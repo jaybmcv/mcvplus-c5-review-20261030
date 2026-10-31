@@ -1,0 +1,12 @@
+{"timeoutSeconds": 540, "label": "replay-env-snapshot", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "tests\\replay-env-snapshot.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T222849805910Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\replay-env-snapshot-20261031T222849805910Z.txt"}
+✔ replay namespace and separate writer credentials are captured before async boundaries; unbound source still rejects (1.2036ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.2562
+
+RESULT {"timeoutSeconds": 540, "label": "replay-env-snapshot", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "tests\\replay-env-snapshot.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T222849805910Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\replay-env-snapshot-20261031T222849805910Z.txt", "pid": 50640, "exitCode": 0}

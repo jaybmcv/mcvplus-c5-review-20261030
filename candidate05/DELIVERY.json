@@ -1,0 +1,11 @@
+{
+  "archive": "MCVPLUS-CANDIDATE05-INTEGRATED-20261031.zip",
+  "bytes": 1044578,
+  "sha256": "8206f10dc59f7405d7f5eb8359e9ab589cacbffe6b037e03e5548ef0772e266e",
+  "sourceManifestSha256": "7c2fca43299c2f70886335b33228829ba9f7fdf4472bf1f10f7c3b1a7b4d888a",
+  "packageManifestSha256": "d5c1ce4e376f99aa811391f032cc614fb01d28e0fd7d7ecc52265a8d667c9ceb",
+  "sourceFiles": 70,
+  "archiveFiles": 386,
+  "archiveFilesHashVerified": 385,
+  "reviewedSourceUnchanged": true
+}

@@ -1,0 +1,31 @@
+{"label": "named-fixtures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "tests/named-campaign.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T215557029481Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\named-fixtures-20261031T215557029481Z.txt"}
+✔ authoritative revised mapping: 42+6, exact B7 operations, schedules and fixed new target (1.5066ms)
+✔ full named campaign stops denied checkpoints and preserves fixed reserved slots (5168.1156ms)
+✔ unsupported Access/permission contracts and fault capabilities remain BLOCKED without spending (53.6235ms)
+✔ B7 seven separate slots; login BEGIN one negative ROLLBACK all counted before entry (764.6111ms)
+✔ B7 unexpected success still rolls back and durably HALTs without refund (172.1756ms)
+✔ B7 cleanup error remains unknown, consumed and halted (152.4905ms)
+✔ B7 omitted rollback cannot be reported complete (177.8938ms)
+✔ local socket/child exit cannot substitute for independent cessation (775.7913ms)
+✔ mutable input and backend replacement cannot change expected status or contract (84.9563ms)
+✔ propagation success is observed, not revocation pass; horizon success halts (855.9061ms)
+✔ revocation baselines and checkpoint timing are mandatory and denial skips future checkpoints (713.2149ms)
+✔ pg Client is bounded, fixed-target and one-connect only; query authority refused (0.7803ms)
+✔ failed pg connect cannot reconnect and old-password login reports only expected SQLSTATE (0.1855ms)
+✔ SDK retains issued token without refresh and refuses expiry despite caller mutation (0.8852ms)
+✔ fresh v1 client per worker, retry:null and no transparent retries; retained probe reuses exact client (1.6357ms)
+✔ HTTPS redirect is an outcome, zero follow-ups/resends; credential allowlist and binding enforced (0.723ms)
+✔ C failure with exact status still needs independent timing and no late continuation (288.8041ms)
+✔ cold remains UNVERIFIED without platform evidence; warm sequence mismatch HALTs (562.1927ms)
+✔ retained DB probe uses the same Client; fresh old-password verification creates exactly one new Client (0.7464ms)
+✔ retained SDK sends the same expired issued token for server rejection and never refreshes it (0.6012ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9888.7277
+
+RESULT {"label": "named-fixtures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "tests/named-campaign.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T215557029481Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\named-fixtures-20261031T215557029481Z.txt", "pid": 55960, "exitCode": 0}

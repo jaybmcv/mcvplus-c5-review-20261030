@@ -1,0 +1,40 @@
+{"label": "final-fixtures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/named-campaign.test.mjs", "tests/review-closures.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T221343512930Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\final-fixtures-20261031T221343512930Z.txt"}
+✔ authoritative revised mapping: 42+6, exact B7 operations, schedules and fixed new target (2.3841ms)
+✔ full named campaign stops denied checkpoints and preserves fixed reserved slots (15750.0496ms)
+✔ unsupported Access/permission contracts and fault capabilities remain BLOCKED without spending (59.6762ms)
+✔ B7 seven separate slots; login BEGIN one negative ROLLBACK all counted before entry (829.4231ms)
+✔ B7 unexpected success still rolls back and durably HALTs without refund (172.1219ms)
+✔ B7 cleanup error remains unknown, consumed and halted (153.9146ms)
+✔ B7 omitted rollback cannot be reported complete (176.1466ms)
+✔ local socket/child exit cannot substitute for independent cessation (620.7536ms)
+✔ mutable input and backend replacement cannot change expected status or contract (144.9091ms)
+✔ propagation success is observed, not revocation pass; horizon success halts (824.7639ms)
+✔ revocation baselines and checkpoint timing are mandatory and denial skips future checkpoints (716.7927ms)
+✔ pg Client is bounded, fixed-target and one-connect only; query authority refused (1.3816ms)
+✔ failed pg connect cannot reconnect and old-password login reports only expected SQLSTATE (0.4081ms)
+✔ SDK retains issued token without refresh and refuses expiry despite caller mutation (1.1847ms)
+✔ fresh v1 client per worker, retry:null and no transparent retries; retained probe reuses exact client (2.4879ms)
+✔ HTTPS redirect is an outcome, zero follow-ups/resends; credential allowlist and binding enforced (0.7065ms)
+✔ C failure with exact status still needs independent timing and no late continuation (235.2005ms)
+✔ cold remains UNVERIFIED without platform evidence; warm sequence mismatch HALTs (508.3186ms)
+✔ retained DB probe uses the same Client; fresh old-password verification creates exactly one new Client (0.5795ms)
+✔ retained SDK sends the same expired issued token for server rejection and never refreshes it (0.8852ms)
+✔ pinned real v1 initialize and GAX createStub exercise fixed universe/auth with an inert protobuf stub (364.2298ms)
+✔ delayed real-interface initialization cannot queue a getDocument after the absolute deadline (147.2705ms)
+✔ bounded HTTP response retains only validated actual identities and correlation (1.5333ms)
+✔ incoming503 plus independently correlated provider401 is contained; generic503 or wrong correlation HALTs (6709.1155ms)
+✔ Cloudflare denial uses its actual upstream contract and records downstream as not dispatched (2770.2061ms)
+✔ contradictory all-undispatched and missing successful branches fail closed; valid prefix is durable (2816.8901ms)
+✔ positive warm booleans cannot override an actual changed server parent identity (1909.2535ms)
+✔ D12 required backend identity function is in the exact B6 allowlist (0.4296ms)
+✔ result or actual-inventory persistence failure rolls back completion and retains active unknown (1024.4983ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20336.887
+
+RESULT {"label": "final-fixtures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/named-campaign.test.mjs", "tests/review-closures.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T221343512930Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\final-fixtures-20261031T221343512930Z.txt", "pid": 52332, "exitCode": 0}

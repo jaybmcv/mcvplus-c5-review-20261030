@@ -1,0 +1,14 @@
+{"label": "provider-bundle", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "tests\\provider-bundle.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T221433974819Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\provider-bundle-20261031T221433974819Z.txt"}
+✔ disabled service bundle exact file hashes and application build binding match (11.5413ms)
+✔ provider and driver exact pure-function authority and fixed targets agree (1.5501ms)
+✔ actual provider entry rejects disabled source binding before client setup and exits collected (85.0272ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 191.777
+
+RESULT {"label": "provider-bundle", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "tests\\provider-bundle.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T221433974819Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\provider-bundle-20261031T221433974819Z.txt", "pid": 55120, "exitCode": 0}

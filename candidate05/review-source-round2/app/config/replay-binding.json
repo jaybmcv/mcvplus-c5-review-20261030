@@ -1,0 +1,1 @@
+﻿{"enabled":false,"projectId":"UNBOUND","databaseId":"UNBOUND","runId":"c5-readonly-20261029-owner-review-1","qualificationProject":"mcv-plus-phase-2-test","qualificationDatabase":"(default)","rule":"Immutable across deployment replacements; unavailable eligible capacity blocks admission. No TTL/reset/migration."}

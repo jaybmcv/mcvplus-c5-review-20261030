@@ -1,0 +1,33 @@
+{"label": "original22", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\copied-candidate04", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "offline.test.mjs", "review-regressions.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214136401136Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\original22-20261031T214136401136Z.txt"}
+✔ 42 primary identities and six fixed reserved slots; primary exhaustion preserves reserved (1858.4735ms)
+✔ same-process contention makes only one send and holds active through observation (49.9801ms)
+✔ independent-process contention cannot dispatch while active (112.2618ms)
+✔ consumption and active state survive process death before acknowledgement (115.9156ms)
+✔ expected denials consumed; explicit retry fresh slot; no retry/refund on uncertain error (120.5718ms)
+✔ unexpected HTTP status and missing or mismatched cessation fail closed (178.7714ms)
+✔ durability failure before send prevents transport; failure after send retains active (121.6287ms)
+✔ HTTP, SDK and DB all use same journal; SDK retry:null, SQLSTATE outcome (76.201ms)
+✔ operator anomaly halt persists and cannot be cleared by success (77.7299ms)
+✔ replay create atomic across callers, run+slot not deployment, error/unknown ack no refund (1.4016ms)
+✔ hosted boundary replay/failure/unconfigured reject before child, claimed slot never refunded (18.1447ms)
+✔ malformed/unauthenticated gate never calls replay or creates worker (0.2381ms)
+✔ empty halt rejected; preexisting empty halt is terminal, not falsy (261.158ms)
+✔ expected outcomes, transport kind and returned status are captured, not mutable (209.3654ms)
+✔ halt during observation retains active; completion has no post-release DB read (499.8742ms)
+✔ late/uncertain/aborted replay claim never creates worker; late claim not refunded (101.1334ms)
+✔ pre-aborted and expired jobs never spawn (1.1424ms)
+✔ abort remains terminal despite queued success; replay credentials excluded from child (1.2399ms)
+✔ failed collection bounded and unverified; delayed success cannot override deadline (59.6808ms)
+✔ cleanup rejection and nonsettlement cannot discard response or hang (16.1089ms)
+✔ synthetic retry authorization provenance persists (265.7857ms)
+✔ captured adapter retains method receiver without mutable plan dependency (141.858ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2828.9187
+
+RESULT {"label": "original22", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\copied-candidate04", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "offline.test.mjs", "review-regressions.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214136401136Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\original22-20261031T214136401136Z.txt", "pid": 45948, "exitCode": 0}

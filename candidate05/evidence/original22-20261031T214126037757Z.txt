@@ -1,0 +1,59 @@
+{"label": "original22", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\copied-candidate04", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "offline.test.mjs", "review-regressions.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214126037757Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\original22-20261031T214126037757Z.txt"}
+node:fs:2787
+      const stats = binding.lstat(base, true, undefined, true /* throwIfNoEntry */);
+                            ^
+
+Error: EPERM: operation not permitted, lstat 'D:\OpenClaw-workspace\artifacts'
+    at Object.realpathSync (node:fs:2787:29)
+    at toRealPath (node:internal/modules/helpers:63:13)
+    at Module._findPath (node:internal/modules/cjs/loader:803:22)
+    at resolveMainPath (node:internal/modules/run_main:35:21)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:146:20)
+    at node:internal/main/run_main_module:33:47 {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'lstat',
+  path: 'D:\\OpenClaw-workspace\\artifacts'
+}
+
+Node.js v24.18.0
+✖ offline.test.mjs (49.2075ms)
+node:fs:2787
+      const stats = binding.lstat(base, true, undefined, true /* throwIfNoEntry */);
+                            ^
+
+Error: EPERM: operation not permitted, lstat 'D:\OpenClaw-workspace\artifacts'
+    at Object.realpathSync (node:fs:2787:29)
+    at toRealPath (node:internal/modules/helpers:63:13)
+    at Module._findPath (node:internal/modules/cjs/loader:803:22)
+    at resolveMainPath (node:internal/modules/run_main:35:21)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:146:20)
+    at node:internal/main/run_main_module:33:47 {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'lstat',
+  path: 'D:\\OpenClaw-workspace\\artifacts'
+}
+
+Node.js v24.18.0
+✖ review-regressions.test.mjs (48.0515ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 63.1286
+
+✖ failing tests:
+
+test at offline.test.mjs:1:1
+✖ offline.test.mjs (49.2075ms)
+  'test failed'
+
+test at review-regressions.test.mjs:1:1
+✖ review-regressions.test.mjs (48.0515ms)
+  'test failed'
+
+RESULT {"label": "original22", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\copied-candidate04", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "offline.test.mjs", "review-regressions.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214126037757Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\original22-20261031T214126037757Z.txt", "pid": 59600, "exitCode": 1}

@@ -1,0 +1,14 @@
+{
+  "enabled": false,
+  "candidate": "Candidate05",
+  "runId": "c5-readonly-20261029-owner-review-1",
+  "deploymentId": "UNBOUND",
+  "buildId": "6c02207ee1e574890848f4d064cae15867fd5559a23df7b49adff5aebfc7d7da",
+  "scopes": [
+    "members:read",
+    "reservations:read"
+  ],
+  "slotsDirectory": "UNPROVISIONED",
+  "logDirectory": "UNPROVISIONED",
+  "status": "source-only; no installed target or usable credential"
+}

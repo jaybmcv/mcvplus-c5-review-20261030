@@ -1,0 +1,8 @@
+{
+  "purpose": "configuration-denied source entry only; no installed service or DB login",
+  "pid": 31588,
+  "code": 78,
+  "signal": null,
+  "collected": true,
+  "credential": "synthetic only"
+}

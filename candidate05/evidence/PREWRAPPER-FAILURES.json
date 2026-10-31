@@ -1,0 +1,43 @@
+[
+  {
+    "command": "Get-Content -LiteralPath TASK.md (twice, tool workdir ignored)",
+    "output": "Get-Content : Cannot find path 'TASK.md' because it does not exist.",
+    "cwd": "C:\\"
+  },
+  {
+    "command": "Set-Location -LiteralPath 'D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031'",
+    "output": "Set-Location : Access is denied; subsequent relative TASK.md read failed."
+  },
+  {
+    "command": "Get-Content Candidate04/PRIMARY.md",
+    "output": "Path does not exist. PRIMARY is exported in operator.mjs; that exact export was used."
+  },
+  {
+    "command": "Read original amendment payload and artifacts CHATGPT-REVIEW-PACKET-20261029.txt",
+    "output": "Access is denied. Parent supplied readable PARENT-AUTHORITATIVE-AMENDMENT.txt and PARENT-HISTORICAL-CAMPAIGN.txt; their hashes are in driver/CASE-MANIFEST.json."
+  },
+  {
+    "command": "Read app/app/layout.tsx in the standalone snapshot",
+    "output": "Path does not exist; the original standalone app is API-only. Final optimized build succeeds without adding purchase pages."
+  },
+  {
+    "command": "apply_patch delete/add same SDK path",
+    "output": "apply_patch verification failed: invalid patch: multiple operations target sdk.mjs. No file change occurred in that failed operation."
+  },
+  {
+    "command": "First run-local.py original22 stdout display",
+    "output": "UnicodeEncodeError: cp1252 cannot encode U+2716. The complete failed test output was already saved before display; stdout now uses UTF-8."
+  },
+  {
+    "command": "Get-CimInstance Win32_Process -Filter ProcessId=53852",
+    "output": "Access denied; HRESULT 0x80041003. No process was modified. Later scoped liveness checks found it gone."
+  },
+  {
+    "command": "Initial seal-app.py",
+    "output": "JSONDecodeError: Expecting value: line 1 column 1 (char 0), reading UTF-8-BOM provider-binding JSON with default Windows encoding. Fixed by utf-8-sig. The sequential shell then ran Next in empty r1; that separate no-app failure has its own retained log."
+  },
+  {
+    "command": "Initial read-only SQLite failure diagnosis",
+    "output": "sqlite3.OperationalError: unable to open database file; glob chose a named-fixtures text log. Fixed by filtering directories and using as_uri(); no fixture database was changed."
+  }
+]

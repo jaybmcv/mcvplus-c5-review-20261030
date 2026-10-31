@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-31T21:39:11Z",
+  "sources": [
+    {
+      "url": "https://firebase.google.com/docs/firestore/pricing",
+      "status": 200,
+      "file": "OFFICIAL-PRICING.md"
+    },
+    {
+      "url": "https://docs.cloud.google.com/firestore/native/docs/security/iam",
+      "status": 200,
+      "file": "OFFICIAL-IAM.md"
+    },
+    {
+      "url": "https://docs.cloud.google.com/firestore/native/docs/manage-databases",
+      "status": 200,
+      "file": "OFFICIAL-DATABASES.md"
+    }
+  ],
+  "note": "Official documentation, not account-specific effective IAM or quota evidence."
+}

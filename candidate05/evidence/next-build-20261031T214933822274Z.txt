@@ -1,0 +1,27 @@
+{"label": "next-build", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-build-20261031-r2", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "node_modules/next/dist/bin/next", "build"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214933822274Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\next-build-20261031T214933822274Z.txt"}
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+   ▲ Next.js 15.5.15
+   - Experiments (use with caution):
+     · cpus: 1
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: Unable to snapshot resolve dependencies
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: Unable to snapshot resolve dependencies
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: Unable to snapshot resolve dependencies
+ ✓ Compiled successfully in 4.4s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./app/api/internal/qualification/read-only/route.ts:27:52
+Type error: Object literal may only specify known properties, and 'replay' does not exist in type '{ run?: ((job: any, env: any, signal: any, { entry, onSpawn, executable, spawnImpl, collectionMs }?: { entry?: string | undefined; onSpawn?: (() => void) | undefined; executable?: string | undefined; spawnImpl?: { (command: string, options?: SpawnOptionsWithoutStdio | undefined): ChildProcessWithoutNullStreams; (com...'.
+
+[0m [90m 25 |[39m   [90m// must reconcile these against named attempts before another attended dispatch.[39m
+ [90m 26 |[39m   [36mconst[39m anomaly[33m=[39m[36masync[39m(event[33m:[39munknown)[33m=>[39m{console[33m.[39merror([33mJSON[39m[33m.[39mstringify({type[33m:[39m[32m'qualification-admission-anomaly'[39m[33m,[39mevent}))[33m;[39m}[33m;[39m
+[31m[1m>[22m[39m[90m 27 |[39m   [36mreturn[39m [36mawait[39m handle(request[33m,[39mbinding[33m,[39mprocess[33m.[39menv[33m,[39m{replay[33m,[39manomaly[33m,[39mdeadline})[33m;[39m
+ [90m    |[39m                                                    [31m[1m^[22m[39m
+ [90m 28 |[39m  } [36mcatch[39m {[36mreturn[39m [33mResponse[39m[33m.[39mjson({code[33m:[39m[32m'admission_unavailable'[39m}[33m,[39m{status[33m:[39m[35m503[39m})[33m;[39m}
+ [90m 29 |[39m  [36mfinally[39m {[36mawait[39m closeReplay(replay[33m,[39mevent[33m=>[39mconsole[33m.[39merror([33mJSON[39m[33m.[39mstringify(event)))[33m;[39m}
+ [90m 30 |[39m }[0m
+Next.js build worker exited with code: 1 and signal: null
+
+RESULT {"label": "next-build", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-build-20261031-r2", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "node_modules/next/dist/bin/next", "build"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214933822274Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\next-build-20261031T214933822274Z.txt", "pid": 26428, "exitCode": 1}

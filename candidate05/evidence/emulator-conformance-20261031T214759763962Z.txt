@@ -1,0 +1,125 @@
+{"label": "emulator-conformance", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--experimental-strip-types", "scripts/run-purchase-emulators.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "FIRESTORE_EMULATOR_HOST", "GCLOUD_PROJECT", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214759763962Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-conformance-20261031T214759763962Z.txt"}
+(node:53936) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:62268) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+    at warnTypelessPackageJsonFile (node:internal/modules/esm/get_format:151:13)
+    at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:205:7)
+    at defaultGetFormat (node:internal/modules/esm/get_format:262:36)
+    at defaultLoadSync (node:internal/modules/esm/load:161:16)
+    at #loadAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:802:12)
+    at #loadSync (node:internal/modules/esm/loader:834:53)
+    at ModuleLoader.load (node:internal/modules/esm/loader:783:26)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:494:31)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)
+    at afterResolve (node:internal/modules/esm/loader:607:52)
+[36m[1mi  emulators:[22m[39m Starting emulators: firestore
+[36m[1mi  emulators:[22m[39m Detected demo project ID "demo-mcv-purchases", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+[36m[1mi  firestore:[22m[39m Firestore Emulator logging to [1mfirestore-debug.log[22m
+[32m[1m+  firestore:[22m[39m Firestore Emulator was started in standard edition.
+[32m[1m+  firestore:[22m[39m Firestore Emulator UI websocket is running on 9159.
+[36m[1mi [22m[39m Running script: [1m"C:\Users\HENRI\AppData\Roaming\npm\node.exe" --conditions=react-server --experimental-strip-types "D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\scripts\run-purchase-emulator-tests.mjs"[22m
+MCV_PURCHASE_CONFORMANCE_STARTED
+(node:26468) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS atomic creation and raw serialization
+PASS concurrent scoped replay and conflicts
+PASS payment contention and expected revision fencing
+PASS injected ABORTED exercises real SDK retries and callback isolation
+PASS forbidden operations poison caught failures and roll back
+PASS callback failures roll back creation and replacement
+PASS independent SDK and repository instances preserve evidence and nulls
+PASS injected lost create and payment acknowledgements
+PASS recovery ambiguity, bindings and lost evidence acknowledgement
+PASS delayed contradictory recovery cannot overwrite winner
+PASS fulfillment claim fencing, explicit reclaim and completion rejection
+PASS v2 quota concurrency, uniqueness, restoration and cancellation fencing
+PASS v2 atomic authority invalidation and freshness across SDK retries
+PASS v2 key closure evidence/quota atomicity, concurrent recovery and original week
+PASS fulfillment claim/reclaim fencing and duplicate applied receipt
+PASS fulfillment grant/cancellation both winning orders and concurrent race
+PASS fulfillment apply/reject rollback and lost acknowledgements
+PASS fulfillment contradictory outcome/settlement and credited histories reject without writes
+PASS fulfillment reclaims, repeated observations and alternative closure histories
+  4 first-activation callbacks entered before release; 1 committed credit pair; 8 attempts
+PASS fulfillment fresh initial activations contend before any credit commits
+PASS fulfillment activation lost acknowledgement, replay and permanent credit
+PASS fulfillment concurrent existing counter writer is preserved
+PASS fulfillment payment states, receipt integrity and uniqueness/quota corruption fail closed
+PASS fulfillment invalid inventory/overflow never partially activates
+PASS fulfillment inactive isolation through actual availability and submission consumers
+PASS fulfillment actual admin absolute count and Alpha update builder under contention
+PASS fulfillment real SDK ABORTED retries atomic grant and activation
+PASS v2 durable Submission Pass grant/rejection and exactly-once credit
+PASS I1 advancing foreground observations and fresh grant/application/activation time
+PASS I2 bounded fair pagination with moving retries, restarted discovery, lost pages and expired leases
+PASS I3 first recovery after 25 admitted hours, lost acknowledgements and indefinite undispatched retention
+PASS checkpoint 4 integrated work discovery, recovery and incidents
+PASS I5 malformed-work corruption race: exact integrity error, unchanged complete versioned snapshot; atomic incident rollback and successful visibility
+PASS checkpoint 4 scan integrity and malformed incidents commit atomically
+PASS retained foreign cookie: active/unknown/corrupt distinguished, proven revocation permits B-only logout, exact complete-map/version no-foreign-mutation and newer-cookie/same-owner replay safety
+PASS combined B lost acknowledgement/newer A cookie: active/unknown/corrupt/contradictory block original-operation replay; retired proof permits read-only completion
+PASS excluded-user recovery: never/cohort removed/mapping removed; real endpoint/controller, missing purchase dependencies, revoked/foreign/cross-owner negatives, uncertainty replay, concurrent removal both orders and no provider access
+PASS integrated controller/handler: issue/invalidation commit-ack loss, response loss, malformed/unexpected replies; exact receipt errors and complete-map/version immutability
+PASS I1 real SDK: both orders, contention, issue/invalidation lost acknowledgements, late-cookie denial and immutable-revision retries
+PASS managed observations: 5-second inclusive freshness, full read delay, request ownership, monotonic regression and Auth boundaries
+PASS transaction-owned allocation: caller time ignored, concurrent quota cap, duplicate winner and immutable original-week restoration
+PASS managed allocation retry crosses Monday; lost acknowledgement preserves one original-week winner
+PASS actual managed admission/transport normal: 2 provider calls including recovery/replay
+PASS actual managed admission/transport delayed-read: 0 provider calls including recovery/replay
+PASS actual managed admission/transport delayed-ack: 0 provider calls including recovery/replay
+PASS actual managed admission/transport delayed-credentials: 3 provider calls including recovery/replay
+PASS actual managed admission/transport delayed-final-check: 0 provider calls including recovery/replay
+PASS actual managed admission/transport no-budget: 0 provider calls including recovery/replay
+PASS transaction-owned leases/backoff: equality reclaim, stale acknowledgement fence and caller timestamps ignored
+PASS operator pin: runtime-writable evidence cannot manufacture a different approved manifest
+PASS operational time: 20 exact-error/full-version-map rejections; equal-time operations, retry rollback, lost-acknowledgement replay and early wake retained
+PASS checkpoint 5 staging host, synthetic authority and protected fake-provider lifecycle
+{
+  "project": "demo-mcv-purchases",
+  "passed": 18,
+  "tests": [
+    "atomic creation and raw serialization",
+    "concurrent scoped replay and conflicts",
+    "payment contention and expected revision fencing",
+    "injected ABORTED exercises real SDK retries and callback isolation",
+    "forbidden operations poison caught failures and roll back",
+    "callback failures roll back creation and replacement",
+    "independent SDK and repository instances preserve evidence and nulls",
+    "injected lost create and payment acknowledgements",
+    "recovery ambiguity, bindings and lost evidence acknowledgement",
+    "delayed contradictory recovery cannot overwrite winner",
+    "fulfillment claim fencing, explicit reclaim and completion rejection",
+    "v2 quota concurrency, uniqueness, restoration and cancellation fencing",
+    "v2 atomic authority invalidation and freshness across SDK retries",
+    "v2 key closure evidence/quota atomicity, concurrent recovery and original week",
+    "v2 durable Submission Pass grant/rejection and exactly-once credit",
+    "checkpoint 4 integrated work discovery, recovery and incidents",
+    "checkpoint 4 scan integrity and malformed incidents commit atomically",
+    "checkpoint 5 staging host, synthetic authority and protected fake-provider lifecycle"
+  ],
+  "faultInjection": [
+    "ABORTED before commit",
+    "callback failures",
+    "acknowledgement suppression after commit"
+  ],
+  "limits": "Local emulator conformance only; no production durability, IAM, real transport-loss or provider guarantee"
+}
+[32m[1m+ [22m[39m Script exited successfully (code 0)
+[36m[1mi  emulators:[22m[39m Shutting down emulators.
+[36m[1mi  firestore:[22m[39m Stopping Firestore Emulator
+[33m[1m! [22m[39m Firestore Emulator has exited upon receiving signal: SIGINT
+[36m[1mi  hub:[22m[39m Stopping emulator hub
+[36m[1mi  logging:[22m[39m Stopping Logging Emulator
+Candidate05: diagnostics retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-emulator-PpPHjJ
+
+RESULT {"label": "emulator-conformance", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--experimental-strip-types", "scripts/run-purchase-emulators.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "FIRESTORE_EMULATOR_HOST", "GCLOUD_PROJECT", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214759763962Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-conformance-20261031T214759763962Z.txt", "pid": 53936, "exitCode": 0}

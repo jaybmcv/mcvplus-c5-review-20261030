@@ -1,0 +1,24 @@
+{"label": "emulator-host-conformance", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--experimental-strip-types", "scripts\\run-purchase-emulators.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "FIRESTORE_EMULATOR_HOST", "GCLOUD_PROJECT", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214627946191Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-host-conformance-20261031T214627946191Z.txt"}
+(node:40196) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:net:2009
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use 127.0.0.1:8089
+    at Server.setupListenHandle [as _listen2] (node:net:2009:16)
+    at listenInCluster (node:net:2066:12)
+    at node:net:2275:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 8089
+}
+
+Node.js v24.18.0
+
+RESULT {"label": "emulator-host-conformance", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--experimental-strip-types", "scripts\\run-purchase-emulators.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "FIRESTORE_EMULATOR_HOST", "GCLOUD_PROJECT", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214627946191Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-host-conformance-20261031T214627946191Z.txt", "pid": 40196, "exitCode": 1}

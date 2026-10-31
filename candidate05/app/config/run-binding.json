@@ -1,0 +1,21 @@
+{
+  "enabled": false,
+  "projectId": "PLATFORM_BOUND_BY_SIGNED_PERMIT",
+  "deploymentId": "UNBOUND",
+  "deploymentHost": "UNBOUND",
+  "buildId": "21731f14dec5805d720d0f6cff7853924781c8e9730da3a13f1d2e2dcda42de4",
+  "runId": "c5-readonly-20261029-owner-review-1",
+  "attempts": 48,
+  "firebaseProject": "mcv-plus-phase-2-test",
+  "database": "(default)",
+  "providerOrigin": "https://c5-roq-20261029.marscatsvoyage.com",
+  "requires": {
+    "platformProtectionAllDeployments": true,
+    "dedicatedReadOnlyIamReviewed": true,
+    "providerPrivilegeReview": true
+  },
+  "permitPublicKey": "",
+  "admissionMode": "signed-permit-v2",
+  "candidate": "Candidate05",
+  "releaseStatus": "local-disabled-source-only"
+}

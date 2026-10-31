@@ -1,0 +1,407 @@
+MCV+ C5 - PLAIN-TEXT REVIEW PACKET
+Prepared 2026-10-29 for Biggunn to forward to ChatGPT.
+Status: REVIEW ONLY. No setup, deployment, installation, hosted tests, revocation or teardown authorized or executed by preparing this packet.
+This is an execution-scope proposal based on sealed local evidence, not a new general source-audit request.
+
+1. CANDIDATE AND REVIEW
+
+Base Git commit: eb71ec9c553cf5606d402e225c03448f4e7f14ba.
+Candidate content-addressed source/build identity:
+8fd17fd74e100abf2cdc9e561c35767fb8ce09484b42d62e8376a7c8f588d372
+This is a SHA256 build identity, NOT a new Git commit SHA. Provider has its own separately sealed source archive; the app build identity alone does not bind the provider.
+
+Existing reviewed deployment: dpl_CgimcFm1HucsAT18UeMC7giYHmL3.
+No current deployment/canonical/Alpha change is proposed.
+Existing services last recorded 5/5 Stopped, Disabled, PID 0 (16:04 EDT receipt); this packet makes no fresh live-state claim.
+
+Independent final verdict: PASS, SOURCE + ISOLATED LOCAL VALIDATION ONLY.
+Reviewer: independently executed GPT-6-Astra High review, saved independent-review-final.md.
+Final findings closed:
+- PostgreSQL18 effective MAINTAIN privilege now rejected, including direct and PUBLIC grants; 27/27 disposable-PG cases PASS.
+- Spawn error collection now waits for close. ENOENT control proves error -> native close -> delivered close -> resolved.
+Reviewer independently recomputed build ID, verified 26 previously reviewed files unchanged and 47 source + 95 evidence hashes.
+Other retained acceptance: 23/23 behavioral groups, optimized Next production build, 12/12 built-route checks, 772 traced build files/no forbidden purchase composition, extracted pinned SDK smoke; 757 runtime files hash-matched, 456 loaded CJS modules confined to extracted package.
+Firebase Admin exactly 14.2.0. Seven real throwaway PostgreSQL DML/DDL/sequence operations denied with 42501. These are local fixtures, not actual hosted IAM/DB authority.
+Cleanup recorded 44 task children and 72 PostgreSQL process identities absent, no recorded-port listeners; parent's additional 9 PG identities gone/data removed.
+Original failed reviews/test receipts retained; final PASS supersedes older 'review pending' prose, not operational gates.
+
+Exact artifact fingerprints and per-file manifests are appended below, freshly recomputed from disk. No archives, executable code, secrets or key values are attached to this packet.
+Changed-file comparison is explicitly against the preserved selected-source baseline, NOT represented as a complete application-repository diff. The qualification project is standalone; purchase application files are excluded, not deleted from the existing app.
+
+2. APPROVAL BOUNDARY: SETUP ONLY
+
+Proposed target name: mcvplus-c5-readonly-qualification, NEW isolated Vercel project, not the purchase project.
+Actual projectId, immutable deploymentId and deploymentHost: UNPROVISIONED / UNBOUND.
+Exact endpoint once bound:
+https://<new immutable deploymentHost>/api/internal/qualification/read-only
+No alias or canonical promotion. Protection required on ALL deployment URLs, not only preview aliases.
+No exact hosted URL exists yet; do not approve or execute against an invented URL. Setup receipt must bind actual IDs/host, protection policy, source/artifact hashes, policy versions, dedicated credentials' nonsecret IDs and installed service definitions before Test Execution approval.
+
+Sealed app config currently enabled=false, C5_ENABLED=false; provider enabled=false/buildId=UNSEALED. Enabling/binding templates, provisioning scripts, wrapper/service definitions and infrastructure configuration are NOT covered as installed bytes by the present source PASS. Prepare exact target deltas for review before applying them. Runtime-source changes would need targeted review/reseal, not a blanket repeat audit.
+Detached Ed25519 permit binds EXACT projectId, deploymentId, deploymentHost, buildId and runId after deployment. Private signing key stays offline; only public key ships. This diagnostic request permit is NOT the financial approval pin. No approval-pin installation.
+
+Named setup operations proposed:
+S1 inventory existing project/deployment/canonical, Alpha, five service states/config hashes and protected business-data invariant baseline using approved read-only inspection; record nonsecret IDs/fingerprints only.
+S2 create dedicated no-cost qualification resources/identities and synthetic fixtures using separately held provisioning authority.
+S3 install separate content-addressed provider and dedicated service wrappers; do not overwrite/repoint existing packages/services. Provision operator/provider ledger/log directories with reviewed ACLs.
+S4 deploy only the isolated protected app with reviewed settings and immutable permit mechanism; no purchase endpoints.
+S5 configuration-only readbacks: artifact hashes, identity/binding policy/grant inventories, deployment protection, service definitions/state, ACLs, secret-reference names and all default-disabled settings. Stop here for review.
+
+S1-S5 do NOT permit the qualification matrix, credential revocation tests, fault injection, test traffic, service restart qualification, or financial operations. Setup API control-plane readbacks/provisioning actions are recorded separately; any workload/credential diagnostic send, even a setup 'smoke', must count against 48 and is forbidden until Test Execution approval. No unmetered preliminary runtime probes.
+Abort Setup if a paid service/upgrade/overage would be required. Existing capacity is not permission to incur spend.
+
+Dedicated Firebase:
+Project mcv-plus-phase-2-test, database (default).
+Proposed new service-account name: c5-qualification-readonly; actual email/unique ID/key ID/binding ID UNPROVISIONED.
+Runtime role proposal: datastore.entities.get/list only; database metadata read permission only if concretely required and explicitly added to the reviewed grant inventory. No broad built-in admin/editor role, transactions/commit/write/index/admin/IAM/deployment permissions. Never reuse current writable staging principal.
+Validate actual org/folder/project/resource inheritance, group membership, role definitions, conditions and deny support. A code facade or proposed role is not effective-authority proof.
+Single fixed document: projects/mcv-plus-phase-2-test/databases/(default)/documents/c5Qualification/readOnlyCanary; marker c5-readonly-20261029.
+Firestore IAM is not assumed to enforce a document-level boundary. If grants permit other reads, state that scope honestly; never claim canary-only IAM unless proven by the actual supported policy.
+Provisioning identity seeds canary once; runtime cannot seed/modify/delete it.
+
+Dedicated PostgreSQL/provider:
+Required target 127.0.0.1:55432/mcvplus_c5_fake, resource marker mcvplus_c5_fake:c5-readonly-20261029.
+Provider loopback listen 127.0.0.1:55433.
+Use a newly isolated dedicated cluster/database at that address only if proven unoccupied and not shared. If installed/shared DB already occupies it, STOP: do not silently reuse/replace/revoke PUBLIC there. A port/database change needs a reviewed config/source delta and reseal. This is an unresolved setup binding, not provisioned infrastructure.
+Runtime role c5_qualification_readonly: LOGIN only when separately provisioned; NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT NOREPLICATION NOBYPASSRLS; no memberships/ownership.
+Owner c5_qualification_fixture_owner: NOLOGIN and no runtime membership.
+CONNECT only to target DB; USAGE only on c5_qualification; SELECT only on:
+ c5_qualification.resource_marker
+ c5_qualification.members_fixture
+ c5_qualification.reservation_keys_fixture
+No relation/column writes, MAINTAIN, schema CREATE, database CREATE/TEMP, other DB CONNECT, sequence rights or unsafe function EXECUTE. Exact pure catalog-function signatures are source-pinned in provider/readonly-db.mjs; resolve/review per-OID grants for actual server version before applying. Check PUBLIC, inherited and default ACLs, ordinary-table definitions, owners/RLS/views/triggers/types and effective privileges.
+PROVISIONING-TEMPLATE.sql deliberately ends ROLLBACK and does not enable LOGIN/assign password. It is NOT an apply-ready migration. Exact dedicated-target DDL/grant script remains to be reviewed.
+Actual DML denial probes use only throwaway nonfinancial objects, transaction read-only disabled so privileges cause denial; never target financial rows. No change to installed c5_runtime or shared grants.
+
+Provider scopes: members:read and reservations:read; no reservations:write.
+Exposed fixed outgoing operation: GET /v1/members/resolve?discordUserId=990000000000000001, boolean output. No arbitrary URL/query/UID. Reservation-key SELECT model is not an extra exposed endpoint.
+Origin fixed in source: https://mcvplus-c5-provider.marscatsvoyage.com.
+Existing infrastructure token/config is NOT reused. If this hostname/Access app/tunnel cannot be dedicated without affecting existing access, STOP and review a separate hostname/source binding; do not repoint shared gateway/tunnel.
+New dedicated Access service token, dedicated provider Bearer, provider perimeter proof, incoming perimeter proof and invocation secret must all be distinct.
+
+Service changes proposed, not installed:
+Only new dedicated provider/tunnel (and gateway if actually required) plus dedicated DB service; exact SCM names, virtual identities, wrapper paths, binary/config hashes, startup/dependency/failure policies, ACLs, ports and connector ID must be enumerated in a reviewed setup manifest BEFORE installation.
+No speculative service name is treated as an existing authorized target. Existing five MCVTest services stay stopped/disabled and unmodified; recovery stays disarmed and is not needed for read-only qualification.
+A missing reviewed service manifest is a concrete setup blocker. Restart tests later apply only to these new exact services, never a shared process/name sweep.
+
+Configuration-variable names (values withheld):
+App: C5_ENABLED, C5_REVIEWED_PURCHASE_PROJECT_ID, C5_BUILD_ID,
+ C5_PERIMETER_SECRET, C5_INVOCATION_SECRET, C5_PROVIDER_BEARER,
+ C5_PROVIDER_PERIMETER_SECRET, C5_CF_CLIENT_ID, C5_CF_CLIENT_SECRET,
+ C5_FIREBASE_CLIENT_EMAIL, C5_FIREBASE_PRIVATE_KEY.
+Platform identity: VERCEL_PROJECT_ID, VERCEL_DEPLOYMENT_ID, VERCEL_URL.
+Provider: C5_PROVIDER_ENABLED, C5_READONLY_DB_PASSWORD,
+ C5_READONLY_PROVIDER_BEARER, C5_PROVIDER_PERIMETER_SECRET.
+C5_PROVIDER_BEARER/C5_READONLY_PROVIDER_BEARER are caller/verifier sides of ONE dedicated bearer; other credential classes are distinct.
+JSON: config/run-binding.json and config/provider-binding.json; permitPublicKey, slotsDirectory, logDirectory and immutable target/build/run bindings.
+
+Writable authority exclusion:
+Do not copy existing project env wholesale. Deploy only the explicit reviewed env allowlist. No ambient ADC, staging admin, Vercel/GCP/Cloudflare provisioning token, DB admin URL, alternate writable pool, inherited NODE_OPTIONS/proxy/emulator configuration in runtime. Admin credentials stay in separate operator provisioning context, never app/provider/worker env or package.
+Fresh request workers inherit only the explicit runtime allowlist. Independently inspect real parent/service environments and credential paths without exporting values.
+A malicious/overbroad actual qualification credential is a FAIL regardless of read-only code.
+
+Permitted diagnostic writes:
+Protected operator exclusive lock, durable HALTED marker and max48 reservation slots; provider persistent slot records; sanitized provider OS logs capped at 4 x 16,384 bytes = 65,536 bytes; sanitized platform logs under reviewed retention; sealed local evidence. Exact directories/volume ACLs/retention bound at Setup.
+Provisioning-only synthetic canary/fixture writes must be in Setup scope and separately identified. No business journal, financial table/key/quota/receipt/fence write.
+
+3. APPROVAL BOUNDARY: TEST EXECUTION
+
+Run ID c5-readonly-20261029-owner-review-1.
+ONE maximum of 48 workload/credential attempts across app, direct provider, retained SDK client and DB probes; successes, denials, timeouts, transport failures, unknown outcomes and retries all count. NOT 48 per phase.
+Owner/counter: Henri runs a single serialized operator with protected crash-safe reserve-before-send ledger; provider has independently durable slot reservations before member SELECT/SDK. Direct/retained probes use the SAME operator ledger even when edge-denied or not reaching provider.
+Every listed case is a maximum-one attempt unless a row explicitly lists multiple checkpoints. Compound negative cases cannot be split into extra uncounted calls. Retries consume an unused approved slot and displace planned coverage; no automatic retry or rollover between phase budgets. No new credential/run/instance resets budget.
+Reserve/fsync before send. Crashed/partial reservation is spent. Unknown outcome durably HALTS. Exhaustion: stop sends, preserve evidence, mark untested rows INCOMPLETE, invoke preapproved containment/cleanup; no slot refund/reset/new run without new approval.
+Matrix IDs below are logical case labels, not permission to reorder destructive operations carelessly. Actual monotonic slot numbers are assigned at send and mapped to case IDs.
+Earlier security failure, excess permission, baseline mismatch, missing correlation or unproven containment HALTS further testing.
+
+COMMON EVIDENCE for each send:
+case/slot/run/build/immutable deployment, sanitized outcome/status, duration/deadline/cancellation timing, correlation UUID where produced; parent UUID/init/sequence plus independent platform request/instance corroboration; child PID+creation/UUID/init and confirmed close; actual SDK identity/version when initialized; provider request/statement/backend identity where applicable. No credential values/token hashes/body/raw errors/UIDs in packet/logs.
+After deadline: verify owned worker/descendants and sockets/DB statement/session, then observe no later correlated work/completion. Deadline response, cancellation attempt, local process close and confirmed downstream cessation are FOUR different observations. Unsupported remote cessation = UNVERIFIED/FAIL, not 'timeout passed'.
+
+A: boundary/cold/warm/idle, 8 attempts:
+A1 no invocation secret ->401 before worker/provider/SDK.
+A2 wrong incoming perimeter proof ->401 before worker/provider/SDK.
+A3 invalid signed permit ->404 disabled before spawn.
+A4 wrong method at exact route ->405, no downstream work (middleware contract).
+A5 unsupported path ->404, no downstream work.
+A6 valid first candidate invocation ->200 qualified, one provider read + one fresh SDK read. Cold only if independent platform new-instance evidence agrees; otherwise cold UNVERIFIED.
+A7 valid warm parent ->200; SAME parent UUID/init and increasing sequence/platform identity; new per-request SDK child is NOT a retained warm cache.
+A8 after approved 15-minute idle ->200/fresh read; record actual identity. Idle alone never proves cold.
+
+B: actual provider/permissions, 8 attempts:
+B1 missing Bearer ->401, no member read/SDK.
+B2 wrong Bearer ->401, no member read/SDK.
+B3 missing Cloudflare proof ->Access denial, no downstream provider/SDK.
+B4 wrong method/query ->deny (exact sanitized enum/status from bound provider contract), no fixture lookup.
+B5 marker-mismatch fixture ->startup/readiness deny; no successful provider lookup; restore only approved synthetic configuration.
+B6 actual-role privilege inventory probe ->all exact effective constraints pass, no alternate pools; archive grants/role/PUBLIC/default/function inventories.
+B7 one reviewed batched throwaway denial transaction ->seven planned DML/DDL/sequence checks individually return42501 and rollback; no financial objects. One submitted probe batch is one attempt; any separately submitted retry consumes another slot. No looped hidden probes.
+B8 actual Firebase qualification credential permission evaluation ->effective get/list scope and explicit write/admin denial evidence. Use supported authorization/test-permission evaluation only, NOT a production write attempt. If supported evidence cannot establish absence of alternate authority, mark BLOCKED, do not substitute code review.
+Control-plane policy inventories supporting B6/B8 are separately logged readbacks, not extra workload RPCs; any canary/DB/data-plane probe additionally consumes a slot.
+
+C: availability/cancellation/restart, 8 attempts:
+C1 provider unavailable before call ->bounded503/504, no SDK success and worker collected.
+C2 delayed provider headers ->native<=5s / whole<=15s; exact downstream statement/socket cessation evidence.
+C3 delayed provider body ->body reader cancelled/destroyed, worker close and no late correlated continuation.
+C4 transient disconnect ->no retry, bounded failure; no late sends.
+C5 client abort ->cancel attempted, exact worker close; downstream cessation separately confirmed.
+C6 delayed credential/SDK initialization ->no send after absolute deadline; confirm request/child timelines.
+C7 approved dedicated provider crash/hang ->bounded failed diagnostic; exact failed process descendants/connections absent. Fault injection requires its named scoped authorization.
+C8 approved dedicated service restart and diagnostic ->readiness then200, new PID/creation evidence and old descendants/sessions absent. Diagnostic availability ONLY, not financial recovery/exactly-once.
+If actual platform cannot expose adequate child/remote cessation evidence, stop rather than invoking paid infrastructure or claiming maxDuration proves it.
+
+D: revocation, 24 attempts, ONLY after Revocation/Cleanup approval AND Test Execution approval:
+D1 bearer retained warm-caller baseline ->success; retain parent identity and old credential.
+D2-D5 old bearer at0/1/5/15 minutes after acknowledged verifier removal/dedicated provider restart ->401/no SDK. Stop remaining checkpoints after evidenced denial. Do NOT claim provider same-process; Next parent must stay same or warm-parent result UNVERIFIED.
+D6 dedicated Cloudflare token baseline ->success.
+D7-D10 old CF token at0/1/5/15 minutes after deletion ->Access denial/no provider/SDK. Fresh TCP connections, same warm caller. Already-issued Access/session JWT is a distinct credential: inventory actual use/lifetime; if present, repurpose an explicitly reviewed available slot or leave session revocation INCOMPLETE. Never silently add attempts.
+D11 retained real Firebase SDK/auth-cache baseline ->success in ONE fixed-read dedicated probe process; record process/client/cache identity and auth mechanism/issued-at/expiry metadata only.
+D12-D18 same retained client/issued token at0/1/5/15/30/60/75 minutes after dedicated account disable + exact IAM role binding removal ->record actual server rejection or expiry/propagation. Lifetime must<=3600s, maxwindow75min, stop after evidenced denial. No token refresh/client substitution. Rejection timing is measured, not assumed. Key deletion alone does not revoke cached OAuth.
+D19 dedicated existing DB Client baseline ->SELECT success, backend PID/backend_start/user/database/application/client bound.
+D20 same Client/new statement after exact NOLOGIN/password invalidation and SELECT/USAGE revocation ->permission deny, no auto reconnect. Previously active statement distinguished.
+D21 fresh login with old DB credential ->deny.
+D22 post-termination exact-session verification ->no captured session or continuing statement; target termination only after rechecking PID+backend_start+role/database/application/client.
+D23 old invocation secret after dedicated config rotation ->reject before spawn. Rotation/redeployment may replace Next instance: NOT same-instance proof.
+D24 old incoming perimeter secret after dedicated config rotation ->reject before spawn; same limitation.
+Config rotation replacement deployments need exact preapproved identity/binding handling; they do not authorize arbitrary new previews or test resets.
+
+Totals A8+B8+C8+D24=48 maximum. Earlier stopping leaves unused slots unused. The 75-minute window involves scheduled observations within approved execution, not an unattended worker promised by this packet.
+
+4. APPROVAL BOUNDARY: REVOCATION AND CLEANUP
+
+Approve BEFORE execution starts:
+(a) exact planned D-case destructive actions, and
+(b) immediate emergency containment/teardown on timeout, authority failure, budget halt or lost evidence.
+Setup receipts must replace every UNPROVISIONED ID below with actual dedicated IDs. Scope may be explicitly approved against the verified setup inventory; no revocation against a guessed name. Test Execution approval alone grants neither revocation nor shutdown of unrelated resources.
+
+Dedicated dispositions, exact IDs to bind:
+- incoming invocation and incoming perimeter secret versions: retire old versions; replacement ONLY if explicitly approved for D23/D24, then retire replacements.
+- provider bearer/verifier version and provider perimeter secret version: remove dedicated verification/use and protected material after evidence.
+- dedicated Cloudflare Access service-token ID and exact qualification policy binding: delete/revoke only these; explicitly address any issued session JWT and its actual lifetime.
+- new Firebase SA unique ID/email, key ID and exact custom-role binding/policy version/condition: disable account/remove binding for D12+, delete dedicated key at final teardown, remove dedicated role/account only after dependency check. No shared credential revocation.
+- DB c5_qualification_readonly exact roleOID/cluster and grants: NOLOGIN/invalidate password, revoke named SELECT/USAGE rights; preserve existing Client long enough for D20; terminate only captured/revalidated dedicated backend, prove no reconnect/session. Drop role/grants after dependencies and evidence permit.
+- c5_qualification_fixture_owner/schema/three synthetic tables and canary: remove only candidate-owned fixtures; no original business data.
+- offline diagnostic signing key: retire dedicated key/protected local material by approved disposition, never upload it; revoke outstanding permits by disabling/retiring candidate. NOT the financial approval pin.
+- exact new deployment(s)/project, Access app/policy, connector/tunnel ID, dedicated service manifest and all generated secret versions: retire only approved candidate resources. Preserve existing canonical/current deployment/Alpha.
+
+Normal/emergency sequence:
+1 durably HALT operator; freeze reserved slots/outcomes, stop all new workload sends. Unknown outcomes retained.
+2 disable qualification admission using exact candidate control; cancel outstanding requests; abort owned readers/sockets and stop exact SDK child identities, await close.
+3 inspect provider/DB active work; cancel/terminate ONLY exact revalidated dedicated session(s) under emergency authorization; collect cessation evidence. Do not confuse HTTP504 or child exit with remote cessation.
+4 stop dedicated tunnel/gateway/provider/DB in reviewed dependency order; recovery never started. Verify service Stopped/Disabled, PID+creation identities and descendants absent, owned listeners/connectors gone, no late correlated work.
+5 revoke/dispose ONLY enumerated dedicated credential IDs/grants/resources; no implicit re-enable/reissue/regrant/rollback. Shared services/credentials not targets.
+6 retire only new immutable qualification deployments after evidence capture; verify protected preview no longer serves candidate and baseline canonical/current deployment still unchanged. Administrative readbacks do not rerun exhausted workload matrix.
+7 compare original139 table/invariant hashes and idempotency keys/quotas/receipts/fences plus canonical/deployment/settings against approved baseline with read-only authority; diagnostic OS/platform logs accounted separately.
+8 preserve sanitized failures, source/artifacts, attempt ledger and all cleanup evidence; reseal envelope. Unverified cleanup explicitly reported; no global process or database sweeps.
+No-login/reboot, financial rediscovery/exactly-once, checkout, approval-pin installation, Alpha/canonical changes and paid services remain excluded.
+
+5. REVIEW REQUEST / REMAINING BLOCKERS
+
+Please review this packet for the smallest concrete Setup scope and any corrections to the finite matrix/dispositions. Do not treat it as approval or ask for another general source audit.
+Real outstanding acceptance: actual dedicated permissions, hosted cold/warm identity/cache behavior, actual credential/session revocation propagation, timeout containment AND remote cessation, dedicated-service restart evidence.
+Concrete setup prerequisites still missing: actual immutable preview IDs/host/protection, exact dedicated credential/grant IDs, isolated DB/hostname occupancy proof, per-target grant SQL, exact service/wrapper/install manifest, protected directory ACL/durability, free-capacity/platform-child-support confirmation, and review of binding-only config deltas.
+No provisioning is undertaken to make this review packet appear complete. Exact IDs can only come from separately approved Setup.
+Ask separately for Setup approval, then Test Execution approval; require Revocation/Cleanup including emergency actions approved before first matrix send. No operational approval is inferred from ChatGPT's advisory review.
+
+
+APPENDIX A - FRESH ARTIFACT SHA256 AND BYTE COUNTS
+manifest.json | 26661 bytes | 984b9485e6ef1121845cb9232a3d1efe3c311e4370131e34035b3d24578e76ad
+implementation-manifest.json | 28650 bytes | 53e41db1697594aea81f6882e1e22a472d52693081114b8edcf9628f234f5289
+candidate-source-manifest.json | 4000 bytes | 5b4b96f32bd9683556a8a8064b1aecea9962fe3b6163f96351202fa9e63d6993
+provider-source-manifest.json | 1857 bytes | 67a3583f9394439ab6b6a57f57bce1caca18802180b02bb8106a743b8df8e00d
+worker-package-manifest.json | 151967 bytes | c4b79516b23faac98f530f627e933fe19322a52a8c78ec591b2f06ef73efb36c
+next-source.tgz | 64402 bytes | 2d8067672ed12ccbadaad4972d0a5f2edaf0566cd4ba9e8fca7648a2390ce89f
+provider-source.tgz | 39311 bytes | 8cf82d1443ce4f35314ae0aeb0dab7526a647cc79f8322851837ebc0e7945128
+worker-runtime.tgz | 1402344 bytes | 241dc52ebd8815da8989074fc2890cc1bf548967025b3c85a0172b2d0dc64aa3
+independent-review-final.md | 3272 bytes | fa2a7343cfec36891b0e10d882d98f7b1089719a3b06a36c5514e04faa2b140a
+candidate-diff.patch | 123944 bytes | f3bc487c4e299abe73ca7d0f9acfad12aa3fde9448276ebca320e17dd5fd1f9d
+reviewed-selected-source.tar | 215040 bytes | 2a6597f2ebf54558d927a597342171a340abdc74b9faddd58e9ee772dd28a376
+reviewed-package-lock.json | 200717 bytes | 5201525a6bfaf87f7b9ffe76c53c715511aba9c59f5f301ee5f112b7c902b669
+MCVplus-C5-source-local-handoff.zip | 1747343 bytes | 727a4ca0004980ff4fef442a437b60dac94952e35e8e1bb690842a58990695c1
+
+APPENDIX B - EXACT SEALED SOURCE MANIFEST (47 FILES)
+Status is against preserved selected-source baseline where it exists. NEW means absent from that SELECTED baseline; it does not assert absence in every historical application tree. All provider/tests/operator files are separate candidate work, never edits to installed services. Purchase app excluded from standalone deployment, not deleted from existing app.
+NEW (selected baseline) | app/api/internal/qualification/read-only/route.ts | 507 bytes | 4cdc11a1139f54a2f3a9f0ef08bfbb4d11b82837225a9b96f682e503668d5581
+NEW (selected baseline) | config/provider-binding.json | 224 bytes | 0b6003969982729767ef62cecc39234a9d6fcd423121a76785e168126ffa5796
+NEW (selected baseline) | config/run-binding.json | 657 bytes | 05882cc11b0bf655ac0d945145cfb0668c3c41f58de5fdcadafcd10a7a41ce4b
+NEW (selected baseline) | config/source-pins.json | 445 bytes | f9859d922c169e4f1b4f5562d79a24cfe940eb796e865981de9bd8eb5c921a20
+NEW (selected baseline) | config/worker-runtime-files.json | 51152 bytes | b558f727b2d570f381a8a21d8321f12ca0fbb2b413484bd1558815624b83567e
+CHANGED from selected baseline | lib/purchases/reservation-v2.ts | 140 bytes | a58189985a8014b5efb07f639ac039d18ce31c22606b7d5533a56d224f16e38d
+CHANGED from selected baseline | lib/server/purchases/creamery-reservations.ts | 240 bytes | 25877f84e63ee5658a128d38d76b62b4abd14293f6bd9879a7dfb34bfa87c5a6
+CHANGED from selected baseline | lib/server/purchases/creamery-transport.ts | 4517 bytes | d25932303f23541f0099bdacabb22973d453c75212c9212d81ec1181d0a2d734
+CHANGED from selected baseline | middleware.ts | 430 bytes | 161ca452b002c08f8a36419957aff2ff238e315600a763167e4447c6ffb7f281
+CHANGED from selected baseline | next-env.d.ts | 268 bytes | f4e8976c19fc926644d72610bf1058bd6bf52add97e46a02bc0b912a751625c0
+CHANGED from selected baseline | next.config.mjs | 624 bytes | 5e1fe92d790591bc4c30116aeaaa1dfea82181c5f6bdca4fcc4b5c2a4506a8f1
+CHANGED from selected baseline | package-lock.json | 195026 bytes | 4feeb2e8170d26fdea56d29d5662d370df557db64a2990e63b4375bc133631a2
+CHANGED from selected baseline | package.json | 601 bytes | 806267f78cee56ef0878a68a7ae2dbf9be195ed2da57298006a37f77766d7c1e
+NEW (selected baseline) | provider/entry.mjs | 1823 bytes | df49e73c29220d905329a7dbe6fc3c6440aa7c4edf37e41b558cfd284afd3bcf
+NEW (selected baseline) | provider/package-lock.json | 126854 bytes | 434d46a2910a684dc9f9bde28e52fb9913d9c89fe8069813ef13f6ab3c2ede9d
+NEW (selected baseline) | provider/package.json | 226 bytes | 87d5f981663e6d40061b64df2a34dd88e23b30eea5edd9ae5940a6bfdfa7fa44
+NEW (selected baseline) | provider/PROVISIONING-TEMPLATE.sql | 4649 bytes | 5cd08f22da483683f0e7025b4a6703dd2b1ed427a9b7b26e1e9e1e422d8453ab
+NEW (selected baseline) | provider/readonly-db.mjs | 8802 bytes | 0fa7699f5be6bede763e82ccc5da7b1dd4203efb37f0efd435bf1c830336e30c
+NEW (selected baseline) | provider/server.mjs | 3057 bytes | e316d53716c7c2a68ef2b966a3f13d56086761e016957be3e43882e5bc3039e2
+NEW (selected baseline) | qualification/budget.mjs | 356 bytes | 1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3
+NEW (selected baseline) | qualification/constants.mjs | 564 bytes | e91ecd2e166172772922cfb5a82fbdcd6866edd78b3a3979b35f8404a3f2700f
+NEW (selected baseline) | qualification/execute.mjs | 591 bytes | b0e7db6366ab104b4deb90421e41af5ceb837e490f8dce63d8fbada0fd45c81e
+NEW (selected baseline) | qualification/gates.mjs | 2831 bytes | ac2c79a71f184635cc910b4514f5d7175b61b5503273bfc23ace30c1130c196c
+NEW (selected baseline) | qualification/handler.mjs | 4518 bytes | 00be0e189df2a35190654826beb687aa3c217a80a8af09c4350e0f369c5c7d22
+NEW (selected baseline) | qualification/ledger.mjs | 2158 bytes | fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73
+NEW (selected baseline) | qualification/native-http.mjs | 2475 bytes | 8a09ed4735eb79f61b3b513fdf8b6f3fda86cbb8472b897f434ce64ab1c93f54
+NEW (selected baseline) | qualification/sdk.mjs | 1310 bytes | 71e41a180b88d8bc96dcb34e17a97fb1642a11152f84b05e0f99efded2b62a7a
+NEW (selected baseline) | qualification/worker.mjs | 2387 bytes | 917b03094bef19ac0a7502de9e551ff14f2601c7b56de2c9030b1b4f1109f475
+NEW (selected baseline) | scripts/audit.mjs | 3990 bytes | 92014aeb27cce09b635b9d508ad0a0cc8e2341176a3491f9e2c58492c5546ed2
+NEW (selected baseline) | scripts/operator.mjs | 1191 bytes | 75abd0d0186790557b917f285c887385824b5c51bdcdb1a0df1497b9228c5ff5
+NEW (selected baseline) | scripts/package-worker.mjs | 2683 bytes | 2a95df31ef1a8ba60c2224708fc684e7c2b6cccaa34b7debbffc2a9e359ce475
+NEW (selected baseline) | scripts/retained-probe.mjs | 2164 bytes | 4abfb550deead9f3cf74b1e5cb80a9351ede6c24f41dcb23f07db513cd0410dc
+NEW (selected baseline) | scripts/seal.mjs | 1586 bytes | daa3847a68485279bdcd1d4f11dabb9a72fec0a72c9df75579454f56e6ef5b70
+NEW (selected baseline) | scripts/verify-local.mjs | 1846 bytes | 95f4abd174c6abc769898b50d781481023d0229f45adc825610a87ab1f7ac8db
+NEW (selected baseline) | tests/built-http.mjs | 2988 bytes | 382a9bc3ea0b4345660565f3ff3e0509254e4c0bbeb978403789e11c8189378d
+NEW (selected baseline) | tests/closure.test.mjs | 3764 bytes | 65924ea63fe30b07a59674437b434e187b9a8baa49bb3e6e4ab9a7d7c1bc4407
+NEW (selected baseline) | tests/gates.test.mjs | 7572 bytes | 1635cb0876b86331477b4666c4abfc62f8eaedfb8bb096142546c9b422ed93bb
+NEW (selected baseline) | tests/hanging-worker.mjs | 185 bytes | 3bafe718b4f8985a78c756c55185000be9a18286edacb2c7d20539cb6f7d31a3
+NEW (selected baseline) | tests/ledger-child.mjs | 605 bytes | cd0a01807387380ab862b102df8c316ca3a7fbefa18813dabf16356c59890b45
+NEW (selected baseline) | tests/loopback-only.mjs | 770 bytes | 91f3cdac066c5d956e22609a118a4ff64feb00e9ed61e81bbf045d8e913f21eb
+NEW (selected baseline) | tests/owned.mjs | 787 bytes | 845f061dde907df7589241e8518b20034f9d2d2aa2e04ee7f00b386e2d267faa
+NEW (selected baseline) | tests/postgres-local.mjs | 13829 bytes | 7d6d15532f2c8a9bdc61ee8ea2d2e2b3c6f022c2194f1e9145218a28283530e6
+NEW (selected baseline) | tests/postgres-parent.mjs | 10524 bytes | 9d440135239124d9a81a6391ea95f71ec8b3b5444c29ddb91fcf0b92a19241ac
+NEW (selected baseline) | tests/provider.test.mjs | 6572 bytes | acdf3011b4bcf83fd271ab2d56517dfbe6942e7abb991b126a2e81fd1e4e8132
+NEW (selected baseline) | tests/transport-sdk.test.mjs | 7621 bytes | d24e41eda82dac4496d415bef29c297497108b6df176d7f2b54ac0451764be9d
+CHANGED from selected baseline | tsconfig.json | 665 bytes | db63cf18a76b0b7f62ece1a47179df74473c1f1b919bee2feaef90bea1a547aa
+NEW (selected baseline) | vercel.json | 340 bytes | dfee950969284761b1371a062f6f60a14ccbb355636204929cb1d4056f5e8bfa
+
+APPENDIX C - DEPLOYED SOURCE ARCHIVE ALLOWLISTS
+NEXT: app/api/internal/qualification/read-only/route.ts
+config/run-binding.json
+config/source-pins.json
+config/worker-runtime-files.json
+lib/purchases/reservation-v2.ts
+lib/server/purchases/creamery-reservations.ts
+lib/server/purchases/creamery-transport.ts
+middleware.ts
+next-env.d.ts
+next.config.mjs
+package-lock.json
+package.json
+qualification/budget.mjs
+qualification/constants.mjs
+qualification/execute.mjs
+qualification/gates.mjs
+qualification/handler.mjs
+qualification/ledger.mjs
+qualification/native-http.mjs
+qualification/sdk.mjs
+qualification/worker.mjs
+scripts/audit.mjs
+tsconfig.json
+vercel.json
+PROVIDER: provider/entry.mjs
+provider/server.mjs
+provider/readonly-db.mjs
+provider/package.json
+provider/package-lock.json
+provider/PROVISIONING-TEMPLATE.sql
+config/provider-binding.json
+qualification/constants.mjs
+qualification/gates.mjs
+qualification/ledger.mjs
+qualification/budget.mjs
+Worker-runtime dependency closure is separately bound by worker-package-manifest.json and config/worker-runtime-files.json fingerprints above/in source manifest, plus worker-runtime.tgz digest. Third-party dependencies are not relabeled as operator-authored changes.
+
+APPENDIX D - SEALED VALIDATION EVIDENCE MANIFEST (95 FILES)
+APPROVALS-AND-RUNBOOK.md | 13266 bytes | e1f9452e59534400484d7a3efa19518acc74499af3b28ebac4c11de3f1f5a3da
+CHATGPT-CLARIFICATIONS.md | 2111 bytes | f23283702dca80530cc3e607ebc6698b402376c6461079fd0d245acbdd1e47e9
+IMPLEMENTATION-RESULTS.md | 4169 bytes | 9e437d8ed60e0a94fcb2a76768fd7be1587293e661f48286b33f00a8fe4fb00e
+MANIFEST.md | 6698 bytes | f15d30f77e391dd66fc1b8cf704b103c71a2fd0d4b7130083734581f262fd893
+MEMORY-LOG.md | 5091 bytes | d04e4f5b8898cfc14e1c5218164069d7a4e81733bbe8e1057810ad99474f9093
+NARROW-CLOSURE.txt | 1917 bytes | df7f1cf26735f61b7b25ce95c5a0449116a274ab14b6ff53fbf9a93ba98c4cf1
+PARENT-REVIEW-NOTES.md | 2772 bytes | 2f25112da21a1dbacb9eae800b15b51763f042ecf7a17d27a4ed200864b6bcb0
+PLAN.md | 3135 bytes | f9f2bf0f4619bdbf23c3304e11f128280a05f721732fbfc73beb5ecf182c23e6
+README.md | 7648 bytes | 9ab5cdc664568659a4ee8edf09548293d6e9544e36e2676e8babec49e7bb9d62
+REQUIRED-CLOSURE.txt | 4132 bytes | 34ddade53c6a494663f09e401725ef1ee554ab1f7e258cc396a552e113603b22
+REVIEW-CLOSURE.md | 4865 bytes | 90a029214c1cd37399322dffa0f92080f3f5d000299e0a9d59318edd52fbd3ce
+REVOCATION-AND-CLEANUP.md | 10247 bytes | b8b34415158ad48896c848c5ff1baa623dec765029e1a77412ffe6f5a21bb27e
+TASK.txt | 5277 bytes | baf6c253a76bdec555013193e69a990b5b3293ad519cd5fc0b6974b2f4a21253
+audit-final.log | 382 bytes | 9f62f47ad4b97ccea410096e1f2403c3e24b345046f0c08026962140e68382f2
+behavior-final.log | 2297 bytes | ffda344c8f22ceb0c2721957809551bca5c96229ba6f05e13d2386682ab59ea2
+build-final.log | 1208 bytes | 68a2fcdb173f89e1c74c2f46462fbf00eb0501fe1e2b5182bf036d09ea26b81a
+build-first.log | 2930 bytes | 94a8bc9f9b0ef23bba11ebbaa86a4ca64217f3b00c58d13b461702e18ff7a48c
+build-manifest.cjs | 6970 bytes | 9b7687d123721f079dec5e668bdc7d001e1736cead8297a01537d7f317a7cf6b
+build-second.log | 2310 bytes | 0071e4f2da4035e1a63e3eb5ce5ceafd22720d4b033add036bb4fa69facfbe67
+built-http-final.log | 719 bytes | dd250e1cbbb75bd80e5bfc58eff2bcb3ad3015265b9ab24fbfff1fd0443d702d
+built-http-server.log | 146 bytes | 06040d5e2cccd5b0e26e2db3c334d4120e2a398f0f2382e3400a58a835e1f9e2
+built-http.json | 866 bytes | 42468cf4f7f4b897c7fb571fce0fd1872113f511c0f99e67ccf611f447933191
+candidate-diff.patch | 123944 bytes | f3bc487c4e299abe73ca7d0f9acfad12aa3fde9448276ebca320e17dd5fd1f9d
+candidate-source-manifest.json | 4000 bytes | 5b4b96f32bd9683556a8a8064b1aecea9962fe3b6163f96351202fa9e63d6993
+cleanup-receipt.json | 41098 bytes | 651a0a569350d467e3cc36aead62637813a1c0e8cd2eb16439d32c5ef4fe8ea1
+closure-complete.log | 1936 bytes | 4cf3ce3dbd115b06eb8def0f7ec56520c1a9c9e40191fbd05fe59fc28c795029
+closure-tests.log | 830 bytes | 442a8495e116217722d8f9964c108c226a40e159fac1db8e9db011ec1a02dcfc
+comms-awaiting-sync/2026-10-29-mcvplus-readonly-openclaw-pc-97ba0435.md | 2374 bytes | 1eea57b47865999e3c9b85a11e04586dfae857fb47fffddec81c607819f92e16
+design-review.md | 5484 bytes | 888f5b71dec98818d3daf71d97e689a7cfb56b647b66b9617859e4eb7f4933da
+fixes-tests.log | 3096 bytes | d3a01301d122ddaa4a4710679f76536e29986926765da538b03e84df055a2a73
+import-build-audit.json | 3676 bytes | 7dedf66f8e0b37a33bd1bd08ec541c60eb8c124256d00ad35617dedfb4d8d429
+independent-review-v2-fail.md | 7449 bytes | 63d039184c51ede5953317bbd3501e37b04f9b6ccae0ecb3bd79743eb387f105
+local-postgres-acceptance.json | 3729 bytes | f14833b4640cc430882ca85db97f1c91d502eb62db894b3e80a68b45a3de69a0
+local-postgres-complete.json | 3628 bytes | ed9a2df8843952de24ee0f91dd1e25c36a72188e962e0495d374e81d7cda9d5f
+local-postgres-final.json | 3647 bytes | d8b91836de136c631b090fbf37068c256f97b35e344b9315e08b6e2f93a6ab40
+local-postgres-fixed.json | 3642 bytes | b082ef1487808ff6a0ad66755230d919f139f58ed8d8e9710734fa958c83f6cb
+local-postgres-maintain-27.json | 4180 bytes | cfcc62ba09431e4206d6cc09769ccdd82322e69c27a871d147e02b6372620c80
+local-postgres-qualified.json | 4101 bytes | c8462302dd85d5b8e2664d5e0fda82ae12f603c0e69db1219c798f2c1b4d2d50
+local-postgres-risk.json | 5920 bytes | 32bb9f28f957329720e7ae09ca0ead497c2472d1d1cedf38dc5948499c3c5344
+local-postgres-validated.json | 3533 bytes | efdba0bfc1a3db4bca3c44edf0b7fc569967d781ead190a5384e5b9e1c063343
+local-postgres.json | 957 bytes | dc5ab539dc2e302f03b426afc5af0fcd2a7302c9ac15f36267b8dc8f5318a63b
+local-test-receipt-audit-failure.json | 1634 bytes | ce1927279c1d2bf4aa1beda949f4d22eca0cbf6238102eeae926c719e1a4e37d
+local-test-receipt-before-narrow-closure.json | 1998 bytes | 9f3f0f94e5d7aae9d66b718640cfd239aa0a4e44014d44e3669a93bb9d314e52
+local-test-receipt-pre-last-clock-check.json | 1998 bytes | 60d66571d9dffb77be890c16d4763215cacc0daf3d71f050efb0d0b08da1a6d4
+local-test-receipt-timeout-preserved.json | 960 bytes | fccec55c429b1cab253fa7a5e480827e9b7e8a4e20548f1f5552aba44bf6d083
+local-test-receipt.json | 3670 bytes | e1c61bf0851218a9d0e03aa759422c1a634c254d4d9e0f25b7f0eaef95e3d4c9
+manifest-before-narrow-closure.json | 23970 bytes | 100a7cdddd7403bfd7b593097069b4d03f269033cbb45523866f9873825b1873
+narrow-local-test-receipt.json | 1485 bytes | 45db258b3951f78292645f47dc9d748033c2c23ed0d8b60e5935cc6547d49360
+narrow-package.cjs | 4492 bytes | 142638b74b717b408453bc3ac53b12e8b4ce163b99319f9f2c1c80182a6bea22
+narrow-postgres.log | 3203 bytes | 2d367672460e333a882abb109d8e8cea1de37bdcb06ad80df8446be5beba8436
+narrow-provider.log | 575 bytes | 175b0c2c6cda980aa26a97d2c6e0c8419f374da6f2a1f8eb831b90d049eb0a15
+narrow-spawn-close.log | 186 bytes | 54feaebdabdd48e53d9d250a06b81e63d1fbdb8ea782c0df75d22acf6f880dda
+narrow-validate.mjs | 1524 bytes | cf896a6b81b4801472d75a8728bf794a13e0281abbcc9d3dbbef8f09c7e37cc8
+next-source.tgz | 64402 bytes | 2d8067672ed12ccbadaad4972d0a5f2edaf0566cd4ba9e8fca7648a2390ce89f
+owned-children.jsonl | 6857 bytes | a1cc562fa477426906e4b884665fd3e1bffef94c3e2b0f26f6a7f1d1f5b4a2f1
+package-deliverables.cjs | 3410 bytes | 5167cc7b8f467990483753516d4dcf3773e5edd13ff3f6588d625b15d0fe38b8
+package-verification-before-narrow-closure.json | 501 bytes | f5142ef0df3e9e171841f0365756ca700a92382fd19eb642808f94540967fa7a
+package-verification.json | 980 bytes | b4a4c85094468649adf3db29c70b36f3d238500e7b8746fe93da70f08144a976
+parent-baseline.json | 3183 bytes | 6eae3c7f91a38c9da67433cee36aead90357081ca63ea6afbf4c7aa5ee3eb529
+parent-final-check.json | 3816 bytes | 9e48763497089ec50e02ddf6c39bd58551ac00045be1d747e47500f9bec8dc02
+parent-fixture-cleanup.json | 344 bytes | db7f80557e189ea0a6cf60dafcc9d800475246ce32d2187b5c3e3fbbd9b5548e
+parent-local-postgres.json | 3655 bytes | 4a73661538225e6be91674cca6a5868617d40bf9a2a1ef863b8966b39db5f718
+postgres-acceptance.log | 5784 bytes | 3d2c5ac27687de85817a4156c8a6f7ff4f6758a3c1d36568383847946561613b
+postgres-complete.log | 5598 bytes | 994f6ea162c6e80cf83f21f22aa9019afce95ca5714ce92c7ff25af19470bc4b
+postgres-final.log | 5636 bytes | 437cc013617e84969623ea8e18a14c76644ea910d47b7c0a4f293dfa4883d181
+postgres-fixed.log | 5626 bytes | c63c88ce614eb3bf1a4e04c757c94070751a40c4d56feec643e120ff81a812ed
+postgres-local.log | 1828 bytes | 854308a0403355ba50ce4cf93d577d6f02b75516703d55f7a00583adcb7b3b09
+postgres-qualified.log | 6272 bytes | 256b32478a38e88f09527bdc8befc95b186b90d01717a0fa7b22a7040a69d39e
+postgres-risk.log | 8714 bytes | 9161468390bd43951d7d2f3ee6b10cef9ed4b5509dcec5539f6e58385e7a4ec0
+postgres-validated.log | 5408 bytes | e34d53718e027d072ca576a0aae5abce60a8df1bdec085fafb9804747014d77c
+prepare.cjs | 3973 bytes | 4ec926f56bbf232a50d7a81f2c250fddeae41ca7e8cd52b551dc732e1ccd4c0d
+provider-first.log | 938 bytes | a7924c3f6ea5cad85247c6fccf94b00a6db5ddb64210def722c14896e84e4881
+provider-source-manifest.json | 1857 bytes | 67a3583f9394439ab6b6a57f57bce1caca18802180b02bb8106a743b8df8e00d
+provider-source.tgz | 39311 bytes | 8cf82d1443ce4f35314ae0aeb0dab7526a647cc79f8322851837ebc0e7945128
+refine.cjs | 2910 bytes | 93fef451b824cdba348672e9640d91db13f6ed42480cae0615b86a5990bc13a4
+reviewed-package-lock.json | 200717 bytes | 5201525a6bfaf87f7b9ffe76c53c715511aba9c59f5f301ee5f112b7c902b669
+reviewed-package.json | 2341 bytes | f48a87c9a0ecf484cc134232de026646c75667a2303e21916f4fc3802923db3d
+reviewed-selected-source.tar | 215040 bytes | 2a6597f2ebf54558d927a597342171a340abdc74b9faddd58e9ee772dd28a376
+sdk-installed-files.json | 120391 bytes | 184776b112f5eb114aff0fea52b5e18d5a5072065da6a612c467497f65cfea07
+source-provenance.json | 760 bytes | 55cfdeee0af2e96803904c9b72c790fd72a4b941d543828c1ac042b234c65cf0
+source-review-v1.md | 9590 bytes | e8b8f7a4c6da4359e660002f3a070abcde81730693a261d5e3f466853e9b326d
+spawn-close-event-order.json | 344 bytes | 12a346ea8c55d5f6deaeaf68086d77b57d2bab66328f11fa1ed081f2fda3b47b
+temporary-fixture-data-cleanup.json | 1923 bytes | 91705440efdf6b733a3fc28ef53f4c15a9f52767485e1e7718880e0451b49373
+tests-preseal.log | 3100 bytes | 0839e07b93f7ea73d84676c628ea010f34db2664032a34dcd8b591c1a19182b3
+transport-sdk-first-fix.log | 2738 bytes | 2648f07924f44752e5a067960dae3701670f55997e0f102a4c609b1da68ee87a
+verify-cleanup.ps1 | 2635 bytes | a611ce2d8b3e9177a8efba3adec5620806637710984d3fb2cca56fa31f21ac0f
+verify-packages.mjs | 1937 bytes | f8f60ea36a99bf0054c62fc87141db853ee4383ccf04416a6818e57d35e3e825
+worker-cleanup-timings.jsonl | 1120 bytes | f1a85edb3b482d8494669c42ac1631e2cf0bf3c0f58688bc8751583a5244f074
+worker-extracted-smoke-failure-preserved.log | 2776 bytes | 43b482d47a479b6a900b48e529632f7f8a0efdf0f4b955cf39b27ec460212016
+worker-extracted-smoke-final.log | 248 bytes | 40f2196056640e4d9feecaad181dcc3774c387862753c671ea20e26fa061a35f
+worker-extracted-smoke.log | 2776 bytes | 43b482d47a479b6a900b48e529632f7f8a0efdf0f4b955cf39b27ec460212016
+worker-package-manifest.json | 151967 bytes | c4b79516b23faac98f530f627e933fe19322a52a8c78ec591b2f06ef73efb36c
+worker-package-smoke.log | 248 bytes | 40f2196056640e4d9feecaad181dcc3774c387862753c671ea20e26fa061a35f
+worker-runtime.tgz | 1402344 bytes | 241dc52ebd8815da8989074fc2890cc1bf548967025b3c85a0172b2d0dc64aa3
+worker-trace-warnings.json | 2663 bytes | fe2e5369a1ae2327414f7fecc31f751d9b720ed8c2c08cacb13e1cdbdac24e49
+
+Packet assembly verification: 47/47 source and 95/95 evidence byte lengths/SHA256 freshly matched. No candidate execution or network operation performed during assembly.

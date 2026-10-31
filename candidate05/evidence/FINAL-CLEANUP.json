@@ -1,0 +1,780 @@
+{
+  "timestamp": "2026-10-31T22:35:07.418Z",
+  "checks": [
+    {
+      "pid": 1280,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 2032,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 2732,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 5652,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 7088,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 7276,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 8272,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 8692,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 8760,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 12692,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 16200,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 17828,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 21112,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 21524,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 21624,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 21712,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 23004,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 24480,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 24808,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 25316,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 25644,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 25932,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 26428,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 26468,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 28008,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 28052,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 30332,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 31144,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 31304,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 31340,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 31480,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 31532,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 32792,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 33236,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 33432,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 33484,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 34484,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 35028,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 37896,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 38476,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 38596,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 39700,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 40196,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 40276,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 40424,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 40636,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 40948,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 41492,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 42740,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 43024,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 43360,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 43648,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 44204,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 44456,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 45700,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 45788,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 45920,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 45948,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 46828,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 46944,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 47780,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 48344,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 50640,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 52068,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 52332,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 52480,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 52704,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 52856,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 53008,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 53660,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 53688,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 53756,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 53852,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 53936,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 54012,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 54520,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 54752,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 55120,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 55624,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 55928,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 55960,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 56636,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 56872,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 56988,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 57324,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 57800,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 57972,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 58748,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 58760,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 58984,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 59080,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 59096,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 59240,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 59600,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 60288,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 60296,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 60492,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 60908,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 61576,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 62140,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 62268,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 62752,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 62812,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 62980,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 63212,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 64616,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 65484,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 65956,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 66588,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 66912,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 66992,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 67892,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 68380,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 68432,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 69012,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 69348,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 69432,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 71020,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 71244,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 71716,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 71900,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 71908,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 72184,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 72480,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 72540,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 72748,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 73568,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 74544,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 74740,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 75356,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 75836,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 76112,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 76212,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 76864,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 77624,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 78900,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 79528,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 79748,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 79760,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 79884,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 80052,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 80180,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 80216,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 80240,
+      "gone": true,
+      "error": "ESRCH"
+    },
+    {
+      "pid": 80400,
+      "gone": true,
+      "error": "ESRCH"
+    }
+  ],
+  "listeners": [
+    {
+      "host": "127.0.0.1",
+      "port": 8089,
+      "free": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 4409,
+      "free": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 4509,
+      "free": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 9159,
+      "free": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 63618,
+      "free": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 63951,
+      "free": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 57902,
+      "free": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 59553,
+      "free": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 59581,
+      "free": true
+    }
+  ],
+  "allRecordedProcessesGone": true,
+  "allRecordedPortsFree": true,
+  "actions": "read-only PID liveness and task-owned bind/close probes; no process kills, shared listener cleanup, deletion or global process enumeration"
+}

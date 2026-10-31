@@ -1,0 +1,170 @@
+[
+  {
+    "path": "app/middleware.ts",
+    "sha256": "161ca452b002c08f8a36419957aff2ff238e315600a763167e4447c6ffb7f281"
+  },
+  {
+    "path": "app/next-env.d.ts",
+    "sha256": "f4e8976c19fc926644d72610bf1058bd6bf52add97e46a02bc0b912a751625c0"
+  },
+  {
+    "path": "app/next.config.mjs",
+    "sha256": "5e1fe92d790591bc4c30116aeaaa1dfea82181c5f6bdca4fcc4b5c2a4506a8f1"
+  },
+  {
+    "path": "app/package-lock.json",
+    "sha256": "4feeb2e8170d26fdea56d29d5662d370df557db64a2990e63b4375bc133631a2"
+  },
+  {
+    "path": "app/package.json",
+    "sha256": "806267f78cee56ef0878a68a7ae2dbf9be195ed2da57298006a37f77766d7c1e"
+  },
+  {
+    "path": "app/SOURCE-MANIFEST.json",
+    "sha256": "18ecdeab46d82121d0da2b9da21bc32b25c12930c25da99753bd13c8036be923"
+  },
+  {
+    "path": "app/tsconfig.json",
+    "sha256": "db63cf18a76b0b7f62ece1a47179df74473c1f1b919bee2feaef90bea1a547aa"
+  },
+  {
+    "path": "app/config/build-binding.json",
+    "sha256": "df180a28ad4f039ee15bb72332794605c7310c2fcae02de642f548e2419c364e"
+  },
+  {
+    "path": "app/config/provider-binding.json",
+    "sha256": "9460670e019f78c6e64fc28e6c9281828c3407bbe8beef8663aadb5efcbbc867"
+  },
+  {
+    "path": "app/config/run-binding.json",
+    "sha256": "fe966f0cb59ea406756192717a4323faa3aa099c48aa31e47867f082604d5726"
+  },
+  {
+    "path": "app/config/source-pins.json",
+    "sha256": "f9859d922c169e4f1b4f5562d79a24cfe940eb796e865981de9bd8eb5c921a20"
+  },
+  {
+    "path": "app/config/worker-runtime-files.json",
+    "sha256": "b558f727b2d570f381a8a21d8321f12ca0fbb2b413484bd1558815624b83567e"
+  },
+  {
+    "path": "app/qualification/budget.mjs",
+    "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+  },
+  {
+    "path": "app/qualification/constants.mjs",
+    "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+  },
+  {
+    "path": "app/qualification/execute.mjs",
+    "sha256": "b0e7db6366ab104b4deb90421e41af5ceb837e490f8dce63d8fbada0fd45c81e"
+  },
+  {
+    "path": "app/qualification/gates.mjs",
+    "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+  },
+  {
+    "path": "app/qualification/handler.d.mts",
+    "sha256": "ac722b3b94fbeff4388ca021fb0148d02f5f04b19be46adf9990999f2fe686a2"
+  },
+  {
+    "path": "app/qualification/handler.mjs",
+    "sha256": "9e65fad0b3aaea25ef006bfb6e537b5c8575c37ca4b48e0a040243d94e0072f1"
+  },
+  {
+    "path": "app/qualification/ledger.mjs",
+    "sha256": "fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73"
+  },
+  {
+    "path": "app/qualification/native-http.mjs",
+    "sha256": "8a09ed4735eb79f61b3b513fdf8b6f3fda86cbb8472b897f434ce64ab1c93f54"
+  },
+  {
+    "path": "app/qualification/replay.d.mts",
+    "sha256": "82d1e16bfb4eb3a654b1ce6f7f3efb067ec892290278df8ec95e190788636cf0"
+  },
+  {
+    "path": "app/qualification/replay.mjs",
+    "sha256": "4e669021540e99f2851d1bccceb3b9bc066c38aecd948723367a4cc7834653d2"
+  },
+  {
+    "path": "app/qualification/sdk.mjs",
+    "sha256": "85cf7ab769b7ffdb2482b9b871bb32932fed27890cd557e5fb0ff54818e2bed0"
+  },
+  {
+    "path": "app/qualification/worker.mjs",
+    "sha256": "33e5c12ea2b005d5eb96bccbd7258315cd5cc315413d2fe7fdb99bb2dcbc8797"
+  },
+  {
+    "path": "app/app/api/internal/qualification/read-only/route.ts",
+    "sha256": "68f209d20a5cad4129df6f68b0bfb93b15e6a983a69390ffda9cdf2674561210"
+  },
+  {
+    "path": "app/lib/purchases/reservation-v2.ts",
+    "sha256": "a58189985a8014b5efb07f639ac039d18ce31c22606b7d5533a56d224f16e38d"
+  },
+  {
+    "path": "app/lib/server/purchases/creamery-reservations.ts",
+    "sha256": "25877f84e63ee5658a128d38d76b62b4abd14293f6bd9879a7dfb34bfa87c5a6"
+  },
+  {
+    "path": "app/lib/server/purchases/creamery-transport.ts",
+    "sha256": "d25932303f23541f0099bdacabb22973d453c75212c9212d81ec1181d0a2d734"
+  },
+  {
+    "path": "driver/accounting.mjs",
+    "sha256": "a25cc64aab1b55e19d7ec5e0090f0ae75dbe1de4679cc68fc3dc3e15313630bd"
+  },
+  {
+    "path": "driver/campaign.mjs",
+    "sha256": "35bb73b0c58d3ad00d4874dbe7b71d42e9b5c159f2b0ebce5bfe2411476d53ff"
+  },
+  {
+    "path": "driver/cases.mjs",
+    "sha256": "617a5b20e7de639ce2bf89d227ee62e7b522eebecc7e71cebbe0c97cef81805a"
+  },
+  {
+    "path": "driver/clients.mjs",
+    "sha256": "2d293afe456bae05544e91a533dc7bb2e4a7dc880f732efd9e20392cd3e88f02"
+  },
+  {
+    "path": "driver/provider-contract.mjs",
+    "sha256": "2404b0a2bb60d148e5e6b0b4f4ebe9c0bf195b1534bdd846feb03e821f7069eb"
+  },
+  {
+    "path": "tests/app-integration.test.mjs",
+    "sha256": "5b0fbe524e38e7d4a98236e012bf41c4ecd8fdea0b942ad7fd17430236aea8dd"
+  },
+  {
+    "path": "tests/built-http.mjs",
+    "sha256": "904e6047c0a3fd1e5e2793c84eb43e3cc08f23a3771b979d64ac0ea12d3a156a"
+  },
+  {
+    "path": "tests/named-campaign.test.mjs",
+    "sha256": "ab840ab5a09cf602e16dba6f90f5e66013ce7029ac644427b367633a9f30411f"
+  },
+  {
+    "path": "TASK.md",
+    "sha256": "d33446481aa0022931284d0fb987c3a3658cd9d1059568fb2cce1d0ccd29b44a"
+  },
+  {
+    "path": "SETUP-PACKET.md",
+    "sha256": "839fbbdf547b05290bf482702f3b2055052cbccb9c58a9a43ab9dd8556c219d2"
+  },
+  {
+    "path": "REPLAY-DEPENDENCY.md",
+    "sha256": "9035fa8e35fc84663f047de3852c8c146e61c7539022253a94f6450cfeeb4806"
+  },
+  {
+    "path": "SETUP-INDEPENDENT-REVIEW.md",
+    "sha256": "ff86d0cd957d5fa193a9b1a56ccc0e959907359d81533b07331d3adb2aad2ae9"
+  },
+  {
+    "path": "PARENT-AUTHORITATIVE-AMENDMENT.txt",
+    "sha256": "11c838e25bdaadef2c3d747dff86944c987b9ca958e3c2987c5b6bfbe429c915"
+  },
+  {
+    "path": "PARENT-HISTORICAL-CAMPAIGN.txt",
+    "sha256": "50205b8715b5b1540be3ef6c609fed185abc83c598e5e2ac36c2be2ce6fab6fe"
+  }
+]

@@ -1,0 +1,256 @@
+{
+  "commit": "0f9a6c12c05887cb090e76964e1ca5b15438ac9d",
+  "zipSha256": "f20a7a34608c94f37f0175a6cbceff7eecda98bba8f1f0b08134686150b3ec21",
+  "zipBytes": 71248,
+  "files": [
+    {
+      "archivePath": "candidate04/adapters.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\adapters.mjs",
+      "match": true,
+      "sha256": "137d93bdc5f4ea072bb9c176e3b5a91a4e7ccf5aed910bd1faa7c122d9a4b78b"
+    },
+    {
+      "archivePath": "candidate04/CREDENTIAL-PLACEMENT.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\CREDENTIAL-PLACEMENT.md",
+      "match": true,
+      "sha256": "708eea3ac68fee069b2f9abec05c52e75a41566522feb0639998a1e4251fa109"
+    },
+    {
+      "archivePath": "candidate04/evidence/CHECKS.json",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\evidence\\CHECKS.json",
+      "match": true,
+      "sha256": "e55808fea7dba2d2a7b1260f3fec8124e73aa53c8e2b3829fd86b485366ed7f3"
+    },
+    {
+      "archivePath": "candidate04/evidence/offline-tests.txt",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\evidence\\offline-tests.txt",
+      "match": true,
+      "sha256": "4c9555e1f9cfc0000f59b7aec91dc8be588f6538aae2fd1b1328e17f127a6b2e"
+    },
+    {
+      "archivePath": "candidate04/evidence/round1/CHECKS.json",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\evidence\\round1\\CHECKS.json",
+      "match": true,
+      "sha256": "46926ebed0234758367fa5045d6901d13187fe5c47d27dd7549065d887d07b82"
+    },
+    {
+      "archivePath": "candidate04/evidence/round1/offline-tests.txt",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\evidence\\round1\\offline-tests.txt",
+      "match": true,
+      "sha256": "ac91198b5e6bee89d93cfa116ebf8eb8c88f903e6478a9b899c8ebdf448cd153"
+    },
+    {
+      "archivePath": "candidate04/fixture-child.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\fixture-child.mjs",
+      "match": true,
+      "sha256": "f4dc88f55b1277af13ade7fd803bf18489fd2a37c6a260426149cda461332077"
+    },
+    {
+      "archivePath": "candidate04/IMPLEMENTATION-REPORT.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\IMPLEMENTATION-REPORT.md",
+      "match": true,
+      "sha256": "c0ea924b70120db3c57d58f93ae48b49e9b75a337f768230eb94b26a56f7041e"
+    },
+    {
+      "archivePath": "candidate04/INDEPENDENT-REVIEW-CLOSEOUT.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\INDEPENDENT-REVIEW-CLOSEOUT.md",
+      "match": true,
+      "sha256": "857385aaf506973d46bbea5e58e50bc3b3f0be13a55afd49850a8dcce878130c"
+    },
+    {
+      "archivePath": "candidate04/INDEPENDENT-REVIEW-CONSOLIDATED.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\INDEPENDENT-REVIEW-CONSOLIDATED.md",
+      "match": true,
+      "sha256": "20b10bda26b7ee973ea6542237767fc78d302b24f99a25c6b2dad24c0663be12"
+    },
+    {
+      "archivePath": "candidate04/INDEPENDENT-REVIEW-FINAL.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\INDEPENDENT-REVIEW-FINAL.md",
+      "match": true,
+      "sha256": "ea8935b8f5a7fcd782de0d31d4c6bc04c2cf5a34f0e5fb712a0b70352a2ffec7"
+    },
+    {
+      "archivePath": "candidate04/INDEPENDENT-REVIEW.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\INDEPENDENT-REVIEW.md",
+      "match": true,
+      "sha256": "9733432d87ce0d7767fe2278eca3818f3395c73dccb28f938c2f92266bc41482"
+    },
+    {
+      "archivePath": "candidate04/offline.test.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\offline.test.mjs",
+      "match": true,
+      "sha256": "5c1550693d5e21e9a60b728e61a4a9ecd8e3b9205294ed12be59af56c113ff38"
+    },
+    {
+      "archivePath": "candidate04/operator.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\operator.mjs",
+      "match": true,
+      "sha256": "a07a15554fb5749ae9e6d94a27436fa1415def50a7f8cf8b52926bc90e4d048d"
+    },
+    {
+      "archivePath": "candidate04/package.json",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\package.json",
+      "match": true,
+      "sha256": "c6f06ed5aac6b6f2dbe6a0e60964581b8c58d9da2590fea5e458a7e6a2bb8ffd"
+    },
+    {
+      "archivePath": "candidate04/qualification/budget.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\budget.mjs",
+      "match": true,
+      "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+    },
+    {
+      "archivePath": "candidate04/qualification/constants.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\constants.mjs",
+      "match": true,
+      "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+    },
+    {
+      "archivePath": "candidate04/qualification/gates.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\gates.mjs",
+      "match": true,
+      "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+    },
+    {
+      "archivePath": "candidate04/qualification/handler.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\handler.mjs",
+      "match": true,
+      "sha256": "334e2fbc52168cd6d79ba517c70292f31fe1103fc402ca0274ed1eba8c01f55f"
+    },
+    {
+      "archivePath": "candidate04/reference/app/api/internal/qualification/read-only/route.ts",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\app\\api\\internal\\qualification\\read-only\\route.ts",
+      "match": true,
+      "sha256": "4cdc11a1139f54a2f3a9f0ef08bfbb4d11b82837225a9b96f682e503668d5581"
+    },
+    {
+      "archivePath": "candidate04/reference/qualification/budget.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\qualification\\budget.mjs",
+      "match": true,
+      "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+    },
+    {
+      "archivePath": "candidate04/reference/qualification/constants.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\qualification\\constants.mjs",
+      "match": true,
+      "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+    },
+    {
+      "archivePath": "candidate04/reference/qualification/gates.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\qualification\\gates.mjs",
+      "match": true,
+      "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+    },
+    {
+      "archivePath": "candidate04/reference/qualification/handler.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\qualification\\handler.mjs",
+      "match": true,
+      "sha256": "00be0e189df2a35190654826beb687aa3c217a80a8af09c4350e0f369c5c7d22"
+    },
+    {
+      "archivePath": "candidate04/replay.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\replay.mjs",
+      "match": true,
+      "sha256": "4e669021540e99f2851d1bccceb3b9bc066c38aecd948723367a4cc7834653d2"
+    },
+    {
+      "archivePath": "candidate04/REVIEW-DISPOSITION.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\REVIEW-DISPOSITION.md",
+      "match": true,
+      "sha256": "d74e1dc3b33873cb02067264afcdf2aa726c99231e0bef2e1ac84f695b4ae0d0"
+    },
+    {
+      "archivePath": "candidate04/review-regressions.test.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-regressions.test.mjs",
+      "match": true,
+      "sha256": "3d61866f6f9bccdb2cf22d3cc2273810a60aa6e29a7955c3c58f0be0872add30"
+    },
+    {
+      "archivePath": "candidate04/review-round1-source/adapters.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\adapters.mjs",
+      "match": true,
+      "sha256": "69a6e05245ce7c102dc5dd9ea73bbd7ca02298c94c56db6d6d6ed59bef5d997f"
+    },
+    {
+      "archivePath": "candidate04/review-round1-source/offline.test.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\offline.test.mjs",
+      "match": true,
+      "sha256": "5c1550693d5e21e9a60b728e61a4a9ecd8e3b9205294ed12be59af56c113ff38"
+    },
+    {
+      "archivePath": "candidate04/review-round1-source/operator.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\operator.mjs",
+      "match": true,
+      "sha256": "339ff118dc2d44196c1bba4b45a8776b64dddd965740ba843a27678547effc53"
+    },
+    {
+      "archivePath": "candidate04/review-round1-source/qualification/handler.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\qualification\\handler.mjs",
+      "match": true,
+      "sha256": "e8f358805bfdea89e34c751dcf9c32dc65f208813cd411fc0d61b0fc662cc04c"
+    },
+    {
+      "archivePath": "candidate04/review-round1-source/replay.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\replay.mjs",
+      "match": true,
+      "sha256": "de11dbf6a823c10b81faabf0d5e2ea7932f861ce12b7e5112fd7a51451563bd1"
+    },
+    {
+      "archivePath": "candidate04/review-round1-source/route.ts",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\route.ts",
+      "match": true,
+      "sha256": "64f594fed1a2eb7a25044f03b323bc9113c110fa2bc8a22696dabd903dcb7d74"
+    },
+    {
+      "archivePath": "candidate04/review-round2-source/operator.mjs",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round2-source\\operator.mjs",
+      "match": true,
+      "sha256": "dfe15cdffbd037fe7d459a7c5f40b2e52b4f55cbfa709ffdb99001c149bd118e"
+    },
+    {
+      "archivePath": "candidate04/review-round2-source/route.ts",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round2-source\\route.ts",
+      "match": true,
+      "sha256": "b47936c5c0264ae0043190115ceb2d7f513c82386a8475d86e7cb7b224ae51c0"
+    },
+    {
+      "archivePath": "candidate04/route.ts",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\route.ts",
+      "match": true,
+      "sha256": "4088d405f15c47d926bb9a9ae2b378e193f638bf86c8f66e4b77b1f4f5b47f81"
+    },
+    {
+      "archivePath": "candidate04/SCOPE.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\SCOPE.md",
+      "match": true,
+      "sha256": "3072d09c6c8510bd55324a150c9ece288c0ff4f14e6a0f31834d56a2fc5f7874"
+    },
+    {
+      "archivePath": "candidate04/SERVICE-INSTALLATION-SPEC.md",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\SERVICE-INSTALLATION-SPEC.md",
+      "match": true,
+      "sha256": "fe33ef94e3888ed1d61d51d75a9fc0ddbd0a5a537bfd85576ce397517be17595"
+    },
+    {
+      "archivePath": "candidate04/SOURCE-MANIFEST.json",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\SOURCE-MANIFEST.json",
+      "match": true,
+      "sha256": "b0b1f20ce9f3ffb0e2f70463f44d2aaed0556fc739f85dc2622b873ae8fa1b09"
+    },
+    {
+      "archivePath": "candidate04/SOURCE-REFERENCES.json",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\SOURCE-REFERENCES.json",
+      "match": true,
+      "sha256": "ab15f9bde96b5caf5271c2ddc4927e907468b75918e1ef03a27d2247f0a53907"
+    },
+    {
+      "archivePath": "candidate04/UPLOAD-MANIFEST.json",
+      "localPath": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\UPLOAD-MANIFEST.json",
+      "match": false,
+      "sha256": "cb26209b0165f0af919055c20e13e472438dee7c16a04b35f59594b2125ceaa6"
+    }
+  ],
+  "payloadFiles": 40,
+  "allPayloadMatch": true,
+  "wrapperNote": "UPLOAD-MANIFEST.json is a GitHub packaging wrapper absent from local original; preserved inside exact archive, not an implementation mismatch"
+}

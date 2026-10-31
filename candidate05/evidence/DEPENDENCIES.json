@@ -1,0 +1,35 @@
+{
+  "node": "v24.18.0",
+  "packages": [
+    {
+      "name": "next",
+      "path": "D:/OpenClaw-workspace/recovery/mcvplus-c5-eb71ec9/node_modules/next/package.json",
+      "version": "15.5.15",
+      "sha256": "7081bb3659c70ddd75fc089d0e4f34850736d825e9eec26990ab5be0ecf9d3f0"
+    },
+    {
+      "name": "firebase-admin",
+      "path": "D:/OpenClaw-workspace/recovery/mcvplus-c5-eb71ec9/node_modules/firebase-admin/package.json",
+      "version": "14.2.0",
+      "sha256": "8cf58a705941f69f8b5c5b4508071e3359954eafd8314567b44cb98f234e2357"
+    },
+    {
+      "name": "typescript",
+      "path": "D:/OpenClaw-workspace/recovery/mcvplus-c5-eb71ec9/node_modules/typescript/package.json",
+      "version": "5.9.3",
+      "sha256": "822ef7ca6452205657b6288b066481ecf508bfbf43455d715cf7d3ec457561e6"
+    },
+    {
+      "name": "pg",
+      "path": "D:/OpenClaw-workspace/recovery/firebase-cli-cache-rc502/_npx/7750544ccf494d8b/node_modules/pg/package.json",
+      "version": "8.23.1",
+      "sha256": "b1e53333a3d0c2c47c49a5cb919d221135dc03145df740925b899bc2baacc435"
+    },
+    {
+      "name": "firebase-tools",
+      "path": "D:/OpenClaw-workspace/recovery/firebase-cli-cache-rc502/_npx/7750544ccf494d8b/node_modules/firebase-tools/package.json",
+      "version": "15.33.0",
+      "sha256": "bdc585a7498b51fe16e7af54882c3113208f23a775e9d1a37f9dc3b51539a8c8"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "time": "2026-10-31T21:38:56.238Z",
+  "mode": "read-only metadata; no qualification data reads/writes",
+  "requests": [
+    {
+      "label": "Existing qualification-project databases",
+      "method": "GET",
+      "status": 200,
+      "result": {
+        "databases": [
+          {
+            "name": "projects/mcv-plus-phase-2-test/databases/(default)",
+            "locationId": "nam5",
+            "type": "FIRESTORE_NATIVE",
+            "databaseEdition": "STANDARD",
+            "freeTier": true,
+            "deleteProtectionState": "DELETE_PROTECTION_ENABLED",
+            "appEngineIntegrationMode": "DISABLED"
+          }
+        ],
+        "nextPageTokenPresent": false
+      }
+    },
+    {
+      "label": "Project identity and parent",
+      "method": "GET",
+      "status": 200,
+      "result": {
+        "projectId": "mcv-plus-phase-2-test",
+        "projectNumber": "688064430439",
+        "lifecycleState": "ACTIVE"
+      }
+    },
+    {
+      "label": "Billing linkage metadata",
+      "method": "GET",
+      "status": 403,
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "reason": [
+          "SERVICE_DISABLED"
+        ]
+      }
+    },
+    {
+      "label": "Project IAM bindings metadata",
+      "method": "POST",
+      "status": 403,
+      "error": {
+        "status": "PERMISSION_DENIED"
+      }
+    },
+    {
+      "label": "Database IAM policy projects/mcv-plus-phase-2-test/databases/(default)",
+      "method": "GET",
+      "status": "unavailable"
+    }
+  ],
+  "project": "mcv-plus-phase-2-test"
+}

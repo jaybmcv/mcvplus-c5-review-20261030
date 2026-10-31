@@ -1,0 +1,19 @@
+{"label": "review-closures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/review-closures.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T220614007851Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\review-closures-20261031T220614007851Z.txt"}
+✔ pinned real v1 initialize and GAX createStub exercise fixed universe/auth with an inert protobuf stub (342.2736ms)
+✔ delayed real-interface initialization cannot queue a getDocument after the absolute deadline (144.9901ms)
+✔ bounded HTTP response retains only validated actual identities and correlation (2.2186ms)
+✔ incoming503 plus independently correlated provider401 is contained; generic503 or wrong correlation HALTs (2023.6198ms)
+✔ Cloudflare denial uses its actual upstream contract and records downstream as not dispatched (793.4184ms)
+✔ contradictory all-undispatched and missing successful branches fail closed; valid prefix is durable (776.5832ms)
+✔ positive warm booleans cannot override an actual changed server parent identity (428.182ms)
+✔ D12 required backend identity function is in the exact B6 allowlist (0.3451ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4674.0341
+
+RESULT {"label": "review-closures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/review-closures.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T220614007851Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\review-closures-20261031T220614007851Z.txt", "pid": 64616, "exitCode": 0}

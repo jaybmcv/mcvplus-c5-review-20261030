@@ -1,0 +1,337 @@
+{
+  "candidate": "Candidate05",
+  "baselineCommit": "0f9a6c12c05887cb090e76964e1ca5b15438ac9d",
+  "purpose": "exact disabled source/spec reviewed; not Setup or execution authorization",
+  "files": [
+    {
+      "path": "CREDENTIAL-BOUNDARIES.md",
+      "bytes": 4554,
+      "sha256": "fc929de4c55928c0917b83d9bd75e6df4ecca2a116a8b6ac06b44a6e1a8d8eea"
+    },
+    {
+      "path": "REPLAY-DEPENDENCY.md",
+      "bytes": 3901,
+      "sha256": "9035fa8e35fc84663f047de3852c8c146e61c7539022253a94f6450cfeeb4806"
+    },
+    {
+      "path": "SETUP-PACKET.md",
+      "bytes": 12916,
+      "sha256": "160327ec7641ca745214a33cbfc0732c14bc3085b7fa9d683611363a7febf662"
+    },
+    {
+      "path": "app/SOURCE-MANIFEST.json",
+      "bytes": 4833,
+      "sha256": "bccb3a154bae9914d49727bdb85b3b9ac758448bba0d0997d80ba561efc8e8c9"
+    },
+    {
+      "path": "app/app/api/internal/qualification/read-only/route.ts",
+      "bytes": 1966,
+      "sha256": "acdca2ec46dce4df531f09bbed50bfd690a2dd3284e34aff55fffaa672de8f6a"
+    },
+    {
+      "path": "app/config/build-binding.json",
+      "bytes": 5169,
+      "sha256": "fc9602c3425a34d9007613e60f35fc47f7c67a51e8df75c6390523e872259200"
+    },
+    {
+      "path": "app/config/provider-binding.json",
+      "bytes": 330,
+      "sha256": "0f75e9532aee9471e72c5b75f0bea9c28c15a96c6f79cfd0e6471e68bd860445"
+    },
+    {
+      "path": "app/config/replay-binding.json",
+      "bytes": 319,
+      "sha256": "c7dedd55e2e74cd75f0692f623416ec6c59328ec41b2f2aa87a392a0de700782"
+    },
+    {
+      "path": "app/config/run-binding.json",
+      "bytes": 730,
+      "sha256": "cd96c6c9af782813cd8e5823f80a3804dc4bbda193b8ba44a3ffae46a47f7134"
+    },
+    {
+      "path": "app/config/source-pins.json",
+      "bytes": 445,
+      "sha256": "f9859d922c169e4f1b4f5562d79a24cfe940eb796e865981de9bd8eb5c921a20"
+    },
+    {
+      "path": "app/config/worker-runtime-files.json",
+      "bytes": 51152,
+      "sha256": "b558f727b2d570f381a8a21d8321f12ca0fbb2b413484bd1558815624b83567e"
+    },
+    {
+      "path": "app/lib/purchases/reservation-v2.ts",
+      "bytes": 140,
+      "sha256": "a58189985a8014b5efb07f639ac039d18ce31c22606b7d5533a56d224f16e38d"
+    },
+    {
+      "path": "app/lib/server/purchases/creamery-reservations.ts",
+      "bytes": 240,
+      "sha256": "25877f84e63ee5658a128d38d76b62b4abd14293f6bd9879a7dfb34bfa87c5a6"
+    },
+    {
+      "path": "app/lib/server/purchases/creamery-transport.ts",
+      "bytes": 4517,
+      "sha256": "d25932303f23541f0099bdacabb22973d453c75212c9212d81ec1181d0a2d734"
+    },
+    {
+      "path": "app/middleware.ts",
+      "bytes": 430,
+      "sha256": "161ca452b002c08f8a36419957aff2ff238e315600a763167e4447c6ffb7f281"
+    },
+    {
+      "path": "app/next-env.d.ts",
+      "bytes": 268,
+      "sha256": "f4e8976c19fc926644d72610bf1058bd6bf52add97e46a02bc0b912a751625c0"
+    },
+    {
+      "path": "app/next.config.mjs",
+      "bytes": 676,
+      "sha256": "3a9124d54741146d602ac7d12ef0c2b08a18d2e6a0ac0c0017af342b1c8f2455"
+    },
+    {
+      "path": "app/package-lock.json",
+      "bytes": 195026,
+      "sha256": "4feeb2e8170d26fdea56d29d5662d370df557db64a2990e63b4375bc133631a2"
+    },
+    {
+      "path": "app/package.json",
+      "bytes": 601,
+      "sha256": "806267f78cee56ef0878a68a7ae2dbf9be195ed2da57298006a37f77766d7c1e"
+    },
+    {
+      "path": "app/qualification/budget.mjs",
+      "bytes": 356,
+      "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+    },
+    {
+      "path": "app/qualification/constants.mjs",
+      "bytes": 568,
+      "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+    },
+    {
+      "path": "app/qualification/execute.mjs",
+      "bytes": 591,
+      "sha256": "b0e7db6366ab104b4deb90421e41af5ceb837e490f8dce63d8fbada0fd45c81e"
+    },
+    {
+      "path": "app/qualification/gates.mjs",
+      "bytes": 3021,
+      "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+    },
+    {
+      "path": "app/qualification/handler.d.mts",
+      "bytes": 818,
+      "sha256": "ac722b3b94fbeff4388ca021fb0148d02f5f04b19be46adf9990999f2fe686a2"
+    },
+    {
+      "path": "app/qualification/handler.mjs",
+      "bytes": 7070,
+      "sha256": "9e65fad0b3aaea25ef006bfb6e537b5c8575c37ca4b48e0a040243d94e0072f1"
+    },
+    {
+      "path": "app/qualification/ledger.mjs",
+      "bytes": 2158,
+      "sha256": "fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73"
+    },
+    {
+      "path": "app/qualification/native-http.mjs",
+      "bytes": 2475,
+      "sha256": "8a09ed4735eb79f61b3b513fdf8b6f3fda86cbb8472b897f434ce64ab1c93f54"
+    },
+    {
+      "path": "app/qualification/replay.d.mts",
+      "bytes": 325,
+      "sha256": "82d1e16bfb4eb3a654b1ce6f7f3efb067ec892290278df8ec95e190788636cf0"
+    },
+    {
+      "path": "app/qualification/replay.mjs",
+      "bytes": 3948,
+      "sha256": "36d81cbe037eed64b14284a3d4af9cc26024017df9d3fccd9f8b178f3da18b02"
+    },
+    {
+      "path": "app/qualification/sdk.mjs",
+      "bytes": 4622,
+      "sha256": "f5d3fa3e568d38784a5c3c332a3ee251963cd0af9b35294da72a75487303968f"
+    },
+    {
+      "path": "app/qualification/worker.mjs",
+      "bytes": 2493,
+      "sha256": "33e5c12ea2b005d5eb96bccbd7258315cd5cc315413d2fe7fdb99bb2dcbc8797"
+    },
+    {
+      "path": "app/tsconfig.json",
+      "bytes": 665,
+      "sha256": "db63cf18a76b0b7f62ece1a47179df74473c1f1b919bee2feaef90bea1a547aa"
+    },
+    {
+      "path": "build_identity.py",
+      "bytes": 1065,
+      "sha256": "8ee47bb6ddf4bb88812298261a7054956ad8855fd4cb83de4b9411b83333b162"
+    },
+    {
+      "path": "driver/accounting.mjs",
+      "bytes": 6483,
+      "sha256": "a25cc64aab1b55e19d7ec5e0090f0ae75dbe1de4679cc68fc3dc3e15313630bd"
+    },
+    {
+      "path": "driver/campaign.mjs",
+      "bytes": 9704,
+      "sha256": "770fdad4cd2625f543fbb25e0b5da18141bc33fcfbb440ba251fc8edd9351a41"
+    },
+    {
+      "path": "driver/cases.mjs",
+      "bytes": 6114,
+      "sha256": "57f10a14542171a3763ad3d7d36161f315381b9135ace75193fca23f763a33ad"
+    },
+    {
+      "path": "driver/clients.mjs",
+      "bytes": 14175,
+      "sha256": "0b54238bda88b58097c2a9506e5b29ada64cd1dd59d6e63f1f4da9c6169bf7d7"
+    },
+    {
+      "path": "driver/evidence.mjs",
+      "bytes": 5550,
+      "sha256": "da24b01f73f30d0a2beabdba41d8b2a12ff96fe730f6f87afbd3844e172bbd5b"
+    },
+    {
+      "path": "driver/identities.mjs",
+      "bytes": 1931,
+      "sha256": "500de8c153b16e2c68f66d4bb0f97ad56219f1dd4d9c37bcbb1107698ec51ca1"
+    },
+    {
+      "path": "driver/package.json",
+      "bytes": 248,
+      "sha256": "51ab117982d74919ca1e657f09bf6143af20a6405e70688424ad3af6bdc8202e"
+    },
+    {
+      "path": "driver/provider-contract.mjs",
+      "bytes": 8932,
+      "sha256": "c1aade362e363c1f4b7b681d577879ade45c5e6be9a241720e22e02a8f07edd2"
+    },
+    {
+      "path": "local-service/README.md",
+      "bytes": 1329,
+      "sha256": "735ff8017eb89913e79c7bd6dfd1ca726bce4b14d2fc0b597e2274790ba77849"
+    },
+    {
+      "path": "local-service/SOURCE-MANIFEST.json",
+      "bytes": 2040,
+      "sha256": "c0107f1fcfd096c735e886fd1bbced395aa0f9d8dad5d45dece19e16b151e194"
+    },
+    {
+      "path": "local-service/config/provider-binding.json",
+      "bytes": 431,
+      "sha256": "b3e7efe95ed4cfc16d35643f31a9cf623d26c4a20071bbe67fcd26ab195bdc4c"
+    },
+    {
+      "path": "local-service/provider/entry.mjs",
+      "bytes": 1831,
+      "sha256": "b4f6ca08902a6fe405a770a4559cf65c3dde15a8ce525892c909bae3f6053627"
+    },
+    {
+      "path": "local-service/provider/package-lock.json",
+      "bytes": 126854,
+      "sha256": "434d46a2910a684dc9f9bde28e52fb9913d9c89fe8069813ef13f6ab3c2ede9d"
+    },
+    {
+      "path": "local-service/provider/package.json",
+      "bytes": 226,
+      "sha256": "87d5f981663e6d40061b64df2a34dd88e23b30eea5edd9ae5940a6bfdfa7fa44"
+    },
+    {
+      "path": "local-service/provider/readonly-db.mjs",
+      "bytes": 8925,
+      "sha256": "c9a11c62117a631b88b0088182127b42337708da9d2ec102e86b1afc2a747e47"
+    },
+    {
+      "path": "local-service/provider/server.mjs",
+      "bytes": 3057,
+      "sha256": "e316d53716c7c2a68ef2b966a3f13d56086761e016957be3e43882e5bc3039e2"
+    },
+    {
+      "path": "local-service/qualification/budget.mjs",
+      "bytes": 356,
+      "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+    },
+    {
+      "path": "local-service/qualification/constants.mjs",
+      "bytes": 568,
+      "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+    },
+    {
+      "path": "local-service/qualification/gates.mjs",
+      "bytes": 3021,
+      "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+    },
+    {
+      "path": "local-service/qualification/ledger.mjs",
+      "bytes": 2158,
+      "sha256": "fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73"
+    },
+    {
+      "path": "run-local.py",
+      "bytes": 2191,
+      "sha256": "0292ac60bda6ed1f394eea987fec12889f6ff1cc20eab389dc54ee0ba7c6428c"
+    },
+    {
+      "path": "seal-app.py",
+      "bytes": 2400,
+      "sha256": "37e1ce611f6751e02351352b09a0811567bb1190adb4ad02a4af4a0c6be12c16"
+    },
+    {
+      "path": "seal-delivery.py",
+      "bytes": 4050,
+      "sha256": "da91d3156025f7b48ffbc67e5e23cf7ff2d3c72daf4c4a4110c52866635d71b5"
+    },
+    {
+      "path": "test-build-identity.py",
+      "bytes": 1266,
+      "sha256": "c85e83511aef5664db188215f3d9211eb4e1f35561819b82d9ad7e33dd193e43"
+    },
+    {
+      "path": "tests/app-integration.test.mjs",
+      "bytes": 3112,
+      "sha256": "42a4bcbf5ace3247e41db869ffbd6d9f658a489bc5fb97f1f7745d256ea95e2b"
+    },
+    {
+      "path": "tests/built-http.mjs",
+      "bytes": 3385,
+      "sha256": "5af6ce2076492a0ec3b46bf2e42011cfcb6e3eb6ff7e70389392912851c81782"
+    },
+    {
+      "path": "tests/campaign-fixture.mjs",
+      "bytes": 3977,
+      "sha256": "4a990ade2214781099bf0d4f5feccfe3d8dac99c26521b08f466fd527024c918"
+    },
+    {
+      "path": "tests/cleanup-check.mjs",
+      "bytes": 1390,
+      "sha256": "c81933e59dcddb304333739e635cecb84e6b3322801fa5ccbea240a7044a0cb0"
+    },
+    {
+      "path": "tests/named-campaign.test.mjs",
+      "bytes": 14296,
+      "sha256": "d137ddde6edb431748fbc4354002696f36ce2f22785aa9b3d10e73084463db03"
+    },
+    {
+      "path": "tests/provider-bundle.test.mjs",
+      "bytes": 3326,
+      "sha256": "d2f5ca344b766b3e9eb6a08e14aebfa274ec13b5a52600aa46642b70ee2f0bb7"
+    },
+    {
+      "path": "tests/real-gax-contract.test.mjs",
+      "bytes": 1273,
+      "sha256": "53acb2fb0543d2d7d66ad58ad14a1bd081617e78eea1cf3e5fa9d668c034c35a"
+    },
+    {
+      "path": "tests/review-closures.test.mjs",
+      "bytes": 8663,
+      "sha256": "4e9fb5c43d412495bcd1e9f949ec8140165142bf9c92ee9b7deecc991a0c5450"
+    },
+    {
+      "path": "verify-source-build.py",
+      "bytes": 3859,
+      "sha256": "aa6c68cf341e891867da26f0b322183f056001027d3241b5a52a350eab4f0b4c"
+    }
+  ]
+}

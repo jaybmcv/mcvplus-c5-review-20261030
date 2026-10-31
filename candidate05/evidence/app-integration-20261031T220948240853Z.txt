@@ -1,0 +1,17 @@
+{"label": "app-integration", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/app-integration.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T220948240853Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\app-integration-20261031T220948240853Z.txt"}
+✔ worker module import registers no IPC handlers or network initialization (38.2839ms)
+{"purpose":"configuration-denied children only; no SDK/data-plane calls","receipts":[{"pid":52068,"result":{"status":503,"code":"unavailable","workerInstance":"190f62e8-0327-4621-82de-39d8a981f189","workerInitializedAt":"2026-10-31T22:09:48.571Z","workerSequence":1,"sdkIdentity":null,"workerCollected":true,"cancellationAttempted":true,"terminationToCloseMs":11}},{"pid":24808,"result":{"status":503,"code":"unavailable","workerInstance":"4f209849-a977-43f7-9a48-5c0531e4918b","workerInitializedAt":"2026-10-31T22:09:48.712Z","workerSequence":1,"sdkIdentity":null,"workerCollected":true,"cancellationAttempted":true,"terminationToCloseMs":9}}]}
+✔ actual fresh worker children fail configuration before network and are collected (298.3502ms)
+✔ installed firebase-admin14.2 v1 accepts static auth facade without network initialization (333.2949ms)
+✔ installed explicit pg Client can be constructed and ended without connecting (18.2132ms)
+✔ replay target remains sealed UNBOUND; environment changes cannot choose a claim namespace (0.2667ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 814.3345
+
+RESULT {"label": "app-integration", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/app-integration.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T220948240853Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\app-integration-20261031T220948240853Z.txt", "pid": 40276, "exitCode": 0}

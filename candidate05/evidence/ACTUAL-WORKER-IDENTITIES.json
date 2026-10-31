@@ -1,0 +1,33 @@
+{
+  "purpose": "configuration-denied children only; no SDK/data-plane calls",
+  "receipts": [
+    {
+      "pid": 46828,
+      "result": {
+        "status": 503,
+        "code": "unavailable",
+        "workerInstance": "c9f80828-0b86-4f8b-a3a6-ce61b5f7a04e",
+        "workerInitializedAt": "2026-10-31T21:55:36.440Z",
+        "workerSequence": 1,
+        "sdkIdentity": null,
+        "workerCollected": true,
+        "cancellationAttempted": true,
+        "terminationToCloseMs": 9
+      }
+    },
+    {
+      "pid": 33484,
+      "result": {
+        "status": 503,
+        "code": "unavailable",
+        "workerInstance": "9574d7b0-1306-477f-adbe-53114da5b69a",
+        "workerInitializedAt": "2026-10-31T21:55:36.551Z",
+        "workerSequence": 1,
+        "sdkIdentity": null,
+        "workerCollected": true,
+        "cancellationAttempted": true,
+        "terminationToCloseMs": 9
+      }
+    }
+  ]
+}

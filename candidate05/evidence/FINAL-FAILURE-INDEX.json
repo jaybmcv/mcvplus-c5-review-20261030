@@ -1,0 +1,682 @@
+{
+  "failures": [
+    {
+      "label": "original22",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\copied-candidate04",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--test",
+        "offline.test.mjs",
+        "review-regressions.test.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214126037757Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\original22-20261031T214126037757Z.txt",
+      "pid": 59600,
+      "exitCode": 1
+    },
+    {
+      "label": "emulator-safety",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "scripts/run-purchase-emulator-runner-fixtures.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "FIRESTORE_EMULATOR_HOST",
+        "GCLOUD_PROJECT",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214154871295Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-safety-20261031T214154871295Z.txt",
+      "pid": 40424,
+      "exitCode": 1
+    },
+    {
+      "label": "next-build",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\app",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "node_modules/next/dist/bin/next",
+        "build"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214422140086Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\next-build-20261031T214422140086Z.txt",
+      "pid": 21524,
+      "exitCode": 1
+    },
+    {
+      "label": "emulator-safety",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "scripts/run-purchase-emulator-runner-fixtures.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "FIRESTORE_EMULATOR_HOST",
+        "GCLOUD_PROJECT",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214449358570Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-safety-20261031T214449358570Z.txt",
+      "pid": 25932,
+      "exitCode": 1
+    },
+    {
+      "label": "emulator-conformance",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--experimental-strip-types",
+        "scripts/run-purchase-emulators.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "FIRESTORE_EMULATOR_HOST",
+        "GCLOUD_PROJECT",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214526123552Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-conformance-20261031T214526123552Z.txt",
+      "pid": 12692,
+      "exitCode": 1
+    },
+    {
+      "label": "emulator-host-conformance",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--experimental-strip-types",
+        "scripts\\run-purchase-emulators.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "FIRESTORE_EMULATOR_HOST",
+        "GCLOUD_PROJECT",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214627946191Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-host-conformance-20261031T214627946191Z.txt",
+      "pid": 40196,
+      "exitCode": 1
+    },
+    {
+      "label": "host-next-build",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\app",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "node_modules\\next\\dist\\bin\\next",
+        "build"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214716407282Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\host-next-build-20261031T214716407282Z.txt",
+      "pid": 59096,
+      "exitCode": 1
+    },
+    {
+      "label": "emulator-conformance",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--experimental-strip-types",
+        "scripts/run-purchase-emulators.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "FIRESTORE_EMULATOR_HOST",
+        "GCLOUD_PROJECT",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214556119202Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-conformance-20261031T214556119202Z.txt",
+      "pid": 69348,
+      "exitCode": 1
+    },
+    {
+      "label": "next-build",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-build-20261031-r1",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "node_modules/next/dist/bin/next",
+        "build"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214859043396Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\next-build-20261031T214859043396Z.txt",
+      "pid": 65956,
+      "exitCode": 1
+    },
+    {
+      "label": "next-build",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-build-20261031-r2",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "node_modules/next/dist/bin/next",
+        "build"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T214933822274Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\next-build-20261031T214933822274Z.txt",
+      "pid": 26428,
+      "exitCode": 1
+    },
+    {
+      "label": "app-integration",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-build-20261031-r2",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--conditions=react-server",
+        "--experimental-strip-types",
+        "--test",
+        "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\tests\\app-integration.test.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "startedAt": "20261031T215009297852Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\app-integration-20261031T215009297852Z.txt",
+      "pid": 21112,
+      "exitCode": 1
+    },
+    {
+      "label": "built-http",
+      "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-build-20261031-r3",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\tests\\built-http.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "explicitEnvironment": {
+        "NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main",
+        "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "CI": "true"
+      },
+      "startedAt": "20261031T215247375967Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\built-http-20261031T215247375967Z.txt",
+      "pid": 80240,
+      "exitCode": 1
+    },
+    {
+      "label": "named-fixtures",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--test",
+        "tests/named-campaign.test.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "explicitEnvironment": {
+        "NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main",
+        "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "CI": "true"
+      },
+      "startedAt": "20261031T215247274294Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\named-fixtures-20261031T215247274294Z.txt",
+      "pid": 71716,
+      "exitCode": 1
+    },
+    {
+      "label": "named-fixtures",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--test",
+        "tests/named-campaign.test.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "explicitEnvironment": {
+        "NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main",
+        "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "CI": "true"
+      },
+      "startedAt": "20261031T215515268664Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\named-fixtures-20261031T215515268664Z.txt",
+      "pid": 61576,
+      "exitCode": 1
+    },
+    {
+      "label": "real-gax-negative-control",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--test",
+        "tests\\real-gax-contract.test.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "explicitEnvironment": {
+        "NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main",
+        "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "CI": "true"
+      },
+      "startedAt": "20261031T215613520951Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\real-gax-negative-control-20261031T215613520951Z.txt",
+      "pid": 30332,
+      "exitCode": 1
+    },
+    {
+      "label": "real-gax-negative-control",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--test",
+        "tests\\real-gax-contract.test.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "explicitEnvironment": {
+        "NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main",
+        "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "CI": "true"
+      },
+      "startedAt": "20261031T215648905178Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\real-gax-negative-control-20261031T215648905178Z.txt",
+      "pid": 45920,
+      "exitCode": 1
+    },
+    {
+      "label": "named-fixtures",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--test",
+        "tests/named-campaign.test.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "explicitEnvironment": {
+        "NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main",
+        "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "CI": "true"
+      },
+      "startedAt": "20261031T220352162077Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\named-fixtures-20261031T220352162077Z.txt",
+      "pid": 56636,
+      "exitCode": 1
+    },
+    {
+      "label": "final-fixtures",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031",
+      "command": [
+        "C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe",
+        "--conditions=react-server",
+        "--experimental-strip-types",
+        "--test",
+        "tests/named-campaign.test.mjs",
+        "tests/review-closures.test.mjs"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "explicitEnvironment": {
+        "NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main",
+        "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "CI": "true"
+      },
+      "startedAt": "20261031T220852611385Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\final-fixtures-20261031T220852611385Z.txt",
+      "pid": 2732,
+      "exitCode": 1
+    },
+    {
+      "timeoutSeconds": 1,
+      "label": "wrapper-timeout-da43af70-3cb9-4fd2-89be-b4fa4239a443",
+      "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\",
+      "command": [
+        "python",
+        "tests/wrapper-timeout-fixture.py"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "CI",
+        "COMSPEC",
+        "FIREBASE_CLI_DISABLE_UPDATE_CHECK",
+        "LOCALAPPDATA",
+        "METADATA_SERVER_DETECTION",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_OPTIONS",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "explicitEnvironment": {
+        "NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main",
+        "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp",
+        "CI": "true"
+      },
+      "startedAt": "20261031T222001806606Z",
+      "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\wrapper-timeout-da43af70-3cb9-4fd2-89be-b4fa4239a443-20261031T222001806606Z.txt",
+      "pid": 5652,
+      "timedOut": true,
+      "exitCode": 124,
+      "cleanup": {
+        "ownedRootPid": 5652,
+        "ownedRootCollected": true,
+        "treeTerminationRequested": true,
+        "treeTerminationReportedSuccess": true,
+        "treeTerminationExitCode": 0,
+        "limit": "tree termination acknowledgement is not an independent descendant census; retain owned-command receipts and verify their PIDs separately"
+      }
+    }
+  ],
+  "note": "All original logs retained; includes intentional timeout124 negative control. Prior FAILURE-INDEX is an intermediate historical receipt."
+}

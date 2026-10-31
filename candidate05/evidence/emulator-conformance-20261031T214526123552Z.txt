@@ -1,0 +1,29 @@
+{"label": "emulator-conformance", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--experimental-strip-types", "scripts/run-purchase-emulators.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "FIRESTORE_EMULATOR_HOST", "GCLOUD_PROJECT", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214526123552Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-conformance-20261031T214526123552Z.txt"}
+(node:12692) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:internal/modules/cjs/loader:1517
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module 'firebase-tools/package.json'
+Require stack:
+- D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\scripts\run-wallet-emulators.mjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at require.resolve (node:internal/modules/helpers:171:31)
+    at resolveFirebaseEntry (file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-wallet-emulators.mjs:17:28)
+    at runPurchaseEmulators (file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulators.mjs:225:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulators.mjs:251:10 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-emulators.mjs'
+  ]
+}
+
+Node.js v24.18.0
+
+RESULT {"label": "emulator-conformance", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--experimental-strip-types", "scripts/run-purchase-emulators.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "FIRESTORE_EMULATOR_HOST", "GCLOUD_PROJECT", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214526123552Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-conformance-20261031T214526123552Z.txt", "pid": 12692, "exitCode": 1}

@@ -1,0 +1,40 @@
+{"label": "named-fixtures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "tests/named-campaign.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T215247274294Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\named-fixtures-20261031T215247274294Z.txt"}
+✔ authoritative revised mapping: 42+6, exact B7 operations, schedules and fixed new target (1.4094ms)
+✖ all 48 named cases dispatch in synthetic scope with fixed reserved slots (4385.8343ms)
+✔ unsupported Access/permission contracts and fault capabilities remain BLOCKED without spending (70.046ms)
+✔ B7 seven separate slots; login BEGIN one negative ROLLBACK all counted before entry (785.5782ms)
+✔ B7 unexpected success still rolls back and durably HALTs without refund (148.1119ms)
+✔ B7 cleanup error remains unknown, consumed and halted (193.9518ms)
+✔ B7 omitted rollback cannot be reported complete (131.6196ms)
+✔ local socket/child exit cannot substitute for independent cessation (663.3275ms)
+✔ mutable input and backend replacement cannot change expected status or contract (116.578ms)
+✔ propagation success is observed, not revocation pass; horizon success halts (904.4294ms)
+✔ revocation baselines and checkpoint timing are mandatory and denial skips future checkpoints (709.3024ms)
+✔ pg Client is bounded, fixed-target and one-connect only; query authority refused (0.7896ms)
+✔ failed pg connect cannot reconnect and old-password login reports only expected SQLSTATE (0.2376ms)
+✔ SDK retains issued token without refresh and refuses expiry despite caller mutation (1.1242ms)
+✔ fresh v1 client per worker, retry:null and no transparent retries; retained probe reuses exact client (1.6863ms)
+✔ HTTPS redirect is an outcome, zero follow-ups/resends; credential allowlist and binding enforced (0.725ms)
+✔ C failure with exact status still needs independent timing and no late continuation (268.829ms)
+✔ cold remains UNVERIFIED without platform evidence; warm sequence mismatch HALTs (575.299ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 17
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9069.6134
+
+✖ failing tests:
+
+test at tests\named-campaign.test.mjs:27:1
+✖ all 48 named cases dispatch in synthetic scope with fixed reserved slots (4385.8343ms)
+  Error: consumed; HALTED; no automatic retry or recovery
+      at Campaign.dispatch (file:///D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/driver/accounting.mjs:67:10)
+      at async NamedCampaign.dispatch (file:///D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/driver/campaign.mjs:78:16)
+      at async TestContext.<anonymous> (file:///D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/tests/named-campaign.test.mjs:30:96)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+
+RESULT {"label": "named-fixtures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--test", "tests/named-campaign.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T215247274294Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\named-fixtures-20261031T215247274294Z.txt", "pid": 71716, "exitCode": 1}

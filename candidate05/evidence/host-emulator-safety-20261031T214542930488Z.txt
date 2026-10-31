@@ -1,0 +1,93 @@
+{"label": "host-emulator-safety", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "scripts\\run-purchase-emulator-runner-fixtures.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214542930488Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\host-emulator-safety-20261031T214542930488Z.txt"}
+(node:79884) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31480) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle success: descendant reaped; unrelated process preserved
+(node:52480) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle success-no-argument: descendant reaped; unrelated process preserved
+(node:44204) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Expected warning-only stderr
+PASS runner lifecycle warning-only: descendant reaped; unrelated process preserved
+(node:53688) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle explicit-undefined: descendant reaped; unrelated process preserved
+(node:58748) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle inherited-failure: descendant reaped; unrelated process preserved
+(node:25644) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle inherited-status-change: descendant reaped; unrelated process preserved
+(node:66912) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle test-child-failure: descendant reaped; unrelated process preserved
+(node:58984) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle startup-failure: descendant reaped; unrelated process preserved
+(node:79528) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Error: Injected startup failure
+    at Object.<anonymous> (D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-runner-fixtures-NR35NT\fake cli startup-throw.cjs:11:43)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14)
+    at Object..js (node:internal/modules/cjs/loader:2002:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+    at bootstrapCli (file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulators.mjs:182:33)
+    at file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulators.mjs:250:5
+PASS runner lifecycle startup-throw: descendant reaped; unrelated process preserved
+(node:75836) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle startup-timeout: descendant reaped; unrelated process preserved
+(node:33236) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle overall-timeout: descendant reaped; unrelated process preserved
+(node:21712) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS runner lifecycle interruption: descendant reaped; unrelated process preserved
+PASS runner ownership missing-ack: incomplete cleanup rejected; diagnostics retained; unrelated process preserved
+Candidate05: diagnostics retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-emulator-fixture-PZQrB9
+PASS runner ownership cleanup-failure: incomplete cleanup rejected; diagnostics retained; unrelated process preserved
+Candidate05: diagnostics retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-emulator-fixture-6sLGPQ
+PASS runner ownership unresponsive: incomplete cleanup rejected; diagnostics retained; unrelated process preserved
+Candidate05: diagnostics retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-emulator-fixture-A1MZ9q
+PASS runner ownership abrupt-grandchild: incomplete cleanup rejected; diagnostics retained; unrelated process preserved
+Candidate05: diagnostics retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-emulator-fixture-lX3asD
+PASS controlled POSIX signal failure: incomplete classification and diagnostics retention
+Candidate05: diagnostics retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-emulator-fixture-vDv82g
+PASS controlled POSIX confirmation failure: incomplete classification and diagnostics retention
+Candidate05: diagnostics retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-emulator-fixture-65wHA1
+Candidate05: lifecycle fixture evidence retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-runner-fixtures-NR35NT
+PASS purchase runner safety: 21 rejected environments; explicit CLI arguments; all four ports and lifecycle paths
+
+RESULT {"label": "host-emulator-safety", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "scripts\\run-purchase-emulator-runner-fixtures.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214542930488Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\host-emulator-safety-20261031T214542930488Z.txt", "pid": 79884, "exitCode": 0}

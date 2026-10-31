@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-10-31T21:52:47.418Z",
+  "port": 63618,
+  "checks": [],
+  "pid": 59080,
+  "status": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: owned built server readiness\n    at file:///D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/tests/built-http.mjs:12:224",
+  "childClose": {
+    "code": 1,
+    "signal": null
+  },
+  "processGone": true,
+  "listenerGone": true,
+  "completedAt": "2026-10-31T21:52:47.563Z"
+}

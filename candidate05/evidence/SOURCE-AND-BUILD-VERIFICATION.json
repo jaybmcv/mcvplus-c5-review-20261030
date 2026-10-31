@@ -1,0 +1,492 @@
+{
+  "timestamp": "2026-10-31T22:29:51.929946+00:00",
+  "buildId": "21731f14dec5805d720d0f6cff7853924781c8e9730da3a13f1d2e2dcda42de4",
+  "checks": [
+    {
+      "check": "source app/api/internal/qualification/read-only/route.ts",
+      "pass": true
+    },
+    {
+      "check": "built input app/api/internal/qualification/read-only/route.ts",
+      "pass": true
+    },
+    {
+      "check": "source config/build-binding.json",
+      "pass": true
+    },
+    {
+      "check": "built input config/build-binding.json",
+      "pass": true
+    },
+    {
+      "check": "source config/provider-binding.json",
+      "pass": true
+    },
+    {
+      "check": "built input config/provider-binding.json",
+      "pass": true
+    },
+    {
+      "check": "source config/replay-binding.json",
+      "pass": true
+    },
+    {
+      "check": "built input config/replay-binding.json",
+      "pass": true
+    },
+    {
+      "check": "source config/run-binding.json",
+      "pass": true
+    },
+    {
+      "check": "built input config/run-binding.json",
+      "pass": true
+    },
+    {
+      "check": "source config/source-pins.json",
+      "pass": true
+    },
+    {
+      "check": "built input config/source-pins.json",
+      "pass": true
+    },
+    {
+      "check": "source config/worker-runtime-files.json",
+      "pass": true
+    },
+    {
+      "check": "built input config/worker-runtime-files.json",
+      "pass": true
+    },
+    {
+      "check": "source lib/purchases/reservation-v2.ts",
+      "pass": true
+    },
+    {
+      "check": "built input lib/purchases/reservation-v2.ts",
+      "pass": true
+    },
+    {
+      "check": "source lib/server/purchases/creamery-reservations.ts",
+      "pass": true
+    },
+    {
+      "check": "built input lib/server/purchases/creamery-reservations.ts",
+      "pass": true
+    },
+    {
+      "check": "source lib/server/purchases/creamery-transport.ts",
+      "pass": true
+    },
+    {
+      "check": "built input lib/server/purchases/creamery-transport.ts",
+      "pass": true
+    },
+    {
+      "check": "source middleware.ts",
+      "pass": true
+    },
+    {
+      "check": "built input middleware.ts",
+      "pass": true
+    },
+    {
+      "check": "source next-env.d.ts",
+      "pass": true
+    },
+    {
+      "check": "built input next-env.d.ts",
+      "pass": true
+    },
+    {
+      "check": "source next.config.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input next.config.mjs",
+      "pass": true
+    },
+    {
+      "check": "source package-lock.json",
+      "pass": true
+    },
+    {
+      "check": "built input package-lock.json",
+      "pass": true
+    },
+    {
+      "check": "source package.json",
+      "pass": true
+    },
+    {
+      "check": "built input package.json",
+      "pass": true
+    },
+    {
+      "check": "source qualification/budget.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/budget.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/constants.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/constants.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/execute.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/execute.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/gates.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/gates.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/handler.d.mts",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/handler.d.mts",
+      "pass": true
+    },
+    {
+      "check": "source qualification/handler.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/handler.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/ledger.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/ledger.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/native-http.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/native-http.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/replay.d.mts",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/replay.d.mts",
+      "pass": true
+    },
+    {
+      "check": "source qualification/replay.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/replay.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/sdk.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/sdk.mjs",
+      "pass": true
+    },
+    {
+      "check": "source qualification/worker.mjs",
+      "pass": true
+    },
+    {
+      "check": "built input qualification/worker.mjs",
+      "pass": true
+    },
+    {
+      "check": "source tsconfig.json",
+      "pass": true
+    },
+    {
+      "check": "built input tsconfig.json",
+      "pass": true
+    },
+    {
+      "check": "actual immutable configuration included in payload identity",
+      "pass": true
+    },
+    {
+      "check": "canonical content build binding",
+      "pass": true
+    },
+    {
+      "check": "Next BUILD_ID equals sealed content identity",
+      "pass": true
+    },
+    {
+      "check": "permanent fence and empty public key",
+      "pass": true
+    },
+    {
+      "check": "original transport exact bytes",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\operator.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\adapters.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\replay.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\route.ts",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\offline.test.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\review-regressions.test.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\fixture-child.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\package.json",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\qualification\\budget.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\qualification\\constants.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\qualification\\gates.mjs",
+      "pass": true
+    },
+    {
+      "check": "unmodified copied Candidate04 copied-candidate04\\qualification\\handler.mjs",
+      "pass": true
+    },
+    {
+      "check": "only qualification application route",
+      "pass": true
+    },
+    {
+      "check": "traced qualification/worker.mjs",
+      "pass": true
+    },
+    {
+      "check": "traced qualification/handler.mjs",
+      "pass": true
+    },
+    {
+      "check": "traced qualification/replay.mjs",
+      "pass": true
+    },
+    {
+      "check": "traced qualification/sdk.mjs",
+      "pass": true
+    },
+    {
+      "check": "traced lib/server/purchases/creamery-transport.ts",
+      "pass": true
+    },
+    {
+      "check": "no traced purchases/composition",
+      "pass": true
+    },
+    {
+      "check": "no traced purchases/application",
+      "pass": true
+    },
+    {
+      "check": "no traced purchases/api-production",
+      "pass": true
+    },
+    {
+      "check": "no traced app/api/purchases",
+      "pass": true
+    },
+    {
+      "check": "no traced purchases/worker.ts",
+      "pass": true
+    },
+    {
+      "check": "no traced purchases/recovery.ts",
+      "pass": true
+    },
+    {
+      "check": "all syntax checks",
+      "pass": true
+    }
+  ],
+  "syntax": [
+    {
+      "path": "driver\\accounting.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "driver\\campaign.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "driver\\cases.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "driver\\clients.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "driver\\evidence.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "driver\\identities.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "driver\\provider-contract.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\budget.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\constants.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\execute.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\gates.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\handler.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\ledger.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\native-http.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\replay.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\sdk.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "app\\qualification\\worker.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\app-integration.test.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\built-http.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\campaign-fixture.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\cleanup-check.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\named-campaign.test.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\provider-bundle.test.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\real-gax-contract.test.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\replay-env-snapshot.test.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\review-closures.test.mjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "path": "tests\\wrapper-timeout.test.mjs",
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "appFiles": 28,
+  "traceFiles": 777,
+  "appPaths": {
+    "/api/internal/qualification/read-only/route": "app/api/internal/qualification/read-only/route.js"
+  }
+}

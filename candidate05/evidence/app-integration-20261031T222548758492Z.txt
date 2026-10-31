@@ -1,0 +1,17 @@
+{"timeoutSeconds": 540, "label": "app-integration", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/app-integration.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T222548758492Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\app-integration-20261031T222548758492Z.txt"}
+✔ worker module import registers no IPC handlers or network initialization (34.8403ms)
+{"purpose":"configuration-denied children only; no SDK/data-plane calls","receipts":[{"pid":43360,"result":{"status":503,"code":"unavailable","workerInstance":"98d23705-2634-420e-a730-0707528320cd","workerInitializedAt":"2026-10-31T22:25:49.057Z","workerSequence":1,"sdkIdentity":null,"workerCollected":true,"cancellationAttempted":true,"terminationToCloseMs":11}},{"pid":37896,"result":{"status":503,"code":"unavailable","workerInstance":"35777866-0f7d-410d-9154-8de9922bfa7a","workerInitializedAt":"2026-10-31T22:25:49.189Z","workerSequence":1,"sdkIdentity":null,"workerCollected":true,"cancellationAttempted":true,"terminationToCloseMs":11}}]}
+✔ actual fresh worker children fail configuration before network and are collected (276.8281ms)
+✔ installed firebase-admin14.2 v1 accepts static auth facade without network initialization (337.9053ms)
+✔ installed explicit pg Client can be constructed and ended without connecting (18.5389ms)
+✔ replay target remains sealed UNBOUND; environment changes cannot choose a claim namespace (0.3275ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 783.2746
+
+RESULT {"timeoutSeconds": 540, "label": "app-integration", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/app-integration.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T222548758492Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\app-integration-20261031T222548758492Z.txt", "pid": 62980, "exitCode": 0}

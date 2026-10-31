@@ -1,0 +1,57 @@
+{"label": "final-fixtures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/named-campaign.test.mjs", "tests/review-closures.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T220852611385Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\final-fixtures-20261031T220852611385Z.txt"}
+✔ authoritative revised mapping: 42+6, exact B7 operations, schedules and fixed new target (1.6685ms)
+✔ full named campaign stops denied checkpoints and preserves fixed reserved slots (13675.2913ms)
+✔ unsupported Access/permission contracts and fault capabilities remain BLOCKED without spending (63.9219ms)
+✔ B7 seven separate slots; login BEGIN one negative ROLLBACK all counted before entry (816.5325ms)
+✔ B7 unexpected success still rolls back and durably HALTs without refund (202.5328ms)
+✔ B7 cleanup error remains unknown, consumed and halted (147.1005ms)
+✔ B7 omitted rollback cannot be reported complete (153.5661ms)
+✔ local socket/child exit cannot substitute for independent cessation (635.5813ms)
+✔ mutable input and backend replacement cannot change expected status or contract (79.7651ms)
+✔ propagation success is observed, not revocation pass; horizon success halts (870.2076ms)
+✔ revocation baselines and checkpoint timing are mandatory and denial skips future checkpoints (694.0722ms)
+✔ pg Client is bounded, fixed-target and one-connect only; query authority refused (0.95ms)
+✔ failed pg connect cannot reconnect and old-password login reports only expected SQLSTATE (0.2616ms)
+✔ SDK retains issued token without refresh and refuses expiry despite caller mutation (1.2208ms)
+✔ fresh v1 client per worker, retry:null and no transparent retries; retained probe reuses exact client (4.6167ms)
+✔ HTTPS redirect is an outcome, zero follow-ups/resends; credential allowlist and binding enforced (1.2495ms)
+✔ C failure with exact status still needs independent timing and no late continuation (286.0636ms)
+✔ cold remains UNVERIFIED without platform evidence; warm sequence mismatch HALTs (507.1502ms)
+✔ retained DB probe uses the same Client; fresh old-password verification creates exactly one new Client (0.6069ms)
+✔ retained SDK sends the same expired issued token for server rejection and never refreshes it (0.5929ms)
+✔ pinned real v1 initialize and GAX createStub exercise fixed universe/auth with an inert protobuf stub (370.0167ms)
+✔ delayed real-interface initialization cannot queue a getDocument after the absolute deadline (150.9761ms)
+✔ bounded HTTP response retains only validated actual identities and correlation (1.1648ms)
+✔ incoming503 plus independently correlated provider401 is contained; generic503 or wrong correlation HALTs (6667.2068ms)
+✔ Cloudflare denial uses its actual upstream contract and records downstream as not dispatched (2469.0968ms)
+✔ contradictory all-undispatched and missing successful branches fail closed; valid prefix is durable (2384.9559ms)
+✔ positive warm booleans cannot override an actual changed server parent identity (1319.4266ms)
+✔ D12 required backend identity function is in the exact B6 allowlist (0.1893ms)
+✖ result or actual-inventory persistence failure rolls back completion and retains active unknown (1642.0893ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 28
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18289.4128
+
+✖ failing tests:
+
+test at tests\review-closures.test.mjs:68:1
+✖ result or actual-inventory persistence failure rolls back completion and retains active unknown (1642.0893ms)
+  Error: disk I/O error
+      at TestContext.<anonymous> (file:///D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/tests/review-closures.test.mjs:71:5)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    code: 'ERR_SQLITE_ERROR',
+    errcode: 2570,
+    errstr: 'disk I/O error'
+  }
+
+RESULT {"label": "final-fixtures", "cwd": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--conditions=react-server", "--experimental-strip-types", "--test", "tests/named-campaign.test.mjs", "tests/review-closures.test.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "explicitEnvironment": {"NODE_OPTIONS": "--preserve-symlinks --preserve-symlinks-main", "TMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "TEMP": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\runtime-tmp", "CI": "true"}, "startedAt": "20261031T220852611385Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\final-fixtures-20261031T220852611385Z.txt", "pid": 2732, "exitCode": 1}

@@ -1,0 +1,105 @@
+{"label": "emulator-conformance", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--experimental-strip-types", "scripts/run-purchase-emulators.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "FIRESTORE_EMULATOR_HOST", "GCLOUD_PROJECT", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214556119202Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-conformance-20261031T214556119202Z.txt"}
+(node:69348) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24480) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+    at warnTypelessPackageJsonFile (node:internal/modules/esm/get_format:151:13)
+    at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:205:7)
+    at defaultGetFormat (node:internal/modules/esm/get_format:262:36)
+    at defaultLoadSync (node:internal/modules/esm/load:161:16)
+    at #loadAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:802:12)
+    at #loadSync (node:internal/modules/esm/loader:834:53)
+    at ModuleLoader.load (node:internal/modules/esm/loader:783:26)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:494:31)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)
+    at afterResolve (node:internal/modules/esm/loader:607:52)
+[36m[1mi  emulators:[22m[39m Starting emulators: firestore
+[36m[1mi  emulators:[22m[39m Detected demo project ID "demo-mcv-purchases", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+[36m[1mi  firestore:[22m[39m Firestore Emulator logging to [1mfirestore-debug.log[22m
+[32m[1m+  firestore:[22m[39m Firestore Emulator was started in standard edition.
+[32m[1m+  firestore:[22m[39m Firestore Emulator UI websocket is running on 9159.
+[36m[1mi [22m[39m Running script: [1m"C:\Users\HENRI\AppData\Roaming\npm\node.exe" --conditions=react-server --experimental-strip-types "D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\scripts\run-purchase-emulator-tests.mjs"[22m
+MCV_PURCHASE_CONFORMANCE_STARTED
+(node:71900) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/wallets/emulator-safety.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS atomic creation and raw serialization
+PASS concurrent scoped replay and conflicts
+PASS payment contention and expected revision fencing
+PASS injected ABORTED exercises real SDK retries and callback isolation
+PASS forbidden operations poison caught failures and roll back
+PASS callback failures roll back creation and replacement
+PASS independent SDK and repository instances preserve evidence and nulls
+PASS injected lost create and payment acknowledgements
+PASS recovery ambiguity, bindings and lost evidence acknowledgement
+PASS delayed contradictory recovery cannot overwrite winner
+PASS fulfillment claim fencing, explicit reclaim and completion rejection
+PASS v2 quota concurrency, uniqueness, restoration and cancellation fencing
+PASS v2 atomic authority invalidation and freshness across SDK retries
+PASS v2 key closure evidence/quota atomicity, concurrent recovery and original week
+PASS fulfillment claim/reclaim fencing and duplicate applied receipt
+PASS fulfillment grant/cancellation both winning orders and concurrent race
+PASS fulfillment apply/reject rollback and lost acknowledgements
+PASS fulfillment contradictory outcome/settlement and credited histories reject without writes
+PASS fulfillment reclaims, repeated observations and alternative closure histories
+  4 first-activation callbacks entered before release; 1 committed credit pair; 8 attempts
+PASS fulfillment fresh initial activations contend before any credit commits
+node:internal/modules/cjs/loader:1517
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module 'D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/data/reference/project-portals'
+Require stack:
+- D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\lib\server\stories\submit.ts
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at require.resolve (node:internal/modules/helpers:171:31)
+    at _resolve (D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\node_modules\jiti\dist\jiti.js:1:246378)
+    at jiti (D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\node_modules\jiti\dist\jiti.js:1:249092)
+    at D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\lib\server\stories\submit.ts:10:23
+    at evalModule (D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\node_modules\jiti\dist\jiti.js:1:251913)
+    at jiti (D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\node_modules\jiti\dist\jiti.js:1:249841)
+    at file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/purchases/submission-pass-fulfillment.fixtures.ts:298:72
+    at async test (file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/purchases/submission-pass-fulfillment.fixtures.ts:76:65)
+    at async runSubmissionPassConformance (file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/lib/server/purchases/submission-pass-fulfillment.fixtures.ts:288:3)
+    at async file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulator-tests.mjs:229:5
+    at async test (file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulator-tests.mjs:75:34)
+    at async file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulator-tests.mjs:227:3 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\submit.ts'
+  ]
+}
+
+Node.js v24.18.0
+[33m[1m! [22m[39m Script exited unsuccessfully (code 1)
+[36m[1mi  emulators:[22m[39m Shutting down emulators.
+[36m[1mi  firestore:[22m[39m Stopping Firestore Emulator
+[33m[1m! [22m[39m Firestore Emulator has exited upon receiving signal: SIGINT
+[36m[1mi  hub:[22m[39m Stopping emulator hub
+[36m[1mi  logging:[22m[39m Stopping Logging Emulator
+
+[1m[31mError:[39m[22m Script "[1m"C:\Users\HENRI\AppData\Roaming\npm\node.exe" --conditions=react-server --experimental-strip-types "D:\OpenClaw-workspace\recovery\mcvplus-candidate05-emulator-20261031-1743\scripts\run-purchase-emulator-tests.mjs"[22m" exited with code 1
+Candidate05: diagnostics retained at D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\evidence\runtime-tmp\mcv-purchase-emulator-V1u4zq
+file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulators.mjs:109
+    if (result.code !== 0) throw new Error(`Purchase child failed: ${result.code ?? result.signal}`);
+                                 ^
+
+Error: Purchase child failed: 1
+    at superviseProcess (file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulators.mjs:109:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async runPurchaseEmulators (file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulators.mjs:235:5)
+    at async file:///D:/OpenClaw-workspace/recovery/mcvplus-candidate05-emulator-20261031-1743/scripts/run-purchase-emulators.mjs:251:10
+
+Node.js v24.18.0
+
+RESULT {"label": "emulator-conformance", "cwd": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743", "command": ["C:\\Users\\HENRI\\AppData\\Roaming\\npm\\node.exe", "--experimental-strip-types", "scripts/run-purchase-emulators.mjs"], "environmentKeys": ["APPDATA", "CI", "COMSPEC", "FIREBASE_CLI_DISABLE_UPDATE_CHECK", "FIRESTORE_EMULATOR_HOST", "GCLOUD_PROJECT", "LOCALAPPDATA", "METADATA_SERVER_DETECTION", "NEXT_TELEMETRY_DISABLED", "NODE_OPTIONS", "PATH", "PATHEXT", "PROGRAMFILES", "PROGRAMFILES(X86)", "SYSTEMROOT", "TEMP", "TMP", "USERPROFILE", "WINDIR"], "startedAt": "20261031T214556119202Z", "log": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\emulator-conformance-20261031T214556119202Z.txt", "pid": 69348, "exitCode": 1}

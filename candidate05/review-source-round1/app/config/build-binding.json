@@ -1,0 +1,136 @@
+{
+  "candidate": "Candidate05",
+  "buildId": "51b45ebf18013029cc87199ef95551339413daad4fc59445dcb5462f7f88071d",
+  "algorithm": "sha256(canonical JSON sorted path,bytes,sha256; keys sorted; separators comma/colon)",
+  "excludes": [
+    "config/run-binding.json",
+    "config/provider-binding.json",
+    "config/build-binding.json",
+    "SOURCE-MANIFEST.json",
+    "node_modules",
+    ".next",
+    "*.tsbuildinfo"
+  ],
+  "payloadFiles": [
+    {
+      "path": "app/api/internal/qualification/read-only/route.ts",
+      "bytes": 1900,
+      "sha256": "68f209d20a5cad4129df6f68b0bfb93b15e6a983a69390ffda9cdf2674561210"
+    },
+    {
+      "path": "config/source-pins.json",
+      "bytes": 445,
+      "sha256": "f9859d922c169e4f1b4f5562d79a24cfe940eb796e865981de9bd8eb5c921a20"
+    },
+    {
+      "path": "config/worker-runtime-files.json",
+      "bytes": 51152,
+      "sha256": "b558f727b2d570f381a8a21d8321f12ca0fbb2b413484bd1558815624b83567e"
+    },
+    {
+      "path": "lib/purchases/reservation-v2.ts",
+      "bytes": 140,
+      "sha256": "a58189985a8014b5efb07f639ac039d18ce31c22606b7d5533a56d224f16e38d"
+    },
+    {
+      "path": "lib/server/purchases/creamery-reservations.ts",
+      "bytes": 240,
+      "sha256": "25877f84e63ee5658a128d38d76b62b4abd14293f6bd9879a7dfb34bfa87c5a6"
+    },
+    {
+      "path": "lib/server/purchases/creamery-transport.ts",
+      "bytes": 4517,
+      "sha256": "d25932303f23541f0099bdacabb22973d453c75212c9212d81ec1181d0a2d734"
+    },
+    {
+      "path": "middleware.ts",
+      "bytes": 430,
+      "sha256": "161ca452b002c08f8a36419957aff2ff238e315600a763167e4447c6ffb7f281"
+    },
+    {
+      "path": "next-env.d.ts",
+      "bytes": 268,
+      "sha256": "f4e8976c19fc926644d72610bf1058bd6bf52add97e46a02bc0b912a751625c0"
+    },
+    {
+      "path": "next.config.mjs",
+      "bytes": 624,
+      "sha256": "5e1fe92d790591bc4c30116aeaaa1dfea82181c5f6bdca4fcc4b5c2a4506a8f1"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 195026,
+      "sha256": "4feeb2e8170d26fdea56d29d5662d370df557db64a2990e63b4375bc133631a2"
+    },
+    {
+      "path": "package.json",
+      "bytes": 601,
+      "sha256": "806267f78cee56ef0878a68a7ae2dbf9be195ed2da57298006a37f77766d7c1e"
+    },
+    {
+      "path": "qualification/budget.mjs",
+      "bytes": 356,
+      "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+    },
+    {
+      "path": "qualification/constants.mjs",
+      "bytes": 568,
+      "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+    },
+    {
+      "path": "qualification/execute.mjs",
+      "bytes": 591,
+      "sha256": "b0e7db6366ab104b4deb90421e41af5ceb837e490f8dce63d8fbada0fd45c81e"
+    },
+    {
+      "path": "qualification/gates.mjs",
+      "bytes": 3021,
+      "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+    },
+    {
+      "path": "qualification/handler.d.mts",
+      "bytes": 818,
+      "sha256": "ac722b3b94fbeff4388ca021fb0148d02f5f04b19be46adf9990999f2fe686a2"
+    },
+    {
+      "path": "qualification/handler.mjs",
+      "bytes": 7070,
+      "sha256": "9e65fad0b3aaea25ef006bfb6e537b5c8575c37ca4b48e0a040243d94e0072f1"
+    },
+    {
+      "path": "qualification/ledger.mjs",
+      "bytes": 2158,
+      "sha256": "fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73"
+    },
+    {
+      "path": "qualification/native-http.mjs",
+      "bytes": 2475,
+      "sha256": "8a09ed4735eb79f61b3b513fdf8b6f3fda86cbb8472b897f434ce64ab1c93f54"
+    },
+    {
+      "path": "qualification/replay.d.mts",
+      "bytes": 325,
+      "sha256": "82d1e16bfb4eb3a654b1ce6f7f3efb067ec892290278df8ec95e190788636cf0"
+    },
+    {
+      "path": "qualification/replay.mjs",
+      "bytes": 2994,
+      "sha256": "4e669021540e99f2851d1bccceb3b9bc066c38aecd948723367a4cc7834653d2"
+    },
+    {
+      "path": "qualification/sdk.mjs",
+      "bytes": 2834,
+      "sha256": "85cf7ab769b7ffdb2482b9b871bb32932fed27890cd557e5fb0ff54818e2bed0"
+    },
+    {
+      "path": "qualification/worker.mjs",
+      "bytes": 2493,
+      "sha256": "33e5c12ea2b005d5eb96bccbd7258315cd5cc315413d2fe7fdb99bb2dcbc8797"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 665,
+      "sha256": "db63cf18a76b0b7f62ece1a47179df74473c1f1b919bee2feaef90bea1a547aa"
+    }
+  ]
+}

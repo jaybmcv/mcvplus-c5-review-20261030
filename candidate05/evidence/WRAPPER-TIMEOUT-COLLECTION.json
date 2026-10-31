@@ -1,0 +1,20 @@
+{
+  "label": "wrapper-timeout-da43af70-3cb9-4fd2-89be-b4fa4239a443",
+  "exitCode": 124,
+  "retainedLog": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-integrated-candidate05-20261031\\evidence\\wrapper-timeout-da43af70-3cb9-4fd2-89be-b4fa4239a443-20261031T222001806606Z.txt",
+  "checks": [
+    {
+      "pid": 5652,
+      "gone": true
+    },
+    {
+      "pid": 25316,
+      "gone": true
+    },
+    {
+      "pid": 7088,
+      "gone": true
+    }
+  ],
+  "limit": "this exact fixture only; not shared-process or production cessation proof"
+}

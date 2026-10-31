@@ -1,0 +1,1067 @@
+[
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\adapters.mjs",
+    "sha256": "137d93bdc5f4ea072bb9c176e3b5a91a4e7ccf5aed910bd1faa7c122d9a4b78b",
+    "bytes": 2088
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\add-regressions.py",
+    "sha256": "a8415f105b00be1c8610b03b5d1f6c82210bca877ef3a8e1a4e6a6824dd3ff7c",
+    "bytes": 2568
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\closeout.py",
+    "sha256": "38f58f993fa7982f1a370baa90e8d5f2ccca35ec9a463f60837d563bc6b320bd",
+    "bytes": 3556
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\COMMUNICATION-OPPORTUNITY-LOCAL.md",
+    "sha256": "1a6a9f8be5bf0a6e63be69cdb3f2c841578b0083e156412f3ef2556fa4390ea3",
+    "bytes": 1104
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\CREDENTIAL-PLACEMENT.md",
+    "sha256": "708eea3ac68fee069b2f9abec05c52e75a41566522feb0639998a1e4251fa109",
+    "bytes": 5999
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\evidence\\CHECKS.json",
+    "sha256": "e55808fea7dba2d2a7b1260f3fec8124e73aa53c8e2b3829fd86b485366ed7f3",
+    "bytes": 2098
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\evidence\\offline-tests.txt",
+    "sha256": "4c9555e1f9cfc0000f59b7aec91dc8be588f6538aae2fd1b1328e17f127a6b2e",
+    "bytes": 2150
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\evidence\\round1\\CHECKS.json",
+    "sha256": "46926ebed0234758367fa5045d6901d13187fe5c47d27dd7549065d887d07b82",
+    "bytes": 1971
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\evidence\\round1\\offline-tests.txt",
+    "sha256": "ac91198b5e6bee89d93cfa116ebf8eb8c88f903e6478a9b899c8ebdf448cd153",
+    "bytes": 1267
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\finalize-candidate.py",
+    "sha256": "cd2d72c12baf501aa7097bc197f4738f4cea73e94f8b278c2123911824f7086c",
+    "bytes": 2535
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\finish-report.py",
+    "sha256": "dadf551eac413ff27aca51e6407ce499a1b60974681333ba4d907b3dfbae4d36",
+    "bytes": 2462
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\fix-final-two.py",
+    "sha256": "ce52f2ae536bf40d2e4a8ea34c13ef8109d7b621c65009831e17aba323b40634",
+    "bytes": 1803
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\fix-lifecycle.py",
+    "sha256": "5684ef550cc09dc801e709d152f698850985d8ada328dbcafa734e752e158781",
+    "bytes": 7408
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\fix-review.py",
+    "sha256": "58218e095fcdb18c6dd719ebf6c819af59bee889c91a0910ba9043535d20859f",
+    "bytes": 1330
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\fixture-child.mjs",
+    "sha256": "f4dc88f55b1277af13ade7fd803bf18489fd2a37c6a260426149cda461332077",
+    "bytes": 686
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\IMPLEMENTATION-REPORT.md",
+    "sha256": "c0ea924b70120db3c57d58f93ae48b49e9b75a337f768230eb94b26a56f7041e",
+    "bytes": 9973
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\INDEPENDENT-REVIEW-CLOSEOUT.md",
+    "sha256": "857385aaf506973d46bbea5e58e50bc3b3f0be13a55afd49850a8dcce878130c",
+    "bytes": 2021
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\INDEPENDENT-REVIEW-CONSOLIDATED.md",
+    "sha256": "20b10bda26b7ee973ea6542237767fc78d302b24f99a25c6b2dad24c0663be12",
+    "bytes": 15010
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\INDEPENDENT-REVIEW-FINAL.md",
+    "sha256": "ea8935b8f5a7fcd782de0d31d4c6bc04c2cf5a34f0e5fb712a0b70352a2ffec7",
+    "bytes": 4413
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\INDEPENDENT-REVIEW.md",
+    "sha256": "9733432d87ce0d7767fe2278eca3818f3395c73dccb28f938c2f92266bc41482",
+    "bytes": 8050
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\offline.test.mjs",
+    "sha256": "5c1550693d5e21e9a60b728e61a4a9ecd8e3b9205294ed12be59af56c113ff38",
+    "bytes": 9434
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\OPERATOR-AUTHORIZATION.txt",
+    "sha256": "e36d82cbffe25dc25a01e59b8c9141953cf30af34be6de9e007fb05f8aecae03",
+    "bytes": 1729
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\operator.mjs",
+    "sha256": "a07a15554fb5749ae9e6d94a27436fa1415def50a7f8cf8b52926bc90e4d048d",
+    "bytes": 6315
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\package.json",
+    "sha256": "c6f06ed5aac6b6f2dbe6a0e60964581b8c58d9da2590fea5e458a7e6a2bb8ffd",
+    "bytes": 412
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\prepare-local.py",
+    "sha256": "42c29062bbcbf959aa9e2efe343406e600834b9297de40f904d79688b93e8879",
+    "bytes": 2048
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\budget.mjs",
+    "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3",
+    "bytes": 356
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\constants.mjs",
+    "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81",
+    "bytes": 568
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\gates.mjs",
+    "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a",
+    "bytes": 3021
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\handler.mjs",
+    "sha256": "334e2fbc52168cd6d79ba517c70292f31fe1103fc402ca0274ed1eba8c01f55f",
+    "bytes": 7063
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\app\\api\\internal\\qualification\\read-only\\route.ts",
+    "sha256": "4cdc11a1139f54a2f3a9f0ef08bfbb4d11b82837225a9b96f682e503668d5581",
+    "bytes": 507
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\qualification\\budget.mjs",
+    "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3",
+    "bytes": 356
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\qualification\\constants.mjs",
+    "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81",
+    "bytes": 568
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\qualification\\gates.mjs",
+    "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a",
+    "bytes": 3021
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\reference\\qualification\\handler.mjs",
+    "sha256": "00be0e189df2a35190654826beb687aa3c217a80a8af09c4350e0f369c5c7d22",
+    "bytes": 4518
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\replay.mjs",
+    "sha256": "4e669021540e99f2851d1bccceb3b9bc066c38aecd948723367a4cc7834653d2",
+    "bytes": 2994
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\REVIEW-CLOSEOUT-PROMPT.txt",
+    "sha256": "5065e541ac943944bc78140580a66a79c834ef8050d51f1d406e54b36bc80f9e",
+    "bytes": 776
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\REVIEW-DISPOSITION.md",
+    "sha256": "d74e1dc3b33873cb02067264afcdf2aa726c99231e0bef2e1ac84f695b4ae0d0",
+    "bytes": 2786
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\REVIEW-FOLLOWUP-PROMPT.txt",
+    "sha256": "a1abd1a9377ef7e8773b97bae7f84088c037933bbfbe6b983c6816f992501cfc",
+    "bytes": 885
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\REVIEW-PROMPT.txt",
+    "sha256": "1a8c448e2b6843072ac7c2c29df1e279a9eade9293c13cf14daaa4f755442181",
+    "bytes": 1015
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-regressions.test.mjs",
+    "sha256": "3d61866f6f9bccdb2cf22d3cc2273810a60aa6e29a7955c3c58f0be0872add30",
+    "bytes": 7454
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\adapters.mjs",
+    "sha256": "69a6e05245ce7c102dc5dd9ea73bbd7ca02298c94c56db6d6d6ed59bef5d997f",
+    "bytes": 1914
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\offline.test.mjs",
+    "sha256": "5c1550693d5e21e9a60b728e61a4a9ecd8e3b9205294ed12be59af56c113ff38",
+    "bytes": 9434
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\operator.mjs",
+    "sha256": "339ff118dc2d44196c1bba4b45a8776b64dddd965740ba843a27678547effc53",
+    "bytes": 5648
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\qualification\\handler.mjs",
+    "sha256": "e8f358805bfdea89e34c751dcf9c32dc65f208813cd411fc0d61b0fc662cc04c",
+    "bytes": 5433
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\replay.mjs",
+    "sha256": "de11dbf6a823c10b81faabf0d5e2ea7932f861ce12b7e5112fd7a51451563bd1",
+    "bytes": 2493
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round1-source\\route.ts",
+    "sha256": "64f594fed1a2eb7a25044f03b323bc9113c110fa2bc8a22696dabd903dcb7d74",
+    "bytes": 1372
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round2-source\\operator.mjs",
+    "sha256": "dfe15cdffbd037fe7d459a7c5f40b2e52b4f55cbfa709ffdb99001c149bd118e",
+    "bytes": 6301
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-round2-source\\route.ts",
+    "sha256": "b47936c5c0264ae0043190115ceb2d7f513c82386a8475d86e7cb7b224ae51c0",
+    "bytes": 1756
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\route.ts",
+    "sha256": "4088d405f15c47d926bb9a9ae2b378e193f638bf86c8f66e4b77b1f4f5b47f81",
+    "bytes": 1836
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\SCOPE.md",
+    "sha256": "3072d09c6c8510bd55324a150c9ece288c0ff4f14e6a0f31834d56a2fc5f7874",
+    "bytes": 978
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\seal-source.py",
+    "sha256": "5a3504c839ee76b83abfa3edff1e79bbe0ecd369cf286d3e1edf8d6c839c0355",
+    "bytes": 648
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\SERVICE-INSTALLATION-SPEC.md",
+    "sha256": "fe33ef94e3888ed1d61d51d75a9fc0ddbd0a5a537bfd85576ce397517be17595",
+    "bytes": 6602
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\SOURCE-MANIFEST.json",
+    "sha256": "b0b1f20ce9f3ffb0e2f70463f44d2aaed0556fc739f85dc2622b873ae8fa1b09",
+    "bytes": 2292
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\SOURCE-REFERENCES.json",
+    "sha256": "ab15f9bde96b5caf5271c2ddc4927e907468b75918e1ef03a27d2247f0a53907",
+    "bytes": 1125
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-1.sqlite",
+    "sha256": "776eddac8a4c63ed41d9cb3dc43646f05ffad982439cb8682e150461a3e97c07",
+    "bytes": 28672
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-10.sqlite",
+    "sha256": "527328932944763731230be9cfd2b1dc72f0fce7c602f80474f918b65d590b95",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-11.sqlite",
+    "sha256": "62c7374af48d0744744cb65822b9f0e690f6cb8bbd66e9e932dec518cffd301d",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-12.sqlite",
+    "sha256": "33384262f886e56c78a0c9df26b1eeee370d1b1fb87442610927d6036b062bca",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-2.sqlite",
+    "sha256": "a252d09c5415a173c3662759e69aacce347613e95478c5587f1d65acdbecfb52",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-3.sqlite",
+    "sha256": "38381886bb57764dc3d512ddd8c11dd215807b87ccfa84406764a5bf1a8ed51c",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-4.sqlite",
+    "sha256": "78671505fc603196c9b70738ad41cb1addf758f5b77ab82a362b98e3c72fd34d",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-5.sqlite",
+    "sha256": "bc60bb0fc4ea4df4f4dec0043b40e7d6c91ec4bef13d98bf14db77df4db6e878",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-6.sqlite",
+    "sha256": "10fba786ec0bcd1dca8661930d71b93fb273c824d3b92ad068a4bcc5ec8e95e0",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-7.sqlite",
+    "sha256": "c2e8280aa4676b9dc11800cab592b827afa68883e57d0f1ee96bf9debdbc731f",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-8.sqlite",
+    "sha256": "ff09df103927f95c84a3aa492f4bf06bc4f2f65ff6eb1ea414acf78c52b9ebb8",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480800425\\SYNTHETIC-9.sqlite",
+    "sha256": "6cc2c7b4d376d2da840dfcd79daf126ad6af209cdcd85f6886fad3ba2ad9790c",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-1.sqlite",
+    "sha256": "dbe6d23535b41e58263c9cec80f925c957c2a6c56ee45eed6ee4171c8a1ba399",
+    "bytes": 28672
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-10.sqlite",
+    "sha256": "b4b52b0c37ec80ab185ded94370b92aa59f041a352c991e2f990a919d57e34fa",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-11.sqlite",
+    "sha256": "89131d4645ad8eb68058ec887d632d2a8b728912b55de939e6ec1ae4b3ab228a",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-12.sqlite",
+    "sha256": "7d0b0dd02402b8748eb46f2c722a5c92777c3f4625ec0890b3e0eb271c662cff",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-2.sqlite",
+    "sha256": "abb3cc97c358a7fa6f07a27107744d2e6411d810e384f6679dff7471ddce8d98",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-3.sqlite",
+    "sha256": "d538566d65ce6b84597e20594f5efca7dd35911c0c7c43e987895fa39bee34dd",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-4.sqlite",
+    "sha256": "f161d7af2f3ba67d65037cb20d1a44f6d3a3d65cffd11e3cbbb891083a538d37",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-5.sqlite",
+    "sha256": "35fb8363d3e73051ecc572bea11781754a6cd21d9ae539ff3b415ee7ce87af25",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-6.sqlite",
+    "sha256": "6fee5abae303f28fcefe7bcd9bd0dbefbd8512b223f6e58992d2e759e678a468",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-7.sqlite",
+    "sha256": "585271cf9e559c56c4c3914f99e3795a20c0167daa619ab246e7bc788f3a4e21",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-8.sqlite",
+    "sha256": "717f716e7a3d909bce2ca6b851e6565a783526d255d595ccdeaaf10a186bda2a",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793480910032\\SYNTHETIC-9.sqlite",
+    "sha256": "6cc2c7b4d376d2da840dfcd79daf126ad6af209cdcd85f6886fad3ba2ad9790c",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-1.sqlite",
+    "sha256": "de08ddf2a440dd3811d78ea4c22783f66a8e552b6ec80a4f397eb97160a8de8c",
+    "bytes": 28672
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-10.sqlite",
+    "sha256": "ab0c51f1e62930aacde5053f2b23aea6ea33fd483be02ab9364ca19421f6a451",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-11.sqlite",
+    "sha256": "e95c05ff8dc839e4661d26e26c38071506b2bdfe06b4c4a596c5971fa02fbe8e",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-12.sqlite",
+    "sha256": "11fbb49169cafd0cd44f896c6147ddb92057035874a33cce9f5827383168b0e2",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-2.sqlite",
+    "sha256": "6bb38e26763692e8526ead539b446f20cfd011137ce8def9679feaeeaa5385f7",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-3.sqlite",
+    "sha256": "749cd8bd09aed8919d0e62fe150f2715de148007b2b9be23be843cd0bec6725c",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-4.sqlite",
+    "sha256": "bd5a78a7c1e7501209704106a76109f0e43e361d33f276a5ae162da186e9eb35",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-5.sqlite",
+    "sha256": "e58842bdb1bb6305b47bb4bd6e99e1080dd54d7fb8d6193b68677506adf64c63",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-6.sqlite",
+    "sha256": "566969f23d79fe571d5b4d5409645081551abd8710ee72cc44f52a77094010b0",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-7.sqlite",
+    "sha256": "bbabbe5ae4adc6d0770fe76973fdbd0a546f4b15703858d16885e012dc72c78c",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-8.sqlite",
+    "sha256": "7443fdf5859077eadea6f8cc593cf3df5740f20f79798099523de8ce1472e54c",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481165213\\SYNTHETIC-9.sqlite",
+    "sha256": "34456f55f415d2e9f3d3c3b2571a605198673eb89af4a9b58ea95ae391048886",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-1.sqlite",
+    "sha256": "a2ef2c95bf09010e3fba042c9c850d29239779aa38d9a7791ef9e8f03f5bebdf",
+    "bytes": 28672
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-1.sqlite-journal",
+    "sha256": "3dfeee037e8481309628f2f3f803257b0e27176a97b1b1eca37e8933cfeb8bb2",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-10.sqlite",
+    "sha256": "780c797676f8ea692a1b727dff7e260e8ae91b65ffb67de9b582f458e0db9ee1",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-10.sqlite-journal",
+    "sha256": "de389b2d99b012acbdd3664778baa06b2cafdda632d43c185c47a337efbbbcc2",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-11.sqlite",
+    "sha256": "f24977b4246d681282cbf84da9b758aebcf6fc5ffe07cc064f69ca5fcb781786",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-11.sqlite-journal",
+    "sha256": "1a931a3c4a542cbf3b45369749c09dbce7e41f7fa00c3b4eac1a793ce5db3ac2",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-12.sqlite",
+    "sha256": "fb560ecf14d7d499b28f62a39238ba4c5baf9b0b7b42c43b7bbf61798fe00663",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-12.sqlite-journal",
+    "sha256": "dec48dbbbf4267a026f70f80664362650714bd587b5046365096efced083029d",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-2.sqlite",
+    "sha256": "d48deb36dad1859e99781f0beb8003cc42351498e3430c7d96ae2fe0db3fbc99",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-2.sqlite-journal",
+    "sha256": "7c1e2a35b67151d7264518e3c6fde20329a7cd51a0f866559a0db1255b7e0900",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-3.sqlite",
+    "sha256": "3917739987ebb5c2ce78094dfe40643c649c8e99e956dbcafa1acb2ee0012f0a",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-3.sqlite-journal",
+    "sha256": "567aae11721f98bfb3d397c46f139426fbb95827c6fd3579dbb1ba01a498ebfa",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-4.sqlite",
+    "sha256": "c6c492b0d49eda79b66084a4418542d21fe8893da2183ed9ff2da6e58ac5a895",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-4.sqlite-journal",
+    "sha256": "d0091e5e65bc8e32af3982b83d8d584fe044e2d3699299fab9fd687147ac2717",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-5.sqlite",
+    "sha256": "b335f13ecc484fa06509802677ea2548193d9c99830faadb28617a74271c9554",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-5.sqlite-journal",
+    "sha256": "b2f29d35b4c4adba51710b82f65fc0a8c8e9a3e701db86a9aeff2a510ad67b96",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-6.sqlite",
+    "sha256": "922b095d1556a0619f38ce8b2c9e36c527a4e88e2afbeef0456bf8426ea0429a",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-6.sqlite-journal",
+    "sha256": "fdd2d77ef03d46355012f3e25a9f220a00affc283c5cf44b87e1ac679053f2ce",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-7.sqlite",
+    "sha256": "b91974dd84c0aa6f7a56a65e3060f07272edbaa49f062e6492575ce6d559c67d",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-7.sqlite-journal",
+    "sha256": "996992fe4d82fb58f54b6a2266871b8266d53106b00710b1cab0eec09a8895d9",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-8.sqlite",
+    "sha256": "58ff9fef7a058a4c26e9a00e1e3101cb95759acaa8b7dcc8c29150974471025e",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-8.sqlite-journal",
+    "sha256": "3c0e389a95cc92bfb7c08600031cae9fcaabeddc04d9ccc06242fc5fcc0b012d",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-9.sqlite",
+    "sha256": "34456f55f415d2e9f3d3c3b2571a605198673eb89af4a9b58ea95ae391048886",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481212664\\SYNTHETIC-9.sqlite-journal",
+    "sha256": "6dbc498f62a417bac508223b740800d38ebfcecba3b8d88cf29492f2661fa1ca",
+    "bytes": 8720
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-1.sqlite",
+    "sha256": "f400de5ac71d0283b3a942b031c5849146754dbd6b4e6b346c05f9c3e60dc764",
+    "bytes": 28672
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-1.sqlite-journal",
+    "sha256": "644da06451cd3e4255085539104384d3d815cb6e4046759e9cd427f64f66d97b",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-10.sqlite",
+    "sha256": "8b1b5b6dd16fd224af6415535fe034918a0202c11804f65e363dd6e7e7656b62",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-10.sqlite-journal",
+    "sha256": "35a6de1f374e42693911439fc86ac2bb7b3f67b1d3b7113b65f7a0f5f37a9c0d",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-11.sqlite",
+    "sha256": "286401959367b24311295f0d1656d935c363b188d7e3c7821309a7c7faef2bb3",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-11.sqlite-journal",
+    "sha256": "d92d5f14ed5af819b1603f01d6383c0a7cdda56a0e363e970fc0627adccc29f9",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-12.sqlite",
+    "sha256": "c03d4ee7922d1b6c260f13366ce00454d295f4e4c26932872e2cc050aa8c7162",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-12.sqlite-journal",
+    "sha256": "15e651cc7edfb2e7a51039bc7675c2975a51bf92dc455716bfc0564048987b2b",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-2.sqlite",
+    "sha256": "81210e9a2ecd40e0ef19ee2f1e6ae1c93ac80bf06ab2aaf3ef2097bb6f5e7a83",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-2.sqlite-journal",
+    "sha256": "78331ae869c7955769bf22fca8462a29190bc173ad52b3ea6fa5636e61eff58f",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-3.sqlite",
+    "sha256": "692d1fc4d70fef99ad642b0bc2f02a3f77159ccdab7632ea391b151400e2b8fa",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-3.sqlite-journal",
+    "sha256": "83d30e75d707a36d098e3c16050da324e5a21bcaf26db836067bd14c7e698dec",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-4.sqlite",
+    "sha256": "15874c515cd3c2944e907147c66516cc31a2fab3ff0b0501213cb2e575358b1e",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-4.sqlite-journal",
+    "sha256": "45265ba55cdbdf446c0e6e7f2982fdcdd386737789a740085e01a16669cd1b05",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-5.sqlite",
+    "sha256": "7597cb5a0571144c54b2d5fbe8d63aa3759be7fb39bb274c66ef2c8500b89dd0",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-5.sqlite-journal",
+    "sha256": "c973263b4e9aed2059592b509f8c443d32447b4c3386ac76599dd078ecc4fcd3",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-6.sqlite",
+    "sha256": "4b3bff86fbdc33e56aab9e8ad8e9d40a04b52cac072e789ca2ff1803984bf492",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-6.sqlite-journal",
+    "sha256": "be8261ee989b604ca2aec5c6c0cb793563725f3892480228d0c2e8fef22c381f",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-7.sqlite",
+    "sha256": "3b75effc68a26e8c8335491075553cfa8d14e48ccecd5acd808982f1b3e690c1",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-7.sqlite-journal",
+    "sha256": "408bb3cdd0803db64d252ebd5626ad265d69ac106cf1154a452d2a665bd8f523",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-8.sqlite",
+    "sha256": "433f1449f7d05fa83abc8a5f7bf2ab118f2eeb1fc04ed4e8538b4a1d2e61d549",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-8.sqlite-journal",
+    "sha256": "b77905c6ccb4f0d5d465d99374a758470a5af9c1c4348b456e245eb5d15d73a2",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-9.sqlite",
+    "sha256": "34456f55f415d2e9f3d3c3b2571a605198673eb89af4a9b58ea95ae391048886",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\1793481361446\\SYNTHETIC-9.sqlite-journal",
+    "sha256": "166ac5a2d21dfc6295a5e0e51e93d23ea8132f92cdc7e05fe66aad3cd23ee8d6",
+    "bytes": 8720
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481165210\\SYNTHETIC-1.sqlite",
+    "sha256": "2310c4748e5979fdeb6acdee4466ef2411cee522395eb4e9ff422b72538dd5ae",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481165210\\SYNTHETIC-2.sqlite",
+    "sha256": "990e22697a92921ec406371819b820e2a79507ba57957b4eb8b83605ab121a42",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481165210\\SYNTHETIC-3.sqlite",
+    "sha256": "ca677158ac2fa74f07a18824eed97e01bbbf09cd2175b73183d061c34b9d1739",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481165210\\SYNTHETIC-4.sqlite",
+    "sha256": "2356a434561c2b957a9c5622d4c91f023a4c4ca5fb459b763729ba8ca7f59d94",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481165210\\SYNTHETIC-5.sqlite",
+    "sha256": "f755a8f42f020ab1b2b15c93e8749678412dd624a5e132b1f7b2469cac89fb60",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-1.sqlite",
+    "sha256": "2310c4748e5979fdeb6acdee4466ef2411cee522395eb4e9ff422b72538dd5ae",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-1.sqlite-journal",
+    "sha256": "7d1e2c8777698119af17cb3519b7172539adacf29e52f1243b4ef661ee707e71",
+    "bytes": 8720
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-2.sqlite",
+    "sha256": "554e07f404ad1cdf51fab2fc8c9c8a17efaf3c6575131c176e8c222fa94498a6",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-2.sqlite-journal",
+    "sha256": "67f0ba43e216e5f87ab4f6cb1eee93ef3a53d2e89165b74d57dd38051f5448fa",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-3.sqlite",
+    "sha256": "48a5dd51af4d9ff393a0ba0831a3f7994e0bcc45695f3a0170c650f1066e385b",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-3.sqlite-journal",
+    "sha256": "1671d5557777a4d093cbd82b131465283fd33490938466b29b5871d004edf8be",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-4.sqlite",
+    "sha256": "c7a35c4f30d3955e8fa921d5fcb9f9603fffb78b282c82ba605673ca6b2a6fe1",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-4.sqlite-journal",
+    "sha256": "92e48af845a483ac14c7e4d58d9dabfaba1b350028e6e05bf7ad599cd56fc6f4",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-5.sqlite",
+    "sha256": "8110ef33502d2db109344525d637c60410c7d471e6efd45f2da8004ab6039a07",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481212674\\SYNTHETIC-5.sqlite-journal",
+    "sha256": "f8a5618d0ed0dc5c869985af39716c681e020abb231167322b345f0a5ea06251",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-1.sqlite",
+    "sha256": "2310c4748e5979fdeb6acdee4466ef2411cee522395eb4e9ff422b72538dd5ae",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-1.sqlite-journal",
+    "sha256": "2e087606816efaab1bf392435f04304323c8b5a8dbc443e0f7128069a5365606",
+    "bytes": 8720
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-2.sqlite",
+    "sha256": "16461562c285f8c80aa1a206313f81d7b5fe1250c7dad61733c1ab6bef27d224",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-2.sqlite-journal",
+    "sha256": "105ceade0b74c037ef6a0c98692b39f21028db8bbf72051096b617e3f7e2ede6",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-3.sqlite",
+    "sha256": "71fc745ab32f964a795a509443160a9ae04c013ce1511bb2d59bcf59e5efab8c",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-3.sqlite-journal",
+    "sha256": "2b3253a0924ffabde0faa19a7d17febe9550e6285fe7fcdbd44892f253118cec",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-4.sqlite",
+    "sha256": "d65b0a386b820d3e255a8e1016510d0536baa0a67216a958b0720d296348e41c",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-4.sqlite-journal",
+    "sha256": "a636fbe70aa4a4def58bdb6e4d8a41976aea95e87b6b871327da22a63ad7f775",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-5.sqlite",
+    "sha256": "db444ae1e64fef1aec87f92161867784602617f14c08e2b5c21b2043d56a0c31",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-5.sqlite-journal",
+    "sha256": "109ab3d59c3df22cc3d3e3d759e9f7962fd39fc923b6c2e7d610e1a8b68be2ba",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-6.sqlite",
+    "sha256": "952e9dc84ff0d38c6c2f4dc22d3e8f3cc813e64c29c9b40ace0bbe97bb9f0c2b",
+    "bytes": 20480
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\synthetic\\regressions-1793481361461\\SYNTHETIC-6.sqlite-journal",
+    "sha256": "9060d00a7b2631b018eb32eacc7d49a3076ff8475800575d608375f0d1c63fb8",
+    "bytes": 16928
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\verify-local.py",
+    "sha256": "9a91c38a99854b9598885ceb058cb0544185c3985b08f70359985468256e8c91",
+    "bytes": 1236
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\app\\api\\internal\\qualification\\read-only\\route.ts",
+    "sha256": "4cdc11a1139f54a2f3a9f0ef08bfbb4d11b82837225a9b96f682e503668d5581",
+    "bytes": 507
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\config\\provider-binding.json",
+    "sha256": "66038cbb6ece24fbd4f31bedfb0a01e4bc8a47e98509c87893c685d67fdb4793",
+    "bytes": 485
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\config\\run-binding.json",
+    "sha256": "4c7214926c5a8ea9fd8192d0dddeb152317ba7b361e115e2cd1ba5c208ca9893",
+    "bytes": 815
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\config\\source-pins.json",
+    "sha256": "f9859d922c169e4f1b4f5562d79a24cfe940eb796e865981de9bd8eb5c921a20",
+    "bytes": 445
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\config\\worker-runtime-files.json",
+    "sha256": "b558f727b2d570f381a8a21d8321f12ca0fbb2b413484bd1558815624b83567e",
+    "bytes": 51152
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\lib\\purchases\\reservation-v2.ts",
+    "sha256": "a58189985a8014b5efb07f639ac039d18ce31c22606b7d5533a56d224f16e38d",
+    "bytes": 140
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\lib\\server\\purchases\\creamery-reservations.ts",
+    "sha256": "25877f84e63ee5658a128d38d76b62b4abd14293f6bd9879a7dfb34bfa87c5a6",
+    "bytes": 240
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\lib\\server\\purchases\\creamery-transport.ts",
+    "sha256": "d25932303f23541f0099bdacabb22973d453c75212c9212d81ec1181d0a2d734",
+    "bytes": 4517
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\middleware.ts",
+    "sha256": "161ca452b002c08f8a36419957aff2ff238e315600a763167e4447c6ffb7f281",
+    "bytes": 430
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\next-env.d.ts",
+    "sha256": "f4e8976c19fc926644d72610bf1058bd6bf52add97e46a02bc0b912a751625c0",
+    "bytes": 268
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\next.config.mjs",
+    "sha256": "5e1fe92d790591bc4c30116aeaaa1dfea82181c5f6bdca4fcc4b5c2a4506a8f1",
+    "bytes": 624
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\package-lock.json",
+    "sha256": "4feeb2e8170d26fdea56d29d5662d370df557db64a2990e63b4375bc133631a2",
+    "bytes": 195026
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\package.json",
+    "sha256": "806267f78cee56ef0878a68a7ae2dbf9be195ed2da57298006a37f77766d7c1e",
+    "bytes": 601
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\provider\\entry.mjs",
+    "sha256": "b4f6ca08902a6fe405a770a4559cf65c3dde15a8ce525892c909bae3f6053627",
+    "bytes": 1831
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\provider\\package-lock.json",
+    "sha256": "434d46a2910a684dc9f9bde28e52fb9913d9c89fe8069813ef13f6ab3c2ede9d",
+    "bytes": 126854
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\provider\\package.json",
+    "sha256": "87d5f981663e6d40061b64df2a34dd88e23b30eea5edd9ae5940a6bfdfa7fa44",
+    "bytes": 226
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\provider\\PROVISIONING-TEMPLATE.sql",
+    "sha256": "5cd08f22da483683f0e7025b4a6703dd2b1ed427a9b7b26e1e9e1e422d8453ab",
+    "bytes": 4649
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\provider\\readonly-db.mjs",
+    "sha256": "e930d076a0fdceb074daf4c08ba7e9f9f648d3bc52c8ee906e8651cc23b9a444",
+    "bytes": 8810
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\provider\\server.mjs",
+    "sha256": "e316d53716c7c2a68ef2b966a3f13d56086761e016957be3e43882e5bc3039e2",
+    "bytes": 3057
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\budget.mjs",
+    "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3",
+    "bytes": 356
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\constants.mjs",
+    "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81",
+    "bytes": 568
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\execute.mjs",
+    "sha256": "b0e7db6366ab104b4deb90421e41af5ceb837e490f8dce63d8fbada0fd45c81e",
+    "bytes": 591
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\gates.mjs",
+    "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a",
+    "bytes": 3021
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\handler.mjs",
+    "sha256": "00be0e189df2a35190654826beb687aa3c217a80a8af09c4350e0f369c5c7d22",
+    "bytes": 4518
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\ledger.mjs",
+    "sha256": "fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73",
+    "bytes": 2158
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\native-http.mjs",
+    "sha256": "8a09ed4735eb79f61b3b513fdf8b6f3fda86cbb8472b897f434ce64ab1c93f54",
+    "bytes": 2475
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\sdk.mjs",
+    "sha256": "71e41a180b88d8bc96dcb34e17a97fb1642a11152f84b05e0f99efded2b62a7a",
+    "bytes": 1310
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\worker.mjs",
+    "sha256": "917b03094bef19ac0a7502de9e551ff14f2601c7b56de2c9030b1b4f1109f475",
+    "bytes": 2387
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\scripts\\audit.mjs",
+    "sha256": "92014aeb27cce09b635b9d508ad0a0cc8e2341176a3491f9e2c58492c5546ed2",
+    "bytes": 3990
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\scripts\\operator.mjs",
+    "sha256": "75abd0d0186790557b917f285c887385824b5c51bdcdb1a0df1497b9228c5ff5",
+    "bytes": 1191
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\scripts\\package-worker.mjs",
+    "sha256": "2a95df31ef1a8ba60c2224708fc684e7c2b6cccaa34b7debbffc2a9e359ce475",
+    "bytes": 2683
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\scripts\\retained-probe.mjs",
+    "sha256": "4abfb550deead9f3cf74b1e5cb80a9351ede6c24f41dcb23f07db513cd0410dc",
+    "bytes": 2164
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\scripts\\seal.mjs",
+    "sha256": "daa3847a68485279bdcd1d4f11dabb9a72fec0a72c9df75579454f56e6ef5b70",
+    "bytes": 1586
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\scripts\\verify-local.mjs",
+    "sha256": "95f4abd174c6abc769898b50d781481023d0229f45adc825610a87ab1f7ac8db",
+    "bytes": 1846
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\built-http.mjs",
+    "sha256": "382a9bc3ea0b4345660565f3ff3e0509254e4c0bbeb978403789e11c8189378d",
+    "bytes": 2988
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\closure.test.mjs",
+    "sha256": "65924ea63fe30b07a59674437b434e187b9a8baa49bb3e6e4ab9a7d7c1bc4407",
+    "bytes": 3764
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\gates.test.mjs",
+    "sha256": "1635cb0876b86331477b4666c4abfc62f8eaedfb8bb096142546c9b422ed93bb",
+    "bytes": 7572
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\hanging-worker.mjs",
+    "sha256": "3bafe718b4f8985a78c756c55185000be9a18286edacb2c7d20539cb6f7d31a3",
+    "bytes": 185
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\ledger-child.mjs",
+    "sha256": "cd0a01807387380ab862b102df8c316ca3a7fbefa18813dabf16356c59890b45",
+    "bytes": 605
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\loopback-only.mjs",
+    "sha256": "91f3cdac066c5d956e22609a118a4ff64feb00e9ed61e81bbf045d8e913f21eb",
+    "bytes": 770
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\owned.mjs",
+    "sha256": "845f061dde907df7589241e8518b20034f9d2d2aa2e04ee7f00b386e2d267faa",
+    "bytes": 787
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\postgres-local.mjs",
+    "sha256": "7d6d15532f2c8a9bdc61ee8ea2d2e2b3c6f022c2194f1e9145218a28283530e6",
+    "bytes": 13829
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\postgres-parent.mjs",
+    "sha256": "9d440135239124d9a81a6391ea95f71ec8b3b5444c29ddb91fcf0b92a19241ac",
+    "bytes": 10524
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\provider.test.mjs",
+    "sha256": "acdf3011b4bcf83fd271ab2d56517dfbe6942e7abb991b126a2e81fd1e4e8132",
+    "bytes": 6572
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tests\\transport-sdk.test.mjs",
+    "sha256": "d24e41eda82dac4496d415bef29c297497108b6df176d7f2b54ac0451764be9d",
+    "bytes": 7621
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\tsconfig.json",
+    "sha256": "db63cf18a76b0b7f62ece1a47179df74473c1f1b919bee2feaef90bea1a547aa",
+    "bytes": 665
+  },
+  {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\vercel.json",
+    "sha256": "dfee950969284761b1371a062f6f60a14ccbb355636204929cb1d4056f5e8bfa",
+    "bytes": 340
+  }
+]

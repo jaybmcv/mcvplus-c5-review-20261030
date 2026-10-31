@@ -1,0 +1,27 @@
+{
+  "startedAt": "2026-10-31T22:11:35.359Z",
+  "port": 57902,
+  "checks": [
+    "GET 405",
+    "HEAD 405",
+    "OPTIONS 405",
+    "PUT 405",
+    "DELETE 405",
+    "POST source fence 404 despite runtime permit-only and synthetic headers",
+    "excluded /",
+    "excluded /api/purchases",
+    "excluded /api/purchases/checkout",
+    "excluded /api/internal/purchases/worker",
+    "excluded /api/internal/qualification/other",
+    "excluded /api/internal/qualification/read-only/extra"
+  ],
+  "pid": 45788,
+  "status": "PASS",
+  "childClose": {
+    "code": null,
+    "signal": "SIGKILL"
+  },
+  "processGone": true,
+  "listenerGone": true,
+  "completedAt": "2026-10-31T22:11:36.194Z"
+}

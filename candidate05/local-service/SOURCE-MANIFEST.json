@@ -1,0 +1,62 @@
+{
+  "candidate": "Candidate05-local-service",
+  "appBuildId": "21731f14dec5805d720d0f6cff7853924781c8e9730da3a13f1d2e2dcda42de4",
+  "files": [
+    {
+      "path": "config/provider-binding.json",
+      "bytes": 431,
+      "sha256": "aa5f44bc898bc1eb94c9d0849cdb6d8d03f19c3b786347e90f2f9e958d980f29"
+    },
+    {
+      "path": "provider/entry.mjs",
+      "bytes": 1831,
+      "sha256": "b4f6ca08902a6fe405a770a4559cf65c3dde15a8ce525892c909bae3f6053627"
+    },
+    {
+      "path": "provider/package-lock.json",
+      "bytes": 126854,
+      "sha256": "434d46a2910a684dc9f9bde28e52fb9913d9c89fe8069813ef13f6ab3c2ede9d"
+    },
+    {
+      "path": "provider/package.json",
+      "bytes": 226,
+      "sha256": "87d5f981663e6d40061b64df2a34dd88e23b30eea5edd9ae5940a6bfdfa7fa44"
+    },
+    {
+      "path": "provider/readonly-db.mjs",
+      "bytes": 8925,
+      "sha256": "c9a11c62117a631b88b0088182127b42337708da9d2ec102e86b1afc2a747e47"
+    },
+    {
+      "path": "provider/server.mjs",
+      "bytes": 3057,
+      "sha256": "e316d53716c7c2a68ef2b966a3f13d56086761e016957be3e43882e5bc3039e2"
+    },
+    {
+      "path": "qualification/budget.mjs",
+      "bytes": 356,
+      "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+    },
+    {
+      "path": "qualification/constants.mjs",
+      "bytes": 568,
+      "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+    },
+    {
+      "path": "qualification/gates.mjs",
+      "bytes": 3021,
+      "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+    },
+    {
+      "path": "qualification/ledger.mjs",
+      "bytes": 2158,
+      "sha256": "fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1329,
+      "sha256": "735ff8017eb89913e79c7bd6dfd1ca726bce4b14d2fc0b597e2274790ba77849"
+    }
+  ],
+  "provenance": "exact amendment inputs plus disabled binding, exact pg_backend_pid allowlist addition, final app build synchronization"
+}

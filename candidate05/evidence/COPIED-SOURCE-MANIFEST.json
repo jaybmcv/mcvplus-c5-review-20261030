@@ -1,0 +1,1922 @@
+[
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\operator.mjs",
+    "path": "copied-candidate04\\operator.mjs",
+    "sha256": "a07a15554fb5749ae9e6d94a27436fa1415def50a7f8cf8b52926bc90e4d048d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\adapters.mjs",
+    "path": "copied-candidate04\\adapters.mjs",
+    "sha256": "137d93bdc5f4ea072bb9c176e3b5a91a4e7ccf5aed910bd1faa7c122d9a4b78b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\replay.mjs",
+    "path": "copied-candidate04\\replay.mjs",
+    "sha256": "4e669021540e99f2851d1bccceb3b9bc066c38aecd948723367a4cc7834653d2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\route.ts",
+    "path": "copied-candidate04\\route.ts",
+    "sha256": "4088d405f15c47d926bb9a9ae2b378e193f638bf86c8f66e4b77b1f4f5b47f81"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\offline.test.mjs",
+    "path": "copied-candidate04\\offline.test.mjs",
+    "sha256": "5c1550693d5e21e9a60b728e61a4a9ecd8e3b9205294ed12be59af56c113ff38"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\review-regressions.test.mjs",
+    "path": "copied-candidate04\\review-regressions.test.mjs",
+    "sha256": "3d61866f6f9bccdb2cf22d3cc2273810a60aa6e29a7955c3c58f0be0872add30"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\fixture-child.mjs",
+    "path": "copied-candidate04\\fixture-child.mjs",
+    "sha256": "f4dc88f55b1277af13ade7fd803bf18489fd2a37c6a260426149cda461332077"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\package.json",
+    "path": "copied-candidate04\\package.json",
+    "sha256": "c6f06ed5aac6b6f2dbe6a0e60964581b8c58d9da2590fea5e458a7e6a2bb8ffd"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\budget.mjs",
+    "path": "copied-candidate04\\qualification\\budget.mjs",
+    "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\constants.mjs",
+    "path": "copied-candidate04\\qualification\\constants.mjs",
+    "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\gates.mjs",
+    "path": "copied-candidate04\\qualification\\gates.mjs",
+    "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\handler.mjs",
+    "path": "copied-candidate04\\qualification\\handler.mjs",
+    "sha256": "334e2fbc52168cd6d79ba517c70292f31fe1103fc402ca0274ed1eba8c01f55f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\app\\api\\internal\\qualification\\read-only\\route.ts",
+    "path": "app\\app\\api\\internal\\qualification\\read-only\\route.ts",
+    "sha256": "4cdc11a1139f54a2f3a9f0ef08bfbb4d11b82837225a9b96f682e503668d5581"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\budget.mjs",
+    "path": "app\\qualification\\budget.mjs",
+    "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\constants.mjs",
+    "path": "app\\qualification\\constants.mjs",
+    "sha256": "e91ecd2e166172772922cfb5a82fbdcd6866edd78b3a3979b35f8404a3f2700f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\execute.mjs",
+    "path": "app\\qualification\\execute.mjs",
+    "sha256": "b0e7db6366ab104b4deb90421e41af5ceb837e490f8dce63d8fbada0fd45c81e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\gates.mjs",
+    "path": "app\\qualification\\gates.mjs",
+    "sha256": "ac2c79a71f184635cc910b4514f5d7175b61b5503273bfc23ace30c1130c196c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\handler.mjs",
+    "path": "app\\qualification\\handler.mjs",
+    "sha256": "00be0e189df2a35190654826beb687aa3c217a80a8af09c4350e0f369c5c7d22"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\ledger.mjs",
+    "path": "app\\qualification\\ledger.mjs",
+    "sha256": "fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\native-http.mjs",
+    "path": "app\\qualification\\native-http.mjs",
+    "sha256": "8a09ed4735eb79f61b3b513fdf8b6f3fda86cbb8472b897f434ce64ab1c93f54"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\sdk.mjs",
+    "path": "app\\qualification\\sdk.mjs",
+    "sha256": "71e41a180b88d8bc96dcb34e17a97fb1642a11152f84b05e0f99efded2b62a7a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\qualification\\worker.mjs",
+    "path": "app\\qualification\\worker.mjs",
+    "sha256": "917b03094bef19ac0a7502de9e551ff14f2601c7b56de2c9030b1b4f1109f475"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\lib\\purchases\\reservation-v2.ts",
+    "path": "app\\lib\\purchases\\reservation-v2.ts",
+    "sha256": "a58189985a8014b5efb07f639ac039d18ce31c22606b7d5533a56d224f16e38d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\lib\\server\\purchases\\creamery-reservations.ts",
+    "path": "app\\lib\\server\\purchases\\creamery-reservations.ts",
+    "sha256": "25877f84e63ee5658a128d38d76b62b4abd14293f6bd9879a7dfb34bfa87c5a6"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\lib\\server\\purchases\\creamery-transport.ts",
+    "path": "app\\lib\\server\\purchases\\creamery-transport.ts",
+    "sha256": "d25932303f23541f0099bdacabb22973d453c75212c9212d81ec1181d0a2d734"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\config\\provider-binding.json",
+    "path": "app\\config\\provider-binding.json",
+    "sha256": "0b6003969982729767ef62cecc39234a9d6fcd423121a76785e168126ffa5796"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\config\\run-binding.json",
+    "path": "app\\config\\run-binding.json",
+    "sha256": "05882cc11b0bf655ac0d945145cfb0668c3c41f58de5fdcadafcd10a7a41ce4b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\config\\source-pins.json",
+    "path": "app\\config\\source-pins.json",
+    "sha256": "f9859d922c169e4f1b4f5562d79a24cfe940eb796e865981de9bd8eb5c921a20"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\config\\worker-runtime-files.json",
+    "path": "app\\config\\worker-runtime-files.json",
+    "sha256": "b558f727b2d570f381a8a21d8321f12ca0fbb2b413484bd1558815624b83567e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\next.config.mjs",
+    "path": "app\\next.config.mjs",
+    "sha256": "5e1fe92d790591bc4c30116aeaaa1dfea82181c5f6bdca4fcc4b5c2a4506a8f1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\package.json",
+    "path": "app\\package.json",
+    "sha256": "806267f78cee56ef0878a68a7ae2dbf9be195ed2da57298006a37f77766d7c1e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\package-lock.json",
+    "path": "app\\package-lock.json",
+    "sha256": "4feeb2e8170d26fdea56d29d5662d370df557db64a2990e63b4375bc133631a2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\tsconfig.json",
+    "path": "app\\tsconfig.json",
+    "sha256": "db63cf18a76b0b7f62ece1a47179df74473c1f1b919bee2feaef90bea1a547aa"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\next-env.d.ts",
+    "path": "app\\next-env.d.ts",
+    "sha256": "f4e8976c19fc926644d72610bf1058bd6bf52add97e46a02bc0b912a751625c0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-readonly-20261029\\middleware.ts",
+    "path": "app\\middleware.ts",
+    "sha256": "161ca452b002c08f8a36419957aff2ff238e315600a763167e4447c6ffb7f281"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\handler.mjs",
+    "path": "app\\qualification\\handler.mjs",
+    "sha256": "334e2fbc52168cd6d79ba517c70292f31fe1103fc402ca0274ed1eba8c01f55f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\gates.mjs",
+    "path": "app\\qualification\\gates.mjs",
+    "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\constants.mjs",
+    "path": "app\\qualification\\constants.mjs",
+    "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\qualification\\budget.mjs",
+    "path": "app\\qualification\\budget.mjs",
+    "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-bounded-candidate04-20261031\\replay.mjs",
+    "path": "app\\qualification\\replay.mjs",
+    "sha256": "4e669021540e99f2851d1bccceb3b9bc066c38aecd948723367a4cc7834653d2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\atlas-graph.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\atlas-graph.ts",
+    "sha256": "49bda79a8d5844d6d0531d833c10154206254fc2fe2a961078a6fe6c0f417b42"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\canon-system.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\canon-system.ts",
+    "sha256": "6c20fb8afcda3d66d38819b6f71249b36d794b393d7dcfd5939f6d0c957aee87"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\collection-identity.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\collection-identity.ts",
+    "sha256": "f44a47cd49f29ea1281ddd1ea44afe4aacef3361f09678c328cb713f95bb899b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firebase.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firebase.ts",
+    "sha256": "2362be57c902a05327bd6218a5f41964e4f4831c471a6aec86c1f64418501350"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\reference-data.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\reference-data.ts",
+    "sha256": "d40caa33912ed5f762b884e5948247336f425b6398f78aeed937e710d68320e8"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\story-moderator-submission-context.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\story-moderator-submission-context.ts",
+    "sha256": "25f3c3acfcce9a32dacab16c1a76b503d50c86597a15c0c448f22c17df7d147a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\story-submission-history.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\story-submission-history.ts",
+    "sha256": "273f2366d52b2b87dc69dd14a69b2aa30c7fb383ba85154acd866eb9243c5e41"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\story-validation.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\story-validation.ts",
+    "sha256": "35377e3868a297c2f89906091bb3b2c94a08c317f7d5e844c6cffc736e25c17d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\story-versioning.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\story-versioning.ts",
+    "sha256": "de65fcfa0fbe1bc0b31255154c280fea9fa10e9567b01d56090713938f8d1672"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\utils.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\utils.ts",
+    "sha256": "5ccb3f159eb7e4c23d6cdd40f5eff0e00e0600c3ef841a9e8bed0e1fe5aaf829"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\auth\\firebase-errors.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\auth\\firebase-errors.ts",
+    "sha256": "1fa98f1a9e697ead3f797e49460514d5be04719f04019223af3ddda960324d05"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\auth\\roles.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\auth\\roles.ts",
+    "sha256": "d443e14bea46f9541a3b61032fd26aae1cb01205ee108cbf2b5f74bc432d887a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\auth\\use-user-role.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\auth\\use-user-role.ts",
+    "sha256": "f4c680a5d5d276c3975cbe5eb9e21c7b0c1659864027949d3799afdba853a4c0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\characters\\character-identity-read-model.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\characters\\character-identity-read-model.fixtures.ts",
+    "sha256": "783dff9d00aadfbacc4c4b28c18f11d96e2315fccbc3854a6271bdf42a3f3c98"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\characters\\character-identity-read-model.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\characters\\character-identity-read-model.ts",
+    "sha256": "63b6d8126805734ee0765442dcde31429ed21068f5082d5771225afeb393eba8"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\characters\\character-identity-reconciliation.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\characters\\character-identity-reconciliation.ts",
+    "sha256": "25cc72c19f57ffb6ee3d60c50ce19ca1bbe66ad8e1f8b29b7b819c6596929da7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\characters\\character-identity.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\characters\\character-identity.ts",
+    "sha256": "acf736875429170e85c227ccb74cbd81aa9e87650b117fcfe2c7aa3b55db290b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\characters\\character-seed-cli-safety.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\characters\\character-seed-cli-safety.ts",
+    "sha256": "9305659476e83884a70986ceba24b2afd84530fd0b9776d3054993a1027429f3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\characters\\mars-cats-source.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\characters\\mars-cats-source.ts",
+    "sha256": "28d0d0a2b36d672064e082faa6e9f43603556bdde91e43dea594a2a29e594ac1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\feedback.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\feedback.ts",
+    "sha256": "cebfc1e311da4f2432729f02a1a149310a384f21f437486df4dd8717ec08fdfc"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\purchases.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\purchases.ts",
+    "sha256": "f0e3ed05822dd34f9342b06f181f70360964577520a16f284e3b0b1cc09c5e23"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\config\\canon-rules.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\config\\canon-rules.ts",
+    "sha256": "bc3f53f62cc6527edc7cd0e5f048c73c3a42e1100ef782c839e3089873217442"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\config\\feedback.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\config\\feedback.ts",
+    "sha256": "4174ff6b1570053cf3cccef30b0769df6b4a126f17792607149e80f9c72ddfa2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\config\\inventory-items.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\config\\inventory-items.ts",
+    "sha256": "6db9a031cde9399e5f91c5c7f996c83a8a9b7fe31816099672ed04684877427e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\config\\review-feedback.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\config\\review-feedback.ts",
+    "sha256": "f8d621599f694984cdf5e54fac7f2b586e9e9dec63d08ab8cae4f7f8b0a91ecf"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\config\\store-products.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\config\\store-products.ts",
+    "sha256": "b4fe4333440b2fdd7ed16eeade1b65cd6219821d6d2bb6d8ac0a45709404a2d9"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\config\\submission-rules.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\config\\submission-rules.ts",
+    "sha256": "e8e4496dacb7ecc98f4c0b16465d866fa10535a0105d5c7eec244dd796d23af0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\creamery\\domain.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\creamery\\domain.ts",
+    "sha256": "e4de676894a3af7845f6e2a12a213e5ac2aa7e07a038908a791dc990320a9293"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\discord\\identity-link.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\discord\\identity-link.ts",
+    "sha256": "739093ff26fd711dad23fc46c5e4c086d6f1b5f5c253cbfce8c6b522a2a262ee"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\demo-data.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\demo-data.ts",
+    "sha256": "4877fa79b9fe29ef9bbc06fd8ef6c4d4a39e79247dff1eb45326c368e6c14925"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\feedback.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\feedback.ts",
+    "sha256": "a575d2547465320d54272521725e954b393f022b49e3bcd8769e44a8c901b04d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\portal-queries.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\portal-queries.ts",
+    "sha256": "c74bafe692d578544ede7dcd9f0208a1757f18e3f55f8e47e1ba59e4d510daa6"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\portal-resolver.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\portal-resolver.fixtures.ts",
+    "sha256": "4fabccc27f5a9cba97f85c67d47f247ce5aefd5934656f96db8d0eda860573e5"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\portal-stewardship.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\portal-stewardship.ts",
+    "sha256": "55ee80c57cddd9bf04e94a22deae8cb4adc5ff99e0c111fc99bf24b69e1202d2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\public-stories.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\public-stories.ts",
+    "sha256": "0bae5dec9b88310ee7a2b6a0757b20cfa9401513761ab2082b8bb4784f979517"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\relay-pass.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\relay-pass.ts",
+    "sha256": "aac87a2c3ede971df451bca57baff1c250e6aa65e743328ba98419fe714ee7d7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\store.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\store.ts",
+    "sha256": "95d348e1d2b2bc0f4e823ff966d2744b9bc82624259186bbb9d0ab49e808004e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\story-queries.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\story-queries.ts",
+    "sha256": "0b8f824963f68eabe5d18aa417fc6083f535753d9871267a271a798949b8f219"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\story-review.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\story-review.ts",
+    "sha256": "307c430a78d7f084360b34dba06749e602c8f2135731015e12e6b71451513cd7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\story-submission-history.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\story-submission-history.fixtures.ts",
+    "sha256": "ae7b8fc116a1d5a14aca4c166c9be9943aa3b870828579ba7f34321da5631333"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\story-submission-history.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\story-submission-history.ts",
+    "sha256": "1b92dbc7045b933542efc9fb32f3df10ad4ea6722c9651e4ff4ae9f35247a77a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\story-submission-utils.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\story-submission-utils.ts",
+    "sha256": "9fe9500821fc44d3767ee137ebfb92977b572c7170d4421d928595d276764c72"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\story-submissions.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\story-submissions.ts",
+    "sha256": "2e625e22a65f1add6f6aa3945603d22c9e51ba1ad453252be87879982aacaa45"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\firestore\\submission-pass.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\firestore\\submission-pass.ts",
+    "sha256": "9f1721837eb0d8acadbe06719d186004a794ed39876bf11e693f9131bcfa89b3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\nfts\\asset-identity.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\nfts\\asset-identity.ts",
+    "sha256": "54c3987c0a9624fc2f27caa4d3c4bb49771b87a0a73d9494accf21b1febc7500"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\nfts\\mars-recognition.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\nfts\\mars-recognition.ts",
+    "sha256": "3fd52ef7e14d013ff941b7ebb699255071039b2f687f1b28f1709d3d29a45c09"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\nfts\\ownership-evidence.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\nfts\\ownership-evidence.ts",
+    "sha256": "c4996fb86c11a9ba87a8f4766bd1b77d18fe15c186e0ff315f6e05d7a53485c6"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\portals\\portal-acquisition-policy.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\portals\\portal-acquisition-policy.ts",
+    "sha256": "72bffa7077317ac46535cc4ec702049d44ac6cb619d1fc04d006360f6a99b611"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\portals\\portal-acquisition.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\portals\\portal-acquisition.ts",
+    "sha256": "596737462f33bb7331b90dc5f1588a11300a3d71f3f95b9c337b61bfc7fa3c92"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\portals\\portal-domain.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\portals\\portal-domain.ts",
+    "sha256": "e7c4288d8fa9726e270d796d366fe0dba3ab8b011a558322cf46b607bb8f78b3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\portals\\portal-issuance.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\portals\\portal-issuance.ts",
+    "sha256": "06b2b87cf926e5c2081ede8436319fc2502ddfd6856485959371995dfceb563a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\portals\\portal-serial-authority.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\portals\\portal-serial-authority.ts",
+    "sha256": "0aa244ae2976783665cba39467437f5a95480aeaa30bfc031366809ea9ff51f4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\portals\\portal-stewardship.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\portals\\portal-stewardship.ts",
+    "sha256": "ce1c978a62ea260b146e02f37b95a70a72ef96144c69c99ca1152d92248f0c2f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\portals\\portal-types.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\portals\\portal-types.ts",
+    "sha256": "9b88e4e9cd48db0614356029d4dabcefb66dba47f73ee34fbc84ab03a2eddca4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\portals\\stewarded-portal-summary.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\portals\\stewarded-portal-summary.ts",
+    "sha256": "e5e9bf2ab158470e893dc40f7ed281d33185a056a15d34af86002648299b03f2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\domain.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\domain.ts",
+    "sha256": "5dca45ef8b3a099ff2744638a6c93c46cc5c49c5353a33aee9f5422dce8f1517"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\fulfillment-plan.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\fulfillment-plan.fixtures.ts",
+    "sha256": "bc800107614bb73c2ab888fa10026cd4ee1158acf7836921545357cd92bb2252"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\fulfillment-plan.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\fulfillment-plan.ts",
+    "sha256": "39653108cc100633d8c9fc256855c2682af14afe3ed34731181a735093197221"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\reservation-v2.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\reservation-v2.ts",
+    "sha256": "2e54aacd14376edd21beb5cfccb2675666efecc23d7954fdc4c1e0c9be298ed3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\staging-session.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\staging-session.ts",
+    "sha256": "1ff6b0d30113bdc544083621ccdcdaeba6247232bf9a0a7d98e7a9d28fb35d39"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\submission-pass-fulfillment.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\submission-pass-fulfillment.fixtures.ts",
+    "sha256": "e1023fa2f0a1aba50e70bad8e635ab6e95dd1ffb696af53aff57228ea4fab9fb"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\submission-pass-fulfillment.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\submission-pass-fulfillment.ts",
+    "sha256": "be84a3d40681cdc4038842b9c5989e84bc61f23a97e7dbe21cd4e5b930cc8d74"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\transitions.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\transitions.fixtures.ts",
+    "sha256": "6152fc36fa2a116386d9262fac6cab121f02543e5b44094f5d21f748ecaf9585"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\transitions.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\transitions.ts",
+    "sha256": "57a2babb4e55aef64b66cf3a087674bf6c708a04cb06ea6bc0ffb5e46c8f91a2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\purchases\\work.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\purchases\\work.ts",
+    "sha256": "4232aa22fa4b47d8cd61a7726613655eb8b24d3368b668068189fb72cfa5cd05"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\security\\wallet-boundary.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\security\\wallet-boundary.ts",
+    "sha256": "75983a63f1a35eb54502234fffcd2434a79d78045cad1778fbd11f3dcbc4ddd7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\stories\\return-to-draft-transition.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\stories\\return-to-draft-transition.ts",
+    "sha256": "13725c896a809be3782f4ea31f44a936df07bd98b117b45758d2d34f9d622861"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\system\\submission-config.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\system\\submission-config.ts",
+    "sha256": "86464414bb0450605a9b848439f2c131c2bb336c559f4fb88f6193210d58c56c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\system\\use-submission-config.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\system\\use-submission-config.ts",
+    "sha256": "9c9eb473e4b27bbe0aec70c40c53d1e4641ec9e3f196490d1f14e82199f0917a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\types\\index.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\types\\index.ts",
+    "sha256": "d6b7e0017d466fdeb23912cd24293faccf99fba59226c9574f8b14f9f0dc9a06"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\wallets\\wallet-link.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\wallets\\wallet-link.fixtures.ts",
+    "sha256": "800b706b4317c78e9621e3105c541b375db5e16fb40d09b45580fcf6030c28a5"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\wallets\\wallet-link.memory.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\wallets\\wallet-link.memory.ts",
+    "sha256": "82e2e2e46b51835c9639a5e0914028c4a5e48b7bec32af46cc3364268b09e01f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\wallets\\wallet-link.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\wallets\\wallet-link.ts",
+    "sha256": "ae0668eacff4fb403764ed28e739881b2cea6679431b40a342baf8921010a9ca"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\account\\profile.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\account\\profile.ts",
+    "sha256": "736861be6cee3562733dda72ee677ac119999b92403a5f01cd43de7ea79bb560"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\admin\\feedback-triage.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\admin\\feedback-triage.ts",
+    "sha256": "ad487b6528acaae188b2c7a9f39ddcc21a2bf2443e6abe28efb3c04fb7a6ed8b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\admin\\starter-pack-reset.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\admin\\starter-pack-reset.ts",
+    "sha256": "a383d800bfefd4786dd0fa4d2debc7f26a06caa9b8f109af6f6c26141ad05489"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\admin\\user-admin-notes.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\admin\\user-admin-notes.ts",
+    "sha256": "85bdbb3799562259c2cde7416f62ab586daaf018f3bd5e8dd9cb29588b070a90"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\admin\\user-authority.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\admin\\user-authority.ts",
+    "sha256": "6b7c80394274c2f68b03bfa301cf4080c89cebaff565bdefe1d1a41c1a86b123"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\admin\\user-cream-balance.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\admin\\user-cream-balance.ts",
+    "sha256": "4667456b07e84003a44c748709a2b3800d50f244d2f67889b73717ce55115abd"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\admin\\user-inventory-count.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\admin\\user-inventory-count.ts",
+    "sha256": "a455e1abb1929be5aea5a9fb042583799b6ac321c43d962dceeb707af357ea9d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\admin\\user-nft-placeholder-holdings.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\admin\\user-nft-placeholder-holdings.ts",
+    "sha256": "47f85b96c5a4cab310f7c86a73bc43386ac74b3e2be607de602fd682de3e1f58"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\characters\\admin-mars-cat-identity-lookup.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\characters\\admin-mars-cat-identity-lookup.ts",
+    "sha256": "e1d53415321ea14b9ff46788bdd6cf169c223b91164bb8e03a6ae6217e5ce8b3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\closed-alpha\\starter-pack-claim.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\closed-alpha\\starter-pack-claim.ts",
+    "sha256": "538720e7fbd1a68c673deacf42156b3d9d2222d4ca4bbac4a5bbfcfa54c8b68f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\creamery\\account-display.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\creamery\\account-display.ts",
+    "sha256": "7f2c9beb622642786ab416eb0680f0f70b9f2d19d4300ad284c2d16721ede766"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\discord\\api.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\discord\\api.ts",
+    "sha256": "36b71eb04549636eea44a87a7a93aa6be5957a6d05f78e7337bb31bd66a66749"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\discord\\browser.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\discord\\browser.ts",
+    "sha256": "dbc20b7cf84d0a56741f7d8478c485d2abe7b7190d98eae24474e0d541416b2b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\discord\\callback.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\discord\\callback.fixtures.ts",
+    "sha256": "f80b6994c9c028e9ac95d96b7dbea8dd964d7b692040453455243b972668ee55"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\discord\\callback.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\discord\\callback.ts",
+    "sha256": "fa0d07a6d47ed70ded8e37430ae94cfb588a4e1efc38d5f7813d8ba581109f0c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\discord\\profile.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\discord\\profile.fixtures.ts",
+    "sha256": "202b6324ad06bd425f1535440e103bffd101694259c497cad46d47259e31800e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\discord\\profile.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\discord\\profile.ts",
+    "sha256": "528e515f9c1c0b7328d40e32f1f478f40a6e71844e310c5244794762af02635d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\discord\\session.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\discord\\session.fixtures.ts",
+    "sha256": "58ee0bcc4f5118f5323d6116559d2e56aaf4cb2e557f5b77484464ab4d93091a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\discord\\session.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\discord\\session.ts",
+    "sha256": "3c9fd56d3ce8caa46f05e39eb0346cfc1da9ab11801fc66c12ebbbeb1523277f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\inventory\\availability.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\inventory\\availability.ts",
+    "sha256": "b4e2f7fecf64243f3391f2ea63af1d34a5520ca2031610e036fe4d658faf39ea"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\inventory\\summary.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\inventory\\summary.ts",
+    "sha256": "184f8e53c7e0e42b15e8caa2254350e84ef798989e481f21958e076a771cc4e6"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\nfts\\mars-session.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\nfts\\mars-session.ts",
+    "sha256": "ea98321499903be0b8e2fa22ee271a8b9ce28dd35ddf7f4c57125720f266c20b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\portals\\admin-managed-portals.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\portals\\admin-managed-portals.ts",
+    "sha256": "58423bfad6416e9834a34a1546f1aef9588cbc894d3b06ce3f9c581724088819"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\portals\\admin-portal-grants.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\portals\\admin-portal-grants.fixtures.ts",
+    "sha256": "31ee0625d9f10d2a96b56f90ae1b61c169bb06f0c91860b7ff9294a2acd936f0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\portals\\admin-portal-grants.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\portals\\admin-portal-grants.ts",
+    "sha256": "6905b74440983c88f75a6b974802b76c3cd89780400540b6cca1ce2861a83fd9"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\portals\\configure-route.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\portals\\configure-route.ts",
+    "sha256": "21eee4f7dd83a5cec6d704e695efd7fd2c1eddb2c8eb6076e0583808124c32e7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\portals\\stewarded-portals.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\portals\\stewarded-portals.ts",
+    "sha256": "a8ae5e8216363667b6bf7e35a01923de162d89b18e1ad6ec5cea0d329035aa20"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\portals\\submission-options.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\portals\\submission-options.ts",
+    "sha256": "60001a6271b2247f3b5546a5a4a3fb327b6a2668b8333920315ba99806a754e4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\purchases\\browser-session.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\purchases\\browser-session.ts",
+    "sha256": "ad47c9689b6452baa8a2b74fa61d4d5f12a8ff3b278ccef9bb69cb35f7a8bca0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\purchases\\session.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\purchases\\session.ts",
+    "sha256": "9680737cac39d15c1f1d4f48c468acc9bd58014f4b66fae7db3f3d1dd72c040a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\approve.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\approve.ts",
+    "sha256": "a963811c002303c75ce70b2528dfa60f19c97d804d7e5d029211c0a41ae1dacc"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\approved-request-changes.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\approved-request-changes.ts",
+    "sha256": "147587005aa13d3a564a74863f9b2e77782dc15d1492ac1e13991719f7a02ddd"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\archive.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\archive.ts",
+    "sha256": "13448990c217a36858f5bdb85b2eeb59b8eaa6d3235ddeaf1abd1fc26f155672"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\create-working-revision.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\create-working-revision.ts",
+    "sha256": "ec4a1034c22eea40d3133047fa99f63bd46f0291fcd7748d41efe81bd0fd2458"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\delete-draft.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\delete-draft.ts",
+    "sha256": "ff49dfdc66806788ad97c3a02b85742653c971770c23038811233c2c2c362f0f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\editorial-flags.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\editorial-flags.ts",
+    "sha256": "395a0c87ad746e025251248dc57c0d9de25a3134348c51862bbe6ff1f3ead802"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\moderator-submission-context.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\moderator-submission-context.ts",
+    "sha256": "6f49e2fc6b2c15aba35186a7adcf11dc191f443c07aaa39fd082d4b05d30bb34"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\publish.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\publish.ts",
+    "sha256": "8156f3f30843d8182d7843ce0f67c8479ffa547dc45bd13044f752025b912c1c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\reject.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\reject.ts",
+    "sha256": "82c6a2ffc8af82d2e5305c2a7d251283c711e28fd8dfcc0df18dd6096f2b940f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\release-review.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\release-review.ts",
+    "sha256": "b5e0f9d428524ca445d060f0c2de77e0ad97207cab435a7c2eef0e289610b427"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\request-changes.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\request-changes.ts",
+    "sha256": "e6d805ddf2da49700b9a71dd14760d20813f343693fef77d92948a09bb3654eb"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\return-to-approved.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\return-to-approved.ts",
+    "sha256": "c9d1425bcbc73999bb058c393e357f1e77603490efc720c59ad6bfad43bfcc24"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\return-to-draft.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\return-to-draft.ts",
+    "sha256": "80f70fadb1218d1017178f066d4dd43d833861a2d39728db6ca0825a578ccc82"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\save-draft.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\save-draft.ts",
+    "sha256": "5045af2ebe31bd6d1ecc80ac68d24609b8ea345310217fc788c7e6343fe5fab7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\start-review.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\start-review.ts",
+    "sha256": "2e63588761c9d754e656b2edf02a3d8a961eae70926adb340840d5c48e2daece"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\submission-history.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\submission-history.ts",
+    "sha256": "4137860362bdefc0a4b7b050f1551826f97abe1320e28120b250998ee0af7e6d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\stories\\submit.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\stories\\submit.ts",
+    "sha256": "852f93dcd4e935a58a507203afe289b3472aaf55f683cd2a12741f76f0d1d1ae"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\system\\config.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\system\\config.ts",
+    "sha256": "b6703b632abb999d95fa313bcd7c4f66a5ec20437e4110c5ecc91fa65ca0a517"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\wallets\\api.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\wallets\\api.ts",
+    "sha256": "adc1aae42867e514c02bafa88bbfe6998e1687f7ebb79893779d5813658a7b14"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\client\\wallets\\provider.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\client\\wallets\\provider.ts",
+    "sha256": "f26cf081d24015f273c61b04b5f610662ed5fc7e9755ea7a3327d6e5bdcfa324"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\account\\profile.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\account\\profile.fixtures.ts",
+    "sha256": "5e3ee93ad20939a8db08e8b3da1747d6a46f9fc6bdab62c644871388e7ac2b5f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\account\\profile.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\account\\profile.ts",
+    "sha256": "1b78c479eae913498e98fd5f855adb50dfa63bad142eb506415a0ae2b6474ac9"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\feedback-triage.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\feedback-triage.fixtures.ts",
+    "sha256": "806990ee820c7824ca0a479e6cdb7e2f6c05aaedcd82b918da866cf14e5c00ca"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\feedback-triage.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\feedback-triage.ts",
+    "sha256": "9dfee658099492a991e595efe5a1187bf915161d800e884a4ab2e3f93121bd8c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\starter-pack-reset.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\starter-pack-reset.fixtures.ts",
+    "sha256": "9e3ed04ca7eb2cff56c507a858b68488ca444813481dc3c26b3cbc7a2e35df30"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\starter-pack-reset.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\starter-pack-reset.ts",
+    "sha256": "0b91e4ab93c099f7e5d9b2276a5976a5b79432567803e6d44b693ab2d76af2da"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-admin-notes.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-admin-notes.fixtures.ts",
+    "sha256": "734cf73afd8ed89039457a33a24708d4b575d836a67ac7490a9618fa1cb2c246"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-admin-notes.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-admin-notes.ts",
+    "sha256": "647961dff4c28fff5197f4af8e5f3b785dc75b9f1fdd97ce15097af9a020c68b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-authority.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-authority.fixtures.ts",
+    "sha256": "8350267d786eb0aca0800774ee949dd0fdf949e50d63393d4394bd62fcb6e2e4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-authority.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-authority.ts",
+    "sha256": "5d7bb6d3922d066bbca94236d48b8a9e6955cae1502f9c6edbe8ba37ad2b484a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-cream-balance.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-cream-balance.fixtures.ts",
+    "sha256": "195f930ca360ab8679a58dd0433513af0be3401d1ff2d84e009805b045e7cc62"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-cream-balance.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-cream-balance.ts",
+    "sha256": "6e6b784b9027eada4c6b98741aa202806a0026ff6870b3e54ce8fb5559a4b6fa"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-inventory-count.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-inventory-count.fixtures.ts",
+    "sha256": "3c03becbf612ceb7d32eff713a16a5583527bdf7895ffa70ee2aa9bf8f98b0d0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-inventory-count.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-inventory-count.ts",
+    "sha256": "c13a52be4f41d150025b16c11bc2d44e3ab02c6770737b1c29083ca21aa6fda9"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-nft-placeholder-holdings.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-nft-placeholder-holdings.fixtures.ts",
+    "sha256": "8692c57fa68bfcc22ef5569ad31ab0561c0d80665ea32aef368f4c73890c2af3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\admin\\user-nft-placeholder-holdings.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\admin\\user-nft-placeholder-holdings.ts",
+    "sha256": "ae27c814dbbf93438c5a448a2bed78dbbe19351952227fdfbb1e808ed12e571c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\discord-browser-session-authority.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\discord-browser-session-authority.fixtures.ts",
+    "sha256": "509e7f7afcab99f48b645e0d1be963aa1fbbd8d8248bdadca1459627d3ea43ad"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\discord-browser-session-authority.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\discord-browser-session-authority.ts",
+    "sha256": "1699c2a66a9a685137dd4b4fa01618f4739a93ee9c63c6165c0c075d8a7ff55b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\discord-browser-session-firestore-repository.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\discord-browser-session-firestore-repository.fixtures.ts",
+    "sha256": "cead69c29f90a79cce6cf0cf3bee3b9fca2c01d2d44a6e0dafb661e882f8fbc2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\discord-browser-session-firestore-repository.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\discord-browser-session-firestore-repository.ts",
+    "sha256": "e155c24e85ef9c3b9ed1d01f7fa0f17afc1b595482822feb9b9f6d0569661665"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\discord-session.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\discord-session.fixtures.ts",
+    "sha256": "b0dffbb6d86c8b1d6a3a4a80bf0b08b5c5e139b114d0eb7e16b25f6b4fbe1eaa"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\discord-session.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\discord-session.ts",
+    "sha256": "295a94d87719c6803a6583fcf29bc1b6bbdb53206758166b6a5a1ed0f7bdd2b3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\require-admin.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\require-admin.ts",
+    "sha256": "bc072a22216f29b8b6079995923c23174fa34dd3edd7c9fb54c91b29b1f976fc"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\require-moderator.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\require-moderator.ts",
+    "sha256": "f9d61dc525a5ef008cd043e3245bd25e019d462fe47abcf859d12291598a5c92"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\auth\\verify-firebase-id-token.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\auth\\verify-firebase-id-token.ts",
+    "sha256": "cd3c9e5305753c176b09b174ff9e80512c3e7017b6cdc17f154a78a34ec2034c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\characters\\admin-mars-cat-identity-lookup.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\characters\\admin-mars-cat-identity-lookup.fixtures.ts",
+    "sha256": "053aff2eb43ff6d7960baaa9e281fc7426810e338822d9fa7cf36a3072d8269a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\characters\\admin-mars-cat-identity-lookup.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\characters\\admin-mars-cat-identity-lookup.ts",
+    "sha256": "855419e0086455b3c00c1af68d4a160098880c876bd922fcdc95e90f055e8d12"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\characters\\character-identity-reads.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\characters\\character-identity-reads.ts",
+    "sha256": "0224b76c4a2ece733b5d30955a62f0d6565f7556400dfc7415e8687b6ae6fd08"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\characters\\mars-cat-identity.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\characters\\mars-cat-identity.fixtures.ts",
+    "sha256": "6b90994ca5931faecb32879074e5ef72223bfa466b97b699c6bc369af422bcb0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\characters\\mars-cats-source.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\characters\\mars-cats-source.ts",
+    "sha256": "ca8cab1b3e40873cc0c5f987d3de67c9fd591bccb82c16e53eca5c1b7da4c3ee"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\characters\\seed-mars-cat-identities.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\characters\\seed-mars-cat-identities.ts",
+    "sha256": "85b59e8edda9f7d1a72159e2891a7571046a3ad1b94b810fdcb059538db7a76d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\closed-alpha\\starter-pack-claim.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\closed-alpha\\starter-pack-claim.fixtures.ts",
+    "sha256": "1a67670267bdb53e1a0a5367c03476b488e6716dd9d7af7c87405ef4af8cb5b5"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\closed-alpha\\starter-pack-claim.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\closed-alpha\\starter-pack-claim.ts",
+    "sha256": "0db2f6e65e015e66f1f197abe8dd8261d5989d1d1524893f0c58c5e467fa3318"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\creamery\\http.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\creamery\\http.fixtures.ts",
+    "sha256": "8ccb9f746931d8242402141e6159c33daa40fddfcc3f50a014c4d18a549816ba"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\creamery\\http.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\creamery\\http.ts",
+    "sha256": "f110d6c94c74db34cd3fe6d3bdb79dfad3a3983f3e255948aff6c94e1b190d51"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\creamery\\read.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\creamery\\read.ts",
+    "sha256": "f429a273dadc6d0ec81d356e229fc668c0e790d59a2bf93ead69b61c45408741"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\creamery\\trusted-read.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\creamery\\trusted-read.ts",
+    "sha256": "ecd7939af51aac1f0170c1357a2f5ce7406014564d4e9518c7b795af7fa1f14c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\api-config.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\api-config.ts",
+    "sha256": "c97292eb864644b7d49810d53db0f18f94719ea009a517a991cd0a6965464591"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\api-production.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\api-production.ts",
+    "sha256": "73528dd0e8a614a5d42c137ba7441640df75f9e858bf5d6b858126fec587e577"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\api.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\api.fixtures.ts",
+    "sha256": "33f58953844d7f190df698bf2119222bfb98622c47a1d5a17174fd37ca53b344"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\api.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\api.ts",
+    "sha256": "d9900b712fdcae063c4102c5aa727940970b707fcd2ef652863d209365e5ffc5"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\firestore-repository.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\firestore-repository.fixtures.ts",
+    "sha256": "458529dc2e0fb76bcaa1ed18b4397ef3706204fc3546d3ea7ff79b15da944485"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\firestore-repository.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\firestore-repository.ts",
+    "sha256": "ff7258e9aada3341d77ab299ce1c5505444d9fce980519f2c11c3fac0877e416"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\identity-link.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\identity-link.ts",
+    "sha256": "f15c40cda7532d76d5f6dcb367b4bfc4c14f23653d7b83c41b5cdafc87c0514a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\oauth-firestore-repository.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\oauth-firestore-repository.fixtures.ts",
+    "sha256": "527370166e432e9d306b2aeb35c99f8194c59512b418471adc5a2f2d4ee58d14"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\oauth-firestore-repository.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\oauth-firestore-repository.ts",
+    "sha256": "a2c0fe5fe6a8c3216defc9b01cbe3c25ae02dd67ac575442381d9b3ea45001b4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\oauth.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\oauth.fixtures.ts",
+    "sha256": "28f08acae576c82e3d177bd7733202a55ddfa15ee2795f14d2ad416224ce8e62"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\oauth.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\oauth.ts",
+    "sha256": "bbb66431389d2831104aff57fb3bb20b3bf4756321a3e57fbf276647f389501d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\rate-limit.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\rate-limit.fixtures.ts",
+    "sha256": "a0cee501b6be88fa87627b74d49684a501c127da83f1a19f57cce3c0c27a3684"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\rate-limit.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\rate-limit.ts",
+    "sha256": "536d8102d15068d0fd5693c05ac41622ab3d5e658e22b16cb0b2b31ecf6f6126"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\resolve-identity.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\resolve-identity.ts",
+    "sha256": "d28ec3e567de19cc9a2466f444802769f1b97c5fa85d93e7aa7b1834b2a57963"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\discord\\session-cookie.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\discord\\session-cookie.ts",
+    "sha256": "1d140ed7c3774f71399cc9e001da542f16420e26163bee6f0f6a736b385ccfd1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\feedback\\create.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\feedback\\create.fixtures.ts",
+    "sha256": "5a60e68fc97e132ccb83f8f88b6c0b912aaaff78be048268b2703eb784d559b2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\feedback\\create.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\feedback\\create.ts",
+    "sha256": "2fbe0378fef66be77a88ea4fe8a7f5e71c06f09721dacf586233a9d1ab449635"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\firebase-admin\\app.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\firebase-admin\\app.ts",
+    "sha256": "e41369e3d0ba3526467fdb430545a9f37374c0bb67abbb65833eb672ed1fbf40"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\firebase-admin\\auth.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\firebase-admin\\auth.ts",
+    "sha256": "2970ce45fd58be5ec6b05bb458af3ab8224d93596add91d9d032dfda2fc8e226"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\firebase-admin\\firestore.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\firebase-admin\\firestore.ts",
+    "sha256": "aaf2ad48080cad35d5fb022827d481dd66684bbb2d900f26512231670d5bd6a1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\firebase-admin\\isolated-app.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\firebase-admin\\isolated-app.ts",
+    "sha256": "2e37db31cab987ee6301855b923d1710e9485ce403309446f0fea6589f553dd0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\inventory\\availability.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\inventory\\availability.fixtures.ts",
+    "sha256": "6ffc651b692264c98c66fe619ad60f4527d2f3b1e911eea37abbcdcce52b5464"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\inventory\\availability.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\inventory\\availability.ts",
+    "sha256": "2d3a842b954c172a9f66c0ba3390dd60f410f829c03eab69ee1f374aedc332e0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\inventory\\summary.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\inventory\\summary.fixtures.ts",
+    "sha256": "a1294f2bbc2d3cc7d68a0e9c368c471a7e016fb2e38e035a8825a1c35526e204"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\inventory\\summary.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\inventory\\summary.ts",
+    "sha256": "f8eddad588d915a5913e3fd44c880fd8efdeb49e7225a6ff3423bc248cd4926a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\nfts\\account.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\nfts\\account.ts",
+    "sha256": "94b5e383aa8bbf80c06c73baf6f47e5d834c635c83b55022bf9e11943ed58407"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\nfts\\admission.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\nfts\\admission.ts",
+    "sha256": "50567da361368e9c5e614432d3dd51486bc1375aad5ae2b8e9ab6816f403bdd3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\nfts\\api.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\nfts\\api.ts",
+    "sha256": "133a7ef93b7824a17a804d11d4b54fddfdf7d847fcadfcfa8b2467cc08ed80cb"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\nfts\\provider.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\nfts\\provider.ts",
+    "sha256": "d690facfeaa9255f5e38c109278c4d7f1f2e29b9beae59bca915b9b75aa9a156"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\nfts\\service.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\nfts\\service.ts",
+    "sha256": "12a35e0cd23037dcbd02ad06c823538c61a73229df3c9c1284f9fb7459cc77a7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\configure-route.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\configure-route.fixtures.ts",
+    "sha256": "42d06eb276f750192ad4fec3689fda57febba34a37599b71de22e5c8e244174d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\configure-route.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\configure-route.ts",
+    "sha256": "add54e79c192679c7b9f7d4499ac27f11f93eae9d99a6b15370d2c228dc8c322"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\issuance-composition.fixture-definitions.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\issuance-composition.fixture-definitions.ts",
+    "sha256": "5c21a097e2d442ab412ba713d692de7df57508cd8761e75fccf5c3733fc11c6e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\issuance-composition.fixture-firestore.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\issuance-composition.fixture-firestore.ts",
+    "sha256": "13319e31ab88dcbee86fcddb1cb2d5a410c3195d687388d9e69522aaec48a5e1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\managed-portal-grant-reads.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\managed-portal-grant-reads.ts",
+    "sha256": "98c631ea92245c42f1f636e09b51a5c65bda527b06128114117d62c3c406768a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\managed-portal-grants.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\managed-portal-grants.fixtures.ts",
+    "sha256": "afee7dc49e2c9423a8535951b08b3570165b19f9e313fcafab2305aaa703bdda"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\managed-portal-grants.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\managed-portal-grants.ts",
+    "sha256": "b7163eaddeb010aa4a1dc6eeca99320d896225e53b47bde73b6af3eadd771aa6"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\managed-portal-inspection-reads.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\managed-portal-inspection-reads.fixtures.ts",
+    "sha256": "729c8231ec5bc29a9b63d33e0e8453df59a190aa9db57e9ef38a0787a1aa5779"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\managed-portal-inspection-reads.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\managed-portal-inspection-reads.ts",
+    "sha256": "06c1e854880c45b64bdf5ebb88c5b1351a034367a8419ffcca8537d75de94779"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\managed-portal-issuance.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\managed-portal-issuance.ts",
+    "sha256": "d474cbf500dbf1f66fedd9b9e104b73050f0b57ee4475b1a3d3136bb83abe334"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\managed-portal-reads.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\managed-portal-reads.ts",
+    "sha256": "692e5465e6bbce3105f47c5cdb4c90a262bed84f4dae344a44733062993eb67f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\portals\\managed-portal-story-submission.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\portals\\managed-portal-story-submission.fixtures.ts",
+    "sha256": "fb62b99a689bb695333c74f00ba28ee5417a5d81559804b570ac39db1666853b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\api-production.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\api-production.ts",
+    "sha256": "cea1fe611594d72fb29df8e4d42d95ac68df117adc0e7a103e06db78fffa7c00"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\api.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\api.ts",
+    "sha256": "05c40e3b4ab5e79451d04b63449425f2ddc3066eff35b86983fc45dda00ddc0d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\application.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\application.ts",
+    "sha256": "b46408402aff13b193af5ea610b8eb7d55b1beb038ee9a46f4ee9e4d0f647d8b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\authorization.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\authorization.ts",
+    "sha256": "b47803ea028b0cae5b7c4fce65eb2194e013fbb2b04fec41ebffa3ad31c85c46"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\composition.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\composition.ts",
+    "sha256": "54b30c6534f24bde217ada6ce8cda87679a5f23fd93986d42fca0cd1f90acb12"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\config.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\config.ts",
+    "sha256": "7fc21d1f32ea66fb618fcd66f7d5612ba39545374063994d7fae725836878024"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\creamery-reservations.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\creamery-reservations.ts",
+    "sha256": "10dae3d509892bbc17a7958256172df6670a9a210aaecefc89c8698bea1fbb5b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\creamery-transport.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\creamery-transport.ts",
+    "sha256": "d25932303f23541f0099bdacabb22973d453c75212c9212d81ec1181d0a2d734"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\dispatch-authority.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\dispatch-authority.ts",
+    "sha256": "f98b398ee1de4a8714b85f3b9ca69f7edca37009481054ee884bf63ef41c531c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\firestore-model.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\firestore-model.ts",
+    "sha256": "b96e279e045f1aac0b71ec35cebbe9da368fe7aba88dc09c0e6b18f00e253940"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\firestore-state-repository.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\firestore-state-repository.fixtures.ts",
+    "sha256": "a2c76409bd67af173f986738a9d90dc6dc62a4bb169a8c7e7b415d4ca8a21fbf"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\firestore-state-repository.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\firestore-state-repository.ts",
+    "sha256": "4c58cd1047f10b4059f7bebfdfae8450242d4e1dac1cacb0cdc9c328d1aa8724"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\host.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\host.ts",
+    "sha256": "3b61860ffc6a0fe1a44bd7934a7447decda7a41837064297afd571592519a03f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\integration.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\integration.fixtures.ts",
+    "sha256": "4bf6080c6f9c6f4384da503381285745d7a4aec1f19cb57242a8f51b14cea0d8"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\isolation-approval.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\isolation-approval.ts",
+    "sha256": "c8e0b7feedf3c949fedc13033ed7b392b119bc80e226e9a31471f46c7ac0afb7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\managed-time.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\managed-time.fixtures.ts",
+    "sha256": "6470d4920ff084e6551f348c2c26b29c15c46ad1fe555eb6fa1d2f5b1fd568c5"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\managed-time.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\managed-time.ts",
+    "sha256": "880ebf5bada10e12ee6e47664fe49225ede1c2b73a33556ab8f337bf85237c54"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\purchase.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\purchase.fixtures.ts",
+    "sha256": "3f22f5b7dfeb492583dec7c57249b760f803512cf2e75c5af8caf8267ce2ef08"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\recovery.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\recovery.ts",
+    "sha256": "e1d3baa396efaadc9aeb431cd2924020e4f6283ff75ccda3475280b3a04fca45"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\repository.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\repository.ts",
+    "sha256": "a93978d2c7098348ece329059f416a15caef0587be36dbf05fa7af412a91995e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\reservation-execution.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\reservation-execution.ts",
+    "sha256": "df776cab563ccbf2d63dd6e8fee57b0bbd12d2443b821ea3af1ff0ea693e9483"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\reservation-repository.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\reservation-repository.ts",
+    "sha256": "d351d700f1474092c9ba6aff777ab31b8de2f544bae844da2fd9eb47716b323b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\reservation-v2.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\reservation-v2.fixtures.ts",
+    "sha256": "7354b1f5e376fc765472e2064ccc558d11719c61ccb3c3b919f70537f891e527"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\staging-config.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\staging-config.ts",
+    "sha256": "7700736dda79900975291a85fddc4d1bdabb00eb21f325f60efb2a9e9739215f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\staging-controls.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\staging-controls.ts",
+    "sha256": "4315c1dc2a9b92ae509fda789e15c70682e2364d0f13136b5101ae63353d4290"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\staging-firebase.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\staging-firebase.fixtures.ts",
+    "sha256": "fc8cb24a36bcfe57e5db98032283e83c89e9ac64971f5fbf2a26316d385da4da"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\staging-host.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\staging-host.fixtures.ts",
+    "sha256": "6e95ec285cd15cc8997f9fd05a2111871ecb2e25b0c093a121d7a188ea279877"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\staging-host.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\staging-host.ts",
+    "sha256": "b2a1369b68f286f08d68da83c4584449cc19999d7207489bc2f9dad217e0cb29"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\staging-identity.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\staging-identity.ts",
+    "sha256": "8fc8e4df0af15ae3f2446651a045a8e599ba919c8b5bc658e3bf13859449f147"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\staging-session.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\staging-session.fixtures.ts",
+    "sha256": "d01bdc6d93428de61ca7450e9b830c1fe9b50c5712a60269084b0c95cc76058f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\submission-pass-fulfillment.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\submission-pass-fulfillment.fixtures.ts",
+    "sha256": "c67c97d9c2d5351281321f3bfdb86aae1c8ad8f9b1cf3485150bfa61020a3de1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\submission-pass-fulfillment.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\submission-pass-fulfillment.ts",
+    "sha256": "4013c30f3a16759e412cd0574043aa0ee6189a0fc60d026dd63063dccb3e8eb6"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\work-repository.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\work-repository.ts",
+    "sha256": "232189abbdffa577e4336d9ecc73dcab1565e07f44096e7d6b8ce5916dadf9b5"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\purchases\\worker.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\purchases\\worker.ts",
+    "sha256": "cdb69122cf0cc6d233ceab0f94118a5277ecde43bd0a52ec000f0593586b11cf"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\store\\purchase.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\store\\purchase.fixtures.ts",
+    "sha256": "6c0889085a8d57f20ed89054305c40aed55dc40277b6681134754e6b5dd71a91"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\store\\purchase.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\store\\purchase.ts",
+    "sha256": "06d5f567e8878c479e18a2f69bf07184f0383cc46d5f0d1dee7f34d41ff904f1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\approve.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\approve.fixtures.ts",
+    "sha256": "eb982698015c1569ca53a10fa9d352c2ab3c233f33cd49d12eae71f97dae2ff4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\approve.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\approve.ts",
+    "sha256": "8f9924ebff2f435bce6a50b444739a7422d6ad6abe4afde5cd280c40966393ba"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\approved-request-changes.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\approved-request-changes.fixtures.ts",
+    "sha256": "331feba0676bd89a41a455d5f957d0ff5ce1683356f39b9c9ca183866347125f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\approved-request-changes.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\approved-request-changes.ts",
+    "sha256": "5502ca4b37e37c27e3c77644480df9325c7c8210166d06d6ea1dd780a5b403ae"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\archive.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\archive.fixtures.ts",
+    "sha256": "4d7f10af4464721e5ca408981c9b9e383270e335cf6740c59690dda0bcefe9dc"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\archive.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\archive.ts",
+    "sha256": "d177fe8765d051cad37bf18523fb64f5b888cd4cb3669930da113df6aa4550e6"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\create-working-revision.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\create-working-revision.fixtures.ts",
+    "sha256": "2cd99fd9d37efcfb662e300ac4b1f9f729471d1b8845238d57ca21624dbf5b51"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\create-working-revision.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\create-working-revision.ts",
+    "sha256": "79bc0fe75699e40a53bc6fda704524fffeb0569822e81be653de887d1769c2d7"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\delete-draft.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\delete-draft.fixtures.ts",
+    "sha256": "a093303c05d376f9d24b6061b3b078c576ed4e5067e4db4ed629b758bd02ef0a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\delete-draft.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\delete-draft.ts",
+    "sha256": "c31606cc10d529fb58e1ede47959df1ff2f489366176499406219e6676dbd33d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\editorial-flags.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\editorial-flags.fixtures.ts",
+    "sha256": "e0207fd0a3d8485cf3e8b09f4c61f2c8fc2ce92dfdcb0038a3ccdeed5ad9d64b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\editorial-flags.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\editorial-flags.ts",
+    "sha256": "2d1edd3e2648be3f967e13f2d0af9b375c3b1414acd1b27440fac45b0af22961"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\moderator-submission-context.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\moderator-submission-context.fixtures.ts",
+    "sha256": "533abf1ffbd611ac2e44a36c743b4c193a4fbb9faee65aad0a3fc1e9bad445fa"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\moderator-submission-context.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\moderator-submission-context.ts",
+    "sha256": "10dcf9c33819f83afe1b9f4d216810e83a69fc9db74a9b30b843dbea48cc7c6a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\publish.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\publish.fixtures.ts",
+    "sha256": "aab021c552d811fd324a10b111b01df55485f7d1655abc6259259110a3056417"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\publish.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\publish.ts",
+    "sha256": "0eb844ac066ca9d2036be04ecd5ce0ab3c7a96c33d59d8c05737353c6957e9f5"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\reject.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\reject.fixtures.ts",
+    "sha256": "35daed5e85f17390336b85bf67bd9947054c8b1c4c9afe7713db8ecb574ce85e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\reject.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\reject.ts",
+    "sha256": "9e82e463015949d927a09a2d19d0ac7fcb0342423f640ea81c827c0e20006f00"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\release-review.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\release-review.fixtures.ts",
+    "sha256": "cd6d52162b85f028fa48504ef4e6857bf21a172278be91e7a4f09b8cd6b88f4e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\release-review.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\release-review.ts",
+    "sha256": "bfdef083f6b838acb1c98598c5475eb89a84cf6064a3663a9d7636bba6ac52e4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\request-changes.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\request-changes.fixtures.ts",
+    "sha256": "f104439d718cf3825f93e6a6db141e11bec9646e30258e3290ed15bbf5177871"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\request-changes.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\request-changes.ts",
+    "sha256": "4072d0a5ab1a2ee40604e74963c53bdf726917d550a70f9fa363181ac821df4a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\return-to-approved.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\return-to-approved.fixtures.ts",
+    "sha256": "9a0132df3132c49985c9c84fd90fac2e9711bdfbd067e78d21bea9cb2deeb0e1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\return-to-approved.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\return-to-approved.ts",
+    "sha256": "686ca4fce39520c4ad76f67c3f1c5c23d47ba1050ee8e41f89a2f82200580f36"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\return-to-draft.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\return-to-draft.fixtures.ts",
+    "sha256": "a89b2bd962216b4258cba97c61b3a239e3b71edb9adb107ec97caedce4374a80"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\return-to-draft.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\return-to-draft.ts",
+    "sha256": "5bb5f74ddf9ddcd40dcd1a07ff479b1ce3317d3fa57c2082e73d5372949da641"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\save-draft.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\save-draft.fixtures.ts",
+    "sha256": "3ff560c2c1437d4a379dd96b012cf7f0c59331fd83f4e84dfaea6b593256e5b1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\save-draft.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\save-draft.ts",
+    "sha256": "5b89cbc51f590230cf6a9e5add525e6ce04d8bbc4263e80f0d98c37e7382ea1b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\start-review.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\start-review.fixtures.ts",
+    "sha256": "d97ca81dc1e37197be5e36c20138de9f63c30e279c64b869f344d80999224d01"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\start-review.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\start-review.ts",
+    "sha256": "5c9cfeaac9df4724e004ce4b5866acb53c2754194a1255e9d56285e7ff6f6a53"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\submission-history.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\submission-history.fixtures.ts",
+    "sha256": "31e0c4e9fcc91380ea992c6004cd71a1b826e3acb0d3ea4a8e2829030c34acd4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\submission-history.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\submission-history.ts",
+    "sha256": "7188c079d889fc478d2d673beadd0f3182a77eb4070b769f5bf24b12324e1d4f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\submit.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\submit.fixtures.ts",
+    "sha256": "7d8e9826839e8c8eaa1a9f7ed441ebec4d559197325a616d660d1eec772f896e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\stories\\submit.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\stories\\submit.ts",
+    "sha256": "ccd944b5333004fe6113736ac7c65c70a0392d41d0eb9d28c52ed46919868db3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\system\\config.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\system\\config.fixtures.ts",
+    "sha256": "02f4377e6fecfc220208d5e4ec0c94db1279d13c59c216c9f4dd34d177a24b07"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\system\\config.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\system\\config.ts",
+    "sha256": "6f9026595a2c8efaf2ffead231b7eb75714d77eb9aa2865826d29498d8340796"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\api-config.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\api-config.ts",
+    "sha256": "8328c58b072e1e21f7545531e6dd4d8f48b5117a990410649fc1b1d41a2c9b4f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\api-production.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\api-production.ts",
+    "sha256": "d63ca13b178846cf4fe0903d6ebd73094ad9b52af6054c4c927579579207b011"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\api.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\api.fixtures.ts",
+    "sha256": "6a9136353f0b932e7badad5253ac0b3233766020dbc8b413dde25eb6163c9bb4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\api.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\api.ts",
+    "sha256": "6ba066a4072f9d72de2085ae5456b66f8434ec7060a5db3c02ac989b170b0622"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\emulator-safety.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\emulator-safety.ts",
+    "sha256": "a6818825c901718889bbf990f42a464168fdad276a657f6770611cd38d7f7dfd"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\firestore-repository.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\firestore-repository.fixtures.ts",
+    "sha256": "e44e5e3ee531e4be222e5362cc2ac41059d58a6a9bbb6cbb7c60ed7ef451507b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\firestore-repository.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\firestore-repository.ts",
+    "sha256": "16df1c21c1251eba8a09affb8c615e2f50e87bae099bf5349ff258d22895261c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\issue-challenge.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\issue-challenge.fixtures.ts",
+    "sha256": "6007785a9624f3618abd6dac4fb7405a948b926dfe4223d13fad8dc8aa8e815c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\issue-challenge.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\issue-challenge.ts",
+    "sha256": "97b99630400ea3603db1c638daf5faa123511ea96ecd90b14f0771474b90de58"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\rate-limit.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\rate-limit.ts",
+    "sha256": "835e4a7f44008ca94d598b709c6a041bb57975c0f39fdb4c23851cc5fed26532"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\verify-signature.fixtures.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\verify-signature.fixtures.ts",
+    "sha256": "b31c3beed35cb54264c388f65bf4305ae50c82121bd12d05a16db6cf082321a1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\lib\\server\\wallets\\verify-signature.ts",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\lib\\server\\wallets\\verify-signature.ts",
+    "sha256": "76dc741714bbdcbf80de9b7e68a17705fe1baf3fe6f94b67e515086229079cc8"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\preflight-mars-cat-identities.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\preflight-mars-cat-identities.mjs",
+    "sha256": "8e394f29dd3fe558fb77864aaadde69451e11d8f5972a8cbfdd5869e9b5e0aaf"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\purchase-emulator-safety.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\purchase-emulator-safety.mjs",
+    "sha256": "e4b6f6f4678718f29ef4d1c266b378e4cef50bf340c88dcb84733db0479d33a1"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-account-persistence-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-account-persistence-fixtures.mjs",
+    "sha256": "cac2cdae2c3823799311ed08069af62b65d5de845bacb341a29041a72acb8eea"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-creamery-display-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-creamery-display-fixtures.mjs",
+    "sha256": "a5ccf1f4947cb2feae9f7e4b2fcaa1a2c2b6d8b7e6e347566a3278b455787eae"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-creamery-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-creamery-fixtures.mjs",
+    "sha256": "3baf55fb4f9607780ef38bb608c308c8fd04098c2cd377eb3652d8a34a0cd97a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-creamery-http-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-creamery-http-fixtures.mjs",
+    "sha256": "82863307b8370c5a969e634e5bad500424109e101dc0d50d70671c184219678e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-api-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-api-fixtures.mjs",
+    "sha256": "243da5e2621b07e05c7ae612ebbb7c9dc9035e8910bbf5c00a6d2f4033ebd308"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-api-rate-limit-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-api-rate-limit-fixtures.mjs",
+    "sha256": "0ba6dd5addf30d96cebbb4093ee3a7ed34588106c1639c5e55e6b1eeefa88a35"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-browser-session-authority-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-browser-session-authority-fixtures.mjs",
+    "sha256": "a1d6703af732e8645e054fa54aa0b3a770078ca830899769611b8f099ec7871b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-browser-session-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-browser-session-fixtures.mjs",
+    "sha256": "da2fb7cda1b1751d424ded0c46cc7ea979ebcdb221cb416b60a1ce9fa5f32612"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-browser-session-persistence-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-browser-session-persistence-fixtures.mjs",
+    "sha256": "d911c22601fe291905bb9da068feb2c9412b6afca02872bb82fc5ee6b481c2ee"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-callback-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-callback-fixtures.mjs",
+    "sha256": "43eeea757e69e63bb4b439adaae4aa0aa2deb051896e5aa001e218446f260143"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-identity-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-identity-fixtures.mjs",
+    "sha256": "224ff9335636169fe8f517f447d025ca871541a96d9cba27e441d95a1f85f927"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-link-persistence-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-link-persistence-fixtures.mjs",
+    "sha256": "44c263510f5105f36328e88e67dd5ef8cc96c93b4a2289236bd6896d07d36092"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-oauth-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-oauth-fixtures.mjs",
+    "sha256": "6868d16f3cda7d35647c69b8359363401a0e5117bd9acafff5a70198124f72b2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-oauth-persistence-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-oauth-persistence-fixtures.mjs",
+    "sha256": "04e5361ce293b432642040c433879b8e82cac336e74919d6632efc22d8c66708"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-profile-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-profile-fixtures.mjs",
+    "sha256": "55b6f9b096f791a02d40eb970f407c129b1323b516c3bf0149b8473c6674fda4"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-discord-session-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-discord-session-fixtures.mjs",
+    "sha256": "bb50a99e711a7b07694590b48bf614e948e8a744c3c248ce1e5d87cbe1aed628"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-feedback-creation-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-feedback-creation-fixtures.mjs",
+    "sha256": "d27862d8d2765b59b348060c07b34593471e0f8aa1d7a743d86c65f9073b315b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-mars-cat-identity-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-mars-cat-identity-fixtures.mjs",
+    "sha256": "cb9ee0841ce981f43b7a3dac0fce925b0d8088f16c37355b7d8371f1d3f311f8"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-mars-recognition-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-mars-recognition-fixtures.mjs",
+    "sha256": "8d77ca6cc9c59d5e983dc7253bbf7211243e8f7f46c703fdbbf812485b497b80"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-moderator-submission-context-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-moderator-submission-context-fixtures.mjs",
+    "sha256": "d9e30512081d8115c59833d08b9cbd25df8231df3e72179ecfee271d4f360e78"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-nft-evidence-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-nft-evidence-fixtures.mjs",
+    "sha256": "8a777b0683cbcdc11f7eef6de1480e39f10527296b93440cf060fce418f8d341"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-portal-acquisition-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-portal-acquisition-fixtures.mjs",
+    "sha256": "a014341fec2493e8b6dc39061666a9d01052a5dd186115532cae39925817453e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-portal-issuance-composition-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-portal-issuance-composition-fixtures.mjs",
+    "sha256": "365a221f825a6b16fd911d934d6522c4b5b0a29710716fb7f19c514651272e34"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-browser-acceptance.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-browser-acceptance.mjs",
+    "sha256": "001cd30a86595428aaa063c457a83150faf1de1dd176fa3328a94c9398fa549c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-emulator-runner-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-emulator-runner-fixtures.mjs",
+    "sha256": "5939a0a9b557f0a35957cb19e1c42bcf0e27180644ef2bd3e8ae4dd97829432e"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-emulator-tests.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-emulator-tests.mjs",
+    "sha256": "c5f08cb526fe20a46ff63d33c73d46a70033ed9bf00b7e74f035ebe2aaff37b0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-emulators.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-emulators.mjs",
+    "sha256": "21437ddb1dc703ee1c07bce2231eca5b837ea0118cfc1cf64d4e4add780661fc"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-fixtures.mjs",
+    "sha256": "7000aff90d955460abed74d9695c818b5a7c8e655526aa792bbdbf8842118741"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-fulfillment-plan-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-fulfillment-plan-fixtures.mjs",
+    "sha256": "d96964cf2fd24d6b953f0c0d22fc56071a5a8fe4615b8025753a1391c4142522"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-integration-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-integration-fixtures.mjs",
+    "sha256": "32286f12023032eea1ca55dc31b150912eaafdc050a117f6591dcc1fb78b58ef"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-persistence-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-persistence-fixtures.mjs",
+    "sha256": "8dc6a986dab941931ed851d0e9429c0d4f3678165c050b91ff31952b11d1f96f"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-staging-browser-acceptance.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-staging-browser-acceptance.mjs",
+    "sha256": "f80842b4f9086dd13a8229ce62121b7e8e21b7ccfcd408ad67cbcf5e697d5359"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-staging-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-staging-fixtures.mjs",
+    "sha256": "b9720ccea244d4fe51c67d585adeb599bf7975c78c4a3f2d1c89053ab082ef41"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-staging-worker.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-staging-worker.mjs",
+    "sha256": "01aa16781868b1b5504bcc85af5f04bf0cdc6ddee9f59035f58f42aa4f06498b"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-transition-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-transition-fixtures.mjs",
+    "sha256": "c68aa1299e691568f2a85e42111aa4c387a6ce191a4f7ce74c078fe9fc7be201"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-purchase-v2-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-purchase-v2-fixtures.mjs",
+    "sha256": "428ec12334257f5e425c82b7918cb7138dec64d76c88cf3a78e74f8b2ae4fa48"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-story-submission-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-story-submission-fixtures.mjs",
+    "sha256": "c5f1b76f271c58c4317b8e4c842fa136c351e284ae62e8d2ec96aff4cca72094"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-story-submission-history-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-story-submission-history-fixtures.mjs",
+    "sha256": "bfc0724b417b19c98b13bd2b2d9457f25a4ce2b5e3155bcf8204f899f25035c3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-submission-pass-fulfillment-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-submission-pass-fulfillment-fixtures.mjs",
+    "sha256": "a85dbe1dd4e6abe4978f2278cfd1a4034216e7c95127b7192502a5139662dc14"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-trusted-creamery-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-trusted-creamery-fixtures.mjs",
+    "sha256": "516363d45a1a31850508a906c3820f3c3cc004ecab451a81ca6dba1c8a00f1a8"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-api-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-api-fixtures.mjs",
+    "sha256": "706f19cec50b934a7ad69826b8c5939bdc29e8577f02ee9e36128810952102fd"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-client-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-client-fixtures.mjs",
+    "sha256": "7ee90f63f623cbfb8033c3ef73e49b91a9ca8d75dd610f124468fe4c6cee090a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-emulator-runner-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-emulator-runner-fixtures.mjs",
+    "sha256": "1fc11663676df619681cc5a4bf7e6839c5d78b3c203628851784f51e305af657"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-emulator-tests.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-emulator-tests.mjs",
+    "sha256": "e3e29efd46cb6f3273a5a9fb98b967822984aac60496b29295cada9ec61884d0"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-emulators.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-emulators.mjs",
+    "sha256": "06873b614b3223a700429b7c081331d2ac4dc9306166465b38a18248d6431492"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-link-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-link-fixtures.mjs",
+    "sha256": "781463c77dc4b80e8778b8cdb4b301119e7f073d73834d4f8c2ab49566296f7c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-link-persistence-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-link-persistence-fixtures.mjs",
+    "sha256": "0699e534ac1b990bac69492486491c84885fa8ad7bd151bfbcf07f50609f628c"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-link-signature-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-link-signature-fixtures.mjs",
+    "sha256": "bdb0d880d388386faf99eaf13c9a961e332118b162437ecbf861916878fdd2ca"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\run-wallet-middleware-fixtures.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\run-wallet-middleware-fixtures.mjs",
+    "sha256": "45daace0137be105ba7d12604cfded0baf1e6f2457661ddcf4263fd0286f9dec"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\scripts\\seed-mars-cat-identities.mjs",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\scripts\\seed-mars-cat-identities.mjs",
+    "sha256": "06968fc8d9ea3f4638a4fdc9faf77bf74ab90c0671aa3387fc1ecaf6a8413218"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\package.json",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\package.json",
+    "sha256": "f48a87c9a0ecf484cc134232de026646c75667a2303e21916f4fc3802923db3d"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\package-lock.json",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\package-lock.json",
+    "sha256": "5201525a6bfaf87f7b9ffe76c53c715511aba9c59f5f301ee5f112b7c902b669"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\tsconfig.json",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\tsconfig.json",
+    "sha256": "45882768021aae17b86ee8733a3ce96120d0137316f583431bdf5efcfe6b57e2"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\firebase.purchase-emulators.json",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\firebase.purchase-emulators.json",
+    "sha256": "0abb010ab3ea4ae328ceea82a17e7629d41ff34ff74da0dbc4a9fb393abb2a00"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\firestore.rules",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\firestore.rules",
+    "sha256": "8ab6eee8b5aa17ab52f03f5ad213608507e48c2a7e67ef0e59daf68784633846"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\recovery\\mcvplus-c5-eb71ec9\\firestore.indexes.json",
+    "path": "D:\\OpenClaw-workspace\\recovery\\mcvplus-candidate05-emulator-20261031-1743\\firestore.indexes.json",
+    "sha256": "0e305f4d871fe41e8ff0731f39a068905199252f5b00d58ab8c00dc182841199"
+  }
+]

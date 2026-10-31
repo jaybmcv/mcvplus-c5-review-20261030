@@ -1,0 +1,333 @@
+MCVPLUS CANDIDATE05 - REVIEW ONLY
+
+Disabled offline source. No Setup, deployment or actual campaign execution is authorized by this upload. Replay capacity/effective IAM remain blocked. All 48 actual attempts remain unspent.
+
+Exact ZIP SHA256: 8206f10dc59f7405d7f5eb8359e9ab589cacbffe6b037e03e5548ef0772e266e
+
+
+========================================================================
+CONSOLIDATED-REPORT.md
+========================================================================
+
+# Candidate05 — bounded local integration
+
+## Status and exact identity
+
+Disabled integrated local candidate complete, based on reviewed Candidate04 commit `0f9a6c12c05887cb090e76964e1ca5b15438ac9d`. This consolidated report supersedes intermediate r5 identities/status in BUILD-RESULT.md; all earlier receipts remain preserved.
+
+- Final source: 70 files, `FINAL-SOURCE-MANIFEST.json` SHA-256 `7c2fca43299c2f70886335b33228829ba9f7fdf4472bf1f10f7c3b1a7b4d888a`.
+- Exact final app identity (r6): `21731f14dec5805d720d0f6cff7853924781c8e9730da3a13f1d2e2dcda42de4`.
+- Unchanged original worker transport SHA-256: `d25932303f23541f0099bdacabb22973d453c75212c9212d81ec1181d0a2d734`.
+- Downloaded Candidate04 ZIP SHA-256: `f20a7a34608c94f37f0175a6cbceff7eecda98bba8f1f0b08134686150b3ec21`; all 40 payload files matched the retained local baseline. The upload wrapper manifest is separate.
+- App manifest pins 28 files; normalized build identity includes all immutable security configuration, excluding only two self-referential buildId fields. Local provider bundle binding matches r6.
+- Archive hash and exact package contents are recorded separately in DELIVERY.json and PACKAGE-MANIFEST.json to avoid self-referential hashes.
+
+## Integrated deliverable
+
+`app/` contains the source-disabled standalone Next qualification route, real per-request worker, unchanged transport and atomic replay admission. Replay namespace is frozen disabled/UNBOUND configuration; credentials are allowlist-snapshotted before asynchronous loading. Writer credentials never enter the child environment. No purchase API or financial composition is built.
+
+`driver/` contains the named 42-primary plus six-reserved campaign mapping, explicit bounded one-shot HTTP, non-refreshing/no-retry SDK and single-client PostgreSQL adapters. CASE-MANIFEST.json pins authoritative inputs, checkpoint names, statuses, schedules and fanout. Seven B7 probes each use BEGIN READ WRITE, one fixed negative statement, ROLLBACK. Retained and fresh DB/session cases are distinct. No operational execution CLI exists; fixture accounting requires synthetic run/backend authorization.
+
+Accounting reserves and consumes before transport entry. Actual fanout, correlated result and inventory commit before active state releases. Contradictory observations, uncertain acknowledgement, incomplete cessation or cleanup evidence retain active/HALT; no automatic refund/reset. Raw status does not substitute for independently correlated semantic denial or cessation.
+
+`local-service/` is a self-contained disabled source/config bundle, not an installed service. Protected code/data/credential boundaries and conventional service identities are proposed in SETUP-PACKET.md. No service was created or activated.
+
+## Verification results
+
+Counts below describe separate suites and must not be added into a campaign-attempt total.
+
+| Check | Result | Evidence |
+| --- | --- | --- |
+| Original copied Candidate04 fixtures | 22/22 | evidence/original22-20261031T214136401136Z.txt |
+| Named cases and review regressions | 31/31 (20 + 11) | evidence/final-fixtures-20261031T222727793398Z.txt |
+| Final app/worker integration | 5/5 | evidence/app-integration-20261031T222548758492Z.txt |
+| Real pinned GAX inert initialization/no-retry contract | 1/1 | evidence/real-gax-correction-20261031T220126674320Z.txt |
+| Replay environment mutation regression | 1/1 | evidence/replay-env-snapshot-20261031T222849805910Z.txt |
+| Forced wrapper timeout/tree collection | 1/1 | evidence/wrapper-regression-20261031T222001627365Z.txt |
+| Immutable-config identity regressions | 3/3 | evidence/build-identity-regression-20261031T220852504345Z.txt |
+| Final disabled provider bundle | 3/3 | evidence/final-provider-bundle-20261031T222659672110Z.txt |
+| Guarded demo emulator conformance | 18/18 top-level groups | evidence/emulator-conformance-20261031T214759763962Z.txt |
+| Normal-host guarded runner safety | PASS: 21 rejected environments, all four ports and lifecycle/ownership paths | evidence/host-emulator-safety-20261031T214542930488Z.txt |
+| Full optimized r6 Next build | PASS | evidence/next-build-20261031T222548932085Z.txt |
+| Final built loopback HTTP route | 12/12 | evidence/parent-final-built-http-20261031T222946025995Z.txt |
+| Final source/build binding | 86/86 checks; 27 JS syntax checks; 777 trace files | evidence/SOURCE-AND-BUILD-VERIFICATION.json |
+
+Named synthetic scenario uses 43 slots because evidenced denials skip later checkpoints; this is not a claim that all 48 named cases were sent. Original accounting fixtures separately test exhaustion. All actual campaign slots remain untouched.
+
+Restricted coding-sandbox runner stress runs failed process-tree termination; full original logs are retained. The separate normal-host safety run passed, including unresponsive and abrupt-grandchild ownership checks. These environments/results are not conflated. The intentional wrapper-timeout inner exit124 is a retained expected negative control. Earlier failed tests/builds and their successful corrections remain in COMMANDS.jsonl and individual logs; failures were not erased.
+
+The demo emulator exercised existing guarded purchase conformance in an isolated demo copy with loopback-only guard; it did not qualify hosted Candidate05, change canonical purchase code or authorize purchases. Harness lib/data 301 files matched the baseline. Existing pinned dependencies were reused via dev-only links; no dependency installation was performed.
+
+## Independent review chain
+
+Round-one review found eight source issues. INDEPENDENT-SOURCE-REVIEW-FINAL.md independently closed all eight with qualified offline-source acceptance. Its remaining wrapper-timeout Low was fixed, regression-tested and independently closed by INDEPENDENT-CLOSEOUT.md. The exact 69-file accepted source and reports are preserved under review-accepted-69/.
+
+Final review INDEPENDENT-REPLAY-CLOSEOUT.md returns qualified PASS with no new findings, verifying 70/70 final files and the preserved 69/69 accepted files. Its exact delta is 55 unchanged, 14 changed, one added, none removed: replay and worker environment snapshotting, stricter raw-denial validation, corresponding regressions, derived r6 bindings and packaging report inclusion. Both app code changes and stricter denial validation were independently inspected, not assumed to be a replay-only delta. Its verdict must be read with the retained earlier reviews; no independent report is rewritten to imply it examined a later source.
+
+## Replay database dependency — blocked
+
+Read-only verification found only the existing qualification `(default)` database in the accessible test project, already using that project's free tier. It is not an eligible isolated replay store. Three other project inventories were unavailable because Firestore API was disabled; that is not proof of absence. Billing/effective IAM access returned403; capacity/headroom and effective database-scoped isolation remain unverified. No eligible existing no-added-paid replay database was established.
+
+Official documented database-resource IAM condition feasibility is not proof of actual effective grants or inherited restrictions. Firestore permits one free database per project; another database must not be presumed free. No API was enabled, no database created, no permission changed and no alternative storage design proposed. Existing credentials were used solely for read-only metadata and are excluded from the package. See REPLAY-DEPENDENCY.md.
+
+## Narrow Setup packet and remaining gates
+
+SETUP-PACKET.md and CREDENTIAL-BOUNDARIES.md separate three scopes: future local service Setup S; separate Vercel access/deployment V; later qualification execution T. None is authorized or executed by this deliverable. Proposed exact service names, ports, virtual identities, protected paths/loading/SCM/SQL/secret boundaries, bounded inventories and partial-Setup containment are specified. A partial failure must leave owned newly-created resources stopped/disabled with collected evidence, no permit/pin, no deletion/reset and no shared-process termination. Containment actions require the future Setup authorization and are not run here.
+
+Remaining gates include eligible replay capacity and proven effective scoped IAM; protected journal/storage/ACL and Windows durability evidence; actual service/SCM/loading/process-tree isolation; separated real credential inventory; supported platform identity and independently correlated fault/revocation/remote-cessation contracts; Setup acceptance; and separate Vercel access. Cache/IAM propagation windows are not remote-cessation acceptance. Missing evidence blocks execution rather than being replaced by mock observations.
+
+## Preservation and cleanup
+
+PRESERVATION-AFTER.json verifies 213 retained historical files unchanged. Earlier candidates, failed receipts, synthetic journals and recovery checkouts remain retained. FINAL-CLEANUP.json verifies all 145 recorded task/test PIDs absent and nine recorded loopback ports free. The separate timeout receipt verifies its root, child and wrapper absent; coding worker PID80216 was confirmed absent before source sealing. No browser automation was used for this task. These are scoped local cleanup observations, not universal process census or remote cessation proof.
+
+No installation, operational staging, deployment, provisioning, hosted qualification, real credential/IAM change, usable permit, approval pin, financial action, paid service, reboot or deletion occurred. Purchases OFF; recovery DISARMED; Alpha/canonical unchanged. All 48 actual attempts remain unspent. Private communication drafts remain local/unpublished and awaiting synchronization; they are excluded from the source archive.
+
+
+========================================================================
+INDEPENDENT-REPLAY-CLOSEOUT.md
+========================================================================
+
+**Verdict: qualified PASS for the disabled, offline source only. No new findings. Prior eight findings and wrapper Low remain closed.**
+
+Independently verified:
+
+- Final manifest SHA-256: `7c2fca43299c2f70886335b33228829ba9f7fdf4472bf1f10f7c3b1a7b4d888a`; **70/70 hashes and byte counts match**.
+- Preserved manifest SHA-256: `027736a36aeb48c94ea70a1b0c84db310704f8b9e821b1ec17824f49810938f9`; **69/69 hashes and byte counts match**.
+- Exact delta: **55 unchanged, 14 changed, one added, none removed**.
+
+Changed files:
+
+```text
+app/SOURCE-MANIFEST.json
+app/config/build-binding.json
+app/config/provider-binding.json
+app/config/run-binding.json
+app/qualification/replay.mjs
+app/qualification/worker.mjs
+driver/evidence.mjs
+local-service/SOURCE-MANIFEST.json
+local-service/config/provider-binding.json
+seal-app.py
+seal-delivery.py
+tests/app-integration.test.mjs
+tests/review-closures.test.mjs
+verify-source-build.py
+```
+
+Added: `tests/replay-env-snapshot.test.mjs`.
+
+The delta also contains worker environment snapshotting and stricter raw-denial validation, beyond the latest replay change. Both were inspected and are acceptable. Packaging now retains independent closeout reports and the accepted snapshot.
+
+Replay captures its seven allowlisted values synchronously into a frozen object before the awaited import. String validation excludes mutable value aliases. Subsequent authentication and namespace construction use that snapshot and the frozen sealed target; claims enforce the sealed run. Caller mutation cannot substitute credentials, target or run across the asynchronous boundary. Replay remains disabled/UNBOUND, and the permanent route fence remains intact. The new test verifies snapshot isolation and disabled rejection; it does not exercise an enabled SDK path.
+
+Independently recomputed both 27-entry normalized payload identities using `build_identity.py` rules. Only `qualification/replay.mjs` and `qualification/worker.mjs` change normalized app identity. Final build:
+
+`21731f14dec5805d720d0f6cff7853924781c8e9730da3a13f1d2e2dcda42de4`
+
+All **28 app** and **11 service** manifest entries match. All 28 r6 build inputs match, and r6 `.next/BUILD_ID` equals that identity. `APP-BUILD-BINDING.json`, service binding and `SOURCE-AND-BUILD-VERIFICATION.json` agree.
+
+Retained evidence records the successful r6 build, replay test, **31 fixtures, five integration, 12 built HTTP and three provider checks**, plus 86 verification checks. These were inspected, not rerun.
+
+Read-only hashing and static inspection only; no writes, tests, network, installation or operational actions. **Zero actual campaign attempts used.** This acceptance establishes no hosted IAM, revocation, remote cessation or Setup readiness, and authorizes no activation or execution.
+
+========================================================================
+INDEPENDENT-CLOSEOUT.md
+========================================================================
+
+**Verdict: PASS for the disabled source only. All eight prior findings and the wrapper Low are CLOSED. No current code findings identified.**
+
+Bound to `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\FINAL-SOURCE-MANIFEST.json`, SHA-256:
+
+`027736a36aeb48c94ea70a1b0c84db310704f8b9e821b1ec17824f49810938f9`
+
+The actual manifest contains **69 entries, not 68**. Independently verified **69/69 byte counts and hashes**. Against frozen round2 manifest `777d23b1e736b4bc222858b8c9f4e36b8d974614007e3ec974b45f1dd8545c2c`: **62 unchanged, four changed, three added, none removed**.
+
+Exact changed files:
+
+- `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\driver\clients.mjs`
+- `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\run-local.py`
+- `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\tests\review-closures.test.mjs`
+- `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\seal-delivery.py`
+
+Exact additions:
+
+- `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\driver\CASE-MANIFEST.json`
+- `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\tests\wrapper-timeout-fixture.py`
+- `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\tests\wrapper-timeout.test.mjs`
+
+The additional case manifest records the reviewed 42+6 mapping; its three authority hashes match.
+
+**Build continuity:** all 29 app files and 12 local-service files, including their manifests, are byte-identical to frozen round2. Nested hashes independently match **28/28 app** and **11/11 service** entries. The prior verified chain to build `6c02207ee1e574890848f4d064cae15867fd5559a23df7b49adff5aebfc7d7da` remains intact. **No app-build rerun is required for this delta.**
+
+**Wrapper Low — CLOSED.** Timeout is explicitly bounded to 1–540 seconds; cleanup targets only the captured Popen root/tree, with bounded termination and collection. Timeout exit **124**, diagnostics and append-only receipts remain retained. No shared/global kill exists. Taskkill acknowledgement explicitly does not establish a descendant census. Retained fixture evidence reports the exact root **5652**, child **25316**, and wrapper **7088** gone, with timeout 124 preserved; the wrapper regression records PASS.
+
+**DB hardening — accepted.** D12 retains its client only after validating both session identity and resource marker; validation failure closes the untrusted client. Nonsettling `end()` is bounded at 250 ms, destroys only that client’s stream, and rejects as unverified. Closed/broken sessions reject subsequent statements. Teardown rejection propagates into consumed/HALT accounting before independent cessation can pass. Retained evidence records both added regressions and **31/31 named/review tests passing**, including the strengthened no-hidden-SDK-retry check.
+
+**Packaging — accepted.** Source enumeration uses exactly four directories plus explicit root files, excluding sibling private communications/runtime trees. Archive selection preserves review documents and failed logs; source hashes are checked before ZIP creation. The delta introduces no installation, deployment, provisioning, or real-key action.
+
+All eight prior closures remain valid. **Setup, IAM, replay capacity, service confinement/durability, Vercel and execution gates remain BLOCKED.** The actual **48-unspent invariant was not freshly live-probed**.
+
+Independent static inspection and file hashing only: no test rerun, network, SDK, DB, service, credential, delegation or write action. This verdict is ready for the CLI host to save as `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\INDEPENDENT-CLOSEOUT.md`; this review did not write it.
+
+========================================================================
+INDEPENDENT-SOURCE-REVIEW-FINAL.md
+========================================================================
+
+**Verdict: qualified PASS for the disabled OFFLINE source only. All eight round-one findings are closed. One new Low-severity development-harness defect remains. This review authorizes no Setup, deployment, activation, or execution.**
+
+Reviewed frozen source at `D:\OpenClaw-workspace\artifacts\mcvplus-integrated-candidate05-20261031\review-source-round2`, including original TASK, authoritative amendment, round-one review, application, driver, local-service bundle, tests, sealing tools, and Setup/Replay/Credential documents. Inspection was read-only: no delegation, tests, network, SDK invocation, DB connection, service operation, dependency installation, or credential operation.
+
+Manifest and build binding:
+
+- **FINAL-SOURCE-MANIFEST:** all **66/66** entries match recorded byte counts and SHA-256. Manifest SHA-256: `777d23b1e736b4bc222858b8c9f4e36b8d974614007e3ec974b45f1dd8545c2c`.
+- **SNAPSHOT-MANIFEST:** all **72/72** entries match. Manifest SHA-256: `38856661b02f41f0f5fa32abdd43e46cc659f32844448623f8bbb8cebac0187c`. The directory contains those 72 files plus the snapshot manifest itself; no missing or unlisted files.
+- Nested manifests independently match: application **28/28**, local service **11/11**.
+- Independently recomputed all **27 normalized payload entries** and build ID: `6c02207ee1e574890848f4d064cae15867fd5559a23df7b49adff5aebfc7d7da`. All 28 app manifest entries also match the r5 build inputs at `D:\OpenClaw-workspace\recovery\mcvplus-candidate05-build-20261031-r5`; its Next BUILD_ID matches.
+- Local-service manifest and configuration bind that same final app build.
+
+The eight prior findings close as follows:
+
+1. **Static auth/GAX compatibility — CLOSED.** [sdk.mjs:5](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/app/qualification/sdk.mjs:5) supplies fixed `getUniverseDomain()`, project and non-refreshing token methods. Inspection of pinned GAX/v1 source confirms the required interface. Retained tests exercise actual v1 initialization/GAX stub construction through an inert protobuf seam; constructor-and-close alone is not treated as sufficient proof.
+
+2. **Raw HTTP versus upstream denial — CLOSED.** [evidence.mjs:3](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/driver/evidence.mjs:3) requires independently correlated upstream evidence to interpret incoming `503` as provider `401` or reviewed Access denial. Raw status remains separately persisted. Generic `503`, wrong correlation, and unreviewed denial contracts fail closed.
+
+3. **Actual server/worker/SDK identity — CLOSED.** [clients.mjs:47](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/driver/clients.mjs:47) retains bounded response data; [identities.mjs:6](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/driver/identities.mjs:6) validates and allowlists actual correlation, parent, worker and SDK identities. Named results persist them with evidence references. Arbitrary bodies, headers and credentials are excluded. Warm identity requires actual matching parent identity and increasing sequence.
+
+4. **Immutable replay target — CLOSED for disabled source.** [replay.mjs:25](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/app/qualification/replay.mjs:25) rejects disabled/unbound or environment-mismatched targets before client creation. Claims remain keyed by run+slot, excluding deployment/build. Current capacity is **not identified**; UNBOUND is an intentional blocker, not a requirement to provision storage.
+
+5. **Security configuration in build identity — CLOSED.** [build_identity.py:3](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/build_identity.py:3) canonicalizes run/provider bindings and omits only their top-level self-referential `buildId`. Security fields and replay binding remain hashed. Independent recomputation matches the final identity.
+
+6. **Absolute SDK initialization/send deadline — CLOSED.** [sdk.mjs:32](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/app/qualification/sdk.mjs:32) awaits explicit initialization before final deadline checks, recalculates RPC timeout, and checks again through the GAX invocation transformer. Timeout closes the client; late initialization triggers another close. Retained adapter uses an absolute deadline. Retained expired tokens reach the server unchanged; local expiry/refresh errors are not classified as server revocation.
+
+7. **Contradictory fanout reconciliation — CLOSED.** [evidence.mjs:14](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/driver/evidence.mjs:14) compares observations with acknowledged local sends and required branches, rejects all-undispatched contradictions, and requires reasons for absent branches. [campaign.mjs:85](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/driver/campaign.mjs:85) writes actual inventory and named result inside the completion transaction before releasing the active fence. Persistence failure retains consumed/unknown state and HALT.
+
+8. **Required DB function allowlist — CLOSED.** Driver and provider contain the same exact **49-signature set**, including `pg_backend_pid()`. Setup specifies the narrowly scoped future grant. Provider declaration and lock are byte-identical to retained inputs and pin **pg 8.23.0**.
+
+Additional source inspection confirms the exact **42 primary + six fixed reserved slots**, seven separate B7 BEGIN READ WRITE/one named statement/ROLLBACK transactions, rollback after expected errors or unexpected success, and no hidden automatic retry. D12 retains one non-reconnecting Client for V4a; V4b creates a separate fresh old-password login. B6 validates identity, effective privileges, relations, constraints and marker. Provider connects to **55442**, listens on **55443**, and remains disabled/unbound. The permanent app fence precedes admission; replay credentials do not enter the worker environment.
+
+**New Low finding — wrapper timeout does not collect its child.** At [run-local.py:29](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/review-source-round2/run-local.py:29), `p.wait(timeout=540)` can raise; the exception handler records failure and exits without terminating or awaiting the launched process. A hung offline command can therefore survive its wrapper and continue writing after the recorded result. **Minimal fix:** handle timeout explicitly, retain evidence, stop only the captured owned process/tree, collect it within a bounded interval, and record unresolved cleanup honestly. This does not expose an activation path in the disabled application.
+
+Retained evidence, rather than newly executed checks, records:
+
+| Evidence group | Recorded result |
+|---|---:|
+| Original offline suite | 22 passed |
+| Corrected driver/review groups | 29 passed |
+| Build-identity regressions | 3 passed |
+| App integration | 5 passed |
+| Separate real-GAX contract seam | 1 passed |
+| Provider bundle | 3 passed |
+| Next 15.5.15 build | Passed |
+| Built disabled-route HTTP checks | 12 passed |
+| Guarded runner | 21 environment rejections plus port/lifecycle checks passed |
+| Existing demo emulator conformance | 18 top-level groups passed |
+
+These are overlapping suites, not an additive qualification count. [COMMANDS.jsonl](D:/OpenClaw-workspace/artifacts/mcvplus-integrated-candidate05-20261031/evidence/COMMANDS.jsonl) retains **45 command records: 27 zero exits and 18 nonzero exits**. Earlier failures remain present. Source/build verification records 86 passing checks and 24 syntax checks. Baseline verification distinguishes 40 matching payload files from the extra packaging wrapper; preservation records 213 checked files with no changes.
+
+The actual worker/provider child evidence proves configuration denial and collection only. SDK seams establish offline interface behavior; emulator results establish local conformance. Neither establishes real authorization, remote cessation, or installed-service confinement.
+
+Actual IAM, eligible replay capacity, storage flush durability, service ACL/loading confinement, SQL effective privileges, hosted cessation and Vercel access remain **operational blockers**. Setup documents preserve phase separation, partial containment, evidence retention, and the distinction between propagation, local expiry and server rejection.
+
+This review spent **zero actual campaign attempts**. All 48 unspent, purchases OFF, recovery DISARMED, pin UNSET, and Alpha/canonical unchanged remain supplied constraints and retained assertions, not freshly live-probed facts. No final code verdict can authorize Setup, deployment, service activation, permit issuance, revocation testing, or campaign execution.
+
+========================================================================
+SETUP-PACKET.md
+========================================================================
+
+# Candidate05 conventional local-service Setup packet — proposal only
+Date 2026-10-31. Scope owner Henri; future Setup executor Windows administrator; approver Biggunn. This is a reviewable specification, NOT authorization, an installer, an operational stage, or instructions to execute now. TASK.md prohibits all installation/provisioning/real credential/IAM changes. This packet separates three future decisions: (S) local services, (V) Vercel, (T) attended campaign execution. Neither review nor S authorizes V/T.
+## 1. Immutable inputs / no carry-forward authorization
+The final Candidate05 source manifest and implementation report bind application, provider, driver, lock files and tests. Candidate04 commit0f9a6c12c05887cb090e76964e1ca5b15438ac9d is provenance, not an install payload. Historical Install-FilesAndServices.ps1, Setup-Database.ps1, SQL and SETUP-OPERATIONS.txt are NOT approved/executable inputs to Candidate05; especially the old combined Vercel/Cloudflare/Firebase plan must not run wholesale.
+No usable execution permit/private signing key/approval pin is included. Synthetic ledgers remain separate and can never be converted/reset into actual campaign history.
+Before S: specify final exact source/binary dependency hashes, source origin and supported version; fresh target-absence/ancestor-access receipts; administrator identity and independent reviewer; protected operator journal path/storage specification. The manifest pins source, not effective ACL, storage durability or service-identity evidence.
+## 2. Exact proposed local footprint
+Retain prior proposed names and paths; check absence, never adopt an existing target.
+| Component | Proposed identity | Protected executable/config | Mutable state |
+|---|---|---|---|
+| PG | NT SERVICE\\MCVQ5Postgres1029 | C:\\Program Files\\MCVQ5-20261029\\postgres; protected external PG config/HBA | C:\\ProgramData\\MCVQ5-20261029\\postgres only |
+| Provider | NT SERVICE\\MCVQ5Provider1029 | pinned Node + existing pinned NSSM + Candidate05 provider and dependencies; administrator-owned launch config | dedicated provider-slots and provider-logs only |
+| Tunnel | NT SERVICE\\MCVQ5Tunnel1029 | pinned existing cloudflared + NSSM, protected dedicated config and connector credential | only expressly listed connector diagnostics if required |
+| Operator (not service) | designated operator/admin, never any runtime SID | code, immutable plan, signing control (not generated here), independent evidence input | protected local SQLite file + PERSIST journal/sidecars and evidence |
+Code root C:\\Program Files\\MCVQ5-20261029; data root C:\\ProgramData\\MCVQ5-20261029. PG loopback55442, provider loopback55443. New database mcvplus_c5_roq_20261029; runtime c5_qualification_readonly, fixture owner c5_qualification_fixture_owner; separate setup administrator. Never reuse old55432 cluster or existing service. Exact binary pins must be verified from original installed sources at later S; retained20261029 pins are historical, not a fresh inventory.
+Collision on path/service/account/port/DB or unexpected link -> STOP; no suffix/alternate/shared target. No ancestor ACL rewrites. No custom checker, supervisor, broker or reboot.
+## 3. Local Setup sequence proposed for separate authorization
+1. Read-only preflight: verify input hashes/runtime dependencies, full executable/DLL/load paths, target absence and non-reparse ancestors, current shared service baseline and exact ownership. No application/provider/SDK/HTTP/runtime-login smoke.
+2. Create only approved new protected roots/config and three virtual-account services, Disabled/Stopped, no start/restart triggers. Copy only reviewed artifacts, no source junctions or test caches. SCM/NSSM restart off; only administrator/SYSTEM may manage service lifecycle/configuration. Runtime identities have no SCM management authority over themselves or another service. Required privileges limited to documented necessary privilege (normally SeChangeNotifyPrivilege).
+3. If separately expressly authorized in S, initialize a NEW dedicated PG cluster with pinned binaries; transient PG alone may run solely for administrator provisioning and fixed catalog/privilege inventory. Provider/tunnel remain stopped. No runtime-login, canary, workload, denial or cessation test. Exact SQL/grants require independent review before inclusion; no broad revocation on shared DB. If SQL is not final, omit DB initialization and return partial disabled Setup rather than improvise.
+4. Secret placement only if named in that later S: provider incoming bearer/perimeter verifier + local readonly DB login; tunnel own connector credential. Runtime receives no provisioning/admin credential, Firebase/replay key, operator signing key, Vercel token or other service credential. No current credential is loaded/altered by this packet.
+5. Stop/disable exact new services and owned provisioning children; independently verify PID0/no owned descendants/no loopback listeners/no connector. Report receipts and unresolved blockers before any later phase.
+Local S does NOT create Cloudflare tunnel/DNS/Access resources, Firebase service accounts/custom roles/keys/canary/replay DB, Vercel project/env/deploy, or install usable permits. Those need explicit separate enumerated resource authority. Keeping a tunnel service installed but unconfigured and disabled is acceptable as partial Setup, not whole-chain success.
+## 4. Effective confinement and journal acceptance
+Administrators/SYSTEM own code/config/control/secret/journal parents and can write. Runtime has RX only own pinned executable and dependencies, Read only own immutable config/secret, Modify only its listed isolated mutable paths. No Everyone/Users/AuthenticatedUsers write; inspect effective inherited/delete-child/create/rename authority and shared-parent replacement, not just direct DACL text. Runtime-readable secrets are exposed to that runtime by design.
+PG OS service can modify its cluster; readonly SQL privileges do not constrain PG OS file/config authority. Review postgresql.auto.conf, HBA/config includes, preload libraries/extensions, dynamic_library_path, archive/restore commands, tablespaces, logs, working directory and DLL/environment search; no privileged consumer may load service-written code/config/path. Verify runtime nonowner/nonsuperuser/no role inheritance/write/admin/MAINTAIN/routine rights/default/PUBLIC grants across actual catalog. The exact pure-function allowlist and later narrowly scoped grant inventory must include pg_catalog.pg_backend_pid() because the D12 fixed session-identity query requires it; grant no broader pg_* helper family, view/business-table authority or administrative function. This is a proposed exact-signature requirement, not an applied GRANT. Proposed positive/negative runtime tests belong to T, not S.
+Use local supported storage honoring FlushFileBuffers/SQLite FULL commits, protected parent plus -journal sidecar, no synced/network/removable volume, no snapshot rollback/restore/reset. Logical process-crash tests do not prove hardware power-loss durability. Old-schema synthetic journals retained; no migration or reuse. If durable HALT/active is uncertain, no next dispatch or automatic recovery.
+Storage exhaustion controls must be demonstrably enforced if a hard bound is required. Log rotation is not a disk quota. Unproven bounds/authority/loading/storage remain explicit blockers.
+## 5. Partial-Setup containment must be included in later S authorization
+Containment is part of S's proposed scope, not current permission to change the host.
+- Maintain an append-only resource receipt before each mutation: unique service/path/cluster identity, file hashes, creation time and exact owned PID+creation ancestry. Failure stops subsequent steps.
+- Never sign/issue permit or enable route/provider. Keep activation fences false and no approval pin. PurchasesOFF/recoveryDISARMED/Alpha canonical unchanged.
+- Stop/disable only exact new services created by this S; cancel/close exact owned provisioning session and cluster; wait bounded time for retained child identities to exit and verify owned listeners gone. No process-name/port sweep, inherited shared process kill or adoption of collided resource.
+- If authorized S had created a dedicated credential/resource, suspend/revoke only that exact new credential/access binding/path when needed to contain exposure, retaining IDs/logs. Local S as narrowed here creates none of the cloud resources; do not disable shared credentials or change unrelated IAM.
+- Preserve partial files, cluster, logs and receipts disabled/quarantined. NO delete, restore, rollback of consumed ledger/claim, automatic retry, resource replacement or financial operation.
+- If containment cannot be verified, record exact residual PID/resource/uncertainty, keep failed state BLOCKED and request specific remediation authority; do not claim Stopped from a stop-request acknowledgement.
+No cleanup/deletion job is supplied or scheduled. Restart requires a newly reviewed continuation of the exact retained state, not rerunning installer until it works.
+## 6. Replay gate and separate Vercel decision
+REPLAY-DEPENDENCY.md: no eligible existing isolated no-added-paid replay DB identified. Testproject only qualification(default); database inventories for three additional visible project IDs were unavailable because each list request returned SERVICE_DISABLED; their database existence/capacity remains unknown. Effective IAM/billing unavailable. Do not create another DB or substitute storage. This blocks replay Setup and hosted execution, but not creation of reviewed local source.
+V needs separate existing team/project access, supported protection/logging, exact app allowlist/build ID/worker trace/runtime support and dedicated env placement; no credentials copied wholesale. New project/provision/deploy or canonical alias changes are not part of S. V must keep route permanently disabled/no permit until separately reviewed source activation and T; current final source is deliberately not operationally activatable.
+## 7. Later execution decision and evidence
+T requires explicit exact48-attempt plan(42primary+6reserved), target+build+replay immutable binding, real ledger/storage controls, independent ingress/platform/provider/SQL correlation and cessation observer, dedicated no-refresh issued token, supported retained DB session + fresh login, scoped revocation/fault/containment authority and bounded observation window. Every denial/failure/authorized retry consumes pre-send; unknown stays consumed and HALT. Retry displaces primary coverage; reserved slots fixed43–48. No synthetic result qualifies actual IAM, cold/warm/revocation, service isolation, remote cessation or power-loss.
+Firestore IAM permission changes can take up to five minutes to become effective according to the retained official documentation. A cache-aware revocation schedule with exact expected outcomes must be independently reviewed before T, within the existing D8-D11 checkpoints and 48-attempt limit; no extra auth probes count as inspection. Revocation acknowledgement, local token expiry, per-dispatch cessation and server-enforced loss of authorization are distinct facts. The +30-second cessation snapshots do not prove IAM revocation or invalidate an issued token. If the authorized schedule cannot establish the required server result, leave that result UNVERIFIED and T BLOCKED.
+Independent source review may accept the disabled candidate while S/V/T stay BLOCKED. Return each separately; never a blanket ready/approved verdict.
+## Inspection bounds retained from the campaign amendment
+Later S inspections: initial/apply/final metadata snapshots, maximum three per named object/config; administrator catalog inventory only on the exact new55442 cluster if that provisioning is expressly authorized. Never runtime-login/startupGate/member/canary/SDK/HTTP probes during Setup.
+Later T per-case evidence: at most six snapshots (baseline, response, cancellation, +5s,+15s,+30s), limited to exact-owned process/socket/service identities, one filtered pg_stat_activity metadata query via administrator, correlation-filtered platform logs and exact connector control-plane state. No business SELECT/GetDocument/credential test/health/fault action disguised as inspection. These are future bounds, not current execution permission.
+## 8. Required S return receipt
+Exact authorization ID/scope, final source/binary hashes, copied inventory, new service identities/SCM+NSSM config/ACLs/env NAMES, cluster system identifier and catalog/privileges if authorized, created secret KEY IDs only, every partial resource and containment action, final stopped/disabled/PID0/descendant/listener evidence, compared baseline hashes, unresolved blockers. No secret values, SQL/business rows or invented no-spend proof. No test/activation claim from catalog-only checks.
+
+
+========================================================================
+CREDENTIAL-BOUNDARIES.md
+========================================================================
+
+# Candidate05 credential boundaries — source inventory, not provisioned
+No real credential is bundled, generated, rotated, revoked or tested by this candidate. All fixture strings are unusable synthetic inputs. No signing key or usable permit is supplied. Existing operator metadata authentication was used only for the separately authorized read-only capacity/IAM inspection; it is never an application/provider/driver runtime input.
+| Holder | Explicit allowed authority | Must not receive |
+|---|---|---|
+| Attended operator | future incoming invocation/perimeter caller inputs; exact immutable deployment/permit inputs; direct readonly DB password; dedicated qualification issued token and issuance/expiry metadata | no wholesale environment forwarding; no real execution in this candidate |
+| Hosted route parent | incoming verifiers; public permit key currently empty; provider bearer/perimeter and CF caller input; qualification reader issued token; separate replay-writer issued token/email/expiry and sealed target | private permit signing key; PG/setup admin; Cloudflare/GCP/Vercel provisioning token; purchase/Alpha authority; ADC |
+| Hosted child | C5_PROVIDER_PERIMETER_SECRET, C5_PROVIDER_BEARER, C5_CF_CLIENT_ID, C5_CF_CLIENT_SECRET, C5_FIRESTORE_ISSUED_TOKEN, C5_FIRESTORE_TOKEN_EXPIRES_AT only, plus minimal platform process environment | all replay credentials/target, invocation/perimeter verifiers, reader/replay private keys, admin/provisioning credentials |
+| Provider service | incoming bearer/perimeter verifiers, its local readonly SQL password, protected disabled binding | Firebase/replay/CF caller credentials, signing/invocation secret, DB administrator/migration credentials |
+| PG service | own cluster/config and exact service identity | operator journal/permit controls and other service secrets |
+| Tunnel service | its own connector credential and protected dedicated ingress config | CF account-wide admin token or hosted caller Access token |
+| Direct retained SDK | same dedicated already-issued qualification token and original issuedAt/expiresAt metadata, fixed read only | ADC/private key/token exchange/refresh; replay writer; client substitution |
+| Direct DB | one explicit readonly Client; same retained connection for V4a; one separate fresh-old-password login for V4b | Pool, automatic reconnect, ambient PG URL/user/password, admin or migration login |
+## Issued-token policy
+Reader and writer principals/tokens must differ; source string checks supplement but do not establish effective IAM or actual token subject. Actual issued principal/authority/expiry evidence is a later execution prerequisite. No token is refreshed or silently substituted; expiry, server rejection and effective revocation are distinct observations. Retained probes may send the same expired token only to obtain an actual independently correlated server rejection within the approved checkpoints, never a new token.
+The fresh worker gets one bounded SDK read, retained SDK gets the exact finite case budget; data RPC retry:null plus grpc retry disabled. Actual SDK initialization and deadline behavior must satisfy the pinned client API. No same-instance/warm-IAM/cessation acceptance follows from construction or mock tests.
+## Replay
+Separate database/project target must be source-sealed across replacement deployments before later activation. Current capacity is unresolved (REPLAY-DEPENDENCY.md); an unconfigured placeholder must reject before client creation/claim, not accept arbitrary environment-selected storage. No new database/storage design is proposed. Writer uses createDocument only; no read/update/delete/TTL or refund API; run+slot key excludes deployment/build. No provider/client receives writer authority. Inherited IAM/subject/absence-of-alternate-grant proof remains BLOCKED, and no usable writer token is included.
+## Logs and receipts
+Persist only bounded enum/status, run/slot/build/correlation/process/client/session identities and independent evidence references. No token value/hash, password, private key, arbitrary response body/header or business row is an evidence field. SQL backend/session metadata is separate from member/document values. Runtime-readable secrets are accessible to that runtime; filesystem labels are not an effective-ACL proof.
+This inventory supersedes Candidate04 key-based placement for Candidate05 source only. Historical Candidate04 remains unchanged and its credential specification remains part of the retained review chain, not a current operational configuration.
+
+
+========================================================================
+REPLAY-DEPENDENCY.md
+========================================================================
+
+# Existing replay capacity and database-scoped IAM — read-only finding
+Checked 2026-10-31; no provisioning, billing change, IAM write, key change, document read or document write.
+## Result: BLOCKED — no existing eligible isolated no-added-paid replay database identified
+- Existing qualification project mcv-plus-phase-2-test: database-list HTTP200, complete unpaginated inventory has only (default), STANDARD/NATIVE/nam5, freeTier=true, deletion protection enabled. It is the qualification database and expressly ineligible for replay write authority.
+- Database inventories for three additional project IDs (gen-lang-client-0454503663, gen-lang-client-0282748199, fluid-mote-488413-d6) were unavailable: each list request returned SERVICE_DISABLED for the Firestore API. Database existence and capacity remain unknown. Nothing was enabled. This is not an account-wide or organization-wide absence proof; no eligible existing replay database was identified.
+- Existing project service credential can read database metadata and project identity. Billing linkage and project IAM reads returned403. A database :getIamPolicy URL did not return a policy and is NOT IAM evidence; Firestore database conditions are configured in project IAM policy. No policy was written, no new auth credential saved. Existing local authenticated gcloud identity was only read/listed.
+- No remaining free-quota headroom or absence of inherited write grants has been proven. Project metadata cannot establish current per-day usage.
+## Feasibility, not effective-authorization acceptance
+Official Firestore server-client IAM documentation identifies createDocument as requiring datastore.entities.create. Official manage-databases documentation supports project IAM bindings with a database resource.name equality condition (REST/client libraries enforce these; console has documented differences). A dedicated custom create-only role bound with exact database condition is a supported design in principle, NOT an applied grant or effective access proof. Do not use roles/datastore.user because it contains broader authority; do not claim collection-scoped IAM.
+Later separately authorized Setup must inspect full inherited organization/folder/project policy, group membership and custom-role expansion for both replay writer and qualification reader; ensure no replay read/update/delete or qualification-data write; bind immutable replay project/database across deployment replacements; retain claims with no TTL/clear/reset. The current403 leaves effective IAM BLOCKED. Official IAM documentation states that cached permissions can take up to five minutes to reflect role changes. Later T needs a separately reviewed cache-aware revocation schedule within existing checkpoint/snapshot/48-attempt limits. Administrative acknowledgement or +30-second cessation observations cannot establish loss of an issued token's authorization; no extra auth probes may be disguised as inspection. Local expiry is not server revocation rejection. If evidence is inadequate within authorized bounds, T stays BLOCKED.
+## No-paid capacity constraint
+Official pricing: exactly one free database per project; additional databases require billing upgrade and are charged for usage. Do not propose a second database in this same project as free. No alternative storage design, new project/database/service, billing upgrade or paid service is proposed here. Identify an existing eligible isolated database and prove no-added-cost headroom before replay Setup can proceed.
+## Evidence
+evidence/REPLAY-METADATA.json; evidence/OTHER-PROJECT-INVENTORY.txt; evidence/OFFICIAL-PRICING.md; evidence/OFFICIAL-IAM.md; evidence/OFFICIAL-DATABASES.md.
+Sources: https://firebase.google.com/docs/firestore/pricing ; https://docs.cloud.google.com/firestore/native/docs/security/iam ; https://docs.cloud.google.com/firestore/native/docs/manage-databases .
+

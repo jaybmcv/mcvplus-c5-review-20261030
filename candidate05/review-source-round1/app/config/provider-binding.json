@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "runId": "c5-readonly-20261029-owner-review-1",
+  "deploymentId": "UNBOUND",
+  "buildId": "51b45ebf18013029cc87199ef95551339413daad4fc59445dcb5462f7f88071d",
+  "scopes": [
+    "members:read",
+    "reservations:read"
+  ],
+  "slotsDirectory": "UNPROVISIONED",
+  "logDirectory": "UNPROVISIONED"
+}
