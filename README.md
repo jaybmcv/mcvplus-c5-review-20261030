@@ -23,3 +23,13 @@ Status: UNTESTED; PG-R1 incomplete and BLOCKED. Uploading is not execution autho
 | --- | ---: | --- |
 | Candidate03 ZIP | 531983 | 3eb6851248d59d8ab09685644ef021394354774167abf739af8766faef3329d0 |
 | Consolidated review TXT | 55432 | f3fa7b871d71130ff5abc142adbe53a08b5d4378f1a7ed36d7418b4643081167 |
+
+## C5 bounded completion proposal — 2026-10-31
+
+Preparation-only proposal; no implementation or execution authorization. Candidate03 is unchanged. Historical BLOCKED status and all 48 hosted attempts are preserved.
+
+- [Plain text for ChatGPT](MCVPLUS-C5-BOUNDED-COMPLETION-PROPOSAL-20261031.txt)
+- [Word document](MCVPLUS-C5-BOUNDED-COMPLETION-PROPOSAL-20261031.docx)
+- [Markdown document](MCVPLUS-C5-BOUNDED-COMPLETION-PROPOSAL-20261031.md)
+- [ZIP package](MCVPLUS-C5-BOUNDED-COMPLETION-PROPOSAL-20261031.zip)
+- [File hashes](MCVPLUS-C5-BOUNDED-COMPLETION-PROPOSAL-20261031-SHA256.json)
