@@ -1,0 +1,268 @@
+MCV+ Candidate04 offline review handoff. Not operational acceptance.
+
+===== IMPLEMENTATION-REPORT.md =====
+# MCV+ Candidate04 — consolidated bounded local implementation report
+Date: 2026-10-31. Owner: Henri. Operator: Biggunn.
+Status: OFFLINE CANDIDATE; NOT Setup-ready, staged, installed or deployed.
+Independent review chain: INDEPENDENT-REVIEW.md (initial), INDEPENDENT-REVIEW-FINAL.md (follow-up), INDEPENDENT-REVIEW-CLOSEOUT.md (focused final corrections). Source/test disposition: REVIEW-DISPOSITION.md.
+
+## Approved scope and preserved state
+48 authorized campaign attempts:42 primary +6 reserved, not a universal network-request ceiling. Every named HTTP/direct SDK/DB attempt consumes before sending; denials, failures and authorized retries count; unknowns remain consumed. Expected fanout is inventoried separately.
+This is a separate source overlay at D:\OpenClaw-workspace\artifacts\mcvplus-bounded-candidate04-20261031. Candidate03, previous candidates, original runs and evidence were not edited. Five historical source references are hash-checked unchanged in evidence/CHECKS.json; no claim of a comprehensive host re-verification.
+No PG-R1 historical campaign rerun, actual ledger, real slot, usable permit, approval pin, real credential change, installation, operational staging, deployment, hosted project request, paid resource, financial activity, reboot or deletion. Final candidate uses PERSIST rollback journals and retains all synthetic fixture/evidence files; no cleanup/deletion script runs.
+Purchases OFF, recovery DISARMED, Alpha/canonical unchanged: preserved constraints, not freshly probed live state.
+
+## Implementation
+| Area | Candidate files | Behavior / limit |
+|---|---|---|
+| One case-aware path | operator.mjs | Fixed primary case IDs + designated reserved43–48. Built-in SQLite transaction FULL commit records spent slot + active owner before transport. HTTP/SDK/DB invoke through same dispatch method. Concurrent callers reject while active; no queue/retry. |
+| Status / accounting | operator.mjs, adapters.mjs | Expected HTTP/SQLSTATE statuses explicit per named plan. Unexpected status/throw/missing or mismatched independent cessation => durable HALT. Explicit authorized primary retry consumes fresh primary slot; fixed reserved cases cannot reuse their slot. |
+| Crash/ack/recovery | operator.mjs | Crash-held active row prevents next send. Post-send persistence failure retains active consumption. recoveryReport is inspection only, resumeAllowed:false; no reset/refund/auto-clear. Actual power-loss durability still depends on supported Windows VFS/storage and protected journal/sidecars. |
+| Replay before child | replay.mjs, qualification/handler.mjs | Atomic Firestore createDocument(runId,slot), retry:null, before runChild. Duplicate409/store uncertainty503; no worker. Immutable record retained after failed/unknown child. Separate database/principal/key required. |
+| Credential separation | replay.mjs, handler child allowlist, CREDENTIAL-PLACEMENT.md | Explicit replay credentials only, no ADC; key/email differ from qualification reader; same qualification database refused. Replay credentials excluded from child. Effective IAM separation remains later Setup evidence, not established by string checks. |
+| Disabled route | route.ts | Static candidate activation false, empty public-key base; no private key or usable permit. Full app packaging/integration is a separate reviewed change before activation; this overlay is not a standalone installable application. |
+| Conventional services | SERVICE-INSTALLATION-SPEC.md | Existing SCM + existing wrapper where required, separate identities/state, protected code/config/control/credentials, PG loading and actual SQL/IAM boundary decisions. No general checker/supervisor/broker. |
+
+## Evidence and verification
+Initial synthetic run:12/12 fixture groups passed. Revised candidate including independent-review regressions:22/22 offline fixture groups passed. Retained run and syntax results: evidence/offline-tests.txt and evidence/CHECKS.json. Tests use fake in-memory Firestore clients, fake HTTP/SDK/DB transports and fresh SYNTHETIC SQLite journals under synthetic/. Only fixture child processes run; no service or server starts.
+Checks parse candidate JS and disabled TypeScript route with installed Node24.18.0. This is NOT a full Next application build, SDK installation, Firestore integration test, hardware power-loss test, Windows ACL/SCM acceptance, remote cancellation proof or historical campaign qualification.
+Fixtures cover42+6 exhaustion, same/independent-process contention, process-death persistence, denial/fresh retry, uncertainty/halt, unexpected statuses/cessation mismatch, persistence faults before/after send, all3dispatch kinds, explicit anomaly halt, atomic duplicate claims, unknown replay writes and pre-child refusal.
+Historical full application/provider fixtures were not executed.
+
+## Deliberately bounded integration limits
+- The actual campaign-specific B7 BEGIN/one statement/ROLLBACK and retained issued-token SDK/fresh-login DB probes are NOT replaced by a generic query loop. Generic adapters expose single-method calls; review real clients for no reconnect/auth refresh/data retries before campaign execution. No claim that arbitrary injected clients cannot retry internally.
+- Platform structured replay anomaly logging exists; attended operator must inspect independent ingress/platform records before every dispatch and persist HALT on unplanned activity. No claim of automatic cross-machine halt or universal request ceiling.
+- Replay SDK dependency is declared/pinned, not installed or initialized. Existing eligible replay database and database-scoped create-only IAM must be available on no-additional-paid resources. If not, hosted execution remains blocked; no new service is proposed.
+- Candidate operator accepts synthetic filenames/run IDs only. Real-ledger activation, exact actual target/plan manifest and deployment packaging remain separately reviewed integration. This fence is intentional under no-operational-staging authorization, not an assertion that synthetic fixtures qualify production.
+
+## Remaining prerequisites
+| Prerequisite | Owner | Evidence needed | Blocks |
+|---|---|---|---|
+| Review any residual source findings | Henri + independent reviewer | Resolved disposition and exact final candidate hashes | source acceptance |
+| Exact service Setup scope and partial containment authorization | Biggunn + Windows administrator | Revised conventional service spec; target occupancy; exact identities/ACLs/loading/storage decisions; bounded checks; disabled end state | Setup |
+| Supported separate replay storage | platform owner | Existing eligible database/no paid capacity, effective DB-scoped create-only writer, no reader write grants, no qualification data write authority | replay Setup and hosted execution |
+| Protected journal durability | Windows administrator | Stable local storage honoring flushes, protected parent/SQLite sidecars, effective identity ACLs, no rollback/reset, final supported runtime pin | operator activation / execution |
+| Actual driver/adapters and independent evidence | Henri + reviewer/operator | Reviewed named-case/status/fanout mapping, no retry/refresh/reconnect, exact-session cessation/log correlation, retained-client behavior, bounded containment | execution |
+| Disabled candidate/app packaging and exact build binding | Henri + platform owner | Separately reviewed actual application integration/build; disabled configuration; no usable permit during Setup | app Setup / execution |
+| Vercel access, kept separate | Vercel team owner | Test team/project access/protection/logging; recorded IDs are not access proof | Vercel Setup / hosted execution |
+| Later campaign/credential containment authorization | Biggunn | Named test activation, exact budget/plan, revocation/cleanup and emergency containment; no automatic recovery | execution |
+
+## Communications
+Local private opportunity note retained in COMMUNICATION-OPPORTUNITY-LOCAL.md. No public copy, message, repository sync or hosted request; awaiting separately authorized synchronization.
+
+## Consolidated review result
+Initial independent read-only review found seven local defects; follow-up confirmed all seven closed and identified two additional narrow issues. All nine corrected in candidate source.22/22 synthetic offline fixture groups and11syntax checks pass;5historical source hashes unchanged. See REVIEW-DISPOSITION.md for each finding, correction and regression. The original written reviews/source snapshots are retained rather than overwritten.
+Independent review is static source review, not an independent test rerun. The focused closeout separately assesses final route-time-budget/adapter-receiver corrections. Exact final source/spec hashes in SOURCE-MANIFEST.json.
+The separate candidate implements the authorized generic admission path and replay boundary, not the full operational qualification campaign. It remains disabled/synthetic-only. Named campaign probes, production packaging, actual IAM/service/journal evidence, independent log/cessation operation and separate Vercel access remain prerequisites listed above.
+Nothing automatically continues after closeout. No operational installer, worker/server/browser session or cleanup job was started. No source-only acceptance authorizes Setup or campaign execution.
+
+## Final independent closeout
+Both follow-up findings are closed at source level. Reviewer verdict: qualified local offline-source acceptance stands; operational acceptance remains pending. All nine concrete source findings addressed;22/22offlinefixturegroups,11syntaxchecks,5historicalreferencesunchanged;14finalsource/specfileshashverified. Complete review chain collected; no active reviewer or task server/browser remains. See INDEPENDENT-REVIEW-CONSOLIDATED.md for verbatim independent written reviews. No Setup, actual campaign execution or operational activation authorized/inferred.
+
+
+===== INDEPENDENT-REVIEW-CONSOLIDATED.md =====
+# Independent written review — consolidated retained reports
+
+Three separate read-only Codex reviewer invocations. Reviews are static; author ran the offline tests. Final closeout first; prior reports retained verbatim below for findings/coverage and audit. No operational acceptance inferred.
+
+## Final focused source closeout
+
+**Both remaining concrete findings are closed at source level.** Comparison of current `route.ts` and `operator.mjs` against `review-round2-source/` shows only the two stated source changes, including the deadline comment.
+
+- **Medium — combined route budget: closed.** `route.ts` now sets a 14,000 ms deadline shared by initialization and handling. With the previously reviewed cleanup bound of 100 ms, this leaves 900 ms nominal response margin within `maxDuration=15`. This addresses the identified budget composition defect; timers do not establish a hard scheduling or platform-delivery guarantee.
+- **Low — captured adapter receiver: closed.** `operator.mjs` now invokes `dispatchAdapter.call(adapters, …)`, preserving the original method receiver while retaining the captured function and frozen dispatch input.
+
+`SERVICE-INSTALLATION-SPEC.md` explicitly limits fixtures to current-schema synthetic journals and forbids migration, reset or reuse of prior round-one synthetic journals, which remain evidence. The compatibility limitation is therefore explicitly scoped, rather than implying transparent upgrades. Future real-ledger migration still requires a separately reviewed, history-preserving specification.
+
+**Qualified local offline-source acceptance stands; operational acceptance remains pending.** Existing prerequisites remain: reviewed worker/case integration and B7 probes; pinned client behavior without unintended retries, refresh or reconnect; independent cessation evidence and log correlation; effective IAM separation and replay-target continuity; and installation, ACL and journal-durability verification. The no-install, no-hosted-request and no-real-slots constraints remain intact.
+
+This is a static source closeout. No candidate code, tests or network operations were executed; no credentials were read or files edited. Reported test results were not independently verified. Actual process termination, hosted timing and storage durability remain unverified operational prerequisites.
+
+## Follow-up review including original finding dispositions
+
+**Qualified local offline-source acceptance is reasonable.** All seven original findings are addressed by inspection. Two narrow defects remain in the changed source, plus a journal compatibility limitation. Operational acceptance remains pending.
+
+I compared the requested current files with `review-round1-source/` and the initial review. No candidate code or tests were executed; no network, credentials or file mutations were used.
+
+The seven original findings:
+
+1. **Empty halt reason — addressed.** `operator.mjs:20` rejects empty or whitespace reasons and receipts. Admission and completion treat every non-NULL halt as terminal, including an existing empty string.
+
+2. **Mutable dispatch outcomes — addressed.** `operator.mjs:28–29` captures the plan, expected statuses and adapter before awaiting. Lines 48–49 capture status before observation and freeze the observer-facing result.
+
+3. **Admission surviving cancellation/deadline — addressed.** Replay claims and anomaly reporting now have bounded waits. Admission is checked again before runner invocation, and `runChild` checks cancellation and remaining budget before spawning. Client initialization shares the route deadline. Late or uncertain claims remain consumed.
+
+4. **Queued success overwriting cancellation — addressed.** `qualification/handler.mjs:73` latches terminal cancellation; line 77 rejects subsequent messages.
+
+5. **Unbounded child collection — addressed at runner level.** Collection now has a fallback returning `504/collection_unverified` with `workerCollected:false`. It does not claim successful collection when termination remains uncertain. The combined route deadline still has the issue below.
+
+6. **Cleanup rejection replacing a prepared response — addressed.** `closeReplay` catches cleanup failures and bounds nonsettlement; the route uses that helper.
+
+7. **Post-completion storage failure losing the fence — addressed.** Halt and active ownership are checked inside the completion transaction. The former storage read after releasing the active fence is removed.
+
+**New concrete defects:**
+
+- **Medium — The combined route budget omits cleanup and response time.** [route.ts:16](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/route.ts:16) gives the handler a full 15 seconds. Failed collection can consume that deadline at [handler.mjs:69](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/qualification/handler.mjs:69), after which `finally` awaits cleanup for up to another 100 ms. The combined path can therefore exceed the declared `maxDuration=15`, leaving acknowledgement vulnerable to platform cutoff. Reserve cleanup and response time within the outer budget.
+
+- **Low — Capturing the adapter drops its method receiver.** [operator.mjs:29](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/operator.mjs:29) captures the function, and line 47 invokes it without its original receiver. An injected adapter method using `this` previously worked; it now throws after reservation, consuming the slot and halting. Preserve the receiver when invoking the captured function. The supplied factory adapters use closures and are unaffected.
+
+**Compatibility limitation:** The new authorization columns are created without migrating existing tables (`operator.mjs:15,42`). Reopening a round-one journal therefore fails on insertion before transport. This fails closed, but acceptance should explicitly cover current-schema journals rather than imply transparent journal upgrades.
+
+The regression source contains useful assertions for the original failures, including fake child lifecycle events and cleanup nonsettlement. It does not establish real process-termination behavior or exercise the combined route budget. I have not independently verified the reported test results.
+
+Acceptance is reasonable for the intentionally disabled, synthetic-only artifact with these exceptions recorded. Before activation, resolve the deadline composition and retain the existing prerequisites: reviewed worker/case integration and B7 probes; pinned client behavior without unintended retries, refresh or reconnect; independent cessation and log correlation; effective IAM separation and replay-target continuity; and installation, ACL and journal-durability verification. The no-install, no-hosted-request and no-real-slots constraints remain intact.
+
+## Initial independent review
+
+**Verdict: the local implementation is not yet complete within its offline boundary.** The journal and replay scaffolding address important failure modes, but several source defects remain. Operational readiness is separately blocked by design: the route is disabled, the binding is incomplete, and installation prerequisites remain unverified.
+
+This was a static review. I read the requested files without executing candidate code/tests, accessing the network, reading credentials, or changing files. Fixture coverage below refers to source assertions, not independently verified test results.
+
+1. **Medium — An empty halt reason permanently defeats the halt latch.**  
+   [operator.mjs:20](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/operator.mjs:20), checks at lines 30 and 54.  
+   `halt('')` stores an empty string, which dispatch treats as false. Later nonempty halt calls cannot repair it because `COALESCE` preserves that first empty value. Thus even a subsequent legitimate anomaly halt permits dispatch. Validate the reason and treat every non-NULL halt value as terminal. The fixture only uses a nonempty reason.
+
+2. **Medium — Expected outcomes and recorded transport status remain mutable after dispatch.**  
+   [operator.mjs:44](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/operator.mjs:44), lines 44–48.  
+   While transport or observation is pending, the caller can change `plan.expected`, allowing an originally unexpected status to complete without halting. `plan.kind` is also reread after transport, and `result.status` is read only after the observer runs, so observation can alter the recorded outcome. Snapshot validated dispatch fields before reservation and capture transport status before calling the observer.
+
+3. **Medium — Admission can outlive cancellation/deadline and still create a child.**  
+   [qualification/handler.mjs:19](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/qualification/handler.mjs:19), lines 19, 22, 28, 41 and 58.  
+   Replay claims and anomaly reporting have no enforced deadline or cancellation handling. A late successful claim still invokes the runner; `runChild` spawns before checking whether the request is already aborted or its budget exhausted. The default runner then withholds the IPC job, so this establishes unnecessary child creation—not a demonstrated remote read. Route client initialization also occurs before the handler starts its budget. Admission needs a shared deadline and a pre-spawn check; uncertain claims must remain consumed.
+
+4. **Medium — Cancellation can be overwritten by a queued success message.**  
+   [qualification/handler.mjs:48](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/qualification/handler.mjs:48), lines 48–53.  
+   Abort sets `504/cancelled` and requests termination. Before `close`, an already-queued valid IPC success can replace that result with `200/qualified` while time remains. There is no terminal cancellation latch. Preserve cancellation while collecting subsequent evidence. The early termination timer has the same overwrite path, although accepting completion before the nominal deadline may be intentional policy.
+
+5. **Medium — Child collection has no enforced completion bound.**  
+   [qualification/handler.mjs:47](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/qualification/handler.mjs:47), lines 47–55.  
+   The kill result is unchecked, and the promise resolves only on `close`. Failed or delayed termination can leave it pending until platform termination. Reserving 750 ms does not establish collection within that interval. A bounded uncertain-collection outcome is needed; it must not report successful collection. The supplied fixtures inject `run` and never exercise this lifecycle.
+
+6. **Low — Cleanup failure can discard an otherwise prepared response.**  
+   [route.ts:23](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/route.ts:23).  
+   `replay.close()` is awaited in `finally`, outside the catch. A rejection overrides the prepared response even after a completed worker, creating avoidable acknowledgement ambiguity. Consumption remains protected, but the caller receives an infrastructure failure instead of the available result.
+
+7. **Low — A combined post-completion storage failure can lose the terminal fence.**  
+   [operator.mjs:49](D:/OpenClaw-workspace/artifacts/mcvplus-bounded-candidate04-20261031/operator.mjs:49), lines 49–59.  
+   Completion commits `active=NULL` before the final halt read. If that read fails and the subsequent halt write also fails, reopening can find neither active nor halt. The comment that the pre-send active row always remains protective is therefore too broad. Cessation was already established, so this is not an overlapping-operation finding, but it weakens the claimed terminal treatment of persistence errors.
+
+**Concurrency, crashes and retries:** For cooperating callers sharing one intact journal, transactionally reserving the slot and active owner before transport is sound. Active ownership spans transport and observation; interrupted or uncertain dispatches retain consumption and block further sends. Fixed reserved slots stay separate, and primary retries consume additional primary capacity. Synthetic retry authorization is only a prefix check, without retained authorization provenance. The crash fixture exits after adapter entry; it does not establish power-loss durability or every commit-boundary outcome.
+
+**Pre-child replay:** The ordering is correct: an acknowledged claim precedes the runner, and duplicate, failed or uncertain claims do not start it. Claims are never refunded. However, uniqueness is per `(runId, slot)`, not campaign-wide exclusion: different unused slots can run concurrently. Replacement-deployment continuity also depends on retaining the same replay database. These are limitations to preserve explicitly; local contention and fake-store fixtures do not establish hosted single-flight behavior.
+
+**Credential separation and operator halt:** Explicit replay credentials and the child environment allowlist provide useful separation in source. Different email/key strings do not prove effective IAM isolation, as the credential document correctly acknowledges. A normal nonempty operator halt blocks subsequent dispatches; it does not cancel remote work already admitted. `workerCollected:true` establishes local child closure, not provider/SQL/Firestore cessation. Independent evidence remains necessary. Gate and binding denials bypass the replay anomaly logger, so independent ingress records must cover those events and fresh unsolicited valid traffic too.
+
+**Offline-source readiness remains partial.** The fixtures omit mutable inputs, empty halt poisoning, delayed claims, actual child lifecycle, route cleanup, and real client behavior. The synthetic filename/run guards constrain ledger admission; they do not sandbox injected transports. `httpsOnce` remains capable of real HTTPS, and its socket inactivity timeout is not an elapsed deadline.
+
+**Operational readiness remains blocked.** Outstanding integration includes the actual worker and case adapters, B7 transactional probes, cessation/log correlation, pinned runtime/client behavior, nonrefreshing direct credentials, and immutable replay-target continuity. Setup must establish approved existing replay capacity and database IAM separation, collision checks, service identities/ACLs, protected executable/configuration paths, PostgreSQL loading confinement, journal storage durability, storage limits where required, and partial-Setup containment. The stopped/disabled end state and prohibition on Setup smoke requests remain requirements, not verified machine state.
+
+The intentionally disabled entrypoint and missing operational integration are not authentication bypass findings. The local defects can be addressed in the existing components without introducing a broker, checker or supervisor.
+
+
+
+===== REVIEW-DISPOSITION.md =====
+# Independent review disposition
+Initial review retained verbatim in INDEPENDENT-REVIEW.md; its inspected source retained in review-round1-source/. No historical candidate/evidence was replaced.
+Follow-up review: INDEPENDENT-REVIEW-FINAL.md (separate independent invocation; static review only).
+
+| Initial finding | Candidate correction | Offline regression |
+|---|---|---|
+| Empty halt poisoning | Reject empty/blank reason+receipt; every non-NULL stored halt is terminal | empty halt rejected / existing empty latch blocks |
+| Mutable expected/status | Copy+freeze plan and expected list, snapshot adapter; capture/freeze returned status before observation | caller mutation cannot change expected outcome/kind/status |
+| Late/aborted admission child spawn | Shared deadline across route initialization, claim, anomaly and handler; pre-run/pre-spawn cancellation/deadline checks; late claim retained | late/uncertain/aborted claim; expired jobs never spawn |
+| Cancellation overwritten by IPC | Terminal cancellation/deadline latch prevents queued success overriding outcome | abort then queued valid success stays504 |
+| Unbounded collection | Bounded exact-child collection; report504/collection_unverified with workerCollected:false if close unobserved | fake failed-kill/uncollected child bounded; no real child spawned |
+| Cleanup masks response | Bounded cleanup helper catches close rejection/nonsettlement and emits sanitized notice, preserves response | cleanup rejection+hang return without throw |
+| Post-release storage read loses fence | Check halt/active within completion transaction; no DB reads after commit releases active fence | halt in observer retains active; forbid every postcommit prepare |
+
+Additional improvements: retry authorization provenance stored with reservation; native HTTPS elapsed (not inactivity) deadline; PERSIST/FULL synthetic journal; replay target continuity and non-global singleflight explicitly documented.
+
+No claim the fixtures independently verify live IAM/Windows flush/remote cessation/Next build. Synthetic-only and disabled entrypoint remain deliberate. No operational recovery/unhalt function added.
+
+## Follow-up two findings
+Independent follow-up INDEPENDENT-REVIEW-FINAL.md confirmed all seven initial fixes; identified two additional narrow defects. Both corrected:
+- Route uses14s initialization/handler deadline, <=100ms cleanup, >=900ms nominal response margin under15s maxDuration.
+- Captured adapter is invoked with .call(adapters,context), preserving its method receiver; dedicated offline regression passes.
+Current-schema-only synthetic journal compatibility is explicit. Prior journals are retained with no reset/migration/reuse. Independent focused closeout: INDEPENDENT-REVIEW-CLOSEOUT.md.
+
+
+===== SERVICE-INSTALLATION-SPEC.md =====
+# Conventional service installation specification — NOT an installer
+Status: local planning deliverable only. No installation, staging, probing or service changes authorized/performed.
+Supersedes custom checker/supervisor proposals only; does not qualify Candidate03.
+
+## Fixed target / collision policy
+Retain original proposed roots: C:\Program Files\MCVQ5-20261029 and C:\ProgramData\MCVQ5-20261029.
+Retain proposed names MCVQ5Postgres1029, MCVQ5Provider1029, MCVQ5Tunnel1029 and dedicated ports 55442 PostgreSQL / 55443 provider on loopback only. These are proposed, NOT freshly verified available.
+Never adopt collided files/services/accounts/ports/databases. Later authorized Setup checks exact occupancy and aborts on any collision.
+No shared ancestor ACL rewrites, old cluster use, source/evidence overwrite or Alpha/other services changes.
+
+## Service boundary
+| Service | Identity / executable | Writable state | Readable protected inputs |
+|---|---|---|---|
+| PostgreSQL | NT SERVICE\MCVQ5Postgres1029; pinned PostgreSQL supported pg_ctl runservice | own cluster/data/log directories only | pinned executable/config; own DB service inputs |
+| Provider | NT SERVICE\MCVQ5Provider1029; existing pinned NSSM only if Node needs wrapper | provider data/log/replay only | code; incoming bearer/perimeter verifier; local readonly DB login |
+| Tunnel | NT SERVICE\MCVQ5Tunnel1029; existing pinned NSSM/cloudflared | dedicated connector logs/state only | pinned ingress config and own connector credential |
+| Operator (not a service) | separately controlled administrator/operator | campaign SQLite journal + sidecars and protected evidence | invocation/perimeter caller inputs and signing key; targeted direct-probe credentials |
+No identity may manage another service or rewrite service registry/config/code. Nonadmin runtime identities have no SCM management or administrator membership.
+Admin/SYSTEM own code/config/secret/control and operator journal parents; runtime RX code, R only its own secrets, Modify only its own isolated mutable directories. Runtime-readable secrets are not confidential from that runtime.
+No privilege-generalizing ACL checker, privilege broker or supervisor is added.
+
+## Files / execution / PostgreSQL
+Protected code includes wrapper, Node/PG/cloudflared executable trees and dependencies. Protected configs outside mutable state, including wrapper environment/cwd, provider configuration and PG postgresql.conf/pg_hba.conf.
+Mutable PG cluster is NOT equivalent to readonly SQL confinement: PostgreSQL OS service can modify cluster files and may discover configuration/loading routes. Explicitly review cluster postgresql.auto.conf, extensions/shared_preload_libraries/local_preload_libraries/session_preload_libraries, dynamic_library_path, external paths, tablespaces, archive/restore commands, log destinations, service working directory and DLL search path.
+Do not claim exact-filename confinement or storage bounds from rotation. No code/config/DLL/privileged load from provider/tunnel mutable data; no control records/attempt counters there. No privileged consumer trusts service-created paths or links/reparse points. Shared-parent replacement/deletion must be excluded. Existing enforceable storage controls must be demonstrated, or storage exhaustion remains a documented risk and execution blocker if a hard bound is required.
+SQL runtime role: nonowner/nonsuperuser, no inherited write/admin/grant roles or write-capable privileged routines. Readonly defaults supplement actual privileges. Migration/admin credentials absent from every runtime. Database/IAM mutation-denial acceptance separate from OS service confinement.
+No broad revocation/grant changes in existing clusters.
+
+## Disabled Setup end state (future separately authorized work)
+All three new services Stopped/Disabled, PID0 and no owned descendants/listeners/connectors. No SCM/NSSM auto restart. Existing roots kept, no recovery monitor. App candidate activation fence false; no usable permit/private key generated here. Purchases OFF; recovery DISARMED; approval pin UNSET.
+Setup must explicitly cover partial-Setup containment for exact new identities, and bounded metadata/catalog checks. Never include HTTP, runtime-login, canary, SDK or qualification smoke in Setup.
+PostgreSQL may only be provisioned transiently if that later Setup authorization explicitly allows it; provider/tunnel remain stopped. No installation commands are supplied or executed here.
+
+## Operator journal and recovery
+Candidate uses Node 24 built-in SQLite, retained rollback journal PERSIST + synchronous FULL, atomic commit before dispatch. Logical active owner persists through dispatch/evidence; concurrent attempts reject, not queue. Crash after commit, even before transport, conservatively consumes the slot. Corrupt/unavailable journal fails closed. The .sqlite file, -journal and parent need protected local stable storage and no rollback/restore/reset.
+SQLite Windows VFS supplies supported fsync/FlushFileBuffers durability, conditional on filesystem/drive honoring flushes. Current synthetic process-kill tests are NOT a power-loss test. Review actual Node/SQLite/VFS and storage behavior before operational use; network/cloud-synced/removable journal storage not accepted.
+Active/uncertain/HALTED is terminal in candidate. recoveryReport only inspects and returns resumeAllowed:false. No clear/reset/refund/reissue API. Resolution requires separate operator evidence of exact remote cessation and separately reviewed continuation that retains consumed history; no automated recovery is introduced.
+Candidate filename/run guards accept SYNTHETIC only. Removing those guards and selecting/protecting the actual ledger is separately reviewed integration, not authorized operational staging now.
+
+## Journal schema compatibility
+Only current-schema synthetic journals are accepted for these fixtures. Prior round-one synthetic journals are retained as evidence and are NOT migrated/reset/reused. Missing authorization columns cause insertion failure before transport. No actual campaign ledger was created or upgraded. Any future real-ledger schema migration requires a separately reviewed, history-preserving specification.
+## Response envelope
+The disabled candidate route reserves at most14s for initialization/admission/worker collection, <=100ms for cleanup, and >=900ms nominal response margin within maxDuration15. Event-loop/platform termination behavior still needs later hosted acceptance; no hard scheduling guarantee is inferred from timers.
+
+
+===== CREDENTIAL-PLACEMENT.md =====
+# Credential placement and fanout inventory
+No real credential was read, loaded, changed or tested.
+| Holder | Required credential / authority | Explicitly absent |
+|---|---|---|
+| Operator | invocation+perimeter caller secrets; permit signing private key (future only); deployment protection caller input if required | no credential forwarded wholesale to services |
+| Hosted route parent | invocation+perimeter verifiers, permit PUBLIC key; replay-writer identity/key | signing private key; PG admin; purchase/Alpha credentials |
+| Hosted worker | provider bearer+perimeter, Cloudflare Access client ID/secret; qualification Firestore reader identity/key | replay identity/key, invocation caller secrets, signing key, ADC, admin/deployment authority |
+| Provider | incoming bearer+perimeter verifiers; local readonly SQL credential | Cloudflare hosted-caller token; Firebase keys; operator invocation/signing inputs; Vercel/admin credentials |
+| PostgreSQL | dedicated OS-service rights; own cluster files | operator ledger and admin/migration credential files |
+| Tunnel | own connector credential | Cloudflare Access caller token or zone-wide admin key |
+| Direct SDK probe | explicitly issued nonrefreshing qualification token/client | replay writer, refresh path, ADC |
+| Direct DB probe | exact existing nonreconnecting readonly Client or one fresh denied-login attempt | pool/reconnect loop, migration/admin login |
+
+## Replay write separation (new Setup prerequisite, not provisioned)
+Use existing firebase-admin@14.2.0 v1.FirestoreClient createDocument with retry:null, deterministic SHA256(runId,slot) document key. Claim before worker creation; ALREADY_EXISTS ->409, uncertain/store failure ->503. No worker in either case; never delete or release claim, including child failure. Key excludes deployment/build so same run cannot reset by redeploying.
+New environment NAMES only: C5_REPLAY_PROJECT, C5_REPLAY_DATABASE, C5_REPLAY_CLIENT_EMAIL, C5_REPLAY_PRIVATE_KEY. Distinct principal/key AND database from qualification readonly project/database. Explicit credentials only, no ADC; never copied to child allowlist.
+The code rejects same qualification database, missing explicit identities, same email/key. Those comparisons are NOT IAM proof: later Setup must show writer's effective inherited grants are limited to create on replay database, cannot update/delete/read qualification data or mutate IAM, and qualification reader cannot create replay records. Firestore IAM is NOT falsely described as collection-scoped.
+An existing isolated separate replay database on supported no-additional-paid capacity must be identified and approved. Availability/price/DB-scoped IAM remain unverified. If no supported existing capacity can supply this, hosted execution stays blocked; do not add paid storage or another broker. No database/account/role/key created here.
+Firestore SDK may perform bounded auth-token acquisition; it is metadata/control fanout, not a hidden qualification read. Library retry:null controls data RPC only, not a proof of zero auth transport retries. Actual library/client options must be reviewed before activation.
+
+## Expected named-dispatch fanout
+48 is authorized campaign dispatch budget:42 primary +6 reserved (V1=43,V2=44,V3=45,V4a=46,V4b=47,V5=48). Named HTTP, direct SDK or DB dispatch consumes one slot before sending, even denial/failure/retry. Primary retries displace coverage; fixed V slot cannot be retried without a separately approved allocation revision within48. No automatic retry/refund.
+- Hosted HTTP: one operator POST; ingress/auth denial may end immediately; accepted route adds one replay create; if newly claimed, one child with provider HTTPS GET + local SQL validation/member read and Firebase canary GetDocument (plus library auth/TLS/DNS activity).
+- Direct HTTP: one named request to exact approved target, no redirect/resend; no worker fanout unless that route normally creates it.
+- Direct SDK: one getDocument with retry:null and bounded timeout; retained issued-token auth must not refresh. No replay write credential.
+- Direct DB: one named workload statement (or one fresh login); B7 negatives retain individually counted BEGIN/statement/ROLLBACK protocol from campaign specification, not a hidden seven-statement batch. Transaction setup/rollback/validation fanout must be enumerated in the actual case adapter before later execution. Current injected DB adapter calls exactly one query; it does NOT implement those campaign-specific transactional probes.
+- Cessation/control-plane evidence: bounded named administrative metadata only under separate approved scope. Never disguise business reads/credential probes as evidence.
+Unexpected/replayed/unsolicited traffic remains visible in independently controlled platform/ingress records, not charged away or asserted impossible. Anomaly sink is structured platform logging; operator must correlate before every attended dispatch and invoke persistent halt on unplanned traffic. No claim of global instantaneous halt or universal network-request ceiling. Provider logs alone are not independent evidence. Missing log correlation/evidence blocks dispatch.
+
+## Review clarifications
+Replay uniqueness prevents repeat(run,slot), NOT different-slot parallelism by someone bypassing the trusted operator. Hosted campaign-wide single-flight is not asserted. Operator active fencing serializes authorized calls; unslotted/unexpected traffic must halt attended operation after independent evidence.
+The replay target database identity is part of the immutable campaign control record: do not switch database/project on redeployment or after uncertainty. No rollback/TTL/delete/replacement ledger. Setup must bind and protect this identity before test activation.
+Gate/binding denials do not reach the replay anomaly sink; platform/ingress records must retain those denials as well as newly claimed unsolicited traffic. Source logger alone is insufficient.

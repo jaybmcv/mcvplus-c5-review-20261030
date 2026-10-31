@@ -1,0 +1,20 @@
+✔ 42 primary identities and six fixed reserved slots; primary exhaustion preserves reserved (791.171ms)
+✔ same-process contention makes only one send and holds active through observation (52.6166ms)
+✔ independent-process contention cannot dispatch while active (108.3604ms)
+✔ consumption and active state survive process death before acknowledgement (103.0688ms)
+✔ expected denials consumed; explicit retry fresh slot; no retry/refund on uncertain error (84.2075ms)
+✔ unexpected HTTP status and missing or mismatched cessation fail closed (168.5059ms)
+✔ durability failure before send prevents transport; failure after send retains active (85.6604ms)
+✔ HTTP, SDK and DB all use same journal; SDK retry:null, SQLSTATE outcome (110.4632ms)
+✔ operator anomaly halt persists and cannot be cleared by success (45.1176ms)
+✔ replay create atomic across callers, run+slot not deployment, error/unknown ack no refund (1.1454ms)
+✔ hosted boundary replay/failure/unconfigured reject before child, claimed slot never refunded (16.1088ms)
+✔ malformed/unauthenticated gate never calls replay or creates worker (0.2503ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1662.9408

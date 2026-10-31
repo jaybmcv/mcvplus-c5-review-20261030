@@ -1,0 +1,22 @@
+[
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\handler.mjs",
+    "sha256": "00be0e189df2a35190654826beb687aa3c217a80a8af09c4350e0f369c5c7d22"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\gates.mjs",
+    "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\constants.mjs",
+    "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\budget.mjs",
+    "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+  },
+  {
+    "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\app\\api\\internal\\qualification\\read-only\\route.ts",
+    "sha256": "4cdc11a1139f54a2f3a9f0ef08bfbb4d11b82837225a9b96f682e503668d5581"
+  }
+]

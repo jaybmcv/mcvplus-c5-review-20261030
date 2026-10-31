@@ -1,0 +1,10 @@
+**Both remaining concrete findings are closed at source level.** Comparison of current `route.ts` and `operator.mjs` against `review-round2-source/` shows only the two stated source changes, including the deadline comment.
+
+- **Medium — combined route budget: closed.** `route.ts` now sets a 14,000 ms deadline shared by initialization and handling. With the previously reviewed cleanup bound of 100 ms, this leaves 900 ms nominal response margin within `maxDuration=15`. This addresses the identified budget composition defect; timers do not establish a hard scheduling or platform-delivery guarantee.
+- **Low — captured adapter receiver: closed.** `operator.mjs` now invokes `dispatchAdapter.call(adapters, …)`, preserving the original method receiver while retaining the captured function and frozen dispatch input.
+
+`SERVICE-INSTALLATION-SPEC.md` explicitly limits fixtures to current-schema synthetic journals and forbids migration, reset or reuse of prior round-one synthetic journals, which remain evidence. The compatibility limitation is therefore explicitly scoped, rather than implying transparent upgrades. Future real-ledger migration still requires a separately reviewed, history-preserving specification.
+
+**Qualified local offline-source acceptance stands; operational acceptance remains pending.** Existing prerequisites remain: reviewed worker/case integration and B7 probes; pinned client behavior without unintended retries, refresh or reconnect; independent cessation evidence and log correlation; effective IAM separation and replay-target continuity; and installation, ACL and journal-durability verification. The no-install, no-hosted-request and no-real-slots constraints remain intact.
+
+This is a static source closeout. No candidate code, tests or network operations were executed; no credentials were read or files edited. Reported test results were not independently verified. Actual process termination, hosted timing and storage durability remain unverified operational prerequisites.

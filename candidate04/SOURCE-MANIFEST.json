@@ -1,0 +1,75 @@
+{
+  "utc": "2026-10-31T21:16:24.563033+00:00",
+  "files": [
+    {
+      "path": "adapters.mjs",
+      "bytes": 2088,
+      "sha256": "137d93bdc5f4ea072bb9c176e3b5a91a4e7ccf5aed910bd1faa7c122d9a4b78b"
+    },
+    {
+      "path": "CREDENTIAL-PLACEMENT.md",
+      "bytes": 5999,
+      "sha256": "708eea3ac68fee069b2f9abec05c52e75a41566522feb0639998a1e4251fa109"
+    },
+    {
+      "path": "fixture-child.mjs",
+      "bytes": 686,
+      "sha256": "f4dc88f55b1277af13ade7fd803bf18489fd2a37c6a260426149cda461332077"
+    },
+    {
+      "path": "offline.test.mjs",
+      "bytes": 9434,
+      "sha256": "5c1550693d5e21e9a60b728e61a4a9ecd8e3b9205294ed12be59af56c113ff38"
+    },
+    {
+      "path": "operator.mjs",
+      "bytes": 6315,
+      "sha256": "a07a15554fb5749ae9e6d94a27436fa1415def50a7f8cf8b52926bc90e4d048d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 412,
+      "sha256": "c6f06ed5aac6b6f2dbe6a0e60964581b8c58d9da2590fea5e458a7e6a2bb8ffd"
+    },
+    {
+      "path": "qualification\\budget.mjs",
+      "bytes": 356,
+      "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+    },
+    {
+      "path": "qualification\\constants.mjs",
+      "bytes": 568,
+      "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+    },
+    {
+      "path": "qualification\\gates.mjs",
+      "bytes": 3021,
+      "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+    },
+    {
+      "path": "qualification\\handler.mjs",
+      "bytes": 7063,
+      "sha256": "334e2fbc52168cd6d79ba517c70292f31fe1103fc402ca0274ed1eba8c01f55f"
+    },
+    {
+      "path": "replay.mjs",
+      "bytes": 2994,
+      "sha256": "4e669021540e99f2851d1bccceb3b9bc066c38aecd948723367a4cc7834653d2"
+    },
+    {
+      "path": "review-regressions.test.mjs",
+      "bytes": 7454,
+      "sha256": "3d61866f6f9bccdb2cf22d3cc2273810a60aa6e29a7955c3c58f0be0872add30"
+    },
+    {
+      "path": "route.ts",
+      "bytes": 1836,
+      "sha256": "4088d405f15c47d926bb9a9ae2b378e193f638bf86c8f66e4b77b1f4f5b47f81"
+    },
+    {
+      "path": "SERVICE-INSTALLATION-SPEC.md",
+      "bytes": 6602,
+      "sha256": "fe33ef94e3888ed1d61d51d75a9fc0ddbd0a5a537bfd85576ce397517be17595"
+    }
+  ]
+}

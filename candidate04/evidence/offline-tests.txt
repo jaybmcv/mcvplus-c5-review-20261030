@@ -1,0 +1,30 @@
+✔ 42 primary identities and six fixed reserved slots; primary exhaustion preserves reserved (1626.1103ms)
+✔ same-process contention makes only one send and holds active through observation (39.7405ms)
+✔ independent-process contention cannot dispatch while active (118.8927ms)
+✔ consumption and active state survive process death before acknowledgement (133.7762ms)
+✔ expected denials consumed; explicit retry fresh slot; no retry/refund on uncertain error (87.2983ms)
+✔ unexpected HTTP status and missing or mismatched cessation fail closed (178.0293ms)
+✔ durability failure before send prevents transport; failure after send retains active (89.8303ms)
+✔ HTTP, SDK and DB all use same journal; SDK retry:null, SQLSTATE outcome (105.627ms)
+✔ operator anomaly halt persists and cannot be cleared by success (73.8039ms)
+✔ replay create atomic across callers, run+slot not deployment, error/unknown ack no refund (1.2091ms)
+✔ hosted boundary replay/failure/unconfigured reject before child, claimed slot never refunded (18.2492ms)
+✔ malformed/unauthenticated gate never calls replay or creates worker (0.3228ms)
+✔ empty halt rejected; preexisting empty halt is terminal, not falsy (198.1456ms)
+✔ expected outcomes, transport kind and returned status are captured, not mutable (120.9702ms)
+✔ halt during observation retains active; completion has no post-release DB read (377.6655ms)
+✔ late/uncertain/aborted replay claim never creates worker; late claim not refunded (92.2806ms)
+✔ pre-aborted and expired jobs never spawn (0.5722ms)
+✔ abort remains terminal despite queued success; replay credentials excluded from child (0.8326ms)
+✔ failed collection bounded and unverified; delayed success cannot override deadline (61.4065ms)
+✔ cleanup rejection and nonsettlement cannot discard response or hang (15.4118ms)
+✔ synthetic retry authorization provenance persists (220.4628ms)
+✔ captured adapter retains method receiver without mutable plan dependency (154.9025ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2552.8511

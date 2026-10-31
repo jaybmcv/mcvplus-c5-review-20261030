@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-31T21:16:03.942367+00:00",
+  "checks": [
+    {
+      "file": "adapters.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "fixture-child.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "offline.test.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "operator.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "replay.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "review-regressions.test.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "qualification\\budget.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "qualification\\constants.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "qualification\\gates.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "qualification\\handler.mjs",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "file": "route.ts",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "command": "node --test offline.test.mjs review-regressions.test.mjs",
+      "exit": 0
+    },
+    {
+      "historical_source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\handler.mjs",
+      "unchanged": true
+    },
+    {
+      "historical_source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\gates.mjs",
+      "unchanged": true
+    },
+    {
+      "historical_source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\constants.mjs",
+      "unchanged": true
+    },
+    {
+      "historical_source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\qualification\\budget.mjs",
+      "unchanged": true
+    },
+    {
+      "historical_source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload\\app\\api\\internal\\qualification\\read-only\\route.ts",
+      "unchanged": true
+    }
+  ]
+}
