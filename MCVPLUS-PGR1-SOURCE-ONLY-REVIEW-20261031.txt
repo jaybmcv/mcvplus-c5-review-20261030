@@ -1,0 +1,674 @@
+# MCV+ PG-R1 source-only delivery ? candidate03
+
+Status: SOURCE ONLY / UNTESTED. Full PG-R1 implementation remains INCOMPLETE and operational qualification BLOCKED. This delivery is an exact reviewed source candidate plus explicit blockers, NOT a completed qualified permission checker.
+
+Candidate root: D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03
+Source manifest: 13824 bytes; SHA256 bd958dff50ff01546f40ab6fc72e727331d41aa1eee1f1abe7d3f1c79cdb1e2a.
+Source:27 files / 1,132,992 bytes. Independently reviewed 66 source/support/reference pins; zero length/hash mismatches, missing/extra source files or directories.
+
+F01: close-before-link, exact unchanged guard and same-identity sentinels authored; no guard test.
+F02: auxiliary/helper pre-pins and exact bounded native identity/capture instrumentation authored; binary/protected loader/supervisor prerequisites remain blocked.
+F03: narrow native token/descriptor/access/path capability machinery authored; all134 historical required names map individually to symbols or explicit source/local/operational blockers. Full semantics/provenance/relative creation/SCM/loader/consumer integration remain incomplete.
+F04: suspended create, assign/readback before resume, exact-owned failure cleanup authored; no native verification.
+F05: semantic-first progression and honest preparation-failure/NOT_RUN accounting source correction retained.
+F06: source parent capture/envelope adapter and cleanup collection authored; targeted R1/R2/R3 source corrections independently confirmed. Full protected store/ancestor/toolchain/interruptible supervisor guarantees remain blocked.
+
+Canonical single prerequisite list: DISPOSITIONS-AND-PREREQUISITES.md, separated SOURCE / future LOCAL / actual OPERATIONAL. Future fixtures/builds/checks are prerequisites only, NOT permission. No operational dependencies simulated into passing evidence.
+
+Activity: zero candidate executions/imports/compilations/AST/syntax checks/fixtures/tests/probes/retries. Packaging and integrity comparison read source bytes only; archive contents were not evaluated or extracted/executed.
+Preservation: original run124 entries unchanged; candidates01/02 source/reviews unchanged (FINAL-PRESERVATION-COMPARISON.json). Historical results remain1 static PASS(L26),27 BLOCKED; all134 required blocked names unchanged. New runtime evidence0. All48 hosted attempts remain unspent(42primary+6reserve); no remote census claimed.
+Setup, operational staging, deployment and hosted testing remain blocked. Existing exclusions preserved. No GitHub publication/application-deployment branch changes, service/ACL/credential/ledger/financial actions. Vercel restoration remains separate/unverified. No ongoing worker or automatic test continuation is part of delivery.
+
+The final independent review and its measurement identity are supplied verbatim. Prior independent reviews are historical reference artifacts, not the current verdict. Every source/support/reference file has its exact path/length/SHA256 in SOURCE-MANIFEST.json and EXACT-SOURCE-PATHS.txt. Archive extraction to another path does not authorize execution.
+
+
+## DELIVERY IDENTITIES
+{
+  "sourceManifest": {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-pgr1-source-only-20261031-candidate03\\SOURCE-MANIFEST.json",
+    "bytes": 13824,
+    "sha256": "bd958dff50ff01546f40ab6fc72e727331d41aa1eee1f1abe7d3f1c79cdb1e2a"
+  },
+  "sourceArchive": {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\MCVPLUS-PGR1-SOURCE-ONLY-CANDIDATE03-20261031.zip",
+    "bytes": 531983,
+    "sha256": "3eb6851248d59d8ab09685644ef021394354774167abf739af8766faef3329d0"
+  },
+  "independentReview": {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-pgr1-source-only-20261031-candidate03\\FINAL-INDEPENDENT-SOURCE-REVIEW.md",
+    "bytes": 12450,
+    "sha256": "89fc0f20c458a5d3543d80f91b3bac90a6b441f64741a4d3115f1855f16e1be4"
+  },
+  "reviewIdentity": {
+    "path": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-pgr1-source-only-20261031-candidate03\\FINAL-INDEPENDENT-SOURCE-REVIEW-IDENTITY.json",
+    "bytes": 559100,
+    "sha256": "09036a8c25864463af2458567e38a83da5b218e0d4361c963315d9eda8bb52b0"
+  },
+  "archiveFiles": 74,
+  "archiveIntegrityScope": "Every archived entry compared as bytes; no extraction/evaluation/execution"
+}
+
+
+## EXACT ABSOLUTE PATHS / LENGTHS / SHA256
+
+EXACT SOURCE-ONLY CANDIDATE INVENTORY
+Root: D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03
+SOURCE-MANIFEST.json | 13824 bytes | bd958dff50ff01546f40ab6fc72e727331d41aa1eee1f1abe7d3f1c79cdb1e2a
+UNTESTED. Full PG-R1 implementation and operational qualification remain BLOCKED.
+
+files:
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\auxiliary\inspect_owned_job.py | 5951 bytes | 0143a318452c9213b3ad937795fd31858029787b86361c553479f5dc74fd09a1
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\Bootstrap.ps1 | 11846 bytes | d04f742ba2fd66e13b908c2c483a03cbc4be5858e4a9e5257d5b8afa938efce4
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\CHECKER-IMPLEMENTATION-NOTES.md | 10382 bytes | 2b45d73a0c074c42cad7dd3e24edfbd62b994b20c9c0464fe4f093c38b86c32e
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\DELIVERY-POLICY.json | 1811 bytes | 0a94d8942b00e76421423c8770c50638ade875f02e6a6f137bf1872dbc03618a
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\F05-F06-SOURCE-NOTES.md | 2758 bytes | a8703a750cfbbd21ad50f457d2d96569b86079ac3fb048d87f28de64a4af980d
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\FIXTURE-MATRIX.json | 97292 bytes | 6f8beafbc02f1229bd0939b6ee0294975cf7495f94b2f1a2e66d5046d8469f9e
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\gate.py | 5490 bytes | 0c515e2e6247c6c69274181034c48c6dda5c66a8dffc7ec8144815b7305e50c2
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\HARNESS-CORRECTION-NOTES.md | 6734 bytes | 31c4d36b6e7fdc85dff2dd049a0f1fcd466f4eb6b51c01dc7eb075a9043953c3
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\IMPLEMENTATION-NOTES.md | 10579 bytes | e7787b63239210f01f1482f359bbde6df082d8e63f345c8f136bfb013a01f465
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\native\ContainedLaunch.cs | 32464 bytes | 13feecf95cd917bad3b53fa8c2504b93353f247fa441403b26c4fb89f33909cc
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\NATIVE-CONTAINMENT-SOURCE-NOTES.md | 7945 bytes | ccc5d79cbabe053c499c1a13f70b38df890580f3dbd81cb6381616b8e37aefee
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\ParentCoordinator.ps1 | 8430 bytes | 9832006a00d3f1a4dc5395527a38950cabcb5992557d02f3856ced9240d0423c
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\PATH-POLICY-SOURCE-NOTES.md | 4581 bytes | bb1ee5495aff9283cf2255d2fbd47754f1db4601e9b93f6f8a85a1c29e59626e
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\path_policy.py | 23023 bytes | 6b6ed8818c169d7f5ff8a4f7b843526d5a2e8f085b64de2fda7f9b86ec576381
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\permission_check.py | 48009 bytes | 33eaca1cd7428eae5e90ad6378da48313967e01c897b23f8219ca4cfd3773f9a
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\policy\BOUNDED-LOCAL-VALIDATION-PLAN.md | 10983 bytes | 03af329888c2fd680660def9dc0301690876ed1a42256a3448bbc75606d35149
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\policy\LOCAL-POLICY.json | 2681 bytes | fec2b6264654502f69ff79d803a0174a6d521c2e6cbac5e26cb517ad8436fc36
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\policy\PATH-SPECIFIC-GATE-REVISION.md | 14406 bytes | 50764c09bddd0c6891d2ccd97195c94f16508c8436a0bbb17641cf04d17718b2
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\policy\STATE-ROOT-BINDINGS.md | 10043 bytes | 12af2adfdf81ce8c1953dcf40f711506d473ba8f9233ad265fd1101364c06715
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\PRE-FREEZE-CORRECTION-MATRIX.md | 6875 bytes | a6426e5bb0688edeb19cfda4bc954e848812908a008c4bec14dfefb542712a56
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\reference\REVIEWED-REVISION-MANIFEST.json.txt | 2448 bytes | 19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\reference\REVIEWED-SOURCE-MAP.json.txt | 731936 bytes | 6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\reference\TRUST-LAUNCH.md.txt | 5263 bytes | 6b1c48b18af401f343d366d31d1b682abd2aef0e3257b563e526dc2879d65ecd
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\RUN-INSTRUCTIONS.md | 2944 bytes | f2fdacbf6c89014c60daaa0aa594577f4b31f0200e3b57e1d73ffe778e4fbcd8
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\run.py | 36592 bytes | bb77c423e004709c3cabbfb7a166752e7158e6cda375fd8e19cad23399b17929
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\SOURCE-MANIFEST.json | 3050 bytes | 414a4572fb327540a55fef9d8713f3478810c8e07ed2a0ff7cda8c651a6001e8
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\source\windows_api.py | 28476 bytes | a6e884f9af58e8c2717b42c7aaaca18ca28ea617fbb1c6f6b5891d5d40f1e0fe
+
+supportingDocuments:
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\CURRENT-AUTHORIZATION.md | 2639 bytes | cc48623ad77121b4b05155107f221781f6bac628ed00bbc5c112112a96a9dd57
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\CORRECTION-TASK.md | 5414 bytes | 016f26e6b08003d921a6701c6016bae2f1b9f50d45394774ff2526d05ac5397e
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\F03-REQUIREMENT-MAP.md | 16755 bytes | 9091eee2b5bc76d13e4bfe7d1ce1b3a19e8c95bdc996e1f0ca7c9d839d48eaa1
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\DISPOSITIONS-AND-PREREQUISITES.md | 6411 bytes | c6e71b49a09f11adc18897cd1bb88cb2961e6f8173d15899191c8f62cad797ca
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\F03-SUBCHECK-CROSSWALK.json | 135412 bytes | d28e8f9149e4c8e19945830fbb3ce72d97438451d2bb104914ca3e81e1b458fd
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\HISTORICAL-REQUIRED-BLOCKED-SUBCHECKS.json | 126313 bytes | 328053f6908d64f565e7ace56105a2884861c472c3dbcf0d3bb0f641182caeb5
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\REFERENCE-PROVENANCE.json | 13190 bytes | 3e35b79a3f276da5f1e6c84b8e6cedde8c2b8cea370ce262d5c6eb70719f3877
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\ORIGINAL-PRESERVATION-BEFORE.json | 30936 bytes | ff3a255190c8132d0ff0a4b5476b039beb6c905815fdafb550829a8f020e6390
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\FINAL-SOURCE-CORRECTIONS.md | 2868 bytes | ca35b241020e534a2b231cff650c5fa1afc9b53739ca02c985354bc34a9256d3
+
+referenceProvenance:
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\AUTHORIZATION-AND-SCOPE.md | 2841 bytes | e1745c5f70adddcb54852e38e38b26446657660d842709f3546fd0f70f94589f
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\Finalize-Containment.ps1 | 2161 bytes | eb11e2930bd4e5944a56dc62715616ea407e46c6d0a16fe97a81144ea4f651b8
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\INDEPENDENT-FINAL-REVIEW.md | 27381 bytes | 057b8788cc7d47124a9d9e6822fea503852b54f69d594fec2a4854661537a1d2
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\inspect-owned-job.py | 1383 bytes | fd02dd920e0e4e16837a37ebe23b69826e74362bc64cfcd0132972672359d122
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\Run-Once.ps1 | 2632 bytes | 9089479f6f557b3a7898d79e881edecd01d4cff4b521f0c090638c6d8ac39788
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\SOURCE-MANIFEST.json | 3050 bytes | 414a4572fb327540a55fef9d8713f3478810c8e07ed2a0ff7cda8c651a6001e8
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\Bootstrap.ps1 | 9079 bytes | da02652997db32f73b8ba0fa80f89087761a8bae6613bbd6fbf3b5919ddd3569
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\FIXTURE-MATRIX.json | 44324 bytes | cfb8e2f7a9d0d1d49eb8e6475363f8d1b6df419856a92b25080fb2f1e056601d
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\gate.py | 4775 bytes | 5b4bcabc1aca1a9b856b263e903ac18b0eeb0f07863f603c366c8a7beb8d3bba
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\IMPLEMENTATION-NOTES.md | 10003 bytes | 29ae0c0c4d82f8efe1a7839dd7562361d5a975918ab44af98ecd8ce70732d31f
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\policy\BOUNDED-LOCAL-VALIDATION-PLAN.md | 10983 bytes | 03af329888c2fd680660def9dc0301690876ed1a42256a3448bbc75606d35149
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\policy\LOCAL-POLICY.json | 2681 bytes | fec2b6264654502f69ff79d803a0174a6d521c2e6cbac5e26cb517ad8436fc36
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\policy\PATH-SPECIFIC-GATE-REVISION.md | 14406 bytes | 50764c09bddd0c6891d2ccd97195c94f16508c8436a0bbb17641cf04d17718b2
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\policy\STATE-ROOT-BINDINGS.md | 10043 bytes | 12af2adfdf81ce8c1953dcf40f711506d473ba8f9233ad265fd1101364c06715
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\PRE-FREEZE-CORRECTION-MATRIX.md | 6299 bytes | 672b8372a0dab1e5f4c10e3902197c6d4357675aef3da84b708d522ec56fe34d
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\reference\REVIEWED-REVISION-MANIFEST.json.txt | 2448 bytes | 19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\reference\REVIEWED-SOURCE-MAP.json.txt | 731936 bytes | 6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\reference\TRUST-LAUNCH.md.txt | 5263 bytes | 6b1c48b18af401f343d366d31d1b682abd2aef0e3257b563e526dc2879d65ecd
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\RUN-INSTRUCTIONS.md | 6177 bytes | 0ca5eb810aee66b0f06440af4239d33df352201141b0feb90d3f3babc3125114
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\run.py | 32048 bytes | ff222f501d1c4c2d37e0fd02342ccc5c316c1ac0b09628e64f6c0d113ce66289
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\SOURCE-MANIFEST.json | 3050 bytes | 414a4572fb327540a55fef9d8713f3478810c8e07ed2a0ff7cda8c651a6001e8
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\original-reference\source\windows_api.py | 18164 bytes | 9b4b3a0478658f71771fd9cd3425d6ca75467cbc668f887773738576a8a951b1
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\prior-review\BUILDER-RESULT.md | 9686 bytes | 9e2d89731a17b1970c7a7b66ab37191abd786abe08616fe5b69239007f228ea0
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\prior-review\INDEPENDENT-SOURCE-REVIEW-IDENTITY.json | 129498 bytes | 02978191d7c3e9d9ee2b41cd13634c88d960702c0fe9834cca50afb898e836af
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\prior-review\INDEPENDENT-SOURCE-REVIEW.md | 42412 bytes | 89a24f6a9ab249fe6559c8cde1d2a03b1c7cf835cb563917fc436ff1c9be3e98
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\prior-review\SOURCE-MANIFEST.json | 12324 bytes | 10556d4e568f86777a579863b0d9efaa7bb67951222d1775338916c633ac5859
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\prior-review02\BUILDER-RESULT.md | 6294 bytes | 6cc15e23929afe1a35740e260fafe838e2a03c4f093b602abb1de05d53b39063
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\prior-review02\FINAL-INDEPENDENT-SOURCE-REVIEW-IDENTITY.json | 386916 bytes | 7fa14403c9689d689ddfb8d249b92c3d29d55fc59461d562f5930e2022439396
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\prior-review02\FINAL-INDEPENDENT-SOURCE-REVIEW.md | 15183 bytes | 5b102559e6f30bf0e74a6ff51bdac0dd4f33a52d6082b1a9903d7a36d4d76889
+D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03\prior-review02\SOURCE-MANIFEST.json | 12841 bytes | 7f00838f5056f9051e8548f85e7296cf20e9a4a40fe6403e19f56236fd3828ec
+
+
+## EXACT REVISED SOURCE MANIFEST
+
+{
+  "schema": 2,
+  "status": "UNTESTED",
+  "executionAuthorized": false,
+  "sourceOnly": true,
+  "namespace": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-pgr1-source-only-20261031-candidate03",
+  "sourceDirectory": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-pgr1-source-only-20261031-candidate03\\source",
+  "implementation": "PARTIAL_SOURCE_CORRECTIONS_F05_F06_WITH_EXPLICIT_SUPERVISOR_TOOLCHAIN_AND_F03_BLOCKERS",
+  "independentReview": "Pending fresh independent review of candidate03; prior independent reviews immutable in prior-review/ and prior-review02/",
+  "sourceInventoryScope": "Every file under source/ including historical source/SOURCE-MANIFEST.json; root manifest and BUILDER-RESULT excluded to avoid circular hashes.",
+  "directories": [
+    "source",
+    "source/auxiliary",
+    "source/native",
+    "source/policy",
+    "source/reference"
+  ],
+  "sourceFileCount": 27,
+  "sourceBytes": 1132992,
+  "files": [
+    {
+      "path": "source/auxiliary/inspect_owned_job.py",
+      "bytes": 5951,
+      "sha256": "0143a318452c9213b3ad937795fd31858029787b86361c553479f5dc74fd09a1"
+    },
+    {
+      "path": "source/Bootstrap.ps1",
+      "bytes": 11846,
+      "sha256": "d04f742ba2fd66e13b908c2c483a03cbc4be5858e4a9e5257d5b8afa938efce4"
+    },
+    {
+      "path": "source/CHECKER-IMPLEMENTATION-NOTES.md",
+      "bytes": 10382,
+      "sha256": "2b45d73a0c074c42cad7dd3e24edfbd62b994b20c9c0464fe4f093c38b86c32e"
+    },
+    {
+      "path": "source/DELIVERY-POLICY.json",
+      "bytes": 1811,
+      "sha256": "0a94d8942b00e76421423c8770c50638ade875f02e6a6f137bf1872dbc03618a"
+    },
+    {
+      "path": "source/F05-F06-SOURCE-NOTES.md",
+      "bytes": 2758,
+      "sha256": "a8703a750cfbbd21ad50f457d2d96569b86079ac3fb048d87f28de64a4af980d"
+    },
+    {
+      "path": "source/FIXTURE-MATRIX.json",
+      "bytes": 97292,
+      "sha256": "6f8beafbc02f1229bd0939b6ee0294975cf7495f94b2f1a2e66d5046d8469f9e"
+    },
+    {
+      "path": "source/gate.py",
+      "bytes": 5490,
+      "sha256": "0c515e2e6247c6c69274181034c48c6dda5c66a8dffc7ec8144815b7305e50c2"
+    },
+    {
+      "path": "source/HARNESS-CORRECTION-NOTES.md",
+      "bytes": 6734,
+      "sha256": "31c4d36b6e7fdc85dff2dd049a0f1fcd466f4eb6b51c01dc7eb075a9043953c3"
+    },
+    {
+      "path": "source/IMPLEMENTATION-NOTES.md",
+      "bytes": 10579,
+      "sha256": "e7787b63239210f01f1482f359bbde6df082d8e63f345c8f136bfb013a01f465"
+    },
+    {
+      "path": "source/native/ContainedLaunch.cs",
+      "bytes": 32464,
+      "sha256": "13feecf95cd917bad3b53fa8c2504b93353f247fa441403b26c4fb89f33909cc"
+    },
+    {
+      "path": "source/NATIVE-CONTAINMENT-SOURCE-NOTES.md",
+      "bytes": 7945,
+      "sha256": "ccc5d79cbabe053c499c1a13f70b38df890580f3dbd81cb6381616b8e37aefee"
+    },
+    {
+      "path": "source/ParentCoordinator.ps1",
+      "bytes": 8430,
+      "sha256": "9832006a00d3f1a4dc5395527a38950cabcb5992557d02f3856ced9240d0423c"
+    },
+    {
+      "path": "source/PATH-POLICY-SOURCE-NOTES.md",
+      "bytes": 4581,
+      "sha256": "bb1ee5495aff9283cf2255d2fbd47754f1db4601e9b93f6f8a85a1c29e59626e"
+    },
+    {
+      "path": "source/path_policy.py",
+      "bytes": 23023,
+      "sha256": "6b6ed8818c169d7f5ff8a4f7b843526d5a2e8f085b64de2fda7f9b86ec576381"
+    },
+    {
+      "path": "source/permission_check.py",
+      "bytes": 48009,
+      "sha256": "33eaca1cd7428eae5e90ad6378da48313967e01c897b23f8219ca4cfd3773f9a"
+    },
+    {
+      "path": "source/policy/BOUNDED-LOCAL-VALIDATION-PLAN.md",
+      "bytes": 10983,
+      "sha256": "03af329888c2fd680660def9dc0301690876ed1a42256a3448bbc75606d35149"
+    },
+    {
+      "path": "source/policy/LOCAL-POLICY.json",
+      "bytes": 2681,
+      "sha256": "fec2b6264654502f69ff79d803a0174a6d521c2e6cbac5e26cb517ad8436fc36"
+    },
+    {
+      "path": "source/policy/PATH-SPECIFIC-GATE-REVISION.md",
+      "bytes": 14406,
+      "sha256": "50764c09bddd0c6891d2ccd97195c94f16508c8436a0bbb17641cf04d17718b2"
+    },
+    {
+      "path": "source/policy/STATE-ROOT-BINDINGS.md",
+      "bytes": 10043,
+      "sha256": "12af2adfdf81ce8c1953dcf40f711506d473ba8f9233ad265fd1101364c06715"
+    },
+    {
+      "path": "source/PRE-FREEZE-CORRECTION-MATRIX.md",
+      "bytes": 6875,
+      "sha256": "a6426e5bb0688edeb19cfda4bc954e848812908a008c4bec14dfefb542712a56"
+    },
+    {
+      "path": "source/reference/REVIEWED-REVISION-MANIFEST.json.txt",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3"
+    },
+    {
+      "path": "source/reference/REVIEWED-SOURCE-MAP.json.txt",
+      "bytes": 731936,
+      "sha256": "6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1"
+    },
+    {
+      "path": "source/reference/TRUST-LAUNCH.md.txt",
+      "bytes": 5263,
+      "sha256": "6b1c48b18af401f343d366d31d1b682abd2aef0e3257b563e526dc2879d65ecd"
+    },
+    {
+      "path": "source/RUN-INSTRUCTIONS.md",
+      "bytes": 2944,
+      "sha256": "f2fdacbf6c89014c60daaa0aa594577f4b31f0200e3b57e1d73ffe778e4fbcd8"
+    },
+    {
+      "path": "source/run.py",
+      "bytes": 36592,
+      "sha256": "bb77c423e004709c3cabbfb7a166752e7158e6cda375fd8e19cad23399b17929"
+    },
+    {
+      "path": "source/SOURCE-MANIFEST.json",
+      "bytes": 3050,
+      "sha256": "414a4572fb327540a55fef9d8713f3478810c8e07ed2a0ff7cda8c651a6001e8"
+    },
+    {
+      "path": "source/windows_api.py",
+      "bytes": 28476,
+      "sha256": "a6e884f9af58e8c2717b42c7aaaca18ca28ea617fbb1c6f6b5891d5d40f1e0fe"
+    }
+  ],
+  "supportingDocuments": [
+    {
+      "path": "CURRENT-AUTHORIZATION.md",
+      "bytes": 2639,
+      "sha256": "cc48623ad77121b4b05155107f221781f6bac628ed00bbc5c112112a96a9dd57"
+    },
+    {
+      "path": "CORRECTION-TASK.md",
+      "bytes": 5414,
+      "sha256": "016f26e6b08003d921a6701c6016bae2f1b9f50d45394774ff2526d05ac5397e"
+    },
+    {
+      "path": "F03-REQUIREMENT-MAP.md",
+      "bytes": 16755,
+      "sha256": "9091eee2b5bc76d13e4bfe7d1ce1b3a19e8c95bdc996e1f0ca7c9d839d48eaa1"
+    },
+    {
+      "path": "DISPOSITIONS-AND-PREREQUISITES.md",
+      "bytes": 6411,
+      "sha256": "c6e71b49a09f11adc18897cd1bb88cb2961e6f8173d15899191c8f62cad797ca"
+    },
+    {
+      "path": "F03-SUBCHECK-CROSSWALK.json",
+      "bytes": 135412,
+      "sha256": "d28e8f9149e4c8e19945830fbb3ce72d97438451d2bb104914ca3e81e1b458fd"
+    },
+    {
+      "path": "HISTORICAL-REQUIRED-BLOCKED-SUBCHECKS.json",
+      "bytes": 126313,
+      "sha256": "328053f6908d64f565e7ace56105a2884861c472c3dbcf0d3bb0f641182caeb5"
+    },
+    {
+      "path": "REFERENCE-PROVENANCE.json",
+      "bytes": 13190,
+      "sha256": "3e35b79a3f276da5f1e6c84b8e6cedde8c2b8cea370ce262d5c6eb70719f3877"
+    },
+    {
+      "path": "ORIGINAL-PRESERVATION-BEFORE.json",
+      "bytes": 30936,
+      "sha256": "ff3a255190c8132d0ff0a4b5476b039beb6c905815fdafb550829a8f020e6390"
+    },
+    {
+      "path": "FINAL-SOURCE-CORRECTIONS.md",
+      "bytes": 2868,
+      "sha256": "ca35b241020e534a2b231cff650c5fa1afc9b53739ca02c985354bc34a9256d3"
+    }
+  ],
+  "referenceProvenance": [
+    {
+      "path": "original-reference/AUTHORIZATION-AND-SCOPE.md",
+      "bytes": 2841,
+      "sha256": "e1745c5f70adddcb54852e38e38b26446657660d842709f3546fd0f70f94589f"
+    },
+    {
+      "path": "original-reference/Finalize-Containment.ps1",
+      "bytes": 2161,
+      "sha256": "eb11e2930bd4e5944a56dc62715616ea407e46c6d0a16fe97a81144ea4f651b8"
+    },
+    {
+      "path": "original-reference/INDEPENDENT-FINAL-REVIEW.md",
+      "bytes": 27381,
+      "sha256": "057b8788cc7d47124a9d9e6822fea503852b54f69d594fec2a4854661537a1d2"
+    },
+    {
+      "path": "original-reference/inspect-owned-job.py",
+      "bytes": 1383,
+      "sha256": "fd02dd920e0e4e16837a37ebe23b69826e74362bc64cfcd0132972672359d122"
+    },
+    {
+      "path": "original-reference/Run-Once.ps1",
+      "bytes": 2632,
+      "sha256": "9089479f6f557b3a7898d79e881edecd01d4cff4b521f0c090638c6d8ac39788"
+    },
+    {
+      "path": "original-reference/SOURCE-MANIFEST.json",
+      "bytes": 3050,
+      "sha256": "414a4572fb327540a55fef9d8713f3478810c8e07ed2a0ff7cda8c651a6001e8"
+    },
+    {
+      "path": "original-reference/source/Bootstrap.ps1",
+      "bytes": 9079,
+      "sha256": "da02652997db32f73b8ba0fa80f89087761a8bae6613bbd6fbf3b5919ddd3569"
+    },
+    {
+      "path": "original-reference/source/FIXTURE-MATRIX.json",
+      "bytes": 44324,
+      "sha256": "cfb8e2f7a9d0d1d49eb8e6475363f8d1b6df419856a92b25080fb2f1e056601d"
+    },
+    {
+      "path": "original-reference/source/gate.py",
+      "bytes": 4775,
+      "sha256": "5b4bcabc1aca1a9b856b263e903ac18b0eeb0f07863f603c366c8a7beb8d3bba"
+    },
+    {
+      "path": "original-reference/source/IMPLEMENTATION-NOTES.md",
+      "bytes": 10003,
+      "sha256": "29ae0c0c4d82f8efe1a7839dd7562361d5a975918ab44af98ecd8ce70732d31f"
+    },
+    {
+      "path": "original-reference/source/policy/BOUNDED-LOCAL-VALIDATION-PLAN.md",
+      "bytes": 10983,
+      "sha256": "03af329888c2fd680660def9dc0301690876ed1a42256a3448bbc75606d35149"
+    },
+    {
+      "path": "original-reference/source/policy/LOCAL-POLICY.json",
+      "bytes": 2681,
+      "sha256": "fec2b6264654502f69ff79d803a0174a6d521c2e6cbac5e26cb517ad8436fc36"
+    },
+    {
+      "path": "original-reference/source/policy/PATH-SPECIFIC-GATE-REVISION.md",
+      "bytes": 14406,
+      "sha256": "50764c09bddd0c6891d2ccd97195c94f16508c8436a0bbb17641cf04d17718b2"
+    },
+    {
+      "path": "original-reference/source/policy/STATE-ROOT-BINDINGS.md",
+      "bytes": 10043,
+      "sha256": "12af2adfdf81ce8c1953dcf40f711506d473ba8f9233ad265fd1101364c06715"
+    },
+    {
+      "path": "original-reference/source/PRE-FREEZE-CORRECTION-MATRIX.md",
+      "bytes": 6299,
+      "sha256": "672b8372a0dab1e5f4c10e3902197c6d4357675aef3da84b708d522ec56fe34d"
+    },
+    {
+      "path": "original-reference/source/reference/REVIEWED-REVISION-MANIFEST.json.txt",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3"
+    },
+    {
+      "path": "original-reference/source/reference/REVIEWED-SOURCE-MAP.json.txt",
+      "bytes": 731936,
+      "sha256": "6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1"
+    },
+    {
+      "path": "original-reference/source/reference/TRUST-LAUNCH.md.txt",
+      "bytes": 5263,
+      "sha256": "6b1c48b18af401f343d366d31d1b682abd2aef0e3257b563e526dc2879d65ecd"
+    },
+    {
+      "path": "original-reference/source/RUN-INSTRUCTIONS.md",
+      "bytes": 6177,
+      "sha256": "0ca5eb810aee66b0f06440af4239d33df352201141b0feb90d3f3babc3125114"
+    },
+    {
+      "path": "original-reference/source/run.py",
+      "bytes": 32048,
+      "sha256": "ff222f501d1c4c2d37e0fd02342ccc5c316c1ac0b09628e64f6c0d113ce66289"
+    },
+    {
+      "path": "original-reference/source/SOURCE-MANIFEST.json",
+      "bytes": 3050,
+      "sha256": "414a4572fb327540a55fef9d8713f3478810c8e07ed2a0ff7cda8c651a6001e8"
+    },
+    {
+      "path": "original-reference/source/windows_api.py",
+      "bytes": 18164,
+      "sha256": "9b4b3a0478658f71771fd9cd3425d6ca75467cbc668f887773738576a8a951b1"
+    },
+    {
+      "path": "prior-review/BUILDER-RESULT.md",
+      "bytes": 9686,
+      "sha256": "9e2d89731a17b1970c7a7b66ab37191abd786abe08616fe5b69239007f228ea0"
+    },
+    {
+      "path": "prior-review/INDEPENDENT-SOURCE-REVIEW-IDENTITY.json",
+      "bytes": 129498,
+      "sha256": "02978191d7c3e9d9ee2b41cd13634c88d960702c0fe9834cca50afb898e836af"
+    },
+    {
+      "path": "prior-review/INDEPENDENT-SOURCE-REVIEW.md",
+      "bytes": 42412,
+      "sha256": "89a24f6a9ab249fe6559c8cde1d2a03b1c7cf835cb563917fc436ff1c9be3e98"
+    },
+    {
+      "path": "prior-review/SOURCE-MANIFEST.json",
+      "bytes": 12324,
+      "sha256": "10556d4e568f86777a579863b0d9efaa7bb67951222d1775338916c633ac5859"
+    },
+    {
+      "path": "prior-review02/BUILDER-RESULT.md",
+      "bytes": 6294,
+      "sha256": "6cc15e23929afe1a35740e260fafe838e2a03c4f093b602abb1de05d53b39063"
+    },
+    {
+      "path": "prior-review02/FINAL-INDEPENDENT-SOURCE-REVIEW-IDENTITY.json",
+      "bytes": 386916,
+      "sha256": "7fa14403c9689d689ddfb8d249b92c3d29d55fc59461d562f5930e2022439396"
+    },
+    {
+      "path": "prior-review02/FINAL-INDEPENDENT-SOURCE-REVIEW.md",
+      "bytes": 15183,
+      "sha256": "5b102559e6f30bf0e74a6ff51bdac0dd4f33a52d6082b1a9903d7a36d4d76889"
+    },
+    {
+      "path": "prior-review02/SOURCE-MANIFEST.json",
+      "bytes": 12841,
+      "sha256": "7f00838f5056f9051e8548f85e7296cf20e9a4a40fe6403e19f56236fd3828ec"
+    }
+  ],
+  "referenceMeaning": "Copied normative, original-reference, historical source manifest and prior-review bytes preserved; historical namespace is reference only. External original run and candidate01 were not accessed or changed.",
+  "crosswalk": {
+    "path": "F03-SUBCHECK-CROSSWALK.json",
+    "requirements": 134,
+    "status": "UNTESTED",
+    "historicalStatus": "BLOCKED"
+  },
+  "historicalResults": {
+    "staticPass": 1,
+    "staticPassCase": "L26",
+    "blocked": 27,
+    "requiredBlockedNames": 134,
+    "newRuntimeEvidence": 0,
+    "hostedAttemptsRemaining": 48,
+    "primary": 42,
+    "reserve": 6
+  },
+  "authorization": "No execution, compilation, import, AST/syntax/check/tests/fixtures/probes/retries. Source/metadata authoring only. No network, publication, sync, operational root/service/token/SCM or native invocation.",
+  "freeze": "Candidate03 source byte freeze after targeted independent F06-R1/R2/R3 corrections; source-only, UNTESTED; independent review pending. No execution authorization."
+}
+
+
+
+## SINGLE CONSOLIDATED PREREQUISITE LIST
+
+# Canonical dispositions and prerequisites
+
+UNTESTED / SOURCE-ONLY-NOT-AUTHORIZED. This is the single consolidated follow-up list. None is execution authorization. Exact historical names and per-name dispositions are in F03-SUBCHECK-CROSSWALK.json; grouped requirements are in F03-REQUIREMENT-MAP.md.
+
+## SOURCE blockers
+
+- Candidate03 source correction of F06-R1/R2/R3: empty separately provisioned store plus exclusive per-attempt claim; any collision/write/flush/close failure irrevocably revokes ALL later store writes. Retain and parse bounded Bootstrap captures before first storage write and return raw base64/parsed failure data on rejection. Native managed Dispose failures are secondary cleanup records and do not prevent original LaunchEvidence return. These are UNTESTED source corrections, not qualified protected-store admission or supervisor guarantees.
+
+
+- F01: close-before-link exclusive hardlink source and unchanged Held.identity guard retained. F05 now defers all dummy filesystem preparation until the semantic phase permits progression. Semantic stop buffers all 28 honest records; L18 preparation errors retain BLOCKED/error detail with other unentered physical cases NOT_RUN. No passing guard or historical L18 repair is claimed.
+- F02/F04: independently pinned runner/inspector/helper source and suspended assign-before-resume containment retained. Native binary/source toolchain provenance, protected pre-script parent/toolchain admission and an independently enforced outer supervisor for synchronous native/preflight/cleanup calls and total 900 seconds remain missing. Checking elapsed time after return cannot interrupt a stuck call.
+- F06: source/ParentCoordinator.ps1 is the independently pinned parent entrypoint adapter, with a source-only guard before candidate work. It captures returning Bootstrap preflight/native/capture/termination failures, retained raw captured streams, primary and secondary cleanup errors, exclusive flushed envelope and evidence manifest. Bootstrap preserves cleanup errors; Python cleanup_close records bounded CloseHandle failures and omitted counts without retry or primary replacement. Complete guarantees remain BLOCKED: no qualified ancestor-relative evidence-store admission, protected parent toolchain, OS interruptibility or process-death-proof flush. Parameter binding/guard failure and rejected evidence destinations require an external caller to retain diagnostics. No invented entered cases. The output inventory lists successfully flushed owned evidence only, not a complete disk census. Manifest identity is returned externally to avoid circular self-hash.
+- F03 remains partial: supported narrow native token/descriptor/AccessCheck predicates and fail-closed unknowns are authored. Complete arbitrary principal/group/claim, special owner/CREATOR OWNER/OWNER RIGHTS/object/callback/conditional ACE, restricted/MIC/privilege and future-child closure is absent.
+- Actual-token class/origin admission adapter is a missing SOURCE implementation. NativeToken.from_handle retains/snapshots an actual handle but does not establish how it was obtained, genuine representative class or service origin. This gap is separate from unavailable operational tokens.
+- Parent-handle relative resolution/at-creation directory handle binding, directory creation-to-open window, full rename/destination/replacement/redirect/volume authority and sibling-create exception remain absent.
+- Exact provider finite filename/rotation enforcement, Postgres external tablespace/preload/config/library closure, complete code RX inventory and installed spec/SCM/NSSM/account/SID-type/registry/environment/loader authority adapters remain absent.
+- Full protected copy/staging and installed readback/operational-consumer integration (Staging-Security, Staging-Gate, Stage-Candidate, installer) remain absent. Map hashes and rejection-only gate do not complete them.
+
+## Future LOCAL verification (separate authorization required)
+
+- Independently build/review native helper, pin binary plus source/toolchain relationship. No assembly is supplied or built here.
+- Verify semantic stop has no prior dummy filesystem mutation; 28 accounting on mismatch, preparation failure and evidence collision; exclusive close-before-link and exact unchanged guard/sentinels; no retry or rejected-path writes.
+- Exercise suspended startup/assign/resume/collision, actual token reference comparisons, bounded raw capture/decoding/nonzero/timeout/termination/close failures, exact owned job empty or explicit BLOCKED_CONTAINMENT. Include coordinator preflight/capture/manifest failures and primary plus secondary errors.
+- Verify actual pin/inventory rejection, substitutions, parent-relative creation/observer continuity after missing source is supplied, and complete independently retained preservation/output inventory. No inert or synthetic observation substitutes for those adapters.
+
+## Actual OPERATIONAL prerequisites (separate authorization required)
+
+- Genuine ordinary/filtered/restricted/elevated/SYSTEM/service tokens with supported class/origin evidence; real SCM existence, account and SID-type bindings. No synthetic service-shaped identities or manufactured service/account/token substitutes.
+- Protected bootstrap/PowerShell/.NET/Python/native helper/DLL/stdlib/compiler dependencies, every ancestor, TEMP/TMP/PATH/PGSYSCONFDIR/cwd and independent supervisor/evidence destination admission.
+- Exact installed T/K/C/S roots and complete executable/config/library/environment/registry/SCM/NSSM authority/readback; full 52 packet + 1 manifest + 1,638 external payload closure and protected staging/copy evidence.
+- Exact provider/tunnel secret-disabled bindings and Postgres own-cluster/external-path closure; no ledger reservation, usable permit, cluster/tunnel/provider execution follows from a filesystem result.
+- Operational root/service/remote before/after preservation remains explicitly UNQUALIFIED. No probes or simulated readbacks supplied. Vercel restoration is separate and unverified.
+
+Historical evidence remains 1 static PASS (L26), 27 BLOCKED, 134 required BLOCKED names. New runtime evidence is ZERO. All 48 attempts remain unspent (42 primary + 6 reserve). Communications publication/synchronization is excluded and is not a PG-R1 prerequisite. No new audience draft is needed for this internal security correction.
+
+
+
+## INDEPENDENT SOURCE REVIEW ? VERBATIM
+
+# Independent targeted source review - candidate03
+
+Verdict: **SOURCE ONLY UNTESTED / full PG-R1 incomplete / operational BLOCKED.** F06-R1/R2/R3 targeted structural corrections are present in the reviewed text. This closes the three narrow candidate02 textual findings for this source revision only; it does not qualify the store, supervisor, native implementation, or complete PG-R1 chain. No runtime PASS or execution authorization is issued.
+
+Reviewer: OpenAI Codex, primary independent reviewer in this conversation, 2026-10-31. The supplied task identifies Henri parent as source author; this reviewer authored no candidate source and used no delegated reviewers. This is an independent conversational source review, not external certification.
+
+## Reviewed identity and preservation
+
+Exact root: `D:\OpenClaw-workspace\artifacts\mcvplus-pgr1-source-only-20261031-candidate03`.
+
+Root SOURCE-MANIFEST.json: **13824 bytes**, SHA256 **bd958dff50ff01546f40ab6fc72e727331d41aa1eee1f1abe7d3f1c79cdb1e2a**, matching the requested identity.
+
+- All **66** listed pins verified: **27 source, 9 support, 30 reference/prior-review**. Length/hash mismatches **0**; duplicate manifest paths **0**.
+- Actual source inventory: **27 files, 1132992 bytes, 5 directories including source**. Missing/extra files **0**, missing/extra directories **0**, source reparse entries in metadata **0**.
+- Independently checked **22** copied-reference baseline entries against ORIGINAL-PRESERVATION-BEFORE.json, normalizing path separators: mismatches **0**. All **7** normative copies equal their original-reference counterparts and stated pins: mismatches **0**. This verifies local copied bytes only, not external original state.
+- Copied candidate02 manifest: **12841 bytes**, SHA256 **7f00838f5056f9051e8548f85e7296cf20e9a4a40fe6403e19f56236fd3828ec**. Its review and identity are separately pinned, unchanged reference inputs.
+- Source comparison with candidate02: **17 byte-identical**, **7 additional files identical after literal candidate03-to-candidate02 namespace normalization**, **3 remaining changed files**: ParentCoordinator.ps1, native/ContainedLaunch.cs, F05-F06-SOURCE-NOTES.md. No source paths added or removed. Normalization preserved all other bytes through a one-byte encoding round trip; no newline normalization was used.
+
+The accompanying identity JSON records every measured pin and normalized comparison. Prior candidate02 full source for the changed files is not supplied as a separate source tree. Their current actual text was reviewed against the exact prior review findings; a complete direct old/new textual diff of those changed files is therefore not claimed. Exact prior hashes establish unchanged algorithms in the other 24 files. Current native containment text was also inspected directly.
+
+## Targeted findings
+
+**F06-R1: narrow structural correction present; UNTESTED.** ParentCoordinator.ps1:20-23 makes rejection irreversible within this adapter: evidenceRejected is set and storeAdmitted cleared, with no reset of the rejection flag. Write-Exclusive:28-54 checks rejection before opening; uses one CreateNew; catches open/write/flush failures; catches Dispose failure; and revokes admission on each such route. A write failure remains the propagating failure if close also fails, while close is separately recorded. The admission block rejects nonempty stores before writing (:68), retains independently pinned coordinator/Bootstrap streams (:70-75), and exclusively creates the fixed attempt marker before Bootstrap (:76-82). Main catch revokes admission (:103-110). Final envelope/manifest writes require admission, owned claim and no rejection (:128); failure of the first final write prevents progression to the second, and the final catch revokes admission. No retry, deletion, repair or rejected-store fallback writer appears in this adapter.
+
+This is a narrow empty-directory/exclusive-marker measure. Path-based Get-Item/Get-Acl/emptiness reads do not establish held ancestor identity, trusted provisioning, race-free protected store access, loader admission or independent supervision. Those remain existing SOURCE blockers. Successfully flushed owned-file inventory is explicitly not a full disk census.
+
+**F06-R2: targeted retention correction present; UNTESTED.** The attempt claim precedes child capture; retention necessarily concerns the first write of already captured Bootstrap data, not that prelaunch marker. At :82-91 bounded returned Bootstrap text is encoded, retained as raw capture base64 and parsed, and primaryError copied before bootstrap-envelope.json is written at :92. Native runner/inspector objects and their raw capture fields remain inside bootstrapResult before any per-channel file write. Catch :107-110 preserves a captured Bootstrap primaryError and appends the new adapter/storage failure as secondary. Original native Failure/Win32Error/cleanup information remains in the nested returned Bootstrap evidence, including when Bootstrap.primaryError is null. The returned object exposes both bootstrapResult and capturedBootstrapBase64 (:139-141) on rejected storage, with no fallback writes. Final write failures appear separately in finalSecondaryErrors. The envelope is constructed before final writes, so its earlier snapshot is not the authoritative latest storage/cleanup state; callers must retain the outer returned rejection flag and finalSecondaryErrors.
+
+Malformed JSON retains the bounded raw capture but cannot supply parsed data. Capture bound failures, parameter binding, unconditional guard failure, interruption/process death and failures before returned capture require an independent external supervisor. Native CaptureComplete and partial-capture limits remain authoritative. Raw Bootstrap bytes here are UTF-8 encoding of PowerShell returned text; original native pipe bytes are the nested native base64 fields. No independent durability or universal failure-return guarantee is established.
+
+**F06-R3: targeted structural correction present; UNTESTED.** native/ContainedLaunch.cs:278 and :286 route both MemoryStreams and the image FileStream through DisposeManaged (:390-401). That helper catches managed Dispose exceptions, appends role/type/message to CleanupFailures, sets BLOCKED_CLEANUP, and leaves Failure/Win32Error intact. The finally block then reaches return session at :291 for this disposal-failure route. Existing exact-owned handle cleanup and collision disposal remain visible. This addresses the identified image/memory-stream Dispose exception route; it does not prove immunity to allocation failure while recording, process death, unsupported native ABI, other native cleanup failure or uninterruptible synchronous calls.
+
+## F01-F06 dispositions
+
+| Finding | Current independent source disposition |
+| --- | --- |
+| F01 | Exclusive close-before-link source and unchanged Held.identity hardlink rejection retained by normalized byte identity; exact rejection predicate also inspected. UNTESTED, historical L18 BLOCKED unchanged. |
+| F02 | Independently pinned runner/helper/inspector source retained. Built binary/source/toolchain provenance, protected parent loader and interruptible outer supervisor remain absent. PARTIAL / BLOCKED. |
+| F03 | Exact mapping complete; narrow token/descriptor/access predicates and rejection-only chain retained. General semantics, provenance and integration adapters remain missing SOURCE. INCOMPLETE / BLOCKED. |
+| F04 | Current native text retains collision rejection, suspended creation, assign/membership readback before resume, and exact-owned cleanup. STRUCTURAL CORRECTION PRESENT / UNTESTED / OPEN. |
+| F05 | Semantic-first progression, deferred hardlink preparation and honest 28-row accounting retained by normalized byte identity and targeted text inspection. NARROW SOURCE CORRECTION PRESENT / UNTESTED; no historical repair. |
+| F06 | R1/R2/R3 targeted corrections present. Parent capture/storage adapter remains PARTIAL / BLOCKED because protected ancestor/store/toolchain and external interruptible supervision are missing. |
+
+Unconditional guards remain before work: ParentCoordinator.ps1:7, Bootstrap.ps1:17, run.py:6, auxiliary inspector:7, and native Run -> RequireFutureAuthorization (:90-100). Existing Python algorithms and entrypoint guards match prior reviewed bytes after namespace normalization. No parameter enables this source revision.
+
+## Crosswalk and remaining blockers
+
+All **134 unique case-sensitive caseId/name keys** equal the historical required list; missing/extra/duplicate keys **0**. All historicalStatus values remain BLOCKED and current statuses UNTESTED. Each key appears once in its matching matrix case; mismatches **0**. All **425** actualSymbols references have text/path presence: **416** literal leaf-name checks and **9** path-only document references. Text presence is not syntax, symbol binding or behavior verification. Individual records and separate source/local/operational blocker fields are retained in the identity JSON.
+
+Compared with the prior review identity's dispositionAsSupplied fields, **15 dispositions changed**: three stale L18 F05 descriptions and all twelve L28 descriptions. The earlier L28 not-run accounting claim is corrected. These editorial changes promote no historical result and supply no operational evidence.
+
+Canonical remaining prerequisites: **DISPOSITIONS-AND-PREREQUISITES.md**, **6411 bytes**, SHA256 **c6e71b49a09f11adc18897cd1bb88cb2961e6f8173d15899191c8f62cad797ca**. Its SOURCE / future LOCAL / actual OPERATIONAL separation remains binding:
+
+- **SOURCE:** complete arbitrary principal/group/claim and owner/CREATOR OWNER/OWNER RIGHTS/object/callback/conditional ACE semantics, restricted/MIC/privilege and future-child closure; actual-token class/origin/service admission; parent-handle-relative resolution and at-creation binding; creation/open continuity; rename/replacement/destination/redirect/volume and sibling-create authority; exact provider filename/rotation and Postgres external config/tablespace/preload/library closure; installed code RX, SCM/NSSM/account/SID-type/registry/environment/loader adapters; protected copy/staging/readback and operational consumers. Protected ancestor-relative store admission, parent/toolchain admission and independent interruptible supervisor also remain absent. These are missing implementation, not merely missing tests or acceptance flags.
+- **Future LOCAL:** separately authorized independent native build/provenance review, ABI and failure-path verification, source/inventory rejection, semantic stop/accounting, hardlink/collision, capture/termination/close and evidence retention verification after missing implementation is supplied. No such checks were run here.
+- **Actual OPERATIONAL:** genuine supported tokens and service origins, real SCM/account/SID types, protected dependencies/ancestors/environment/store, exact installed T/K/C/S, complete 52 packet + 1 manifest + 1638 external payload closure, protected staging/installed consumer readback, provider/tunnel/Postgres bindings and real before/after preservation. All remain unavailable or unqualified. A copied source map is not payload or installed-state evidence. Vercel remains separate/unverified.
+
+## Activity and limits
+
+Only absolute paths inside this candidate root were accessed. Text/JSON reads, byte lengths/hashes, inventory comparisons and the two requested review artifacts were used. A reviewer metadata extraction initially mishandled path-only symbol references; its JSON data processing was corrected, with no candidate invocation. No candidate execution, import, compilation, AST/syntax check, test, fixture, probe, retry, native/token/ACL/SCM/installed-root action or network action occurred. No authored function was invoked. No source, manifest, map, documentation or copied prior/reference file was edited. Only FINAL-INDEPENDENT-SOURCE-REVIEW.md and FINAL-INDEPENDENT-SOURCE-REVIEW-IDENTITY.json were written. External communications repository access, drafts, synchronization and publication were excluded by this targeted review scope.
+
+Historical evidence remains **1 static PASS (L26), 27 BLOCKED, 134 required historical BLOCKED names**. New runtime evidence **0**. All **48 attempts remain unspent (42 primary + 6 reserve)** as preserved history, not a remote census. Setup/staging/deployment/hosted qualification remain BLOCKED. This report grants no execution authority.
+
+
+
+## ORIGINAL AND PRIOR-REVISION BYTE PRESERVATION
+
+{
+    "scope":  "Read-only original regular-file byte/reparse-target and prior source/review byte comparison; not candidate tests or operational/remote census",
+    "originalRoot":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-path-gate-validation-20261030\\run-5e810f64956a463593a4ec00c4a610f2",
+    "beforeEntries":  124,
+    "currentEntries":  124,
+    "originalDifferences":  [
+
+                            ],
+    "originalUnchanged":  true,
+    "priorCandidates":  [
+                            {
+                                "differences":  [
+
+                                                ],
+                                "candidate":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-pgr1-source-only-20261031-candidate01",
+                                "manifestSha256":  "10556d4e568f86777a579863b0d9efaa7bb67951222d1775338916c633ac5859",
+                                "unchanged":  true
+                            },
+                            {
+                                "differences":  [
+
+                                                ],
+                                "candidate":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-pgr1-source-only-20261031-candidate02",
+                                "manifestSha256":  "7f00838f5056f9051e8548f85e7296cf20e9a4a40fe6403e19f56236fd3828ec",
+                                "unchanged":  true
+                            }
+                        ],
+    "candidateExecutions":  0,
+    "compilations":  0,
+    "tests":  0,
+    "fixturesRun":  0,
+    "historicalStaticPass":  1,
+    "historicalBlocked":  27,
+    "hostedRemaining":  48,
+    "remoteCensus":  "NOT_PERFORMED"
+}
+
+
+
+## FINAL SOURCE CORRECTIONS / AUTHOR SCOPE
+
+# Final targeted source corrections — candidate03
+Source author for this delta: Henri parent, separate from independent reviewers. All code remains UNTESTED, source-only and unqualified. No candidate execution, compilation, import, AST/syntax check, fixture, test, native/token/ACL/SCM/installed-root probe or retry occurred. Source text reads/writes, JSON and byte identity operations only.
+
+Original run and candidates01/02 remain unchanged. The exact candidate02 review is copied in prior-review02/. Normative originals and original source manifest remain historical byte-preserved inputs, never execution permissions. Old CORRECTION-TASK.md describes revision02 only; this revision's unconditional guards and current user prohibition still bind every action.
+
+F06-R1: ParentCoordinator rejects a nonempty preprovisioned store before any write; independently pinned coordinator/bootstrap streams precede an exclusive fixed attempt-claim file. Any create collision, write, flush or close error irrevocably sets script-wide evidenceRejected and revokes storeAdmitted. No final envelope/manifest writes are attempted after rejection. Claim/store admission is only a narrow adapter: protected held-ancestor identity, trusted provisioning and independent supervisor source/evidence remain BLOCKED; no complete policy PASS is issued.
+
+F06-R2: bounded Bootstrap raw capture is retained in base64 and parsed BEFORE the first capture/evidence write. Original Bootstrap primaryError remains primary; subsequent adapter/storage errors are secondary. Both parsed Bootstrap/native evidence and raw base64 remain in returned output even when destination storage is rejected. No fallback writes into that destination. Native CaptureComplete and partial capture limits remain authoritative. Independent external supervisor retention/durability is still required.
+
+F06-R3: ContainedLaunch.DisposeManaged catches image/memory-stream Dispose exceptions, appends cleanup failure and BLOCKED_CLEANUP while retaining original Failure and returning the original session/LaunchEvidence. Existing native exact-owned handle cleanup and Python error collectors remain. Process death/OOM/unsupported native ABI and interruptibility are not guaranteed or qualified.
+
+F05 semantic-first ordering, exact hardlink guard and all F01/F02/F04 protections remain. Corrected stale current crosswalk text about F05; all134 original case/name keys and historical BLOCKED states remain. F03 remains partial, with source/local/operational blockers in the single canonical DISPOSITIONS-AND-PREREQUISITES.md.
+
+Fresh exact manifest and independent delta review are required before delivery. No current source revision can be enabled by a parameter. Future local verification is not authorized here. Historical1staticPASS27BLOCKED, all48attemptsunspent; Setup/staging/deploy/hosted blocked; Vercel separate.

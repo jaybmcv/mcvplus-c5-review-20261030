@@ -1,6 +1,6 @@
 # MCV+ C5 review package
 
-Inspection only. No execution is authorized. Scripts are supplied as .txt files.
+Inspection only. No execution is authorized. The original October 30 package supplies scripts as .txt files; the October 31 archive contains the exact reviewed source files.
 
 [Download complete ZIP](./MCVPLUS-C5-REVIEW-TEXT-ONLY-20261030.zip?raw=true)
 
@@ -11,3 +11,15 @@ The seven original receipts are under documents/05 through documents/11. Provena
 ZIP SHA-256: b733c44a1658169242b64569a199485823f34a36cd07cc42dafcefdd678ed945
 
 Dedicated review repository only. No application/deployment branch changes, scripts executed, or validation attempts spent.
+
+## Latest source-only handoff: October 31, 2026
+
+- [Consolidated review (plain text)](./MCVPLUS-PGR1-SOURCE-ONLY-REVIEW-20261031.txt)
+- [Exact candidate03 source bundle (ZIP)](./MCVPLUS-PGR1-SOURCE-ONLY-CANDIDATE03-20261031.zip?raw=true)
+
+Status: UNTESTED; PG-R1 incomplete and BLOCKED. Uploading is not execution authorization. No candidate scripts, compilation, fixtures, tests, probes, or retries were run for this upload. Historical 1 static PASS / 27 BLOCKED and 48 unspent attempts remain unchanged.
+
+| Artifact | Bytes | SHA-256 |
+| --- | ---: | --- |
+| Candidate03 ZIP | 531983 | 3eb6851248d59d8ab09685644ef021394354774167abf739af8766faef3329d0 |
+| Consolidated review TXT | 55432 | f3fa7b871d71130ff5abc142adbe53a08b5d4378f1a7ed36d7418b4643081167 |
