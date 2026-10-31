@@ -1,0 +1,22 @@
+// Local preparation only. Original source files are opened read-only, never executed.
+const fs=require('node:fs'), path=require('node:path'), crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..'), original=path.resolve(root,'../mcvplus-c5-setup-closure-20261029');
+const digest='b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c';
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const raw=fs.readFileSync(path.join(original,'SETUP-FILE-MANIFEST.json'));
+if(hash(raw)!==digest)throw Error('ORIGINAL_MANIFEST_DRIFT');
+const packet=JSON.parse(raw), spec=JSON.parse(fs.readFileSync(path.join(original,'SETUP-SPEC.json'))), pg=JSON.parse(fs.readFileSync(path.join(original,'POSTGRES-BINARY-MANIFEST.json'))), deps=JSON.parse(fs.readFileSync(path.join(original,'PROVIDER-DEPENDENCY-MANIFEST.json')));
+const entries=packet.map(p=>({kind:'packet',key:p.path,source:path.join(original,p.path),destination:'packet/'+p.path,bytes:p.bytes,sha256:p.sha256}));
+entries.push({kind:'packet-manifest',key:'SETUP-FILE-MANIFEST.json',source:path.join(original,'SETUP-FILE-MANIFEST.json'),destination:'packet/SETUP-FILE-MANIFEST.json',bytes:raw.length,sha256:digest});
+for(const [name,p]of Object.entries(spec.binary))entries.push({kind:'external',key:p.source,source:p.source,destination:`inputs/binary/${name}.exe`,bytes:p.bytes,sha256:p.sha256});
+for(const p of pg)entries.push({kind:'external',key:p.source,source:p.source,destination:'inputs/postgres/'+p.path,bytes:p.bytes,sha256:p.sha256});
+for(const p of deps.files)entries.push({kind:'external',key:p.source,source:p.source,destination:'inputs/provider/'+p.path,bytes:p.bytes,sha256:p.sha256});
+const sourcePrefix='C:\\Users\\HENRI\\.openclaw\\workspace\\artifacts\\mcvplus-c5-setup-closure-20261029\\';
+for(const e of entries)if(e.source.startsWith(sourcePrefix))e.source=original+'\\'+e.source.slice(sourcePrefix.length);
+const seen=new Set(),observed=[];let bytes=0;
+for(const p of entries){if(!/^(packet|inputs)\/(?!.*(?:^|\/)\.\.(?:\/|$))[^:]+$/.test(p.destination)||seen.has(p.destination.toLowerCase()))throw Error('MAP_COLLISION');seen.add(p.destination.toLowerCase());try{const b=fs.readFileSync(p.source);const ok=b.length===p.bytes&&hash(b)===p.sha256;observed.push({destination:p.destination,status:ok?'MATCH':'DRIFT',actualBytes:b.length,actualSha256:hash(b)});if(ok)bytes+=b.length;}catch(e){observed.push({destination:p.destination,status:'UNREADABLE',error:e.code});}}
+if(packet.length!==52||entries.filter(e=>e.kind==='external').length!==1638)throw Error('COUNTS');
+fs.writeFileSync(path.join(root,'SOURCE-MAP.json'),JSON.stringify({schema:1,status:'PREPARED_LOCAL_ONLY_NOT_TRUSTED',originalManifestSha256:digest,candidateName:'candidate-b9e20e88',counts:{packet:52,external:1638,manifest:1},entries},null,2)+'\n');
+const counts=observed.reduce((a,e)=>(a[e.status]=(a[e.status]||0)+1,a),{});
+fs.writeFileSync(path.join(root,'evidence/source-verification.json'),JSON.stringify({at:new Date().toISOString(),originalManifestSha256:hash(fs.readFileSync(path.join(original,'SETUP-FILE-MANIFEST.json'))),packet:52,external:1638,manifest:1,counts,bytes,originalFilesWritten:0,observed},null,2)+'\n');
+console.log(JSON.stringify({counts,bytes,originalManifestSha256:digest}));

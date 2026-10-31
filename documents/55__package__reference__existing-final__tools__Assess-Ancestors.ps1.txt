@@ -1,0 +1,52 @@
+# Read-only host assessment. Writes only the evidence file below in this candidate.
+# Static ACL interpretation is NOT Windows AccessCheck and NEVER emits approval.
+$ErrorActionPreference='Stop'
+$candidate=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
+$retainedPath=Join-Path (Split-Path -Parent $candidate) 'mcvplus-c5-setup-execution-20261029\preflight.json'
+$retained=Get-Content -LiteralPath $retainedPath -Raw | ConvertFrom-Json
+$trusted=@('S-1-5-18','S-1-5-32-544','S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464')
+$rightNames=[ordered]@{createFile=2;createSubdirectory=4;writeExtendedAttributes=16;deleteChild=64;writeAttributes=256;deleteSelf=65536;writeDacl=262144;writeOwner=524288}
+function Expand-FileMask([int]$SignedMask){
+ $m=[uint64]([BitConverter]::ToUInt32([BitConverter]::GetBytes($SignedMask),0))
+ $expanded=$m -band 268435455
+ if($m -band 2147483648){$expanded=$expanded -bor 1179785}
+ if($m -band 1073741824){$expanded=$expanded -bor 1179926}
+ if($m -band 536870912){$expanded=$expanded -bor 1179808}
+ if($m -band 268435456){$expanded=$expanded -bor 2032127}
+ return $expanded
+}
+function Sid-Name([string]$Sid){try{(New-Object Security.Principal.SecurityIdentifier($Sid)).Translate([Security.Principal.NTAccount]).Value}catch{return $null}}
+$observations=@(foreach($path in @('C:\','C:\Program Files','C:\ProgramData')){
+ $item=Get-Item -LiteralPath $path -Force
+ $acl=Get-Acl -LiteralPath $path
+ $raw=New-Object Security.AccessControl.RawSecurityDescriptor($acl.Sddl)
+ $old=@($retained.acls | Where-Object path -eq $path)
+ $issues=New-Object 'Collections.Generic.List[string]'
+ if($item.Attributes -band [IO.FileAttributes]::ReparsePoint){$issues.Add('REPARSE_ANCESTOR')}
+ if(-not $raw.DiscretionaryAcl){$issues.Add('NULL_DACL_UNSUPPORTED')}
+ $ownerName=Sid-Name $raw.Owner.Value
+ if(-not $ownerName){$issues.Add('UNRESOLVED_OWNER')}
+ $aces=@(foreach($ace in $raw.DiscretionaryAcl){
+  $known=$ace -is [Security.AccessControl.CommonAce]
+  if(-not $known){$issues.Add('UNSUPPORTED_OBJECT_OR_OTHER_ACE');continue}
+  $sid=$ace.SecurityIdentifier.Value;$name=Sid-Name $sid
+  if(-not $name){$issues.Add('UNRESOLVED_TRUSTEE_'+$sid)}
+  $self= -not [bool](([int]$ace.AceFlags) -band ([int][Security.AccessControl.AceFlags]::InheritOnly))
+  $allow=$ace.AceQualifier -eq [Security.AccessControl.AceQualifier]::AccessAllowed
+  if(-not $allow -or $ace.IsCallback){$issues.Add('DENY_OR_CONDITIONAL_ACE_UNSUPPORTED')}
+  $mask=Expand-FileMask $ace.AccessMask
+  $rights=[ordered]@{}
+  foreach($entry in $rightNames.GetEnumerator()){$rights[$entry.Key]=[bool]($mask -band $entry.Value)}
+  [ordered]@{sid=$sid;account=$name;aceType=[string]$ace.AceType;flags=[string]$ace.AceFlags;selfApplicable=$self;rawMask=('0x{0:x8}' -f ([BitConverter]::ToUInt32([BitConverter]::GetBytes($ace.AccessMask),0)));expandedFileMask=('0x{0:x8}' -f $mask);trustedAdministratorSystemOrTrustedInstaller=($sid -in $trusted);mutationRights=$rights;untrustedSelfMutationAllow=($self -and $allow -and $sid -notin $trusted -and [bool]($mask -band 852310))}
+ })
+ [ordered]@{path=$path;attributes=[string]$item.Attributes;ownerSid=$raw.Owner.Value;ownerName=$ownerName;daclProtected=[bool](([int]$raw.ControlFlags) -band ([int][Security.AccessControl.ControlFlags]::DiscretionaryAclProtected));sddl=$acl.Sddl;retainedAt=$retained.at;retainedSddl=$(if($old.Count -eq 1){$old[0].sddl}else{$null});sddlEqualsRetained=($old.Count -eq 1 -and $old[0].sddl -ceq $acl.Sddl);interpretationIssues=$issues.ToArray();aces=$aces;strictOriginalRuleViolationObserved=[bool](@($aces | Where-Object untrustedSelfMutationAllow).Count)}
+})
+$targets=@(foreach($path in @('C:\Program Files\MCVQ5-Staging-20261029','C:\Program Files\MCVQ5-20261029','C:\ProgramData\MCVQ5-20261029','C:\Program Files\MCVQ5-State-20261029')){
+ $exists=Test-Path -LiteralPath $path
+ [ordered]@{path=$path;exists=$exists;attributes=$(if($exists){[string](Get-Item -LiteralPath $path -Force).Attributes}else{$null});collisionBlocked=$exists;created=$false}
+})
+$report=[ordered]@{schema='C5-ANCESTOR-ASSESSMENT-1';atUtc=[DateTime]::UtcNow.ToString('o');computer=$env:COMPUTERNAME;mode='READ_ONLY_STATIC_ACL_ASSESSMENT';status='BLOCKED_NOT_AN_APPROVAL';originalManifestSha256='b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c';retainedEvidence=$retainedPath;retainedEvidenceSha256=(Get-FileHash -LiteralPath $retainedPath -Algorithm SHA256).Hash.ToLowerInvariant();observations=$observations;targetCollisions=$targets;effectiveAccessCheckPerformed=$false;effectiveAccessStatus='NOT_PROVEN_NO_TOKEN_AUTHZ_OR_WINDOWS_ACCESSCHECK';strictOriginalRule='reject reparse points and untrusted write/create/delete/rename; no shared ancestor changes';strictOriginalRuleResult='FAIL_C_DRIVE_AUTHENTICATED_USERS_CREATE_SUBDIRECTORY_AND_PROGRAMDATA_USERS_WRITE';proposedRelocation=[ordered]@{dataRoot='C:\Program Files\MCVQ5-State-20261029';status='PREPARED_TARGETED_REVIEW_AND_FUTURE_AUTHORIZATION_REQUIRED';programFilesSelfObservation='No observed untrusted self-applicable mutation allow; this is not full-chain effective-access approval';fullChain='BLOCKED_C_DRIVE_CREATE_RULE';created=$false};limitations=@('Static allow-ACE bit decoding is not token-specific Windows AccessCheck or Authz; it cannot issue PASS.','No denial, callback/conditional, object-specific or unresolved trustee/owner interpretation is accepted as proof. Such observations are unsupported and fail closed.','Create rights alone do not establish delete-child/delete/rename or replacement of an already protected target.','No non-admin token experiment, file creation or destructive replacement test occurred on shared ancestors.','No target root or service was created; no ACL, owner, inheritance, registry, credential, cluster or cloud change occurred.');operationalMutations=0}
+$out=Join-Path $candidate 'evidence\ancestor-assessment.json'
+[IO.Directory]::CreateDirectory((Split-Path -Parent $out)) | Out-Null
+$report | ConvertTo-Json -Depth 14 | Set-Content -LiteralPath $out -Encoding UTF8
+"BLOCKED_NOT_AN_APPROVAL; read-only evidence: $out"

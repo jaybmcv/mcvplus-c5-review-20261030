@@ -1,0 +1,41 @@
+﻿{
+    "status":  "BLOCKED",
+    "primary":  "FAIL_CREATE_SERVICE:LOCAL_INJECTED_FAILURE",
+    "cleanup":  [
+                    "DEDICATED_ACCESS_REVOCATION_BLOCKED",
+                    "DEDICATED_ACCESS_REVOCATION_BLOCKED",
+                    "DEDICATED_ACCESS_REVOCATION_BLOCKED"
+                ],
+    "mode":  "LOCAL_FILES_ACTUAL_SCM_ACL_SIMULATED",
+    "localFault":  "ContainmentFailure",
+    "roots":  [
+                  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\code",
+                  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\data"
+              ],
+    "services":  [
+                     {
+                         "path":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\code\\postgres\\bin\\pg_ctl.exe\" runservice -N MCVQ5Postgres1029 -D \"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\data\\postgres\\data\" -w -t 30",
+                         "created":  true,
+                         "name":  "MCVQ5Postgres1029"
+                     }
+                 ],
+    "mockSCM":  {
+                    "MCVQ5Postgres1029":  {
+                                              "ProcessId":  0,
+                                              "PathName":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\code\\postgres\\bin\\pg_ctl.exe\" runservice -N MCVQ5Postgres1029 -D \"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\data\\postgres\\data\" -w -t 30",
+                                              "State":  "Stopped",
+                                              "Name":  "MCVQ5Postgres1029",
+                                              "StartMode":  "Disabled"
+                                          }
+                },
+    "mockACL":  {
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\data|NT SERVICE\\MCVQ5Postgres1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\code|NT SERVICE\\MCVQ5Postgres1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b\\data\\postgres|NT SERVICE\\MCVQ5Postgres1029":  "(OI)(CI)M"
+                },
+    "revokedGrants":  0,
+    "native":  [
+
+               ],
+    "deletionPerformed":  false
+}

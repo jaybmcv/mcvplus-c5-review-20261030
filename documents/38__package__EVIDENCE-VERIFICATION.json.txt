@@ -1,0 +1,274 @@
+{
+  "scope": "ARTIFACT_INTEGRITY_AND_EXISTING_RECEIPT_INSPECTION_ONLY_NO_TESTS",
+  "at": "2026-10-31T02:15:30.040774+00:00",
+  "originalBundleSha256": "27f49dd773527656d113cc69e04bbd2549a20ee4444dfea45010e750725049e8",
+  "originalBindingsVerified": 32,
+  "predecessorManifest": "d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70",
+  "existingFinalManifest": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3",
+  "revisionPinsReadAndVerified": 14,
+  "changedPinPaths": [
+    "SOURCE-MAP.json"
+  ],
+  "parsedMapEntriesIdentical": 1691,
+  "sevenOriginalReceipts": [
+    {
+      "case": "Success",
+      "outcome": "LOCAL_FILES_AND_SIMULATED_DISABLED_SERVICES",
+      "path": "receipts/01-Success.json",
+      "bytes": 8806,
+      "sha256": "f381fc574b0d2e4e3973972fa6c6e5f6c98ed87fdd821d8718142904235ababf"
+    },
+    {
+      "case": "AfterCodeRoot",
+      "outcome": "FAIL_QUARANTINED",
+      "path": "receipts/02-AfterCodeRoot.json",
+      "bytes": 706,
+      "sha256": "05fef7c82e9b757843a172aef1638980b409e7540e69a306f7043c6df6fae282"
+    },
+    {
+      "case": "AfterDataRoot",
+      "outcome": "FAIL_QUARANTINED",
+      "path": "receipts/03-AfterDataRoot.json",
+      "bytes": 913,
+      "sha256": "5949b3898f75e32eb6e31ee008167ca198768ca02b1b539b9dabdd90d3c165b3"
+    },
+    {
+      "case": "AfterFirstCopy",
+      "outcome": "FAIL_QUARANTINED",
+      "path": "receipts/04-AfterFirstCopy.json",
+      "bytes": 908,
+      "sha256": "7abd21a87831ae21c9495f593b9a4c15f76f2002dd292c99a74ae831194cfdf1"
+    },
+    {
+      "case": "AfterServiceCreate",
+      "outcome": "FAIL_QUARANTINED",
+      "path": "receipts/05-AfterServiceCreate.json",
+      "bytes": 2461,
+      "sha256": "e70c2ca1904c04fd1cb5b98b71943656ef36a338fc06c68aa542b59f22fccd32"
+    },
+    {
+      "case": "AfterGrant",
+      "outcome": "FAIL_QUARANTINED",
+      "path": "receipts/06-AfterGrant.json",
+      "bytes": 2453,
+      "sha256": "329d1e5edbdce1b9ab08ad28c66b57d2ac4d7a77fbca75020fb077ed7fd0f9e2"
+    },
+    {
+      "case": "ContainmentFailure",
+      "outcome": "BLOCKED",
+      "path": "receipts/07-ContainmentFailure.json",
+      "bytes": 3381,
+      "sha256": "f38f777d3d8807e697793504c6b6c9fcd63a90fe0f88853ec29c12480e7fff17"
+    }
+  ],
+  "stageEvidenceBindings": [
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\stage-receipt.json",
+      "path": "reference/predecessor/stage-receipt.json",
+      "bytes": 483090,
+      "sha256": "35fd81e95f4be6bf4d072f3c50f1fea97f14478a8b761d001d2b2605a2c2fe49"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\candidate-b9e20e88\\REVISION-MANIFEST.json",
+      "path": "reference/predecessor/staged-REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-aceb629e08e2498498d6ed47a1b958e7\\stage-receipt.json",
+      "path": "reference/existing-final/stage-receipt.json",
+      "bytes": 483090,
+      "sha256": "18ac1853599fc8012b2f4319f8896cddd7b945701706b3a155bd646656f85ee8"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-aceb629e08e2498498d6ed47a1b958e7\\candidate-b9e20e88\\REVISION-MANIFEST.json",
+      "path": "reference/existing-final/staged-REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3"
+    }
+  ],
+  "referenceCopies": [
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-readonly-assessment-20261030\\C5-READONLY-ASSESSMENT-AND-SEVEN-RECEIPTS.zip",
+      "path": "C5-READONLY-ASSESSMENT-AND-SEVEN-RECEIPTS.zip",
+      "bytes": 256705,
+      "sha256": "27f49dd773527656d113cc69e04bbd2549a20ee4444dfea45010e750725049e8"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\REVISION-MANIFEST.json",
+      "path": "reference/existing-final/REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\SOURCE-MAP.json",
+      "path": "reference/existing-final/SOURCE-MAP.json",
+      "bytes": 731936,
+      "sha256": "6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\revision\\Install-FilesAndServices.ps1",
+      "path": "reference/existing-final/revision/Install-FilesAndServices.ps1",
+      "bytes": 13021,
+      "sha256": "2bd0591770e08b5ab1c6b9c7c6af0998999fb3e91db16db1ca36bb75c4d1b561"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\revision\\SETUP-SPEC.json",
+      "path": "reference/existing-final/revision/SETUP-SPEC.json",
+      "bytes": 9009,
+      "sha256": "463f85a2516296e8ffcd19c266bc59d67124b5230e049d5c71d184a895174414"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\revision\\Setup-Common.ps1",
+      "path": "reference/existing-final/revision/Setup-Common.ps1",
+      "bytes": 9957,
+      "sha256": "9569624fa58dfb139026d48df9d080af64bae33d3fc1a88354aebe595c11dbe7"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\revision\\Setup-Database.ps1",
+      "path": "reference/existing-final/revision/Setup-Database.ps1",
+      "bytes": 13687,
+      "sha256": "b385bcdfc3af6c3a66c85937005eda1bde0abef17355b4a2027b140b027bb3f2"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\revision\\Staging-Gate.ps1",
+      "path": "reference/existing-final/revision/Staging-Gate.ps1",
+      "bytes": 11706,
+      "sha256": "613fa981f5fed3fa4dba758619e5713e05f14d389892d7d94a3ea97b1811a309"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\revision\\provider-binding.json",
+      "path": "reference/existing-final/revision/provider-binding.json",
+      "bytes": 501,
+      "sha256": "0fd281796b12b38ba7af755487206d3fdf034ca00b6f14497e67846e68b634d8"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\revision\\service-launch.mjs",
+      "path": "reference/existing-final/revision/service-launch.mjs",
+      "bytes": 1070,
+      "sha256": "819e37a8fb140b413c1202ee588a37a9954231f88cee5ab86f0d6969b3d30767"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Assess-Ancestors.ps1",
+      "path": "reference/existing-final/tools/Assess-Ancestors.ps1",
+      "bytes": 6080,
+      "sha256": "9e6476006c441b93f44826ecd6557b8bd877b7bca20e6d2fd571e802530a0d3d"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Stage-Candidate.ps1",
+      "path": "reference/existing-final/tools/Stage-Candidate.ps1",
+      "bytes": 8890,
+      "sha256": "e02cc09151572e39a78e8043e0c7ce32be05ee7d668b1f9246f467afce7b4c93"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Staging-Security.cs",
+      "path": "reference/existing-final/tools/Staging-Security.cs",
+      "bytes": 11110,
+      "sha256": "6161f1421525f238d6be7ba85047e7ae132ec8c81a7b343c6b51f1fde2cb6422"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\build-installer-revision.py",
+      "path": "reference/existing-final/tools/build-installer-revision.py",
+      "bytes": 12101,
+      "sha256": "66d86149589f9d72b4f66dc5995558cf0a09bf39a4c94ce44bc7ebd684eea8f7"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\build-map.cjs",
+      "path": "reference/existing-final/tools/build-map.cjs",
+      "bytes": 3300,
+      "sha256": "522dcea826de367dce977fc05694d1f3d2173846e1dac56e32a771bd0ebac6a7"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\seal-revision.cjs",
+      "path": "reference/existing-final/tools/seal-revision.cjs",
+      "bytes": 1218,
+      "sha256": "826e664024bc07ad298be07d02828ac8e61a12e0b104504c3e2af1b8143a402e"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\docs\\STATE-ROOT-BINDINGS.md",
+      "path": "reference/existing-final/docs/STATE-ROOT-BINDINGS.md",
+      "bytes": 10043,
+      "sha256": "12af2adfdf81ce8c1953dcf40f711506d473ba8f9233ad265fd1101364c06715"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\docs\\TRUST-LAUNCH.md",
+      "path": "reference/existing-final/docs/TRUST-LAUNCH.md",
+      "bytes": 5263,
+      "sha256": "6b1c48b18af401f343d366d31d1b682abd2aef0e3257b563e526dc2879d65ecd"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\test-installer-adapter.ps1",
+      "path": "reference/existing-final/tests/test-installer-adapter.ps1",
+      "bytes": 2953,
+      "sha256": "008f3c11a4888582694f22fe5530d3963711d1a28ee54c9849244eb305cf8c0e"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\security-final.json",
+      "path": "reference/retained-evidence/security-final.json",
+      "bytes": 23716,
+      "sha256": "e0594ecc931334ff1ae04a390b9081b2c377b50d7f43b7c8689ef4327af03d19"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\security-canonical-final.json",
+      "path": "reference/retained-evidence/security-canonical-final.json",
+      "bytes": 23714,
+      "sha256": "5fca6b5ebc0f5c1c85732d15217d923e8a1852046b3208f9ed1d65b6f4690a7a"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\installer-prepared-tests.json",
+      "path": "reference/retained-evidence/installer-prepared-tests.json",
+      "bytes": 3116,
+      "sha256": "e0ff13a3b855a2574594cef80f05fb006ee50d612d561d4ca35059b9431dc5ef"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\native-containment-tests.json",
+      "path": "reference/retained-evidence/native-containment-tests.json",
+      "bytes": 4696,
+      "sha256": "e9072ebcac0feb7844c1d8a86df2a26317e4c5d222a136dac30a886b1f9fc3fd"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\fresh-pins.json",
+      "path": "reference/retained-evidence/fresh-pins.json",
+      "bytes": 1712,
+      "sha256": "63131b7c3e452f5d3af0933604d45fd37be32c740dd4a4d4d3388144e62b6207"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\collision-negative-control.json",
+      "path": "reference/retained-evidence/collision-negative-control.json",
+      "bytes": 1362,
+      "sha256": "23e59dbabc76ea71901330fc23199e1c3c8c940c915f08d1cdca6e62084e3e15"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\independent-review-v1.txt",
+      "path": "reference/retained-evidence/independent-review-v1.txt",
+      "bytes": 6277,
+      "sha256": "f8050050cb823033a0d83ddfc2475b26070b32e49fe748921b40863e1b3aaff4"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\independent-review.txt",
+      "path": "reference/retained-evidence/independent-review.txt",
+      "bytes": 2703,
+      "sha256": "c8d4b156304e5c490e320518e0bd4ef699d4ec3ef17bcd9dcffffac02a519646"
+    },
+    {
+      "source": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-closeout-20261030\\RESULTS-ENVELOPE.json",
+      "path": "reference/retained-evidence/RESULTS-ENVELOPE.json",
+      "bytes": 2468,
+      "sha256": "53f992a5c9b87a8c8ae254042cb2dd46aebc8e444af0cc0729956fa0cf98cb6c"
+    }
+  ],
+  "existingFinalSecurityCounts": {
+    "pass": 64,
+    "fail": 0,
+    "blocked": 0
+  },
+  "newPolicyTestsRun": 0,
+  "independentReviewPerformed": false,
+  "limitations": [
+    "Historical records only; no fresh host census",
+    "Seven adapter receipts have no direct manifest digest; transitive retained stage binding only",
+    "Actual copies; simulated SCM/ACL; not installed-service acceptance",
+    "Existing final 64-case result is not PG-R1 evidence",
+    "No full 1691-source original live-byte reread in this task"
+  ]
+}

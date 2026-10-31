@@ -1,0 +1,616 @@
+﻿{
+    "schema":  "C5-ANCESTOR-ASSESSMENT-1",
+    "atUtc":  "2026-10-30T22:19:50.3938991Z",
+    "computer":  "DESKTOP-SPC3OQK",
+    "mode":  "READ_ONLY_STATIC_ACL_ASSESSMENT",
+    "status":  "BLOCKED_NOT_AN_APPROVAL",
+    "originalManifestSha256":  "b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c",
+    "retainedEvidence":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-execution-20261029\\preflight.json",
+    "retainedEvidenceSha256":  "f79d229e36af048d02c63345e9c4e9317076824528baac1c909f9624e679953a",
+    "observations":  [
+                         {
+                             "path":  "C:\\",
+                             "attributes":  "Hidden, System, Directory",
+                             "ownerSid":  "S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464",
+                             "ownerName":  "NT SERVICE\\TrustedInstaller",
+                             "daclProtected":  false,
+                             "sddl":  "O:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464G:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464D:(A;;LC;;;AU)(A;OICIIO;SDGXGWGR;;;AU)(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)(A;;0x1000a1;;;S-1-15-3-65536-1888954469-739942743-1668119174-2468466756-4239452838-1296943325-355587736-700089176)",
+                             "retainedAt":  "2026-10-30T01:19:03.0319272Z",
+                             "retainedSddl":  "O:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464G:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464D:(A;;LC;;;AU)(A;OICIIO;SDGXGWGR;;;AU)(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)(A;;0x1000a1;;;S-1-15-3-65536-1888954469-739942743-1668119174-2468466756-4239452838-1296943325-355587736-700089176)",
+                             "sddlEqualsRetained":  true,
+                             "interpretationIssues":  [
+                                                          "UNRESOLVED_TRUSTEE_S-1-15-3-65536-1888954469-739942743-1668119174-2468466756-4239452838-1296943325-355587736-700089176"
+                                                      ],
+                             "aces":  [
+                                          {
+                                              "sid":  "S-1-5-11",
+                                              "account":  "NT AUTHORITY\\Authenticated Users",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "None",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x00000004",
+                                              "expandedFileMask":  "0x00000004",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  true
+                                          },
+                                          {
+                                              "sid":  "S-1-5-11",
+                                              "account":  "NT AUTHORITY\\Authenticated Users",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0xe0010000",
+                                              "expandedFileMask":  "0x001301bf",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-18",
+                                              "account":  "NT AUTHORITY\\SYSTEM",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001f01ff",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-544",
+                                              "account":  "BUILTIN\\Administrators",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001f01ff",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-545",
+                                              "account":  "BUILTIN\\Users",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001200a9",
+                                              "expandedFileMask":  "0x001200a9",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-15-3-65536-1888954469-739942743-1668119174-2468466756-4239452838-1296943325-355587736-700089176",
+                                              "account":  null,
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "None",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001000a1",
+                                              "expandedFileMask":  "0x001000a1",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          }
+                                      ],
+                             "strictOriginalRuleViolationObserved":  true
+                         },
+                         {
+                             "path":  "C:\\Program Files",
+                             "attributes":  "ReadOnly, Directory",
+                             "ownerSid":  "S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464",
+                             "ownerName":  "NT SERVICE\\TrustedInstaller",
+                             "daclProtected":  true,
+                             "sddl":  "O:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464G:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464D:PAI(A;OICIIO;GA;;;CO)(A;OICIIO;GA;;;SY)(A;;0x1301bf;;;SY)(A;OICIIO;GA;;;BA)(A;;0x1301bf;;;BA)(A;OICIIO;GXGR;;;BU)(A;;0x1200a9;;;BU)(A;CIIO;GA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;AC)(A;OICIIO;GXGR;;;AC)(A;;0x1200a9;;;S-1-15-2-2)(A;OICIIO;GXGR;;;S-1-15-2-2)",
+                             "retainedAt":  "2026-10-30T01:19:03.0319272Z",
+                             "retainedSddl":  "O:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464G:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464D:PAI(A;OICIIO;GA;;;CO)(A;OICIIO;GA;;;SY)(A;;0x1301bf;;;SY)(A;OICIIO;GA;;;BA)(A;;0x1301bf;;;BA)(A;OICIIO;GXGR;;;BU)(A;;0x1200a9;;;BU)(A;CIIO;GA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;AC)(A;OICIIO;GXGR;;;AC)(A;;0x1200a9;;;S-1-15-2-2)(A;OICIIO;GXGR;;;S-1-15-2-2)",
+                             "sddlEqualsRetained":  true,
+                             "interpretationIssues":  [
+
+                                                      ],
+                             "aces":  [
+                                          {
+                                              "sid":  "S-1-3-0",
+                                              "account":  "CREATOR OWNER",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0x10000000",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-18",
+                                              "account":  "NT AUTHORITY\\SYSTEM",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0x10000000",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-18",
+                                              "account":  "NT AUTHORITY\\SYSTEM",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "None",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001301bf",
+                                              "expandedFileMask":  "0x001301bf",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-544",
+                                              "account":  "BUILTIN\\Administrators",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0x10000000",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-544",
+                                              "account":  "BUILTIN\\Administrators",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "None",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001301bf",
+                                              "expandedFileMask":  "0x001301bf",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-545",
+                                              "account":  "BUILTIN\\Users",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0xa0000000",
+                                              "expandedFileMask":  "0x001200a9",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-545",
+                                              "account":  "BUILTIN\\Users",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "None",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001200a9",
+                                              "expandedFileMask":  "0x001200a9",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464",
+                                              "account":  "NT SERVICE\\TrustedInstaller",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0x10000000",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464",
+                                              "account":  "NT SERVICE\\TrustedInstaller",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "None",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001f01ff",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-15-2-1",
+                                              "account":  "APPLICATION PACKAGE AUTHORITY\\ALL APPLICATION PACKAGES",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "None",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001200a9",
+                                              "expandedFileMask":  "0x001200a9",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-15-2-1",
+                                              "account":  "APPLICATION PACKAGE AUTHORITY\\ALL APPLICATION PACKAGES",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0xa0000000",
+                                              "expandedFileMask":  "0x001200a9",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-15-2-2",
+                                              "account":  "APPLICATION PACKAGE AUTHORITY\\ALL RESTRICTED APPLICATION PACKAGES",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "None",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001200a9",
+                                              "expandedFileMask":  "0x001200a9",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-15-2-2",
+                                              "account":  "APPLICATION PACKAGE AUTHORITY\\ALL RESTRICTED APPLICATION PACKAGES",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0xa0000000",
+                                              "expandedFileMask":  "0x001200a9",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          }
+                                      ],
+                             "strictOriginalRuleViolationObserved":  false
+                         },
+                         {
+                             "path":  "C:\\ProgramData",
+                             "attributes":  "Hidden, Directory, NotContentIndexed",
+                             "ownerSid":  "S-1-5-18",
+                             "ownerName":  "NT AUTHORITY\\SYSTEM",
+                             "daclProtected":  true,
+                             "sddl":  "O:SYG:SYD:PAI(A;OICIIO;GA;;;CO)(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)(A;CI;DCLCRPCR;;;BU)",
+                             "retainedAt":  "2026-10-30T01:19:03.0319272Z",
+                             "retainedSddl":  "O:SYG:SYD:PAI(A;OICIIO;GA;;;CO)(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;BU)(A;CI;DCLCRPCR;;;BU)",
+                             "sddlEqualsRetained":  true,
+                             "interpretationIssues":  [
+
+                                                      ],
+                             "aces":  [
+                                          {
+                                              "sid":  "S-1-3-0",
+                                              "account":  "CREATOR OWNER",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit, InheritOnly",
+                                              "selfApplicable":  false,
+                                              "rawMask":  "0x10000000",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-18",
+                                              "account":  "NT AUTHORITY\\SYSTEM",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001f01ff",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-544",
+                                              "account":  "BUILTIN\\Administrators",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001f01ff",
+                                              "expandedFileMask":  "0x001f01ff",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  true,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  true,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  true,
+                                                                     "writeDacl":  true,
+                                                                     "writeOwner":  true
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-545",
+                                              "account":  "BUILTIN\\Users",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ObjectInherit, ContainerInherit",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x001200a9",
+                                              "expandedFileMask":  "0x001200a9",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  false,
+                                                                     "createSubdirectory":  false,
+                                                                     "writeExtendedAttributes":  false,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  false,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  false
+                                          },
+                                          {
+                                              "sid":  "S-1-5-32-545",
+                                              "account":  "BUILTIN\\Users",
+                                              "aceType":  "AccessAllowed",
+                                              "flags":  "ContainerInherit",
+                                              "selfApplicable":  true,
+                                              "rawMask":  "0x00000116",
+                                              "expandedFileMask":  "0x00000116",
+                                              "trustedAdministratorSystemOrTrustedInstaller":  false,
+                                              "mutationRights":  {
+                                                                     "createFile":  true,
+                                                                     "createSubdirectory":  true,
+                                                                     "writeExtendedAttributes":  true,
+                                                                     "deleteChild":  false,
+                                                                     "writeAttributes":  true,
+                                                                     "deleteSelf":  false,
+                                                                     "writeDacl":  false,
+                                                                     "writeOwner":  false
+                                                                 },
+                                              "untrustedSelfMutationAllow":  true
+                                          }
+                                      ],
+                             "strictOriginalRuleViolationObserved":  true
+                         }
+                     ],
+    "targetCollisions":  [
+                             {
+                                 "path":  "C:\\Program Files\\MCVQ5-Staging-20261029",
+                                 "exists":  false,
+                                 "attributes":  null,
+                                 "collisionBlocked":  false,
+                                 "created":  false
+                             },
+                             {
+                                 "path":  "C:\\Program Files\\MCVQ5-20261029",
+                                 "exists":  false,
+                                 "attributes":  null,
+                                 "collisionBlocked":  false,
+                                 "created":  false
+                             },
+                             {
+                                 "path":  "C:\\ProgramData\\MCVQ5-20261029",
+                                 "exists":  false,
+                                 "attributes":  null,
+                                 "collisionBlocked":  false,
+                                 "created":  false
+                             },
+                             {
+                                 "path":  "C:\\Program Files\\MCVQ5-State-20261029",
+                                 "exists":  false,
+                                 "attributes":  null,
+                                 "collisionBlocked":  false,
+                                 "created":  false
+                             }
+                         ],
+    "effectiveAccessCheckPerformed":  false,
+    "effectiveAccessStatus":  "NOT_PROVEN_NO_TOKEN_AUTHZ_OR_WINDOWS_ACCESSCHECK",
+    "strictOriginalRule":  "reject reparse points and untrusted write/create/delete/rename; no shared ancestor changes",
+    "strictOriginalRuleResult":  "FAIL_C_DRIVE_AUTHENTICATED_USERS_CREATE_SUBDIRECTORY_AND_PROGRAMDATA_USERS_WRITE",
+    "proposedRelocation":  {
+                               "dataRoot":  "C:\\Program Files\\MCVQ5-State-20261029",
+                               "status":  "PREPARED_TARGETED_REVIEW_AND_FUTURE_AUTHORIZATION_REQUIRED",
+                               "programFilesSelfObservation":  "No observed untrusted self-applicable mutation allow; this is not full-chain effective-access approval",
+                               "fullChain":  "BLOCKED_C_DRIVE_CREATE_RULE",
+                               "created":  false
+                           },
+    "limitations":  [
+                        "Static allow-ACE bit decoding is not token-specific Windows AccessCheck or Authz; it cannot issue PASS.",
+                        "No denial, callback/conditional, object-specific or unresolved trustee/owner interpretation is accepted as proof. Such observations are unsupported and fail closed.",
+                        "Create rights alone do not establish delete-child/delete/rename or replacement of an already protected target.",
+                        "No non-admin token experiment, file creation or destructive replacement test occurred on shared ancestors.",
+                        "No target root or service was created; no ACL, owner, inheritance, registry, credential, cluster or cloud change occurred."
+                    ],
+    "operationalMutations":  0
+}

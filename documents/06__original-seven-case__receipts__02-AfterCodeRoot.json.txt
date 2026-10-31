@@ -1,0 +1,26 @@
+﻿{
+    "status":  "FAIL_QUARANTINED",
+    "primary":  "FAIL_CREATE_CODE_ROOT:LOCAL_INJECTED_FAILURE",
+    "cleanup":  [
+
+                ],
+    "mode":  "LOCAL_FILES_ACTUAL_SCM_ACL_SIMULATED",
+    "localFault":  "AfterCodeRoot",
+    "roots":  [
+                  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-5dea4f1cb19549fc9334b9af1e28ca42\\code"
+              ],
+    "services":  [
+
+                 ],
+    "mockSCM":  {
+
+                },
+    "mockACL":  {
+
+                },
+    "revokedGrants":  0,
+    "native":  [
+
+               ],
+    "deletionPerformed":  false
+}

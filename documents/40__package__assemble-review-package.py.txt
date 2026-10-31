@@ -1,0 +1,139 @@
+"""Evidence copying/hash verification ONLY. Does not load project code or run tests."""
+from pathlib import Path
+import json, hashlib, zipfile, shutil, datetime
+R=Path(__file__).parent
+A=Path(r'D:\OpenClaw-workspace\artifacts')
+C=A/'mcvplus-c5-staging-closeout-20261030'
+S=A/'mcvplus-c5-staging-revision-20261030'
+B=A/'mcvplus-c5-readonly-assessment-20261030'/'C5-READONLY-ASSESSMENT-AND-SEVEN-RECEIPTS.zip'
+def sha(b): return hashlib.sha256(b).hexdigest()
+def obj(b): return json.loads(b.decode('utf-8-sig'))
+def save(rel,b):
+ p=R/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
+def copy(p,rel):
+ b=p.read_bytes();save(rel,b);return {'source':str(p),'path':rel,'bytes':len(b),'sha256':sha(b)}
+assert sha(B.read_bytes())=='27f49dd773527656d113cc69e04bbd2549a20ee4444dfea45010e750725049e8'
+bindings=[]
+bindings.append(copy(B,B.name))
+with zipfile.ZipFile(B) as z:
+ names=z.namelist()
+ assert len(names)==len(set(n.casefold() for n in names))
+ ix=obj(z.read('BINDINGS.json'))
+ assert set(names)=={x['archivePath'] for x in ix['files']}|{'BINDINGS.json'}
+ for x in ix['files']:
+  b=z.read(x['archivePath']);assert len(b)==x['bytes'] and sha(b)==x['sha256'], x['archivePath']
+ prev=obj(z.read('predecessor-candidate/REVISION-MANIFEST.json'))
+ final=obj(z.read('final-candidate/REVISION-MANIFEST.json'))
+ assert sha(z.read('predecessor-candidate/REVISION-MANIFEST.json'))==ix['expectedPrecedingManifestSha256']
+ assert sha(z.read('final-candidate/REVISION-MANIFEST.json'))=='19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3'
+ pp={x['path']:x for x in prev['files']};fp={x['path']:x for x in final['files']}
+ assert set(pp)==set(fp) and len(fp)==14
+ changed=[k for k in fp if fp[k]!=pp[k]];assert changed==['SOURCE-MAP.json']
+ pm=obj(z.read('predecessor-candidate/SOURCE-MAP.json'));fm=obj(z.read('final-candidate/SOURCE-MAP.json'))
+ assert pm==fm and len(fm['entries'])==1691
+ aggregate=obj(z.read('existing-evidence/installer-adapter-tests.json'))
+ assert len(aggregate['cases'])==7 and aggregate['scope']=='ACTUAL_FILE_COPIES_SIMULATED_SCM_AND_ACL'
+ case_rows=[]
+ for i,case in enumerate(aggregate['cases'],1):
+  rec_name=next(n for n in names if n.startswith('receipts/%02d-'%i))
+  raw=z.read(rec_name);rec=obj(raw)
+  assert case['result']=='PASS' and case['scmAclSimulated'] is True
+  assert case['processesStarted']==0
+  assert rec['status']==case['status'] and rec['native']==[]
+  assert case['root'] in '|'.join(rec.get('roots',[]))
+  case_rows.append({'case':case['fault'] or 'Success','outcome':rec['status'],'path':rec_name,'bytes':len(raw),'sha256':sha(raw)})
+for rel in ['REVISION-MANIFEST.json','SOURCE-MAP.json']+[x['path'] for x in final['files'] if x['path']!='SOURCE-MAP.json']+['docs/STATE-ROOT-BINDINGS.md','docs/TRUST-LAUNCH.md','tests/test-installer-adapter.ps1']:
+ p=S/rel
+ if p.exists():
+  raw=p.read_bytes()
+  if rel in fp: assert len(raw)==fp[rel]['bytes'] and sha(raw)==fp[rel]['sha256'],rel
+  bindings.append(copy(p,'reference/existing-final/'+rel))
+for rel in ['security-final.json','security-canonical-final.json','installer-prepared-tests.json','native-containment-tests.json','fresh-pins.json','collision-negative-control.json','independent-review-v1.txt','independent-review.txt','RESULTS-ENVELOPE.json']:
+ bindings.append(copy(C/rel,'reference/retained-evidence/'+rel))
+stage_rows=[]
+for label,name,expected in [('predecessor','security-final.json',ix['expectedPrecedingManifestSha256']),('existing-final','security-canonical-final.json','19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3')]:
+ sec=obj((C/name).read_bytes());root=Path(sec['stage']['root'])
+ assert sec['stage']['revisionManifestSha256']==expected
+ p=root/'stage-receipt.json';rec=obj(p.read_bytes())
+ assert rec['revisionManifestSha256']==expected
+ stage_rows.append(copy(p,'reference/'+label+'/stage-receipt.json'))
+ stage_rows.append(copy(root/'candidate-b9e20e88'/'REVISION-MANIFEST.json','reference/'+label+'/staged-REVISION-MANIFEST.json'))
+ assert stage_rows[-1]['sha256']==expected
+sec=obj((C/'security-canonical-final.json').read_bytes())
+assert sec['counts']=={'pass':64,'fail':0,'blocked':0}
+assert len(sec['tests'])==64 and all(x['status']=='PASS' for x in sec['tests'])
+assert sec['ownedProcessesRemaining']==0
+out={'scope':'ARTIFACT_INTEGRITY_AND_EXISTING_RECEIPT_INSPECTION_ONLY_NO_TESTS','at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+'originalBundleSha256':sha(B.read_bytes()),'originalBindingsVerified':len(ix['files']),
+'predecessorManifest':ix['expectedPrecedingManifestSha256'],'existingFinalManifest':'19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3',
+'revisionPinsReadAndVerified':len(fp),'changedPinPaths':changed,'parsedMapEntriesIdentical':1691,
+'sevenOriginalReceipts':case_rows,'stageEvidenceBindings':stage_rows,'referenceCopies':bindings,
+'existingFinalSecurityCounts':sec['counts'],'newPolicyTestsRun':0,'independentReviewPerformed':False,
+'limitations':['Historical records only; no fresh host census','Seven adapter receipts have no direct manifest digest; transitive retained stage binding only','Actual copies; simulated SCM/ACL; not installed-service acceptance','Existing final 64-case result is not PG-R1 evidence','No full 1691-source original live-byte reread in this task']}
+save('EVIDENCE-VERIFICATION.json',(json.dumps(out,indent=2)+'\n').encode())
+rows='\n'.join('| '+x['case']+' | '+x['outcome']+' | '+x['sha256']+' |' for x in case_rows)
+report="""# Evidence provenance and author integrity checks
+
+This task performed file reads, exact-byte copies and hash/JSON inspection only. No installer, gate, fixture or hosted tests were executed. This is NOT an independent-review verdict.
+
+## Recovered original evidence
+
+The original ZIP is included unmodified. SHA256:
+27f49dd773527656d113cc69e04bbd2549a20ee4444dfea45010e750725049e8
+
+All 32 original BINDINGS entries match their archived sizes/hashes; all seven original receipts match expected aggregate outcomes. Their native-operation arrays are empty; all have simulated SCM/ACL and zero processes started. The original harness, adapter source/stdout/stderr and review limitations are included.
+
+| Predecessor case | Recorded expected outcome | Original receipt SHA256 |
+| --- | --- | --- |
+"""+rows+"""
+
+These seven results belong to predecessor d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70. ContainmentFailure records BLOCKED as the expected safe outcome, not successful installation or containment.
+
+## Existing final candidate — different evidence lane
+
+Manifest: 19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3.
+All 14 current revision pins were read and hash/size-verified against the retained manifest. Only SOURCE-MAP differs from the predecessor pin list; both parsed map objects are identical, with 1,691 entries. No full live-original payload readback was performed.
+
+Retained final security JSON contains 64 PASS / 0 FAIL / 0 BLOCKED, 64 matching per-case PASS entries and zero recorded remaining owned children. This is inspection of historical evidence, NOT rerunning tests or current process verification. The final and predecessor original stage receipts plus staged manifests are supplied separately, with source paths and hashes. They directly name their own revision digests.
+
+Installer adapter receipts themselves lack a direct digest. Their recovered binding is transitive through aggregate case-root paths, the predecessor stage receipt/manifest, security record, adapter invocation source/stdout and carry-forward record. This is not rewritten into the old receipts.
+
+The prior independent review did not verify the unavailable seven-case receipt. Original review findings/closure are supplied unchanged. Current author hash checks do not retroactively change that conclusion.
+
+## Proposed PG-R1 — no acceptance evidence
+
+The new policy is a requirement document only. It has no implemented gate manifest and zero validation cases executed. Do not cite the predecessor seven or existing-final 64 as evidence that PG-R1 works.
+
+## Independent verification without project execution
+
+Use any trusted SHA256/JSON/ZIP tool. Do not run archived PS1/CS/Python project harnesses.
+1. Hash the delivered review ZIP against the separately delivered digest; reject duplicate/unsafe archive paths before extracting.
+2. Check PACKAGE-MANIFEST.json against each delivered file (manifest excludes itself).
+3. Hash the nested original evidence ZIP against the fixed digest above.
+4. Verify all entries in nested BINDINGS.json against raw archived bytes. Inspect the seven receipts, aggregate, mock flags and native arrays.
+5. Reconstruct predecessor binding from the separately included stage receipt/staged manifest and aggregate root paths. Do not infer direct per-receipt manifest binding.
+6. Compare both revision manifests and decoded maps. Check all current 14 revision pins against reference/existing-final copies.
+7. Inspect the final security receipt and per-case outcomes separately; no claim of seven final-revision runs.
+8. Review PG-R1 policy and planned cases as new untested requirements.
+
+EVIDENCE-VERIFICATION.json records exact provenance. File hashes ensure consistency of supplied artifacts, not authenticity independent of their producer, current host state, operational authorization or service/ACL acceptance.
+"""
+assert len(ix['files'])==32
+save('03-EVIDENCE-PROVENANCE.md',report.encode())
+files=[]
+for p in sorted(R.rglob('*')):
+ if p.is_file() and p.name!='PACKAGE-MANIFEST.json' and p.suffix!='.zip' or (p.is_file() and p.name==B.name):
+  rel=p.relative_to(R).as_posix()
+  if rel=='PACKAGE-MANIFEST.json': continue
+  b=p.read_bytes();files.append({'path':rel,'bytes':len(b),'sha256':sha(b)})
+save('PACKAGE-MANIFEST.json',(json.dumps({'scope':'REVIEW_ONLY_NOT_EXECUTION_APPROVAL','files':files},indent=2)+'\n').encode())
+archive=R.parent/'MCVPLUS-C5-PATH-GATE-REVIEW-20261030.zip'
+with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+ for p in sorted(R.rglob('*')):
+  if p.is_file():z.write(p,p.relative_to(R).as_posix())
+with zipfile.ZipFile(archive) as z:
+ manifest=obj(z.read('PACKAGE-MANIFEST.json'))
+ assert set(z.namelist())=={x['path'] for x in manifest['files']}|{'PACKAGE-MANIFEST.json'}
+ for x in manifest['files']:
+  raw=z.read(x['path']);assert len(raw)==x['bytes'] and sha(raw)==x['sha256']
+print(json.dumps({'archive':str(archive),'bytes':archive.stat().st_size,'sha256':sha(archive.read_bytes()),'originalBindingsVerified':len(ix['files']),'packageFilesVerified':len(files),'revisionPinsVerified':len(fp),'stageReceiptsSupplied':2,'newTestsRun':0},indent=2))

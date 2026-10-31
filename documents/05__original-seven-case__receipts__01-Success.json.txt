@@ -1,0 +1,77 @@
+﻿{
+    "status":  "LOCAL_FILES_AND_SIMULATED_DISABLED_SERVICES",
+    "primary":  "",
+    "cleanup":  [
+
+                ],
+    "mode":  "LOCAL_FILES_ACTUAL_SCM_ACL_SIMULATED",
+    "localFault":  "",
+    "roots":  [
+                  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code",
+                  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data"
+              ],
+    "services":  [
+                     {
+                         "path":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\postgres\\bin\\pg_ctl.exe\" runservice -N MCVQ5Postgres1029 -D \"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data\\postgres\\data\" -w -t 30",
+                         "created":  true,
+                         "name":  "MCVQ5Postgres1029"
+                     },
+                     {
+                         "path":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\nssm.exe\"",
+                         "created":  true,
+                         "name":  "MCVQ5Provider1029"
+                     },
+                     {
+                         "path":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\nssm.exe\"",
+                         "created":  true,
+                         "name":  "MCVQ5Tunnel1029"
+                     }
+                 ],
+    "mockSCM":  {
+                    "MCVQ5Postgres1029":  {
+                                              "ProcessId":  0,
+                                              "PathName":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\postgres\\bin\\pg_ctl.exe\" runservice -N MCVQ5Postgres1029 -D \"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data\\postgres\\data\" -w -t 30",
+                                              "Name":  "MCVQ5Postgres1029",
+                                              "StartMode":  "Disabled",
+                                              "State":  "Stopped"
+                                          },
+                    "MCVQ5Tunnel1029":  {
+                                            "ProcessId":  0,
+                                            "PathName":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\nssm.exe\"",
+                                            "Name":  "MCVQ5Tunnel1029",
+                                            "StartMode":  "Disabled",
+                                            "State":  "Stopped"
+                                        },
+                    "MCVQ5Provider1029":  {
+                                              "ProcessId":  0,
+                                              "PathName":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\nssm.exe\"",
+                                              "Name":  "MCVQ5Provider1029",
+                                              "StartMode":  "Disabled",
+                                              "State":  "Stopped"
+                                          }
+                },
+    "mockACL":  {
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data\\provider-secrets.json|NT SERVICE\\MCVQ5Provider1029":  "R",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\provider|NT SERVICE\\MCVQ5Provider1029":  "(OI)(CI)RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\node.exe|NT SERVICE\\MCVQ5Provider1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\postgres|NT SERVICE\\MCVQ5Postgres1029":  "(OI)(CI)RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data|NT SERVICE\\MCVQ5Postgres1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code|NT SERVICE\\MCVQ5Provider1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\nssm.exe|NT SERVICE\\MCVQ5Provider1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code|NT SERVICE\\MCVQ5Postgres1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data|NT SERVICE\\MCVQ5Provider1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\service-launch.mjs|NT SERVICE\\MCVQ5Provider1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data\\provider-slots|NT SERVICE\\MCVQ5Provider1029":  "(OI)(CI)M",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data|NT SERVICE\\MCVQ5Tunnel1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code|NT SERVICE\\MCVQ5Tunnel1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\nssm.exe|NT SERVICE\\MCVQ5Tunnel1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\code\\cloudflared.exe|NT SERVICE\\MCVQ5Tunnel1029":  "RX",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data\\postgres|NT SERVICE\\MCVQ5Postgres1029":  "(OI)(CI)M",
+                    "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279\\data\\provider-logs|NT SERVICE\\MCVQ5Provider1029":  "(OI)(CI)M"
+                },
+    "revokedGrants":  0,
+    "native":  [
+
+               ],
+    "deletionPerformed":  false
+}

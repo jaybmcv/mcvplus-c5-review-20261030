@@ -1,0 +1,7 @@
+MCV+ inspection-only plain-text redelivery
+
+Every supplied attachment ends in .txt. Files are byte-identical to original contents; original names and SHA256 are in 00-TEXT-DELIVERY-MANIFEST.json.txt. No archive or executable is delivered. Scripts are source text for inspection only; none were executed.
+
+Read the four package/00 through 03 documents first. The seven original receipts are explicitly under original-seven-case/receipts and remain predecessor evidence, not results for the final revision or proposed gate. Final-revision references are separately named. The bounded validation plan is NOT RUN. All 48 attempts remain unspent. Vercel restoration remains a separate prerequisite. No application/deployment branches, ACLs, staging, Setup, or hosted testing changed.
+
+All 38 original package bindings and 32 original evidence bindings were checked before copying. The old ZIP entry remains recorded in the original package manifest for provenance only; no ZIP is attached.

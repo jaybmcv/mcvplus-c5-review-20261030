@@ -1,0 +1,195 @@
+{
+  "scope": "REVIEW_ONLY_NOT_EXECUTION_APPROVAL",
+  "files": [
+    {
+      "path": "00-REVIEW-README.md",
+      "bytes": 2833,
+      "sha256": "f65b5f2345cdfeb212b12573716fff7679334611dfb841fa24ea063c8722ff22"
+    },
+    {
+      "path": "01-PATH-SPECIFIC-GATE-REVISION.md",
+      "bytes": 14406,
+      "sha256": "50764c09bddd0c6891d2ccd97195c94f16508c8436a0bbb17641cf04d17718b2"
+    },
+    {
+      "path": "02-BOUNDED-LOCAL-VALIDATION-PLAN.md",
+      "bytes": 10983,
+      "sha256": "03af329888c2fd680660def9dc0301690876ed1a42256a3448bbc75606d35149"
+    },
+    {
+      "path": "03-EVIDENCE-PROVENANCE.md",
+      "bytes": 4618,
+      "sha256": "8479fb9e386dfbec957c52592aebbd9aaf1503ae57cb076978fa4844aee3e91c"
+    },
+    {
+      "path": "assemble-review-package.py",
+      "bytes": 10655,
+      "sha256": "956ec9266d471909999daf50ccda3867bc2e68f86ce8d6c851ce18182e6e99f4"
+    },
+    {
+      "path": "C5-READONLY-ASSESSMENT-AND-SEVEN-RECEIPTS.zip",
+      "bytes": 256705,
+      "sha256": "27f49dd773527656d113cc69e04bbd2549a20ee4444dfea45010e750725049e8"
+    },
+    {
+      "path": "EVIDENCE-VERIFICATION.json",
+      "bytes": 12860,
+      "sha256": "57832da897d2d8251c6db31bd606cb78a34e8fad5cc41fdda1585e2bbd019acf"
+    },
+    {
+      "path": "reference/existing-final/docs/STATE-ROOT-BINDINGS.md",
+      "bytes": 10043,
+      "sha256": "12af2adfdf81ce8c1953dcf40f711506d473ba8f9233ad265fd1101364c06715"
+    },
+    {
+      "path": "reference/existing-final/docs/TRUST-LAUNCH.md",
+      "bytes": 5263,
+      "sha256": "6b1c48b18af401f343d366d31d1b682abd2aef0e3257b563e526dc2879d65ecd"
+    },
+    {
+      "path": "reference/existing-final/revision/Install-FilesAndServices.ps1",
+      "bytes": 13021,
+      "sha256": "2bd0591770e08b5ab1c6b9c7c6af0998999fb3e91db16db1ca36bb75c4d1b561"
+    },
+    {
+      "path": "reference/existing-final/revision/provider-binding.json",
+      "bytes": 501,
+      "sha256": "0fd281796b12b38ba7af755487206d3fdf034ca00b6f14497e67846e68b634d8"
+    },
+    {
+      "path": "reference/existing-final/revision/service-launch.mjs",
+      "bytes": 1070,
+      "sha256": "819e37a8fb140b413c1202ee588a37a9954231f88cee5ab86f0d6969b3d30767"
+    },
+    {
+      "path": "reference/existing-final/revision/Setup-Common.ps1",
+      "bytes": 9957,
+      "sha256": "9569624fa58dfb139026d48df9d080af64bae33d3fc1a88354aebe595c11dbe7"
+    },
+    {
+      "path": "reference/existing-final/revision/Setup-Database.ps1",
+      "bytes": 13687,
+      "sha256": "b385bcdfc3af6c3a66c85937005eda1bde0abef17355b4a2027b140b027bb3f2"
+    },
+    {
+      "path": "reference/existing-final/revision/SETUP-SPEC.json",
+      "bytes": 9009,
+      "sha256": "463f85a2516296e8ffcd19c266bc59d67124b5230e049d5c71d184a895174414"
+    },
+    {
+      "path": "reference/existing-final/revision/Staging-Gate.ps1",
+      "bytes": 11706,
+      "sha256": "613fa981f5fed3fa4dba758619e5713e05f14d389892d7d94a3ea97b1811a309"
+    },
+    {
+      "path": "reference/existing-final/REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3"
+    },
+    {
+      "path": "reference/existing-final/SOURCE-MAP.json",
+      "bytes": 731936,
+      "sha256": "6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1"
+    },
+    {
+      "path": "reference/existing-final/stage-receipt.json",
+      "bytes": 483090,
+      "sha256": "18ac1853599fc8012b2f4319f8896cddd7b945701706b3a155bd646656f85ee8"
+    },
+    {
+      "path": "reference/existing-final/staged-REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3"
+    },
+    {
+      "path": "reference/existing-final/tests/test-installer-adapter.ps1",
+      "bytes": 2953,
+      "sha256": "008f3c11a4888582694f22fe5530d3963711d1a28ee54c9849244eb305cf8c0e"
+    },
+    {
+      "path": "reference/existing-final/tools/Assess-Ancestors.ps1",
+      "bytes": 6080,
+      "sha256": "9e6476006c441b93f44826ecd6557b8bd877b7bca20e6d2fd571e802530a0d3d"
+    },
+    {
+      "path": "reference/existing-final/tools/build-installer-revision.py",
+      "bytes": 12101,
+      "sha256": "66d86149589f9d72b4f66dc5995558cf0a09bf39a4c94ce44bc7ebd684eea8f7"
+    },
+    {
+      "path": "reference/existing-final/tools/build-map.cjs",
+      "bytes": 3300,
+      "sha256": "522dcea826de367dce977fc05694d1f3d2173846e1dac56e32a771bd0ebac6a7"
+    },
+    {
+      "path": "reference/existing-final/tools/seal-revision.cjs",
+      "bytes": 1218,
+      "sha256": "826e664024bc07ad298be07d02828ac8e61a12e0b104504c3e2af1b8143a402e"
+    },
+    {
+      "path": "reference/existing-final/tools/Stage-Candidate.ps1",
+      "bytes": 8890,
+      "sha256": "e02cc09151572e39a78e8043e0c7ce32be05ee7d668b1f9246f467afce7b4c93"
+    },
+    {
+      "path": "reference/existing-final/tools/Staging-Security.cs",
+      "bytes": 11110,
+      "sha256": "6161f1421525f238d6be7ba85047e7ae132ec8c81a7b343c6b51f1fde2cb6422"
+    },
+    {
+      "path": "reference/predecessor/stage-receipt.json",
+      "bytes": 483090,
+      "sha256": "35fd81e95f4be6bf4d072f3c50f1fea97f14478a8b761d001d2b2605a2c2fe49"
+    },
+    {
+      "path": "reference/predecessor/staged-REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70"
+    },
+    {
+      "path": "reference/retained-evidence/collision-negative-control.json",
+      "bytes": 1362,
+      "sha256": "23e59dbabc76ea71901330fc23199e1c3c8c940c915f08d1cdca6e62084e3e15"
+    },
+    {
+      "path": "reference/retained-evidence/fresh-pins.json",
+      "bytes": 1712,
+      "sha256": "63131b7c3e452f5d3af0933604d45fd37be32c740dd4a4d4d3388144e62b6207"
+    },
+    {
+      "path": "reference/retained-evidence/independent-review-v1.txt",
+      "bytes": 6277,
+      "sha256": "f8050050cb823033a0d83ddfc2475b26070b32e49fe748921b40863e1b3aaff4"
+    },
+    {
+      "path": "reference/retained-evidence/independent-review.txt",
+      "bytes": 2703,
+      "sha256": "c8d4b156304e5c490e320518e0bd4ef699d4ec3ef17bcd9dcffffac02a519646"
+    },
+    {
+      "path": "reference/retained-evidence/installer-prepared-tests.json",
+      "bytes": 3116,
+      "sha256": "e0ff13a3b855a2574594cef80f05fb006ee50d612d561d4ca35059b9431dc5ef"
+    },
+    {
+      "path": "reference/retained-evidence/native-containment-tests.json",
+      "bytes": 4696,
+      "sha256": "e9072ebcac0feb7844c1d8a86df2a26317e4c5d222a136dac30a886b1f9fc3fd"
+    },
+    {
+      "path": "reference/retained-evidence/RESULTS-ENVELOPE.json",
+      "bytes": 2468,
+      "sha256": "53f992a5c9b87a8c8ae254042cb2dd46aebc8e444af0cc0729956fa0cf98cb6c"
+    },
+    {
+      "path": "reference/retained-evidence/security-canonical-final.json",
+      "bytes": 23714,
+      "sha256": "5fca6b5ebc0f5c1c85732d15217d923e8a1852046b3208f9ed1d65b6f4690a7a"
+    },
+    {
+      "path": "reference/retained-evidence/security-final.json",
+      "bytes": 23716,
+      "sha256": "e0594ecc931334ff1ae04a390b9081b2c377b50d7f43b7c8689ef4327af03d19"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+﻿{
+    "status":  "PASS",
+    "failure":  "",
+    "scope":  "ISOLATED_UNCHANGED_NATIVE_UNIT_NOT_STAGING_OR_SETUP",
+    "run":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\native-runs\\run-b5536042b60649af93d00c17a6054894",
+    "originalManifestSha256":  "b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c",
+    "copiedNative":  {
+                         "destination":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\native-runs\\run-b5536042b60649af93d00c17a6054894\\Setup-Native.cs",
+                         "sha256":  "cc30a43c0629f56d50d4c842210a34f3a9e7a7987e92cc5f01f73f9449e42f87",
+                         "source":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-closure-20261029\\Setup-Native.cs",
+                         "bytes":  10960
+                     },
+    "testHelper":  {
+                       "destination":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\native-runs\\run-b5536042b60649af93d00c17a6054894\\NativeTestHarness.cs",
+                       "sha256":  "97f99ac718abfbe34c94b9b0a0dd0b19a19e717c91e5b4bfd95b10ae3fc518ea"
+                   },
+    "testExecutable":  {
+                           "path":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                           "sha256":  "8bb6fa8c283b4d92120b1ef249a9b311b0f804d4cabbe9981159976c8be76a5e",
+                           "ownerSid":  "S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464",
+                           "sddl":  "O:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464G:S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464D:P(A;;0x1200a9;;;SY)(A;;0x1200a9;;;BA)(A;;0x1200a9;;;BU)(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;AC)(A;;0x1200a9;;;S-1-15-2-2)"
+                       },
+    "cases":  [
+                  {
+                      "name":  "timeout_300ms",
+                      "result":  "PASS",
+                      "status":  "TIMEOUT",
+                      "cleanup":  "CONFIRMED_JOB_EMPTY",
+                      "pid":  66908,
+                      "creationUtc":  "2026-10-30T22:19:44.1345119Z",
+                      "heldPid":  66908,
+                      "heldCreationTicks":  639289955841345119,
+                      "heldChildExited":  true,
+                      "jobActive":  0,
+                      "exit":  -1,
+                      "elapsedMs":  354,
+                      "identities":  [
+                                         "66908@639289955841345119",
+                                         "66640@639289955841655170"
+                                     ],
+                      "output":  ""
+                  },
+                  {
+                      "name":  "positive_exit_zero",
+                      "result":  "PASS",
+                      "status":  "PASS",
+                      "cleanup":  "NOT_NEEDED",
+                      "pid":  68088,
+                      "creationUtc":  "2026-10-30T22:19:44.5148818Z",
+                      "heldPid":  68088,
+                      "heldCreationTicks":  639289955845148818,
+                      "heldChildExited":  true,
+                      "jobActive":  0,
+                      "exit":  0,
+                      "elapsedMs":  296,
+                      "identities":  [
+                                         "68088@639289955845148818",
+                                         "73268@639289955845412450"
+                                     ],
+                      "output":  "native-positive"
+                  },
+                  {
+                      "name":  "nonzero_exit",
+                      "result":  "PASS",
+                      "status":  "EXIT_NONZERO",
+                      "cleanup":  "CONFIRMED_JOB_EMPTY",
+                      "pid":  26524,
+                      "creationUtc":  "2026-10-30T22:19:44.8139898Z",
+                      "heldPid":  26524,
+                      "heldCreationTicks":  639289955848139898,
+                      "heldChildExited":  true,
+                      "jobActive":  0,
+                      "exit":  7,
+                      "elapsedMs":  277,
+                      "identities":  [
+                                         "26524@639289955848139898",
+                                         "67200@639289955848431490"
+                                     ],
+                      "output":  ""
+                  }
+              ],
+    "clusterCredentialsScmAclOperations":  false,
+    "deletionPerformed":  false
+}

@@ -1,0 +1,233 @@
+{
+  "status": "PREPARED_LOCAL_ONLY_TARGETED_REVIEW_AND_FUTURE_AUTHORIZATION_REQUIRED",
+  "codeRoot": "C:\\Program Files\\MCVQ5-20261029",
+  "dataRoot": "C:\\Program Files\\MCVQ5-State-20261029",
+  "binary": {
+    "node": {
+      "source": "inputs/binary/node.exe",
+      "bytes": 92534088,
+      "sha256": "9a4eb5f1c29c6a2e93852ead46b999e284a6a5ca8bab4d4e241d587d025a52de"
+    },
+    "nssm": {
+      "source": "inputs/binary/nssm.exe",
+      "bytes": 368640,
+      "sha256": "eee9c44c29c2be011f1f1e43bb8c3fca888cb81053022ec5a0060035de16d848"
+    },
+    "cloudflared": {
+      "source": "inputs/binary/cloudflared.exe",
+      "bytes": 68513948,
+      "sha256": "b5d598b00cc3a28cabc5812d9f762819334614bae452db4e7f23eefe7b081556"
+    }
+  },
+  "services": [
+    {
+      "name": "MCVQ5Postgres1029",
+      "identity": "NT SERVICE\\MCVQ5Postgres1029",
+      "binary": "C:\\Program Files\\MCVQ5-20261029\\postgres\\bin\\pg_ctl.exe",
+      "arguments": "runservice -N MCVQ5Postgres1029 -D \"C:\\Program Files\\MCVQ5-State-20261029\\postgres\\data\" -w -t 30",
+      "dependencies": [],
+      "mutable": [
+        "C:\\Program Files\\MCVQ5-State-20261029\\postgres"
+      ],
+      "secretRead": [],
+      "startup": "Disabled",
+      "recovery": "none",
+      "requiredPrivileges": [
+        "SeChangeNotifyPrivilege"
+      ]
+    },
+    {
+      "name": "MCVQ5Provider1029",
+      "identity": "NT SERVICE\\MCVQ5Provider1029",
+      "binary": "C:\\Program Files\\MCVQ5-20261029\\nssm.exe",
+      "application": "C:\\Program Files\\MCVQ5-20261029\\node.exe",
+      "arguments": "\"C:\\Program Files\\MCVQ5-20261029\\service-launch.mjs\"",
+      "cwd": "C:\\Program Files\\MCVQ5-20261029\\provider",
+      "dependencies": [
+        "MCVQ5Postgres1029"
+      ],
+      "mutable": [
+        "C:\\Program Files\\MCVQ5-State-20261029\\provider-slots",
+        "C:\\Program Files\\MCVQ5-State-20261029\\provider-logs"
+      ],
+      "secretRead": [
+        "C:\\Program Files\\MCVQ5-State-20261029\\provider-secrets.json"
+      ],
+      "startup": "Disabled",
+      "recovery": "none",
+      "requiredPrivileges": [
+        "SeChangeNotifyPrivilege"
+      ]
+    },
+    {
+      "name": "MCVQ5Tunnel1029",
+      "identity": "NT SERVICE\\MCVQ5Tunnel1029",
+      "binary": "C:\\Program Files\\MCVQ5-20261029\\nssm.exe",
+      "application": "C:\\Program Files\\MCVQ5-20261029\\cloudflared.exe",
+      "arguments": "tunnel --no-autoupdate --config \"C:\\Program Files\\MCVQ5-State-20261029\\tunnel\\config.yml\" run",
+      "cwd": "C:\\Program Files\\MCVQ5-20261029",
+      "dependencies": [
+        "MCVQ5Provider1029"
+      ],
+      "mutable": [],
+      "secretRead": [
+        "C:\\Program Files\\MCVQ5-State-20261029\\tunnel\\credentials.json"
+      ],
+      "startup": "Disabled",
+      "recovery": "none",
+      "requiredPrivileges": [
+        "SeChangeNotifyPrivilege"
+      ]
+    }
+  ],
+  "acl": {
+    "owner": "BUILTIN\\Administrators",
+    "inheritance": "disabled on new roots",
+    "baseAllow": [
+      "SYSTEM FullControl",
+      "BUILTIN\\Administrators FullControl"
+    ],
+    "code": "RX only exact service SID on own subtree/executable/dependency files; no Users/AuthUsers/Everyone",
+    "mutable": "Modify only assigned service SID on listed mutable paths; operator ledger/evidence Admin+SYSTEM only",
+    "secrets": "Read only assigned SID on named secret file; Admin+SYSTEM FullControl; service cannot write",
+    "providerConfig": "Admin+SYSTEM write; provider SID Read; provider cannot change enabled/binding",
+    "ancestors": "reject reparse points and untrusted write/create/delete/rename; no shared ancestor changes"
+  },
+  "nssm": {
+    "AppExit": {
+      "Default": "Exit"
+    },
+    "AppKillProcessTree": 1,
+    "AppStopMethodSkip": 0,
+    "AppStopMethodConsole": 1500,
+    "AppStopMethodWindow": 1500,
+    "AppStopMethodThreads": 1500,
+    "AppEnvironment": [
+      "SystemRoot=C:\\WINDOWS",
+      "PATH=C:\\Program Files\\MCVQ5-20261029;C:\\WINDOWS\\System32"
+    ],
+    "AppEnvironmentExtra": "absent",
+    "logging": "stdio disabled; provider sanitized boundedLog only; SCM errors captured as sanitized enums"
+  },
+  "database": {
+    "host": "127.0.0.1",
+    "port": 55442,
+    "name": "mcvplus_c5_roq_20261029",
+    "admin": "c5_roq_setup_admin",
+    "runtime": "c5_qualification_readonly",
+    "owner": "c5_qualification_fixture_owner",
+    "initialize": "new initdb, not copied existing cluster",
+    "version": "18.4",
+    "sql": [
+      "01-create-database.sql",
+      "02-fixture-grants.sql"
+    ],
+    "runtimePassword": "new secret via safely quoted protected setup input; role LOGIN after grants; never inline/logged"
+  },
+  "cloudflare": {
+    "hostname": "c5-roq-20261029.marscatsvoyage.com",
+    "newAccessApp": "c5-roq-20261029",
+    "newTunnel": "c5-roq-20261029",
+    "newServiceToken": "c5-roq-20261029",
+    "policy": {
+      "decision": "service_auth",
+      "include": "only newly assigned service_token ID",
+      "exclude": [],
+      "require": [],
+      "sessionDuration": "15m"
+    },
+    "ingress": [
+      {
+        "hostname": "c5-roq-20261029.marscatsvoyage.com",
+        "service": "http://127.0.0.1:55443"
+      },
+      {
+        "service": "http_status:404"
+      }
+    ],
+    "existingReuse": false,
+    "setupConnectorStart": false,
+    "provisioningScopes": [
+      "Account Cloudflare Tunnel Edit",
+      "Account Access Apps and Policies Edit",
+      "Account Access Service Tokens Edit",
+      "Zone DNS Edit only relevant zone"
+    ],
+    "runtime": "new locally-managed tunnel credentials only; no control-plane token"
+  },
+  "firebase": {
+    "project": "mcv-plus-phase-2-test",
+    "database": "(default)",
+    "serviceAccountId": "c5-roq-20261029",
+    "customRoleId": "c5RoqReadOnly20261029",
+    "permissions": [
+      "datastore.entities.get",
+      "datastore.entities.list"
+    ],
+    "binding": "exact new SA; preserve policy etag; no built-in admin role",
+    "readScope": "potential database/project-wide reads, NOT canary-only IAM",
+    "canary": "c5Qualification/readOnlyCanary",
+    "marker": "c5-readonly-20261029",
+    "inheritance": "inventory project/folder/org/resource policies; unreviewed inherited write authority blocks test"
+  },
+  "vercel": {
+    "newProject": "mcvplus-c5-readonly-qualification",
+    "environment": "preview",
+    "runtime": "nodejs24.x",
+    "productionPromotion": false,
+    "gitIntegration": false,
+    "crons": [],
+    "buildCommand": "npm run build",
+    "installCommand": "npm ci --ignore-scripts",
+    "protection": "ALL deployment URLs including generated immutable host; no-cost supported protection or STOP",
+    "envNames": [
+      "C5_ENABLED",
+      "C5_REVIEWED_PURCHASE_PROJECT_ID",
+      "C5_BUILD_ID",
+      "C5_PERIMETER_SECRET",
+      "C5_INVOCATION_SECRET",
+      "C5_PROVIDER_BEARER",
+      "C5_PROVIDER_PERIMETER_SECRET",
+      "C5_CF_CLIENT_ID",
+      "C5_CF_CLIENT_SECRET",
+      "C5_FIREBASE_CLIENT_EMAIL",
+      "C5_FIREBASE_PRIVATE_KEY"
+    ],
+    "envFixed": {
+      "C5_ENABLED": "permit-only",
+      "C5_BUILD_ID": "5a5ded1bd2f4aa7e92ffd8ddfab06c4d76b04ce1fc0fc99413666bb65756d645"
+    },
+    "platformIdentity": [
+      "VERCEL_PROJECT_ID",
+      "VERCEL_DEPLOYMENT_ID",
+      "VERCEL_URL"
+    ],
+    "inheritance": "none; explicit allowlist; remove default team-shared env exposure or STOP",
+    "runtimeCredentials": "new read-only secrets only; never provisioner/admin/ambient ADC",
+    "probes": "no cron/startup hook/warmup/custom health probe. Platform compilation is not invocation. Unsolicited unsigned request cannot spawn/initialize SDK/provider"
+  },
+  "setupChecks": [
+    "file/hash/ACL readbacks",
+    "SCM/registry states/config readbacks",
+    "control-plane new resource/protection/grant/env-NAME readbacks",
+    "new DB admin-only version/catalog OID/role/grant/fixture inventories; no runtime login, startupGate, member, canary or SDK diagnostic",
+    "provisioner-only synthetic fixture seeding, not qualification"
+  ],
+  "endState": {
+    "services": "three Stopped/Disabled/PID0; zero owned descendants/listeners/connectors",
+    "providerBindingEnabled": false,
+    "providerEnvironmentEnabled": "false",
+    "appBindingEnabled": false,
+    "usablePermit": "none signed or issued",
+    "existing": "five services and old database untouched",
+    "writableAuthority": "only separate provisioning context, absent in runtime"
+  },
+  "rollback": "Setup approval permits ONLY exact-new-resource containment/quarantine and necessary dedicated-access revocation. NO deployment, resource, service, data or evidence deletion whatsoever is authorized under Setup approval. Preserve all partial resources and evidence; report containment failures explicitly.",
+  "dataRootRelocation": {
+    "original": "C:\\ProgramData\\MCVQ5-20261029",
+    "proposed": "C:\\Program Files\\MCVQ5-State-20261029",
+    "applied": false,
+    "sharedAclChangesAuthorized": false,
+    "review": "Strict ancestor effective-access gate still required; relocation is proposed, not approved."
+  }
+}

@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {spawn} from 'node:child_process';
+const input=JSON.parse(fs.readFileSync('C:\\Program Files\\MCVQ5-State-20261029\\provider-secrets.json','utf8'));
+const keys=['C5_PROVIDER_ENABLED','C5_READONLY_DB_PASSWORD','C5_READONLY_PROVIDER_BEARER','C5_PROVIDER_PERIMETER_SECRET'];
+if(Object.keys(input).sort().join(',')!==keys.sort().join(',')||input.C5_PROVIDER_ENABLED!=='true')throw Error('disabled');
+for(const k of keys)if(typeof input[k]!=='string'||(k!=='C5_PROVIDER_ENABLED'&&input[k].length<32))throw Error('configuration denied');
+const child=spawn('C:\\Program Files\\MCVQ5-20261029\\node.exe',['C:\\Program Files\\MCVQ5-20261029\\provider\\provider\\entry.mjs'],{cwd:'C:\\Program Files\\MCVQ5-20261029\\provider',env:{SystemRoot:'C:\\WINDOWS',PATH:'C:\\Program Files\\MCVQ5-20261029;C:\\WINDOWS\\System32',...input},stdio:'ignore',windowsHide:true});
+for(const sig of ['SIGTERM','SIGINT'])process.once(sig,()=>child.kill());
+child.once('error',()=>{process.exitCode=78;});
+child.once('close',code=>{process.exitCode=code===0?0:78;});

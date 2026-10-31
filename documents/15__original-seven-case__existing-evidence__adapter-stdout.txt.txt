@@ -1,0 +1,71 @@
+
+status                     packet external originalManifestUnchanged
+------                     ------ -------- -------------------------
+UNTRUSTED_LOCAL_VALIDATION     52     1638                      True
+{
+    "status":  "PASS",
+    "scope":  "ACTUAL_FILE_COPIES_SIMULATED_SCM_AND_ACL",
+    "cases":  [
+                  {
+                      "fault":  "",
+                      "status":  "LOCAL_FILES_AND_SIMULATED_DISABLED_SERVICES",
+                      "root":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-1c7fedf6f5f6470ca65936c7ac3a9279",
+                      "result":  "PASS",
+                      "processesStarted":  0,
+                      "scmAclSimulated":  true
+                  },
+                  {
+                      "fault":  "AfterCodeRoot",
+                      "status":  "FAIL_QUARANTINED",
+                      "root":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-5dea4f1cb19549fc9334b9af1e28ca42",
+                      "result":  "PASS",
+                      "processesStarted":  0,
+                      "scmAclSimulated":  true
+                  },
+                  {
+                      "fault":  "AfterDataRoot",
+                      "status":  "FAIL_QUARANTINED",
+                      "root":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-002a83c7d65c4f7c9ee5c5d10fb14156",
+                      "result":  "PASS",
+                      "processesStarted":  0,
+                      "scmAclSimulated":  true
+                  },
+                  {
+                      "fault":  "AfterFirstCopy",
+                      "status":  "FAIL_QUARANTINED",
+                      "root":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-914b6b93e7df45f198910eedbb832bf5",
+                      "result":  "PASS",
+                      "processesStarted":  0,
+                      "scmAclSimulated":  true
+                  },
+                  {
+                      "fault":  "AfterServiceCreate",
+                      "status":  "FAIL_QUARANTINED",
+                      "root":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-96158a6eb07b4e3b8d4fe951e0bc4a27",
+                      "result":  "PASS",
+                      "processesStarted":  0,
+                      "scmAclSimulated":  true
+                  },
+                  {
+                      "fault":  "AfterGrant",
+                      "status":  "FAIL_QUARANTINED",
+                      "root":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-2925028195d24eec8a165c58853bfd19",
+                      "result":  "PASS",
+                      "processesStarted":  0,
+                      "scmAclSimulated":  true
+                  },
+                  {
+                      "fault":  "ContainmentFailure",
+                      "status":  "BLOCKED",
+                      "root":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-c67e98df3f844df695043218ec2e2d0b",
+                      "result":  "PASS",
+                      "processesStarted":  0,
+                      "scmAclSimulated":  true
+                  }
+              ],
+    "operationalMutations":  0,
+    "deletionPerformed":  false,
+    "noClusterOrCredentialsCreated":  true
+}
+
+

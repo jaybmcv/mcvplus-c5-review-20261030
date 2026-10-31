@@ -1,0 +1,138 @@
+$ErrorActionPreference='Stop'
+# Dot-sourcing the common helpers performs no compilation or process operation.
+function Initialize-C5Native([string]$CandidateRoot,[string]$ExpectedRevisionManifestSha256){
+ Assert-C5Revision -CandidateRoot $CandidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+ if(('C5Native' -as [type]) -or ('C5System' -as [type])){throw 'PRELOADED_NATIVE_TYPE_REQUIRES_FRESH_PROCESS'}
+ $native=Get-C5StagedPacketPath -CandidateRoot $CandidateRoot -RelativePath 'Setup-Native.cs'
+ Add-Type -Path $native -ReferencedAssemblies System.Management
+}
+function Assert-C5LocalInstalledPin([string]$Path,$Pin,[string]$LocalRoot){
+ Assert-C5Plain $Path
+ $full=[IO.Path]::GetFullPath($Path)
+ if(-not $full.StartsWith($LocalRoot+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'LOCAL_NATIVE_OUTSIDE_DISPOSABLE_ROOT'}
+ if(-not(Test-Path -LiteralPath $full -PathType Leaf) -or (Get-Item -LiteralPath $full).Length -ne $Pin.bytes -or (Get-FileHash -LiteralPath $full -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Pin.sha256){throw 'LOCAL_INSTALLED_NATIVE_PIN_MISMATCH'}
+}
+
+
+function Assert-C5Plain([string]$Path){
+ $q=[IO.Path]::GetFullPath($Path)
+ while($q){if(Test-Path -LiteralPath $q){if((Get-Item -LiteralPath $q -Force).Attributes -band [IO.FileAttributes]::ReparsePoint){throw 'REPARSE_PATH_BLOCKED'}};$q=Split-Path -Parent $q}
+}
+function Assert-C5LocalRoot([string]$Root,[switch]$Fresh){
+ # Disposable outputs are outside the sealed candidate inventory.
+ $candidate=Split-Path -Parent $PSScriptRoot
+ if((Split-Path -Leaf $candidate) -eq 'candidate-b9e20e88'){$base=[IO.Path]::GetFullPath((Join-Path (Split-Path -Parent $candidate) 'local-runs'))}
+ else{$base=[IO.Path]::GetFullPath((Join-Path $candidate 'tests\installer-runs'))}
+ $full=[IO.Path]::GetFullPath($Root)
+ if((Split-Path -Parent $full) -ne $base -or (Split-Path -Leaf $full) -notmatch '^run-[a-f0-9]{32}$'){throw 'LOCAL_ROOT_OUTSIDE_FRESH_TEST_NAMESPACE'}
+ Assert-C5Plain $full
+ if($Fresh -and (Test-Path -LiteralPath $full)){throw 'LOCAL_ROOT_ALREADY_EXISTS'}
+ return $full
+}
+function Write-C5Json([string]$Path,$Value){$Value | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $Path -Encoding UTF8}
+function Get-C5Environment([string]$Bin,[string]$Password=''){
+ $envs=@(('SystemRoot='+$env:SystemRoot),('WINDIR='+$env:SystemRoot),('PATH='+$Bin+';'+$env:SystemRoot+'\System32'),('TEMP='+$env:TEMP),('TMP='+$env:TEMP),'PGCONNECT_TIMEOUT=5','PGCLIENTENCODING=UTF8','PGPASSFILE=NUL','PGSERVICEFILE=NUL',('PGSYSCONFDIR='+$Bin))
+ if($Password){$envs+=('PGPASSWORD='+$Password)}
+ return ,$envs
+}
+function Invoke-C5Native([string]$Exe,[string[]]$Arguments,[string]$Stage,[string]$Cwd,[string]$InputText='', [int]$TimeoutMs=30000,[switch]$KeepChildren,[string]$Password=''){
+ $n=New-Object C5Native
+ try{$n.Run($Exe,$Arguments,$Cwd,$InputText,$TimeoutMs,[bool]$KeepChildren,(Get-C5Environment (Split-Path -Parent $Exe) $Password))}
+ catch{throw ('FAIL stage='+$Stage+' primary='+$n.Status+' cleanup='+$n.Cleanup)}
+ finally{
+  if($null -ne $script:C5NativeReceipts){$script:C5NativeReceipts.Add([ordered]@{stage=$Stage;pid=$n.Pid;creationUtc=$n.CreationUtc;status=$n.Status;cleanup=$n.Cleanup;exit=$n.ExitCode;elapsedMs=$n.ElapsedMs;identities=@($n.Identities)})}
+  if(-not $KeepChildren -or $n.Status -ne 'PASS'){$n.Dispose()}
+ }
+ return $n
+}
+function Assert-C5PortFree([int]$Port){
+ $l=New-Object Net.Sockets.TcpListener([Net.IPAddress]::Loopback,$Port)
+ $l.Server.ExclusiveAddressUse=$true
+ try{$l.Start()}catch{throw 'LOOPBACK_TEST_PORT_OCCUPIED'}finally{$l.Stop()}
+}
+function Get-C5Service([string]$Name){
+ if($Name -notmatch '^MCVQ5(Postgres|Provider|Tunnel)1029$'){throw 'SERVICE_NAME_BLOCKED'}
+ $r=@([C5System]::Query("SELECT * FROM Win32_Service WHERE Name='$Name'",2000))
+ if($r.Count -gt 1){throw 'SERVICE_READBACK_AMBIGUOUS'}
+ if($r.Count){return $r[0]};return $null
+}
+function Invoke-C5Sc([string[]]$Arguments,[string]$Cwd){[void](Invoke-C5Native ($env:SystemRoot+'\System32\sc.exe') $Arguments 'SCM_REQUEST' $Cwd -TimeoutMs 10000)}
+function Wait-C5Service([string]$Name,[string]$State,[string]$Mode='',[int]$TimeoutMs=30000){
+ $watch=[Diagnostics.Stopwatch]::StartNew()
+ while($watch.ElapsedMilliseconds -lt $TimeoutMs){
+  $remain=$TimeoutMs-[int]$watch.ElapsedMilliseconds
+  if($remain -lt 2000){break}
+  $s=Get-C5Service $Name
+  if($s -and $s.State -eq $State -and (-not $Mode -or $s.StartMode -eq $Mode)){return $s}
+  Start-Sleep -Milliseconds 50
+ }
+ throw ('SERVICE_TRANSITION_TIMEOUT_'+$State)
+}
+function Get-C5OwnedClusterProcesses([string]$Cluster,[string]$Bin,$Known){
+ # Only exact postgres executables in this new cluster or descendants of an observed
+ # PID+creation handle. Retain handles to prevent PID reuse between validation/kill.
+ $pg=(Join-Path $Bin 'postgres.exe').Replace('\','\\');$ctl=(Join-Path $Bin 'pg_ctl.exe').Replace('\','\\')
+ $rows=@([C5System]::Query("SELECT ProcessId,ParentProcessId,CreationDate,ExecutablePath,CommandLine FROM Win32_Process WHERE ExecutablePath='$pg' OR ExecutablePath='$ctl'",2000))
+ foreach($row in $rows){
+  $command=if($row.CommandLine){$row.CommandLine.Replace('/','\')}else{''}
+  $root=$command -match ('(?:^|\s)"?-D"?\s+(?:"'+[regex]::Escape($Cluster)+'"|'+[regex]::Escape($Cluster)+'(?=\s|$))')
+  $parent=@($Known.Values | Where-Object {$_.Id -eq $row.ParentProcessId -and -not $_.HasExited})
+  if(-not $root -and -not $parent.Count){continue}
+  if($row.ExecutablePath -ne (Join-Path $Bin 'postgres.exe') -and $row.ExecutablePath -ne (Join-Path $Bin 'pg_ctl.exe')){throw 'OWNED_DESCENDANT_EXECUTABLE_MISMATCH'}
+  try{$p=[Diagnostics.Process]::GetProcessById([int]$row.ProcessId);$handle=$p.Handle
+   $created=[Management.ManagementDateTimeConverter]::ToDateTime([string]$row.CreationDate).ToUniversalTime()
+   # WMI timestamps have microsecond precision. Compare the captured creation
+   # time to the HELD process handle before accepting snapshot ownership.
+   if([Math]::Abs(($p.StartTime.ToUniversalTime()-$created).Ticks) -gt 10 -or $p.MainModule.FileName -ne $row.ExecutablePath){$p.Dispose();throw 'PROCESS_IDENTITY_CHANGED_DURING_READBACK'}
+   $key=([string]$p.Id)+'@'+$p.StartTime.ToUniversalTime().Ticks
+   if($parent.Count -and $p.StartTime -lt $parent[0].StartTime){continue}
+   if(-not $Known.ContainsKey($key)){$Known[$key]=$p}else{$p.Dispose()}
+  }catch [ArgumentException]{}catch [InvalidOperationException]{}
+ }
+}
+function Stop-C5OwnedProcesses($Known,[int]$TimeoutMs=5000){
+ $w=[Diagnostics.Stopwatch]::StartNew();$failed=$false
+ foreach($p in $Known.Values){try{if(-not $p.HasExited){$p.Kill()}}catch{$failed=$true}}
+ while($w.ElapsedMilliseconds -lt $TimeoutMs){if(@($Known.Values | Where-Object {-not $_.HasExited}).Count -eq 0){if($failed){throw 'OWNED_KILL_REQUEST_FAILED'};return};Start-Sleep -Milliseconds 25}
+ throw 'OWNED_PROCESS_CESSATION_BLOCKED'
+}
+
+# Pure receipt protocol; no native/SCM, credential, deletion or resource operations.
+function Complete-C5InstallEvidence($Report,[string[]]$Roots,[string]$Code,[string]$Data,$Cleanup){
+ $receiptId=[guid]::NewGuid().ToString('N')
+ $Report['receiptId']=$receiptId
+ try{
+  if($Report.status -ne 'FILES_AND_DISABLED_SERVICES_INSTALLED'){
+   foreach($root in $Roots){Write-C5Json (Join-Path $root 'setup-install-state.json') $Report}
+   return
+  }
+  if($Roots.Count -ne 2 -or $Roots[0] -ne $Code -or $Roots[1] -ne $Data){throw 'EVIDENCE_ROOT_BINDING_MISMATCH'}
+  # Leaf records alone are NEVER acceptance. Commit is written only after both
+  # required writes and independent readback/hash collection have succeeded.
+  $Report.status='INSTALL_EVIDENCE_PENDING'
+  foreach($root in $Roots){Write-C5Json (Join-Path $root 'setup-install-state.json') $Report}
+  foreach($root in $Roots){
+   $leaf=Get-Content -LiteralPath (Join-Path $root 'setup-install-state.json') -Raw | ConvertFrom-Json
+   if($leaf.status -ne 'INSTALL_EVIDENCE_PENDING' -or $leaf.receiptId -ne $receiptId -or @($leaf.cleanup).Count){throw 'EVIDENCE_READBACK_MISMATCH'}
+  }
+  $commit=[ordered]@{status='FILES_AND_DISABLED_SERVICES_INSTALLED';receiptId=$receiptId;codeRoot=$Code;dataRoot=$Data;codeReceiptSha256=(Get-FileHash -LiteralPath (Join-Path $Code 'setup-install-state.json') -Algorithm SHA256).Hash.ToLowerInvariant();dataReceiptSha256=(Get-FileHash -LiteralPath (Join-Path $Data 'setup-install-state.json') -Algorithm SHA256).Hash.ToLowerInvariant();cleanup=@()}
+  Write-C5Json (Join-Path $Code 'setup-install-complete.json') $commit
+ }catch{
+  $Cleanup.Add('EVIDENCE_WRITE_OR_READBACK_BLOCKED')
+  $Report.status='BLOCKED';$Report.cleanup=$Cleanup.ToArray()
+  # New failure sidecars preserve all earlier pending/partial evidence in place.
+  foreach($root in $Roots){try{Write-C5Json (Join-Path $root 'setup-install-failure.json') $Report}catch{$Cleanup.Add('EVIDENCE_FAILURE_RECORD_BLOCKED')}}
+ }
+}
+function Assert-C5InstallEvidence([string]$Code,[string]$Data){
+ foreach($root in @($Code,$Data)){if(Test-Path -LiteralPath (Join-Path $root 'setup-install-failure.json')){throw 'INSTALL_EVIDENCE_FAILURE_RECORDED'}}
+ $commit=Get-Content -LiteralPath (Join-Path $Code 'setup-install-complete.json') -Raw | ConvertFrom-Json
+ if($commit.status -ne 'FILES_AND_DISABLED_SERVICES_INSTALLED' -or $commit.receiptId -notmatch '^[a-f0-9]{32}$' -or $commit.codeRoot -ne $Code -or $commit.dataRoot -ne $Data -or @($commit.cleanup).Count){throw 'INSTALL_COMMIT_INVALID'}
+ foreach($pair in @(@($Code,$commit.codeReceiptSha256),@($Data,$commit.dataReceiptSha256))){
+  $path=Join-Path $pair[0] 'setup-install-state.json'
+  if($pair[1] -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant() -ne $pair[1]){throw 'INSTALL_EVIDENCE_HASH_MISMATCH'}
+  $leaf=Get-Content -LiteralPath $path -Raw | ConvertFrom-Json
+  if($leaf.status -ne 'INSTALL_EVIDENCE_PENDING' -or $leaf.receiptId -ne $commit.receiptId -or @($leaf.cleanup).Count){throw 'INSTALL_EVIDENCE_NOT_COMMITTED'}
+ }
+ return $commit
+}

@@ -1,0 +1,37 @@
+﻿{
+    "status":  "FAIL_QUARANTINED",
+    "primary":  "FAIL_CREATE_SERVICE:LOCAL_INJECTED_FAILURE",
+    "cleanup":  [
+
+                ],
+    "mode":  "LOCAL_FILES_ACTUAL_SCM_ACL_SIMULATED",
+    "localFault":  "AfterGrant",
+    "roots":  [
+                  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-2925028195d24eec8a165c58853bfd19\\code",
+                  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-2925028195d24eec8a165c58853bfd19\\data"
+              ],
+    "services":  [
+                     {
+                         "path":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-2925028195d24eec8a165c58853bfd19\\code\\postgres\\bin\\pg_ctl.exe\" runservice -N MCVQ5Postgres1029 -D \"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-2925028195d24eec8a165c58853bfd19\\data\\postgres\\data\" -w -t 30",
+                         "created":  true,
+                         "name":  "MCVQ5Postgres1029"
+                     }
+                 ],
+    "mockSCM":  {
+                    "MCVQ5Postgres1029":  {
+                                              "ProcessId":  0,
+                                              "PathName":  "\"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-2925028195d24eec8a165c58853bfd19\\code\\postgres\\bin\\pg_ctl.exe\" runservice -N MCVQ5Postgres1029 -D \"D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-53af7bd408d7496a818ffac1bcf3824f\\local-runs\\run-2925028195d24eec8a165c58853bfd19\\data\\postgres\\data\" -w -t 30",
+                                              "State":  "Stopped",
+                                              "Name":  "MCVQ5Postgres1029",
+                                              "StartMode":  "Disabled"
+                                          }
+                },
+    "mockACL":  {
+
+                },
+    "revokedGrants":  3,
+    "native":  [
+
+               ],
+    "deletionPerformed":  false
+}

@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-30T22:26:43.075057+00:00",
+  "revisionManifestSha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3",
+  "bootstrapSha256": "e02cc09151572e39a78e8043e0c7ce32be05ee7d668b1f9246f467afce7b4c93",
+  "originalManifestSha256": "b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c",
+  "revisionFiles": 14,
+  "revisionFailures": [],
+  "mapped": 1691,
+  "sourceFailures": [],
+  "payloadPinChanges": [],
+  "changedFiles": [
+    {
+      "path": "SOURCE-MAP.json",
+      "before": "ccb96b536333e03ca9c2d4c1e7d66eeb2bf571cfe82ba0f41f88ead38890d8b3",
+      "after": "6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1"
+    },
+    {
+      "path": "revision/Staging-Gate.ps1",
+      "before": "b81f3956b4a83158d8def68df97e78b11f9c0cd5d52de050ffccdf75456ad570",
+      "after": "613fa981f5fed3fa4dba758619e5713e05f14d389892d7d94a3ea97b1811a309"
+    },
+    {
+      "path": "tools/Stage-Candidate.ps1",
+      "before": "4ef8942e1665d53bd9a66ef2fd19d3e4a13b95b88a8c9c75b213ca074f891460",
+      "after": "e02cc09151572e39a78e8043e0c7ce32be05ee7d668b1f9246f467afce7b4c93"
+    },
+    {
+      "path": "tools/Staging-Security.cs",
+      "before": "28c3dc79d650a903c5aada9e02027dedbe08dd6791fda9f7af3cfc1b81ab7fe9",
+      "after": "6161f1421525f238d6be7ba85047e7ae132ec8c81a7b343c6b51f1fde2cb6422"
+    },
+    {
+      "path": "tools/build-map.cjs",
+      "before": "16e2d87c77dde5bbeb3601b3ed947bfd8300ca83264216904177fd4860415b57",
+      "after": "522dcea826de367dce977fc05694d1f3d2173846e1dac56e32a771bd0ebac6a7"
+    }
+  ],
+  "originalCandidateManifestUnchanged": true,
+  "totalPayloadBytes": 272835541,
+  "operationalMutations": 0
+}

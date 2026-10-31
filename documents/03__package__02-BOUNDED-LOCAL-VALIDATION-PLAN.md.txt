@@ -1,0 +1,78 @@
+# PG-R1 bounded local validation plan — NOT EXECUTED
+
+## Admission and hard limits
+
+This is a proposed future plan, not authorization to implement the gate or run it. All cases below are PLANNED/NOT RUN for PG-R1. Current strict gate and ProtectedStage/Apply blocks remain. No implementation, local test suite, SCM operation, operational stage, Setup, database startup, cloud call or attempt reservation is performed by preparing this package.
+
+A later implementation/validation decision must bind the exact new source manifest, bootstrap, helper, policy document, harness and approved fixture matrix by SHA256. No preexisting digest automatically approves new code. The complete reviewed root-binding inventory must travel with it.
+
+Proposed local scope: one unique run directory under
+D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-path-gate-validation-<approved-date>\\run-<32hex>
+This namespace is NOT created by this preparation. The future implementation must review and bind this namespace explicitly; the old LocalValidation hardcoded namespace is not silently widened.
+
+Only disposable dummy files and synthetic receipts there; no installed root creation. Only task-owned fixture ACL changes would be permitted by a later local-validation authorization; no changes to C:\\, D:\\, Program Files, ProgramData, workspace parents, existing accounts, services or shared policies. No real secrets or usable permits. Offline only. Do not run provider, ledger, qualification, tunnel, Postgres or hosted app code.
+
+Proposed bounds:
+- At most 15 minutes total wall time; each native/check child <=30 seconds, one full inventory fixture <=180 seconds. At most 2 concurrent owned children, <=512 MiB new fixture payload and <=2 GiB retained new run outputs.
+- One run per case; no automatic retries. Timeout, resource-bound hit, unavailable token or cleanup failure => retain failure/BLOCKED, not PASS.
+- Record exact owned PID/creation-time/executable/job identity. End every run with empty owned job/children; never sweep shared processes.
+- No automatic deletion or cleanup beyond authorized task-owned process termination. Retain fixtures for review; eventual file cleanup is separately scoped. Preserve all failed and historical receipts.
+- Do not duplicate the 92 MB Node/68 MB cloudflared or full runtime stacks to simulate service operation. Full pinned-input stage rerun, if needed, requires its own explicit local-copy budget/source census; this plan's dummy fixtures cannot qualify full installer staging.
+- Existing roots/services/ledgers may be read only if authorized and accessible; denial stops that check without retry/bypass. No DuplicateToken retry, privilege enablement, service start or substitute identity.
+
+## Token and descriptor coverage
+
+Real token classes: supported ordinary interactive user, non-elevated/filtered admin, restricted/deny-only token, and each exact service identity when already available via a supported permitted route. For this bounded plan, real service tokens may be unavailable because the proposed services are absent and must not be created. Such rows remain BLOCKED/UNQUALIFIED; an offline Authz fixture with service SID claims is semantic coverage, NOT proof of an actual service token or installed service.
+
+Capture enabled/deny-only/restricted SIDs, integrity and enabled privileges. Synthetic owner/ACE fixtures cover Everyone, Users, Authenticated Users, CREATOR OWNER, OWNER RIGHTS, service SID and an unresolved SID. Descriptor analysis must cover arbitrary applicable mutation principals, not just the tested tokens. Representative token success alone cannot establish universal absence of access. Supported AccessCheck/Authz reference results must be recorded independently of the revised gate's own return value.
+
+## Exact 28-case matrix
+
+Each case records fixture descriptor(s), token context(s), requested individual rights, reference result, revised gate result and preservation delta.
+
+| ID | Fixture / check | Required outcome |
+| --- | --- | --- |
+| L01 | Admin/SYSTEM protected parent+leaf, exact known descriptor and owner | PASS_PROTECTED for known untrusted contexts denied all mutation; intended RX allowed. |
+| L02 | Ancestor permits only unrelated sibling creation; protected existing branch; no delete/security/redirect route | SIBLING_CREATE_ONLY on ancestor; protected branch can pass only with full chain proof. |
+| L03 | Parent FILE_DELETE_CHILD with protected child denying DELETE | BLOCKED_EFFECTIVE_ACCESS; child DACL does not override parent route. |
+| L04 | Child DELETE with parent lacking DELETE_CHILD | BLOCKED_EFFECTIVE_ACCESS. |
+| L05 | File WRITE_DATA or APPEND_DATA; directory ADD_FILE/ADD_SUBDIRECTORY inside protected code | BLOCKED_EFFECTIVE_ACCESS for each independently requested right. |
+| L06 | Untrusted WRITE_DAC, WRITE_OWNER, owner/OWNER RIGHTS variants | BLOCKED; distinguish filtered/deny-only admin from enabled trusted admin. |
+| L07 | EA/attribute mutation, reparse/security relevance not proven harmless | BLOCKED; no silent attribute-bit exception. |
+| L08 | Allow/deny ordering, generic-right mapping, inherited vs inherit-only ACE | Match supported AccessCheck/Authz; unresolved semantics => BLOCKED_UNKNOWN. |
+| L09 | Restricted SID intersection, deny-only groups, integrity labels and privilege effects | Match supported reference; unavailable context => UNQUALIFIED. |
+| L10 | Null DACL, callback/conditional/object ACE unsupported, unresolved SID/group/claim | BLOCKED_UNKNOWN, never skip ACE/token. |
+| L11 | Postgres SID Modify only postgres subtree; protected parent+siblings | PASS_SCOPED_SERVICE_DATA only own subtree; no code/evidence/secret/cross-service mutation. |
+| L12 | Provider SID Modify only provider slots/logs; tunnel SID read-only | Same separation; operator-slots and control roots remain denied mutation. No real slots created. |
+| L13 | Service cannot mutate provider binding/secrets, tunnel config/credential or install receipt | Every negative access request denied; unintended grant blocks chain. |
+| L14 | Service Modify incorrectly inherited on S or protected code; CREATOR OWNER contamination | BLOCKED; explicit deny on one child is not broad cleanup. |
+| L15 | Preexisting exact destination directory/file/service-name observation, sentinel receipt | BLOCKED_COLLISION; sentinel bytes, ACL, identity unchanged; zero destination writes. No SCM call. |
+| L16 | Preplanted junction/symlink/reparse, unexpected mount transition | BLOCKED before traversal/writes; target sentinel unchanged. Existing shared junctions never altered. |
+| L17 | Traversal/ADS/UNC/device path/case collision/trailing-dot-space/short alias/reserved name | BLOCKED; case-normalized duplicate inventory rejected. |
+| L18 | Protected-file hard link/link count >1 | BLOCKED; no acceptance from leaf hash alone. |
+| L19 | Descriptor-at-create; observe immediately under supported fixture token | No inherited untrusted grant; trusted owner; no post-create ACL repair interval. |
+| L20 | Instrument creation-to-held-handle substitution and parent rename attempt under untrusted fixture token | No successful identity switch; inability to demonstrate continuity => BLOCKED_CONTINUITY. Malicious admin resistance not claimed. |
+| L21 | Held parent+leaf, no-delete-share; path/handle file ID drift injection | BLOCKED; record volume/file ID; descriptor/hash refer to held object. |
+| L22 | Exclusive receipt create; collision and failure-before-owned-destination | No receipt overwrite/no finally write into rejected path; preserve original failure. |
+| L23 | Source same-byte untrusted substitution, drift, missing staged file or inventory extra | BLOCKED; no original-source execution fallback. Fixture tests do not reread all 1,691 real files. |
+| L24 | Wrong external manifest/bootstrap pin, stale policy/helper/harness or extra manifest entry | BLOCKED before candidate load/compile. No adjacent self-approval. |
+| L25 | Unprotected TEMP/compiler/DLL/cwd/PATH or unresolved loader dependency | BLOCKED_LAUNCH_CHAIN_UNQUALIFIED before Add-Type/native launch. |
+| L26 | ProtectedStage/Apply/Setup admission attempted through test harness | Unconditional rejection before side effects; no operational flag/alias can bypass. Static/fixture-only test, never real Setup invocation. |
+| L27 | Timeout/nonzero child/containment failure injection | Fail closed, owned job empty or explicit BLOCKED_CONTAINMENT; do not relabel incomplete cleanup. |
+| L28 | Final preservation readback and provenance audit | No operational roots/services/ACL/ledger/credential/cloud deltas, zero owned children; cases not run stay NOT_RUN. |
+
+Run L01–L14 semantic fixtures first; any reference/gate mismatch stops progression. L15–L22 use only disposable task fixtures. L23–L28 use inert inventory/admission stubs and source checks; no loading or execution of operational installer code. A blocked prerequisite cannot be hidden by replacing a real token with a fixture token.
+
+## Evidence schema and review conditions
+
+Per-case receipt: case ID, UTC times, exact policy/source/harness hashes, fixture namespace, descriptors/owner/integrity, token provenance, all individual desired-access masks and reference result, gate result, handles/volume/file IDs, pre/post sentinel hashes, owned process/job outcome, actual/simulated flags, exclusions/preservation delta and explicit PASS/FAIL/BLOCKED/NOT_RUN.
+
+Aggregate: all 28 IDs exactly once; no omission or extra cases; counts for performed and outcomes, not a percent inferred from time. Raw stdout/stderr and failed receipts retained. Bundle manifest binds every evidence byte. Redact secrets; synthetic inputs contain no real credentials. Reviewer checks exact pins, all negative controls and scope, rather than accepting summary counts.
+
+No seven-case installer rerun is included in these 28 cases. If a future authorization permits a local real-file adapter rerun, it must remain a separate seven-case lane, with SCM/ACL SIMULATED labels, exact new manifest digest directly written by a revised harness, and separate receipt directory. It cannot establish actual installed-service/token acceptance.
+
+## After local validation — still not authorized here
+
+Local fixture acceptance alone cannot close protected launcher/TEMP, real service-token effective access, actual operational root creation or complete pinned-input staging. These require separately reviewed exact-revision authorization and independent evidence. Supported Vercel-access restoration and read-only remote preservation are separate prerequisites. No Setup retry should be requested or attempted merely because local fixtures pass.
+
+Preserved exclusions: no shared ACL changes, credentials, usable permits/financial approval pins, financial or purchase enablement, old/new cluster operations, service creation/start/reconfiguration, tunnel/connectors, cloud resources, deploy/alias/project/env changes, hosted testing, reboot or deletion. All 48 attempts remain unspent.

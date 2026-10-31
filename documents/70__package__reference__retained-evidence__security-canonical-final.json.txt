@@ -1,0 +1,410 @@
+﻿{
+    "schema":  1,
+    "at":  "2026-10-30T22:26:36.0600275Z",
+    "mode":  "LOCAL_ONLY_IMPLEMENTATION_TESTING_NOT_INDEPENDENT_APPROVAL",
+    "runRoot":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\security-runs\\run-4d3f3220661449b8b5c4dcc39ce188ad",
+    "identity":  "DESKTOP-SPC3OQK\\HENRI",
+    "securityHelperSha256":  "6161f1421525f238d6be7ba85047e7ae132ec8c81a7b343c6b51f1fde2cb6422",
+    "tests":  [
+                  {
+                      "name":  "local-at-creation-security",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "copy-pinned-positive",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "destination-existing-file-collision",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"CopyPin\" with \"5\" argument(s): \"The file \u0027D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\security-runs\\run-4d3f3220661449b8b5c4dcc39ce188ad\\local-sealed\\copied.bin\u0027 already exists.\""
+                  },
+                  {
+                      "name":  "destination-directory-collision",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"CreateValidation\" with \"1\" argument(s): \"FRESH_PROTECTED_CREATE_FAILED_183\""
+                  },
+                  {
+                      "name":  "source-size-drift",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"CopyPin\" with \"5\" argument(s): \"SOURCE_SIZE_DRIFT\""
+                  },
+                  {
+                      "name":  "source-hash-drift",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"CopyPin\" with \"5\" argument(s): \"SOURCE_HASH_DRIFT\""
+                  },
+                  {
+                      "name":  "drift-no-destination-created",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "path-reject-../escape",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"RELATIVE_PATH_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet/../escape",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"RELATIVE_PATH_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-/absolute",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"RELATIVE_PATH_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-C:/escape",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"RELATIVE_PATH_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet\\escape",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"RELATIVE_PATH_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet//escape",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"RELATIVE_PATH_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet/./escape",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"RELATIVE_PATH_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet/file:stream",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"RELATIVE_PATH_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet/trailing.",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"PATH_NORMALIZATION_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet/trailing ",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"PATH_NORMALIZATION_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet/CON",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"PATH_SEGMENT_REJECTED\""
+                  },
+                  {
+                      "name":  "path-reject-packet/short~1",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"Under\" with \"2\" argument(s): \"PATH_SEGMENT_REJECTED\""
+                  },
+                  {
+                      "name":  "path-positive",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "reparse-source-chain",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"CopyPin\" with \"5\" argument(s): \"REPARSE_OR_IDENTITY_BLOCKED\""
+                  },
+                  {
+                      "name":  "reparse-destination-chain",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"CopyPin\" with \"5\" argument(s): \"REPARSE_OR_IDENTITY_BLOCKED\""
+                  },
+                  {
+                      "name":  "untrusted-replacement-fixture",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "untrusted-replacement-identical-bytes-rejected",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"AssertValidation\" with \"2\" argument(s): \"LOCAL_OWNER_CHANGED\""
+                  },
+                  {
+                      "name":  "restore-original-retain-replacement-evidence",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "local-copy-not-production-trusted",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"AssertProtected\" with \"2\" argument(s): \"UNTRUSTED_OWNER\""
+                  },
+                  {
+                      "name":  "production-admin-system-at-creation",
+                      "status":  "PASS",
+                      "detail":  "Created only inside disposable run; Admin/SYSTEM owner and DACL validated"
+                  },
+                  {
+                      "name":  "staged-bytes-independent-of-mutable-source",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "mutable-source-recopy-rejected",
+                      "status":  "PASS",
+                      "detail":  "Exception calling \"CopyPin\" with \"5\" argument(s): \"SOURCE_HASH_DRIFT\""
+                  },
+                  {
+                      "name":  "mutable-source-failure-no-fallback-file",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "Install-FilesAndServices.ps1-operational-guard-AST",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "Setup-Database.ps1-operational-guard-AST",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "database-disposable-cluster-parameter-blocked",
+                      "status":  "PASS",
+                      "detail":  "PREPARED_CANDIDATE_CLUSTER_AND_CREDENTIAL_OPERATIONS_BLOCKED"
+                  },
+                  {
+                      "name":  "database-native-switch-requires-root",
+                      "status":  "PASS",
+                      "detail":  "LOCAL_NATIVE_TEST_REQUIRES_DISPOSABLE_ROOT"
+                  },
+                  {
+                      "name":  "installer-fault-requires-root",
+                      "status":  "PASS",
+                      "detail":  "LOCAL_FAULT_REQUIRES_DISPOSABLE_ROOT"
+                  },
+                  {
+                      "name":  "denied-database-request-created-no-root",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "evidence-two-root-commit-and-readback",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "evidence-post-commit-drift-rejected",
+                      "status":  "PASS",
+                      "detail":  "INSTALL_EVIDENCE_HASH_MISMATCH"
+                  },
+                  {
+                      "name":  "evidence-partial-write-blocks-acceptance",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "evidence-failure-sidecar-prevents-acceptance",
+                      "status":  "PASS",
+                      "detail":  "INSTALL_EVIDENCE_FAILURE_RECORDED"
+                  },
+                  {
+                      "name":  "installer-local-root-operational-path-escape",
+                      "status":  "PASS",
+                      "detail":  "LOCAL_ROOT_OUTSIDE_FRESH_TEST_NAMESPACE"
+                  },
+                  {
+                      "name":  "installer-local-root-arbitrary-workspace-escape",
+                      "status":  "PASS",
+                      "detail":  "LOCAL_ROOT_OUTSIDE_FRESH_TEST_NAMESPACE"
+                  },
+                  {
+                      "name":  "resolver-unit-returns-only-staged-path",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "resolver-unit-missing-stage-never-falls-back",
+                      "status":  "PASS",
+                      "detail":  "INVALID_OR_MISSING_PIN"
+                  },
+                  {
+                      "name":  "resolver-unit-destination-drift-never-falls-back",
+                      "status":  "PASS",
+                      "detail":  "PIN_DRIFT"
+                  },
+                  {
+                      "name":  "resolver-unit-original-mutable-source-retained",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "full-map-validator-destination-collision",
+                      "status":  "PASS",
+                      "detail":  "MAP_COLLISION"
+                  },
+                  {
+                      "name":  "full-map-validator-source-collision",
+                      "status":  "PASS",
+                      "detail":  "MAP_COLLISION"
+                  },
+                  {
+                      "name":  "full-map-validator-casefold-destination-alias",
+                      "status":  "PASS",
+                      "detail":  "MAP_COLLISION"
+                  },
+                  {
+                      "name":  "full-map-validator-casefold-source-alias",
+                      "status":  "PASS",
+                      "detail":  "MAP_COLLISION"
+                  },
+                  {
+                      "name":  "full-map-validator-traversal",
+                      "status":  "PASS",
+                      "detail":  "UNSAFE_RELATIVE_PATH"
+                  },
+                  {
+                      "name":  "full-candidate-local-stage",
+                      "status":  "PASS",
+                      "detail":  "Full allowlist staged under disposable root; remains explicitly untrusted local validation"
+                  },
+                  {
+                      "name":  "stage-bootstrap-digest-mismatch",
+                      "status":  "PASS",
+                      "detail":  "STAGE_CHILD_REJECTED: EXTERNAL_BOOTSTRAP_PIN_MISMATCH\r\nAt D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Stage-Candidate.ps1:17 char:120\r\n+ ... ne $ExpectedBootstrapSha256){throw \u0027EXTERNAL_BOOTSTRAP_PIN_MISMATCH\u0027}\r\n+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (EXTERNAL_BOOTSTRAP_PIN_MISMATCH:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : EXTERNAL_BOOTSTRAP_PIN_MISMATCH "
+                  },
+                  {
+                      "name":  "stage-revision-digest-mismatch",
+                      "status":  "PASS",
+                      "detail":  "STAGE_CHILD_REJECTED: EXTERNAL_REVISION_PIN_MISMATCH\r\nAt D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Stage-Candidate.ps1:21 char:126\r\n+ ... pectedRevisionManifestSha256){throw \u0027EXTERNAL_REVISION_PIN_MISMATCH\u0027}\r\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (EXTERNAL_REVISION_PIN_MISMATCH:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : EXTERNAL_REVISION_PIN_MISMATCH "
+                  },
+                  {
+                      "name":  "stage-root-collision",
+                      "status":  "PASS",
+                      "detail":  "STAGE_CHILD_REJECTED: DESTINATION_COLLISION\r\nAt D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Stage-Candidate.ps1:67 char:46\r\n+ ... st-Path -LiteralPath $DestinationRoot){throw \u0027DESTINATION_COLLISION\u0027}\r\n+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (DESTINATION_COLLISION:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : DESTINATION_COLLISION "
+                  },
+                  {
+                      "name":  "stage-collision-does-not-create-receipt",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "stage-existing-receipt-collision",
+                      "status":  "PASS",
+                      "detail":  "STAGE_CHILD_REJECTED: DESTINATION_COLLISION\r\nAt D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Stage-Candidate.ps1:67 char:46\r\n+ ... st-Path -LiteralPath $DestinationRoot){throw \u0027DESTINATION_COLLISION\u0027}\r\n+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (DESTINATION_COLLISION:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : DESTINATION_COLLISION "
+                  },
+                  {
+                      "name":  "stage-existing-receipt-preserved",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "stage-junction-collision",
+                      "status":  "PASS",
+                      "detail":  "STAGE_CHILD_REJECTED: DESTINATION_COLLISION\r\nAt D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Stage-Candidate.ps1:67 char:46\r\n+ ... st-Path -LiteralPath $DestinationRoot){throw \u0027DESTINATION_COLLISION\u0027}\r\n+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (DESTINATION_COLLISION:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : DESTINATION_COLLISION "
+                  },
+                  {
+                      "name":  "stage-junction-target-preserved",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "stage-local-root-escape",
+                      "status":  "PASS",
+                      "detail":  "STAGE_CHILD_REJECTED: LOCAL_STAGE_NAMESPACE_ONLY\r\nAt D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Stage-Candidate.ps1:41 char:127\r\n+ ...  -cnotmatch \u0027^run-[a-f0-9]{32}$\u0027){throw \u0027LOCAL_STAGE_NAMESPACE_ONLY\u0027}\r\n+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (LOCAL_STAGE_NAMESPACE_ONLY:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : LOCAL_STAGE_NAMESPACE_ONLY "
+                  },
+                  {
+                      "name":  "stage-revision-source-drift-before-load",
+                      "status":  "PASS",
+                      "detail":  "STAGE_CHILD_REJECTED: REVISION_SOURCE_DRIFT\r\nAt D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tools\\Stage-Candidate.ps1:28 char:145\r\n+ ... ash.ToLowerInvariant() -cne $p.sha256){throw \u0027REVISION_SOURCE_DRIFT\u0027}\r\n+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (REVISION_SOURCE_DRIFT:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : REVISION_SOURCE_DRIFT "
+                  },
+                  {
+                      "name":  "stage-drifted-code-never-executed",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  },
+                  {
+                      "name":  "full-candidate-local-gate",
+                      "status":  "PASS",
+                      "detail":  "Expected successful disposable operation completed"
+                  }
+              ],
+    "counts":  {
+                   "pass":  64,
+                   "fail":  0,
+                   "blocked":  0
+               },
+    "stage":  {
+                  "status":  "COMPLETED_UNTRUSTED_LOCAL_VALIDATION",
+                  "root":  "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\stage-runs\\run-aceb629e08e2498498d6ed47a1b958e7",
+                  "bootstrapSha256":  "e02cc09151572e39a78e8043e0c7ce32be05ee7d668b1f9246f467afce7b4c93",
+                  "revisionManifestSha256":  "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3",
+                  "elapsedMs":  59348
+              },
+    "limitations":  [
+
+                    ],
+    "operationalApplyInvoked":  false,
+    "networkInvoked":  false,
+    "deletionPerformed":  false,
+    "servicesCreated":  0,
+    "clustersCreated":  0,
+    "ownedProcessesStarted":  8,
+    "ownedProcesses":  [
+                           {
+                               "pid":  8632,
+                               "creationUtc":  "2026-10-30T22:25:21.6294428Z",
+                               "executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                               "ceased":  true,
+                               "exitCode":  0
+                           },
+                           {
+                               "pid":  62904,
+                               "creationUtc":  "2026-10-30T22:26:20.9561489Z",
+                               "executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                               "ceased":  true,
+                               "exitCode":  1
+                           },
+                           {
+                               "pid":  73020,
+                               "creationUtc":  "2026-10-30T22:26:21.4300156Z",
+                               "executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                               "ceased":  true,
+                               "exitCode":  1
+                           },
+                           {
+                               "pid":  47396,
+                               "creationUtc":  "2026-10-30T22:26:21.9682695Z",
+                               "executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                               "ceased":  true,
+                               "exitCode":  1
+                           },
+                           {
+                               "pid":  45452,
+                               "creationUtc":  "2026-10-30T22:26:22.8878438Z",
+                               "executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                               "ceased":  true,
+                               "exitCode":  1
+                           },
+                           {
+                               "pid":  73152,
+                               "creationUtc":  "2026-10-30T22:26:23.9108191Z",
+                               "executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                               "ceased":  true,
+                               "exitCode":  1
+                           },
+                           {
+                               "pid":  5500,
+                               "creationUtc":  "2026-10-30T22:26:24.7411140Z",
+                               "executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                               "ceased":  true,
+                               "exitCode":  1
+                           },
+                           {
+                               "pid":  63892,
+                               "creationUtc":  "2026-10-30T22:26:25.6454527Z",
+                               "executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                               "ceased":  true,
+                               "exitCode":  1
+                           }
+                       ],
+    "ownedProcessesRemaining":  0
+}

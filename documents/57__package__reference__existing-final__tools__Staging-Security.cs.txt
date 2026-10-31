@@ -1,0 +1,100 @@
+// Windows/.NET Framework; loaded only after externally pinned manifest verification.
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Security.AccessControl;
+using System.Security.Principal;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using Microsoft.Win32.SafeHandles;
+public static class C5StageSecurity {
+ public const string ValidationWorkspace=@"D:\OpenClaw-workspace\artifacts\mcvplus-c5-staging-revision-20261030";
+ static string LocalTarget(string p){p=Full(p);if(!p.StartsWith(ValidationWorkspace+"\\",StringComparison.OrdinalIgnoreCase))throw new Exception("LOCAL_VALIDATION_OUTSIDE_TASK_WORKSPACE");return p;}
+ public const string Sddl="O:BAG:BAD:P(A;OICI;FA;;;BA)(A;OICI;FA;;;SY)";
+ [StructLayout(LayoutKind.Sequential)] struct SA {public int length;public IntPtr descriptor;public int inherit;}
+ [StructLayout(LayoutKind.Sequential)] struct INFO {public uint attributes;public System.Runtime.InteropServices.ComTypes.FILETIME creation,access,write;public uint volume,sizeHigh,sizeLow,links,indexHigh,indexLow;}
+ [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)]static extern bool CreateDirectoryW(string path,ref SA security);
+ [DllImport("advapi32.dll",CharSet=CharSet.Unicode,SetLastError=true)]static extern bool ConvertStringSecurityDescriptorToSecurityDescriptorW(string s,uint revision,out IntPtr d,out uint length);
+ [DllImport("kernel32.dll")]static extern IntPtr LocalFree(IntPtr p);
+ [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)]static extern SafeFileHandle CreateFileW(string p,uint access,uint share,IntPtr sa,uint disposition,uint flags,IntPtr template);
+ [DllImport("kernel32.dll",SetLastError=true)]static extern bool GetFileInformationByHandle(SafeFileHandle h,out INFO info);
+ public static string Full(string p) {
+  if(String.IsNullOrEmpty(p)||p.Length>240||p.Contains("/")||!System.Text.RegularExpressions.Regex.IsMatch(p,@"^[A-Za-z]:\\"))throw new Exception("NONCANONICAL_LOCAL_PATH");
+  string f=Path.GetFullPath(p);if(!String.Equals(f,p.TrimEnd('\\'),StringComparison.OrdinalIgnoreCase)&&!String.Equals(f,p,StringComparison.OrdinalIgnoreCase))throw new Exception("PATH_NORMALIZATION_REJECTED");
+  foreach(string s in p.Substring(3).Split('\\'))if(s=="."||s==".."||s.EndsWith(".")||s.EndsWith(" ")||s.IndexOfAny(new[]{':','*','?','"','<','>','|'})>=0||System.Text.RegularExpressions.Regex.IsMatch(s,@"^(CON|PRN|AUX|NUL|COM[0-9]|LPT[0-9])(?:\.|$)",System.Text.RegularExpressions.RegexOptions.IgnoreCase)||System.Text.RegularExpressions.Regex.IsMatch(s,@"~[0-9]"))throw new Exception("PATH_SEGMENT_REJECTED");
+  return f;
+ }
+ public static string Under(string root,string rel){
+  root=Full(root);if(String.IsNullOrEmpty(rel)||rel.StartsWith("/")||rel.Contains("\\")||rel.Contains(":"))throw new Exception("RELATIVE_PATH_REJECTED");
+  foreach(string s in rel.Split('/'))if(s.Length==0||s=="."||s=="..")throw new Exception("RELATIVE_PATH_REJECTED");
+  string p=Full(Path.Combine(root,rel.Replace('/','\\')));if(!p.StartsWith(root.TrimEnd('\\')+"\\",StringComparison.OrdinalIgnoreCase))throw new Exception("PATH_ESCAPE");return p;
+ }
+ public sealed class Chain : IDisposable {
+  List<SafeFileHandle> held=new List<SafeFileHandle>(); public List<string> identities=new List<string>();
+  public Chain(string p,bool includeLeaf):this(p,includeLeaf,false){}
+  public Chain(string p,bool includeLeaf,bool local){
+   try{p=Full(p);if(!includeLeaf)p=Path.GetDirectoryName(p);var parts=new List<string>();while(!String.IsNullOrEmpty(p)){if(local&&String.Equals(p,@"C:\Users\HENRI",StringComparison.OrdinalIgnoreCase))break;parts.Insert(0,p);p=Path.GetDirectoryName(p);}foreach(string q in parts){
+    var h=CreateFileW(q,0x80,3,IntPtr.Zero,3,0x02200000,IntPtr.Zero);if(h.IsInvalid){int error=Marshal.GetLastWin32Error();h.Dispose();throw new Exception("CHAIN_OPEN_FAILED_"+error+"_"+q);}held.Add(h);INFO i;if(!GetFileInformationByHandle(h,out i)||(i.attributes&0x400)!=0)throw new Exception("REPARSE_OR_IDENTITY_BLOCKED");identities.Add(q+"|"+i.volume+"|"+i.indexHigh+":"+i.indexLow);
+   }}catch{Dispose();throw;}
+  }
+  public void Dispose(){foreach(var h in held)h.Dispose();held.Clear();}
+ }
+ public static Chain Hold(string path,bool includeLeaf){return new Chain(path,includeLeaf);}
+ public static Chain HoldValidation(string path,bool includeLeaf){return new Chain(LocalTarget(path),includeLeaf,true);}
+ public static void CreateProtected(string p){Create(p,Sddl,false);AssertProtected(p,true);}
+ public static void CreateValidation(string p){p=LocalTarget(p);Create(p,"O:"+WindowsIdentity.GetCurrent().User.Value+"G:BAD:P(A;OICI;FA;;;BA)(A;OICI;FA;;;SY)(A;OICI;FA;;;"+WindowsIdentity.GetCurrent().User.Value+")",true);AssertValidation(p,true);}
+ static void Create(string p,string descriptor,bool local){
+  p=Full(p);using(var chain=new Chain(p,false,local)){IntPtr sd;uint n;if(!ConvertStringSecurityDescriptorToSecurityDescriptorW(descriptor,1,out sd,out n))throw new Exception("SDDL_BUILD_FAILED");
+   try{SA sa=new SA();sa.length=Marshal.SizeOf(sa);sa.descriptor=sd;if(!CreateDirectoryW(p,ref sa))throw new Exception("FRESH_PROTECTED_CREATE_FAILED_"+Marshal.GetLastWin32Error());}finally{LocalFree(sd);}
+  }
+ }
+ static FileSystemSecurity Security(string p,bool dir){return dir?(FileSystemSecurity)Directory.GetAccessControl(p):File.GetAccessControl(p);}
+ public static string AssertValidation(string p,bool dir){
+  using(var chain=new Chain(LocalTarget(p),true,true)){var a=Security(p,dir);string sid=WindowsIdentity.GetCurrent().User.Value;if(a.GetOwner(typeof(SecurityIdentifier)).Value!=sid)throw new Exception("LOCAL_OWNER_CHANGED");if(dir&&!a.AreAccessRulesProtected)throw new Exception("LOCAL_DACL_NOT_PROTECTED");
+   var seen=new HashSet<string>();foreach(FileSystemAccessRule r in a.GetAccessRules(true,true,typeof(SecurityIdentifier))){string s=r.IdentityReference.Value;if(r.AccessControlType!=AccessControlType.Allow||(s!=sid&&s!="S-1-5-32-544"&&s!="S-1-5-18")||r.FileSystemRights!=FileSystemRights.FullControl||!seen.Add(s))throw new Exception("LOCAL_DACL_CHANGED");}if(seen.Count!=3)throw new Exception("LOCAL_DACL_CHANGED");return a.GetSecurityDescriptorSddlForm(AccessControlSections.All);
+  }
+ }
+ public static string AssertProtected(string p,bool dir){
+  using(var chain=new Chain(p,true)){var a=Security(p,dir);string owner=a.GetOwner(typeof(SecurityIdentifier)).Value;if(owner!="S-1-5-32-544"&&owner!="S-1-5-18")throw new Exception("UNTRUSTED_OWNER");
+   if(dir&&!a.AreAccessRulesProtected)throw new Exception("DACL_NOT_PROTECTED");int count=0;bool admin=false,system=false;
+   foreach(FileSystemAccessRule r in a.GetAccessRules(true,true,typeof(SecurityIdentifier))){string sid=r.IdentityReference.Value;
+    if(r.AccessControlType!=AccessControlType.Allow||(sid!="S-1-5-32-544"&&sid!="S-1-5-18")||r.FileSystemRights!=FileSystemRights.FullControl)throw new Exception("UNTRUSTED_DACL");
+    if(sid=="S-1-5-32-544")admin=true;else system=true;count++;
+   }if(!admin||!system||count!=2)throw new Exception("DACL_ALLOWLIST_MISMATCH");return a.GetSecurityDescriptorSddlForm(AccessControlSections.All);
+  }
+ }
+ // Deliberately conservative original rule. This is NOT a fabricated effective AccessCheck.
+ // Any unknown/conditional/object/deny ACE or untrusted mutation ALLOW blocks acceptance.
+ public static string AssertStrictAncestor(string p){
+  using(var chain=new Chain(p,true)){var a=Directory.GetAccessControl(p);string owner=a.GetOwner(typeof(SecurityIdentifier)).Value;
+   string ti="S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464";
+   if(owner!="S-1-5-32-544"&&owner!="S-1-5-18"&&owner!=ti)throw new Exception("ANCESTOR_OWNER_UNRESOLVED");
+   var raw=new RawSecurityDescriptor(a.GetSecurityDescriptorBinaryForm(),0);if(raw.DiscretionaryAcl==null)throw new Exception("ANCESTOR_NULL_DACL");
+   foreach(GenericAce ace in raw.DiscretionaryAcl){var c=ace as CommonAce;if(c==null||c.IsCallback||c.AceQualifier!=AceQualifier.AccessAllowed)throw new Exception("ANCESTOR_EFFECTIVE_CHECK_UNSUPPORTED");
+    if((c.AceFlags&AceFlags.InheritOnly)!=0)continue;string sid=c.SecurityIdentifier.Value;
+    try{c.SecurityIdentifier.Translate(typeof(NTAccount));}catch{throw new Exception("ANCESTOR_IDENTITY_UNRESOLVED");}
+    if(sid!="S-1-5-32-544"&&sid!="S-1-5-18"&&sid!=ti&&(c.AccessMask&unchecked((int)0x500D0156))!=0)throw new Exception("STRICT_ANCESTOR_UNTRUSTED_MUTATION_"+sid);
+   }return a.GetSecurityDescriptorSddlForm(AccessControlSections.All);
+  }
+ }
+ public static string Hash(string p){using(var chain=new Chain(p,true))using(var f=new FileStream(p,FileMode.Open,FileAccess.Read,FileShare.Read))using(var sha=SHA256.Create())return BitConverter.ToString(sha.ComputeHash(f)).Replace("-","").ToLowerInvariant();}
+ public static string HashValidation(string p){using(var chain=new Chain(LocalTarget(p),true,true))using(var f=new FileStream(p,FileMode.Open,FileAccess.Read,FileShare.Read))using(var sha=SHA256.Create())return BitConverter.ToString(sha.ComputeHash(f)).Replace("-","").ToLowerInvariant();}
+ public static void WriteReceiptNew(string dest,string json){
+  LocalTarget(dest);using(var chain=HoldValidation(dest,false)){
+   AssertValidation(Path.GetDirectoryName(dest),true);
+   var security=new FileSecurity();
+   security.SetSecurityDescriptorSddlForm("O:"+WindowsIdentity.GetCurrent().User.Value+"G:BAD:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FA;;;"+WindowsIdentity.GetCurrent().User.Value+")");
+   byte[] bytes=new System.Text.UTF8Encoding(false).GetBytes(json);
+   using(var output=new FileStream(dest,FileMode.CreateNew,FileSystemRights.Write,FileShare.Read,65536,FileOptions.WriteThrough,security)){output.Write(bytes,0,bytes.Length);output.Flush(true);}
+   AssertValidation(dest,false);
+  }
+ }
+ public static void CopyPin(string source,string dest,long bytes,string hash,bool local){
+  if(local)LocalTarget(dest);using(var sc=new Chain(source,true,local))using(var dc=new Chain(dest,false,local))using(var input=new FileStream(source,FileMode.Open,FileAccess.Read,FileShare.Read)){
+   if(input.Length!=bytes)throw new Exception("SOURCE_SIZE_DRIFT");using(var sha=SHA256.Create()){string h=BitConverter.ToString(sha.ComputeHash(input)).Replace("-","").ToLowerInvariant();if(h!=hash)throw new Exception("SOURCE_HASH_DRIFT");}input.Position=0;
+   FileSecurity fileSecurity=new FileSecurity();string descriptor=local?("O:"+WindowsIdentity.GetCurrent().User.Value+"G:BAD:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FA;;;"+WindowsIdentity.GetCurrent().User.Value+")"):"O:BAG:BAD:P(A;;FA;;;BA)(A;;FA;;;SY)";fileSecurity.SetSecurityDescriptorSddlForm(descriptor);
+   using(var output=new FileStream(dest,FileMode.CreateNew,FileSystemRights.Write,FileShare.Read,65536,FileOptions.WriteThrough,fileSecurity)){input.CopyTo(output);output.Flush(true);}
+   if(local)AssertValidation(dest,false);else AssertProtected(dest,false);if(new FileInfo(dest).Length!=bytes||(local?HashValidation(dest):Hash(dest))!=hash)throw new Exception("DESTINATION_DRIFT");
+  }
+ }
+}

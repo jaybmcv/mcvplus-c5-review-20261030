@@ -1,0 +1,51 @@
+# Evidence provenance and author integrity checks
+
+This task performed file reads, exact-byte copies and hash/JSON inspection only. No installer, gate, fixture or hosted tests were executed. This is NOT an independent-review verdict.
+
+## Recovered original evidence
+
+The original ZIP is included unmodified. SHA256:
+27f49dd773527656d113cc69e04bbd2549a20ee4444dfea45010e750725049e8
+
+All 32 original BINDINGS entries match their archived sizes/hashes; all seven original receipts match expected aggregate outcomes. Their native-operation arrays are empty; all have simulated SCM/ACL and zero processes started. The original harness, adapter source/stdout/stderr and review limitations are included.
+
+| Predecessor case | Recorded expected outcome | Original receipt SHA256 |
+| --- | --- | --- |
+| Success | LOCAL_FILES_AND_SIMULATED_DISABLED_SERVICES | f381fc574b0d2e4e3973972fa6c6e5f6c98ed87fdd821d8718142904235ababf |
+| AfterCodeRoot | FAIL_QUARANTINED | 05fef7c82e9b757843a172aef1638980b409e7540e69a306f7043c6df6fae282 |
+| AfterDataRoot | FAIL_QUARANTINED | 5949b3898f75e32eb6e31ee008167ca198768ca02b1b539b9dabdd90d3c165b3 |
+| AfterFirstCopy | FAIL_QUARANTINED | 7abd21a87831ae21c9495f593b9a4c15f76f2002dd292c99a74ae831194cfdf1 |
+| AfterServiceCreate | FAIL_QUARANTINED | e70c2ca1904c04fd1cb5b98b71943656ef36a338fc06c68aa542b59f22fccd32 |
+| AfterGrant | FAIL_QUARANTINED | 329d1e5edbdce1b9ab08ad28c66b57d2ac4d7a77fbca75020fb077ed7fd0f9e2 |
+| ContainmentFailure | BLOCKED | f38f777d3d8807e697793504c6b6c9fcd63a90fe0f88853ec29c12480e7fff17 |
+
+These seven results belong to predecessor d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70. ContainmentFailure records BLOCKED as the expected safe outcome, not successful installation or containment.
+
+## Existing final candidate — different evidence lane
+
+Manifest: 19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3.
+All 14 current revision pins were read and hash/size-verified against the retained manifest. Only SOURCE-MAP differs from the predecessor pin list; both parsed map objects are identical, with 1,691 entries. No full live-original payload readback was performed.
+
+Retained final security JSON contains 64 PASS / 0 FAIL / 0 BLOCKED, 64 matching per-case PASS entries and zero recorded remaining owned children. This is inspection of historical evidence, NOT rerunning tests or current process verification. The final and predecessor original stage receipts plus staged manifests are supplied separately, with source paths and hashes. They directly name their own revision digests.
+
+Installer adapter receipts themselves lack a direct digest. Their recovered binding is transitive through aggregate case-root paths, the predecessor stage receipt/manifest, security record, adapter invocation source/stdout and carry-forward record. This is not rewritten into the old receipts.
+
+The prior independent review did not verify the unavailable seven-case receipt. Original review findings/closure are supplied unchanged. Current author hash checks do not retroactively change that conclusion.
+
+## Proposed PG-R1 — no acceptance evidence
+
+The new policy is a requirement document only. It has no implemented gate manifest and zero validation cases executed. Do not cite the predecessor seven or existing-final 64 as evidence that PG-R1 works.
+
+## Independent verification without project execution
+
+Use any trusted SHA256/JSON/ZIP tool. Do not run archived PS1/CS/Python project harnesses.
+1. Hash the delivered review ZIP against the separately delivered digest; reject duplicate/unsafe archive paths before extracting.
+2. Check PACKAGE-MANIFEST.json against each delivered file (manifest excludes itself).
+3. Hash the nested original evidence ZIP against the fixed digest above.
+4. Verify all entries in nested BINDINGS.json against raw archived bytes. Inspect the seven receipts, aggregate, mock flags and native arrays.
+5. Reconstruct predecessor binding from the separately included stage receipt/staged manifest and aggregate root paths. Do not infer direct per-receipt manifest binding.
+6. Compare both revision manifests and decoded maps. Check all current 14 revision pins against reference/existing-final copies.
+7. Inspect the final security receipt and per-case outcomes separately; no claim of seven final-revision runs.
+8. Review PG-R1 policy and planned cases as new untested requirements.
+
+EVIDENCE-VERIFICATION.json records exact provenance. File hashes ensure consistency of supplied artifacts, not authenticity independent of their producer, current host state, operational authorization or service/ACL acceptance.

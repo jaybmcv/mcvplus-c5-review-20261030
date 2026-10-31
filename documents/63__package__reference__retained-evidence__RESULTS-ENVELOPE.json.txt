@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-30T22:31:20.499813+00:00",
+  "status": "LOCAL_PREPARATION_ONLY_OPERATIONAL_BLOCKED",
+  "revisionManifestSha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3",
+  "files": [
+    {
+      "path": "C5-LOCAL-PREPARATION-RESULTS.txt",
+      "bytes": 11515,
+      "sha256": "85e374053e60713790912b974756408388dc918aad2c6210da930763fbe5b110"
+    },
+    {
+      "path": "REVISED-MANIFEST.txt",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3"
+    },
+    {
+      "path": "REVISED-SHA256SUMS.txt",
+      "bytes": 181,
+      "sha256": "8d5bd50549c97038af4c3d6d61f57bcdfe645adc958d9a91c2143e68e61239c9"
+    },
+    {
+      "path": "independent-review.txt",
+      "bytes": 2703,
+      "sha256": "c8d4b156304e5c490e320518e0bd4ef699d4ec3ef17bcd9dcffffac02a519646"
+    },
+    {
+      "path": "fresh-pins.json",
+      "bytes": 1712,
+      "sha256": "63131b7c3e452f5d3af0933604d45fd37be32c740dd4a4d4d3388144e62b6207"
+    },
+    {
+      "path": "security-canonical-final.json",
+      "bytes": 23714,
+      "sha256": "5fca6b5ebc0f5c1c85732d15217d923e8a1852046b3208f9ed1d65b6f4690a7a"
+    },
+    {
+      "path": "installer-adapter-tests.json",
+      "bytes": 3736,
+      "sha256": "7b2d5035bc0e955a4e912b15b52c6e25193bffeaec4b44176b3f18e0fa63c0b6"
+    },
+    {
+      "path": "installer-prepared-tests.json",
+      "bytes": 3116,
+      "sha256": "e0ff13a3b855a2574594cef80f05fb006ee50d612d561d4ca35059b9431dc5ef"
+    },
+    {
+      "path": "native-containment-tests.json",
+      "bytes": 4696,
+      "sha256": "e9072ebcac0feb7844c1d8a86df2a26317e4c5d222a136dac30a886b1f9fc3fd"
+    },
+    {
+      "path": "ancestor-assessment.json",
+      "bytes": 50132,
+      "sha256": "79852e0bcf17c904dea3bb3b35518a1489baeeb80aa5830dd635dd204ef10ac8"
+    },
+    {
+      "path": "collision-negative-control.json",
+      "bytes": 1362,
+      "sha256": "23e59dbabc76ea71901330fc23199e1c3c8c940c915f08d1cdca6e62084e3e15"
+    },
+    {
+      "path": "runtime-evidence-carryforward.json",
+      "bytes": 4349,
+      "sha256": "ced794d49edb88cc73f850feda2c1d2a93bc14d8b9c2aac20d0d02f15c03caeb"
+    },
+    {
+      "path": "preservation-before.json",
+      "bytes": 13122,
+      "sha256": "17dd5c052a34d6eb221ab9ce9782638fcf59df1730e255332097d8d1152f65a9"
+    },
+    {
+      "path": "preservation.json",
+      "bytes": 13122,
+      "sha256": "6b1d2e5fc43735886bee68722c5222ea524a0baeace039093f9fe57edfaaa24f"
+    }
+  ]
+}

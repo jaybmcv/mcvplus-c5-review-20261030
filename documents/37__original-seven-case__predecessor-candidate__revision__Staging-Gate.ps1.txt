@@ -1,0 +1,125 @@
+# Separate revision metadata. This file is trusted ONLY when launched from a reviewed,
+# externally pinned protected bootstrap. LocalValidation explicitly has no such trust.
+$ErrorActionPreference='Stop'
+function Get-C5Sha([string]$Path){(Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant()}
+function Assert-C5Pin([string]$Path,$Pin){
+ if($Pin.sha256 -cnotmatch '^[a-f0-9]{64}$' -or $Pin.bytes -lt 0 -or -not(Test-Path -LiteralPath $Path -PathType Leaf)){throw 'INVALID_OR_MISSING_PIN'}
+ if((Get-Item -LiteralPath $Path).Length -ne $Pin.bytes -or (Get-C5Sha $Path) -cne $Pin.sha256){throw 'PIN_DRIFT'}
+}
+function Assert-C5SafeRelative([string]$RelativePath){
+ if(-not $RelativePath -or $RelativePath -match '\\|:|^/|//|(^|/)\.{1,2}(/|$)|[. ](/|$)|[<>"|?*]' -or $RelativePath -match '(^|/)(CON|PRN|AUX|NUL|COM[0-9]|LPT[0-9])([./]|$)|~[0-9]'){throw 'UNSAFE_RELATIVE_PATH'}
+}
+function Get-C5MappedPath([string]$CandidateRoot,[string]$RelativePath){
+ Assert-C5SafeRelative $RelativePath
+ $p=[IO.Path]::GetFullPath((Join-Path $CandidateRoot $RelativePath))
+ if(-not $p.StartsWith(([IO.Path]::GetFullPath($CandidateRoot)+'\'),[StringComparison]::OrdinalIgnoreCase)){throw 'PATH_ESCAPE'}
+ return $p
+}
+function Assert-C5ProtectedPreload([string]$CandidateRoot){
+ # Uses only protected .NET/PowerShell system prerequisites. Reject before loading
+ # any candidate helper. Conservative ACE assessment is not an AccessCheck claim.
+ $ti='S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464'
+ $q=$CandidateRoot
+ while($q){
+  $i=Get-Item -LiteralPath $q -Force;if($i.Attributes -band [IO.FileAttributes]::ReparsePoint){throw 'PROTECTED_PRELOAD_REPARSE'}
+  $a=[IO.Directory]::GetAccessControl($q);$owner=$a.GetOwner([Security.Principal.SecurityIdentifier]).Value
+  if($owner -notin @('S-1-5-32-544','S-1-5-18',$ti)){throw 'PROTECTED_PRELOAD_OWNER'}
+  $raw=New-Object Security.AccessControl.RawSecurityDescriptor($a.GetSecurityDescriptorBinaryForm(),0)
+  if($null -eq $raw.DiscretionaryAcl){throw 'PROTECTED_PRELOAD_NULL_DACL'}
+  foreach($ace in $raw.DiscretionaryAcl){
+   if($ace -isnot [Security.AccessControl.CommonAce] -or $ace.IsCallback -or $ace.AceQualifier -ne [Security.AccessControl.AceQualifier]::AccessAllowed){throw 'PROTECTED_PRELOAD_EFFECTIVE_UNSUPPORTED'}
+   if($ace.AceFlags -band [Security.AccessControl.AceFlags]::InheritOnly){continue}
+   try{[void]$ace.SecurityIdentifier.Translate([Security.Principal.NTAccount])}catch{throw 'PROTECTED_PRELOAD_IDENTITY_UNRESOLVED'}
+   if($ace.SecurityIdentifier.Value -notin @('S-1-5-32-544','S-1-5-18',$ti) -and ($ace.AccessMask -band 0x500D0156)){throw 'PROTECTED_PRELOAD_STRICT_ANCESTOR_BLOCKED'}
+  }
+  $q=Split-Path -Parent $q
+ }
+}
+function Read-C5StageMap([string]$CandidateRoot){Get-Content -LiteralPath (Join-Path $CandidateRoot 'SOURCE-MAP.json') -Raw | ConvertFrom-Json}
+function Get-C5PhysicalSource([string]$OriginalSource){
+ # Exact reviewed storage relocation only; no discovery or alternate source fallback.
+ $old='C:\Users\HENRI\.openclaw\workspace\artifacts\mcvplus-c5-setup-closure-20261029\'
+ $new='D:\OpenClaw-workspace\artifacts\mcvplus-c5-setup-closure-20261029\'
+ if($OriginalSource.StartsWith($old,[StringComparison]::Ordinal)){return $new+$OriginalSource.Substring($old.Length)}
+ return $OriginalSource
+}
+function Assert-C5MapBindings([string]$CandidateRoot,$Map){
+ $digest='b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c'
+ if($Map.schema -ne 1 -or $Map.originalManifestSha256 -cne $digest -or $Map.candidateName -cne 'candidate-b9e20e88' -or @($Map.entries).Count -ne 1691){throw 'MAP_IDENTITY_OR_COUNT'}
+ $manifest=Join-Path $CandidateRoot 'packet\SETUP-FILE-MANIFEST.json'
+ if((Get-C5Sha $manifest) -cne $digest){throw 'ORIGINAL_MANIFEST_ANCHOR_DRIFT'}
+ $pins=Get-Content -LiteralPath $manifest -Raw|ConvertFrom-Json
+ if($pins.Count -ne 52){throw 'PACKET_COUNT'}
+ $destinations=@{};$sources=@{}
+ foreach($e in $Map.entries){
+  Assert-C5SafeRelative $e.destination
+  if($destinations.ContainsKey($e.destination) -or $sources.ContainsKey($e.source)){throw 'MAP_COLLISION'}
+  if($e.sha256 -cnotmatch '^[a-f0-9]{64}$' -or $e.bytes -lt 0 -or $e.source -notmatch '^[A-Za-z]:\\' -or $e.source -match '(^|\\)\.{1,2}(\\|$)|/|[. ](\\|$)|~[0-9]' -or $e.source.Substring(2).Contains(':')){throw 'INVALID_MAP_PIN_OR_SOURCE'}
+  $destinations[$e.destination]=$e;$sources[$e.source]=$e
+ }
+ foreach($p in $pins){$e=$destinations['packet/'+$p.path];if(-not $e -or $e.kind -cne 'packet' -or $e.key -cne $p.path -or $e.bytes -ne $p.bytes -or $e.sha256 -cne $p.sha256){throw 'PACKET_MAPPING_MISMATCH'}}
+ $anchor=$destinations['packet/SETUP-FILE-MANIFEST.json'];if(-not $anchor -or $anchor.kind -cne 'packet-manifest' -or $anchor.sha256 -cne $digest){throw 'MANIFEST_MAPPING_MISMATCH'}
+ # These manifests were just anchored by the original approved digest. Verify their
+ # bytes BEFORE trusting JSON source fields. No adjacent manifest self-approval.
+ foreach($rel in @('SETUP-SPEC.json','POSTGRES-BINARY-MANIFEST.json','PROVIDER-DEPENDENCY-MANIFEST.json')){Assert-C5Pin (Get-C5MappedPath $CandidateRoot ('packet/'+$rel)) $destinations['packet/'+$rel]}
+ $s=Get-Content (Join-Path $CandidateRoot 'packet\SETUP-SPEC.json') -Raw|ConvertFrom-Json
+ $external=@();foreach($n in @('node','nssm','cloudflared')){$external+=@{pin=$s.binary.$n;dest=('inputs/binary/'+$n+'.exe')}}
+ $postgresPins=Get-Content (Join-Path $CandidateRoot 'packet\POSTGRES-BINARY-MANIFEST.json') -Raw|ConvertFrom-Json
+ foreach($p in $postgresPins){$external+=@{pin=$p;dest=('inputs/postgres/'+$p.path)}}
+ $d=Get-Content (Join-Path $CandidateRoot 'packet\PROVIDER-DEPENDENCY-MANIFEST.json') -Raw|ConvertFrom-Json
+ foreach($p in @($d.files)){$external+=@{pin=$p;dest=('inputs/provider/'+$p.path)}}
+ if($external.Count -ne 1638){throw 'EXTERNAL_COUNT'}
+ foreach($x in $external){$p=$x.pin;$e=$destinations[$x.dest];if(-not $e -or $e.kind -cne 'external' -or $e.key -cne $p.source -or $e.source -cne (Get-C5PhysicalSource $p.source) -or $e.bytes -ne $p.bytes -or $e.sha256 -cne $p.sha256){throw 'EXTERNAL_MAPPING_MISMATCH'}}
+ return $destinations
+}
+function Assert-C5Revision {
+ param([Parameter(Mandatory)][string]$CandidateRoot,[Parameter(Mandatory)][ValidatePattern('^[a-f0-9]{64}$')][string]$ExpectedRevisionManifestSha256,[switch]$LocalValidation)
+ $CandidateRoot=[IO.Path]::GetFullPath($CandidateRoot)
+ if((Split-Path -Leaf $CandidateRoot) -cne 'candidate-b9e20e88'){throw 'CANDIDATE_NAME'}
+ if($LocalValidation -and $CandidateRoot -notmatch '\\tests\\stage-runs\\run-[a-f0-9]{32}\\candidate-b9e20e88$'){throw 'LOCAL_CANDIDATE_NAMESPACE'}
+ $manifest=Join-Path $CandidateRoot 'REVISION-MANIFEST.json'
+ if((Get-C5Sha $manifest) -cne $ExpectedRevisionManifestSha256){throw 'EXTERNALLY_PINNED_REVISION_DRIFT'}
+ $r=Get-Content -LiteralPath $manifest -Raw|ConvertFrom-Json
+ if($r.schema -ne 1 -or $r.status -cne 'PREPARED_LOCAL_ONLY_REQUIRES_TARGETED_REVIEW' -or $r.originalManifestSha256 -cne 'b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c'){throw 'REVISION_IDENTITY'}
+ $seen=@{};foreach($p in $r.files){Assert-C5SafeRelative $p.path;if($seen.ContainsKey($p.path)){throw 'REVISION_COLLISION'};$seen[$p.path]=$true;Assert-C5Pin (Get-C5MappedPath $CandidateRoot $p.path) $p}
+ foreach($required in @('SOURCE-MAP.json','revision/Staging-Gate.ps1','tools/Staging-Security.cs')){if(-not $seen.ContainsKey($required)){throw 'REQUIRED_REVISION_PIN_MISSING'}}
+ if(-not $LocalValidation){Assert-C5ProtectedPreload $CandidateRoot}
+ if(-not ('C5StageSecurity' -as [type])){Add-Type -Path (Join-Path $CandidateRoot 'tools\Staging-Security.cs')}
+ $held=if($LocalValidation){[C5StageSecurity]::HoldValidation($CandidateRoot,$true)}else{[C5StageSecurity]::Hold($CandidateRoot,$true)}
+ try{
+  if(-not $LocalValidation){$q=$CandidateRoot;while($q){[void][C5StageSecurity]::AssertStrictAncestor($q);$q=Split-Path -Parent $q}}
+  $map=Read-C5StageMap $CandidateRoot;$mapped=Assert-C5MapBindings $CandidateRoot $map
+  $expected=@{'REVISION-MANIFEST.json'=$true};foreach($p in $r.files){$expected[$p.path]=$true};foreach($e in $map.entries){$expected[$e.destination]=$true;Assert-C5Pin (Get-C5MappedPath $CandidateRoot $e.destination) $e}
+  $expectedDirs=@{};foreach($rel in @($expected.Keys)){$d=Split-Path -Parent $rel;while($d){$expectedDirs[$d.Replace('\','/')]=$true;$d=Split-Path -Parent $d}}
+  # Enumerate without following any reparse point. Reject extras, aliases and ACL
+  # substitutions; every file and directory is part of the protected identity.
+  $queue=New-Object 'Collections.Generic.Queue[string]';$queue.Enqueue($CandidateRoot)
+  while($queue.Count){$dir=$queue.Dequeue();if($LocalValidation){[void][C5StageSecurity]::AssertValidation($dir,$true)}else{[void][C5StageSecurity]::AssertProtected($dir,$true)}
+   foreach($item in Get-ChildItem -LiteralPath $dir -Force){if($item.Attributes -band [IO.FileAttributes]::ReparsePoint){throw 'REPARSE_ENTRY'};$rel=$item.FullName.Substring($CandidateRoot.Length+1).Replace('\','/');if($item.PSIsContainer){if(-not $expectedDirs.ContainsKey($rel)){throw 'UNEXPECTED_STAGED_DIRECTORY'};$queue.Enqueue($item.FullName);continue};if(-not $expected.ContainsKey($rel)){throw 'UNEXPECTED_STAGED_FILE'};if($LocalValidation){[void][C5StageSecurity]::AssertValidation($item.FullName,$false)}else{[void][C5StageSecurity]::AssertProtected($item.FullName,$false)}}
+  }
+  $script:C5ExpectedRevisionManifestSha256=$ExpectedRevisionManifestSha256
+  return [pscustomobject]@{status=$(if($LocalValidation){'UNTRUSTED_LOCAL_VALIDATION'}else{'PROTECTED_BYTES_VERIFIED_NOT_SETUP_AUTHORIZATION'});packet=52;external=1638;originalManifestUnchanged=$true}
+ }finally{$held.Dispose()}
+}
+function Get-C5StagedPacketPath([string]$CandidateRoot,[string]$RelativePath){
+ $m=Read-C5StageMap $CandidateRoot;$e=@($m.entries|Where-Object {$_.kind -in @('packet','packet-manifest') -and $_.key -ceq $RelativePath});if($e.Count -ne 1){throw 'PACKET_PATH_NOT_ALLOWLISTED'}
+ $p=Get-C5MappedPath $CandidateRoot $e[0].destination;Assert-C5Pin $p $e[0];return $p
+}
+function Get-C5StagedSpec([string]$CandidateRoot){
+ $s=Get-Content -LiteralPath (Join-Path $CandidateRoot 'revision\SETUP-SPEC.json') -Raw|ConvertFrom-Json
+ $m=Read-C5StageMap $CandidateRoot
+ foreach($n in @('node','nssm','cloudflared')){$e=@($m.entries|Where-Object destination -ceq ('inputs/binary/'+$n+'.exe'));if($e.Count -ne 1 -or $s.binary.$n.source -cne $e[0].destination){throw 'REVISION_BINARY_MAPPING'};$s.binary.$n.source=Get-C5MappedPath $CandidateRoot $e[0].destination}
+ return $s
+}
+function Get-C5StagedManifest([string]$CandidateRoot,[ValidateSet('Postgres','Provider')][string]$Kind){
+ $name=if($Kind -eq 'Postgres'){'POSTGRES-BINARY-MANIFEST.json'}else{'PROVIDER-DEPENDENCY-MANIFEST.json'}
+ $o=Get-Content -LiteralPath (Get-C5StagedPacketPath $CandidateRoot $name) -Raw|ConvertFrom-Json
+ $pins=if($Kind -eq 'Postgres'){@($o)}else{@($o.files)};$prefix=if($Kind -eq 'Postgres'){'inputs/postgres/'}else{'inputs/provider/'}
+ foreach($p in $pins){$p.source=Get-C5MappedPath $CandidateRoot ($prefix+$p.path)}
+ if($Kind -eq 'Postgres'){return ,$pins};return $o
+}
+function Get-C5RevisionFilePin([string]$CandidateRoot,[string]$RelativePath){
+ Assert-C5SafeRelative $RelativePath;$m=Get-Content (Join-Path $CandidateRoot 'REVISION-MANIFEST.json') -Raw|ConvertFrom-Json
+ $p=@($m.files|Where-Object path -ceq ('revision/'+$RelativePath));if($p.Count -ne 1){throw 'REVISION_FILE_NOT_PINNED'}
+ $f=Get-C5MappedPath $CandidateRoot $p[0].path;Assert-C5Pin $f $p[0];return [pscustomobject]@{source=$f;bytes=$p[0].bytes;sha256=$p[0].sha256}
+}

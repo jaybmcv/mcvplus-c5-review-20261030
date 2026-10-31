@@ -1,0 +1,504 @@
+{
+  "scope": "TEXT_ONLY_REDELIVERY_NO_BUNDLED_SCRIPT_EXECUTION_NO_NEW_TESTS",
+  "verifiedPackageBindings": 38,
+  "verifiedOriginalBindings": 32,
+  "files": [
+    {
+      "file": "01__package__00-REVIEW-README.md.txt",
+      "originalPath": "package/00-REVIEW-README.md",
+      "bytes": 2833,
+      "sha256": "f65b5f2345cdfeb212b12573716fff7679334611dfb841fa24ea063c8722ff22",
+      "byteIdentical": true
+    },
+    {
+      "file": "02__package__01-PATH-SPECIFIC-GATE-REVISION.md.txt",
+      "originalPath": "package/01-PATH-SPECIFIC-GATE-REVISION.md",
+      "bytes": 14406,
+      "sha256": "50764c09bddd0c6891d2ccd97195c94f16508c8436a0bbb17641cf04d17718b2",
+      "byteIdentical": true
+    },
+    {
+      "file": "03__package__02-BOUNDED-LOCAL-VALIDATION-PLAN.md.txt",
+      "originalPath": "package/02-BOUNDED-LOCAL-VALIDATION-PLAN.md",
+      "bytes": 10983,
+      "sha256": "03af329888c2fd680660def9dc0301690876ed1a42256a3448bbc75606d35149",
+      "byteIdentical": true
+    },
+    {
+      "file": "04__package__03-EVIDENCE-PROVENANCE.md.txt",
+      "originalPath": "package/03-EVIDENCE-PROVENANCE.md",
+      "bytes": 4618,
+      "sha256": "8479fb9e386dfbec957c52592aebbd9aaf1503ae57cb076978fa4844aee3e91c",
+      "byteIdentical": true
+    },
+    {
+      "file": "05__original-seven-case__receipts__01-Success.json.txt",
+      "originalPath": "original-seven-case/receipts/01-Success.json",
+      "bytes": 8806,
+      "sha256": "f381fc574b0d2e4e3973972fa6c6e5f6c98ed87fdd821d8718142904235ababf",
+      "byteIdentical": true
+    },
+    {
+      "file": "06__original-seven-case__receipts__02-AfterCodeRoot.json.txt",
+      "originalPath": "original-seven-case/receipts/02-AfterCodeRoot.json",
+      "bytes": 706,
+      "sha256": "05fef7c82e9b757843a172aef1638980b409e7540e69a306f7043c6df6fae282",
+      "byteIdentical": true
+    },
+    {
+      "file": "07__original-seven-case__receipts__03-AfterDataRoot.json.txt",
+      "originalPath": "original-seven-case/receipts/03-AfterDataRoot.json",
+      "bytes": 913,
+      "sha256": "5949b3898f75e32eb6e31ee008167ca198768ca02b1b539b9dabdd90d3c165b3",
+      "byteIdentical": true
+    },
+    {
+      "file": "08__original-seven-case__receipts__04-AfterFirstCopy.json.txt",
+      "originalPath": "original-seven-case/receipts/04-AfterFirstCopy.json",
+      "bytes": 908,
+      "sha256": "7abd21a87831ae21c9495f593b9a4c15f76f2002dd292c99a74ae831194cfdf1",
+      "byteIdentical": true
+    },
+    {
+      "file": "09__original-seven-case__receipts__05-AfterServiceCreate.json.txt",
+      "originalPath": "original-seven-case/receipts/05-AfterServiceCreate.json",
+      "bytes": 2461,
+      "sha256": "e70c2ca1904c04fd1cb5b98b71943656ef36a338fc06c68aa542b59f22fccd32",
+      "byteIdentical": true
+    },
+    {
+      "file": "10__original-seven-case__receipts__06-AfterGrant.json.txt",
+      "originalPath": "original-seven-case/receipts/06-AfterGrant.json",
+      "bytes": 2453,
+      "sha256": "329d1e5edbdce1b9ab08ad28c66b57d2ac4d7a77fbca75020fb077ed7fd0f9e2",
+      "byteIdentical": true
+    },
+    {
+      "file": "11__original-seven-case__receipts__07-ContainmentFailure.json.txt",
+      "originalPath": "original-seven-case/receipts/07-ContainmentFailure.json",
+      "bytes": 3381,
+      "sha256": "f38f777d3d8807e697793504c6b6c9fcd63a90fe0f88853ec29c12480e7fff17",
+      "byteIdentical": true
+    },
+    {
+      "file": "12__original-seven-case__ASSESSMENT.txt.txt",
+      "originalPath": "original-seven-case/ASSESSMENT.txt",
+      "bytes": 8712,
+      "sha256": "1da00c41c9896529b5e31f69302c3576952dedf062caa1287e79ee2001bce856",
+      "byteIdentical": true
+    },
+    {
+      "file": "13__original-seven-case__BINDINGS.json.txt",
+      "originalPath": "original-seven-case/BINDINGS.json",
+      "bytes": 11244,
+      "sha256": "14117ed316be674cf0d7ff9ac816ccbf0152808822289e0090f8777a3aa77c16",
+      "byteIdentical": true
+    },
+    {
+      "file": "14__original-seven-case__existing-evidence__adapter-stderr.txt.txt",
+      "originalPath": "original-seven-case/existing-evidence/adapter-stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdentical": true
+    },
+    {
+      "file": "15__original-seven-case__existing-evidence__adapter-stdout.txt.txt",
+      "originalPath": "original-seven-case/existing-evidence/adapter-stdout.txt",
+      "bytes": 3949,
+      "sha256": "66a594d1d9192b129303834c6ac8af4f8aafdd39b2bf76c698fc07a6cc79defa",
+      "byteIdentical": true
+    },
+    {
+      "file": "16__original-seven-case__existing-evidence__adapter.py.txt",
+      "originalPath": "original-seven-case/existing-evidence/adapter.py",
+      "bytes": 769,
+      "sha256": "0f760b3e0d48018acea3685fd56e7857feae4eb477cf2f24a914879aa850e0c1",
+      "byteIdentical": true
+    },
+    {
+      "file": "17__original-seven-case__existing-evidence__ancestor-assessment.json.txt",
+      "originalPath": "original-seven-case/existing-evidence/ancestor-assessment.json",
+      "bytes": 50132,
+      "sha256": "79852e0bcf17c904dea3bb3b35518a1489baeeb80aa5830dd635dd204ef10ac8",
+      "byteIdentical": true
+    },
+    {
+      "file": "18__original-seven-case__existing-evidence__independent-review.txt.txt",
+      "originalPath": "original-seven-case/existing-evidence/independent-review.txt",
+      "bytes": 2703,
+      "sha256": "c8d4b156304e5c490e320518e0bd4ef699d4ec3ef17bcd9dcffffac02a519646",
+      "byteIdentical": true
+    },
+    {
+      "file": "19__original-seven-case__existing-evidence__installer-adapter-tests.json.txt",
+      "originalPath": "original-seven-case/existing-evidence/installer-adapter-tests.json",
+      "bytes": 3736,
+      "sha256": "7b2d5035bc0e955a4e912b15b52c6e25193bffeaec4b44176b3f18e0fa63c0b6",
+      "byteIdentical": true
+    },
+    {
+      "file": "20__original-seven-case__existing-evidence__pre-canonical-REVISION-MANIFEST.json.txt",
+      "originalPath": "original-seven-case/existing-evidence/pre-canonical-REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70",
+      "byteIdentical": true
+    },
+    {
+      "file": "21__original-seven-case__existing-evidence__preservation.json.txt",
+      "originalPath": "original-seven-case/existing-evidence/preservation.json",
+      "bytes": 13122,
+      "sha256": "6b1d2e5fc43735886bee68722c5222ea524a0baeace039093f9fe57edfaaa24f",
+      "byteIdentical": true
+    },
+    {
+      "file": "22__original-seven-case__existing-evidence__runtime-evidence-carryforward.json.txt",
+      "originalPath": "original-seven-case/existing-evidence/runtime-evidence-carryforward.json",
+      "bytes": 4349,
+      "sha256": "ced794d49edb88cc73f850feda2c1d2a93bc14d8b9c2aac20d0d02f15c03caeb",
+      "byteIdentical": true
+    },
+    {
+      "file": "23__original-seven-case__existing-evidence__security-canonical-final.json.txt",
+      "originalPath": "original-seven-case/existing-evidence/security-canonical-final.json",
+      "bytes": 23714,
+      "sha256": "5fca6b5ebc0f5c1c85732d15217d923e8a1852046b3208f9ed1d65b6f4690a7a",
+      "byteIdentical": true
+    },
+    {
+      "file": "24__original-seven-case__existing-evidence__security-final.json.txt",
+      "originalPath": "original-seven-case/existing-evidence/security-final.json",
+      "bytes": 23716,
+      "sha256": "e0594ecc931334ff1ae04a390b9081b2c377b50d7f43b7c8689ef4327af03d19",
+      "byteIdentical": true
+    },
+    {
+      "file": "25__original-seven-case__final-candidate__REVISION-MANIFEST.json.txt",
+      "originalPath": "original-seven-case/final-candidate/REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3",
+      "byteIdentical": true
+    },
+    {
+      "file": "26__original-seven-case__final-candidate__SOURCE-MAP.json.txt",
+      "originalPath": "original-seven-case/final-candidate/SOURCE-MAP.json",
+      "bytes": 731936,
+      "sha256": "6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1",
+      "byteIdentical": true
+    },
+    {
+      "file": "27__original-seven-case__final-candidate__revision__Install-FilesAndServices.ps1.txt",
+      "originalPath": "original-seven-case/final-candidate/revision/Install-FilesAndServices.ps1",
+      "bytes": 13021,
+      "sha256": "2bd0591770e08b5ab1c6b9c7c6af0998999fb3e91db16db1ca36bb75c4d1b561",
+      "byteIdentical": true
+    },
+    {
+      "file": "28__original-seven-case__final-candidate__revision__SETUP-SPEC.json.txt",
+      "originalPath": "original-seven-case/final-candidate/revision/SETUP-SPEC.json",
+      "bytes": 9009,
+      "sha256": "463f85a2516296e8ffcd19c266bc59d67124b5230e049d5c71d184a895174414",
+      "byteIdentical": true
+    },
+    {
+      "file": "29__original-seven-case__final-candidate__revision__Setup-Common.ps1.txt",
+      "originalPath": "original-seven-case/final-candidate/revision/Setup-Common.ps1",
+      "bytes": 9957,
+      "sha256": "9569624fa58dfb139026d48df9d080af64bae33d3fc1a88354aebe595c11dbe7",
+      "byteIdentical": true
+    },
+    {
+      "file": "30__original-seven-case__final-candidate__revision__Staging-Gate.ps1.txt",
+      "originalPath": "original-seven-case/final-candidate/revision/Staging-Gate.ps1",
+      "bytes": 11706,
+      "sha256": "613fa981f5fed3fa4dba758619e5713e05f14d389892d7d94a3ea97b1811a309",
+      "byteIdentical": true
+    },
+    {
+      "file": "31__original-seven-case__final-candidate__tests__test-installer-adapter.ps1.txt",
+      "originalPath": "original-seven-case/final-candidate/tests/test-installer-adapter.ps1",
+      "bytes": 2953,
+      "sha256": "008f3c11a4888582694f22fe5530d3963711d1a28ee54c9849244eb305cf8c0e",
+      "byteIdentical": true
+    },
+    {
+      "file": "32__original-seven-case__predecessor-candidate__REVISION-MANIFEST.json.txt",
+      "originalPath": "original-seven-case/predecessor-candidate/REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70",
+      "byteIdentical": true
+    },
+    {
+      "file": "33__original-seven-case__predecessor-candidate__SOURCE-MAP.json.txt",
+      "originalPath": "original-seven-case/predecessor-candidate/SOURCE-MAP.json",
+      "bytes": 745477,
+      "sha256": "b15b82d5be05cbefc547ee7646599a329314647a9365818d4dcc8b84d6335264",
+      "byteIdentical": true
+    },
+    {
+      "file": "34__original-seven-case__predecessor-candidate__revision__Install-FilesAndServices.ps1.txt",
+      "originalPath": "original-seven-case/predecessor-candidate/revision/Install-FilesAndServices.ps1",
+      "bytes": 13021,
+      "sha256": "2bd0591770e08b5ab1c6b9c7c6af0998999fb3e91db16db1ca36bb75c4d1b561",
+      "byteIdentical": true
+    },
+    {
+      "file": "35__original-seven-case__predecessor-candidate__revision__SETUP-SPEC.json.txt",
+      "originalPath": "original-seven-case/predecessor-candidate/revision/SETUP-SPEC.json",
+      "bytes": 9009,
+      "sha256": "463f85a2516296e8ffcd19c266bc59d67124b5230e049d5c71d184a895174414",
+      "byteIdentical": true
+    },
+    {
+      "file": "36__original-seven-case__predecessor-candidate__revision__Setup-Common.ps1.txt",
+      "originalPath": "original-seven-case/predecessor-candidate/revision/Setup-Common.ps1",
+      "bytes": 9957,
+      "sha256": "9569624fa58dfb139026d48df9d080af64bae33d3fc1a88354aebe595c11dbe7",
+      "byteIdentical": true
+    },
+    {
+      "file": "37__original-seven-case__predecessor-candidate__revision__Staging-Gate.ps1.txt",
+      "originalPath": "original-seven-case/predecessor-candidate/revision/Staging-Gate.ps1",
+      "bytes": 11706,
+      "sha256": "613fa981f5fed3fa4dba758619e5713e05f14d389892d7d94a3ea97b1811a309",
+      "byteIdentical": true
+    },
+    {
+      "file": "38__package__EVIDENCE-VERIFICATION.json.txt",
+      "originalPath": "package/EVIDENCE-VERIFICATION.json",
+      "bytes": 12860,
+      "sha256": "57832da897d2d8251c6db31bd606cb78a34e8fad5cc41fdda1585e2bbd019acf",
+      "byteIdentical": true
+    },
+    {
+      "file": "39__package__PACKAGE-MANIFEST.json.txt",
+      "originalPath": "package/PACKAGE-MANIFEST.json",
+      "bytes": 6999,
+      "sha256": "71f57460e051a2c70fe39f2ddd1375e48bbc412a5fb28484ac6c92197e91b03b",
+      "byteIdentical": true
+    },
+    {
+      "file": "40__package__assemble-review-package.py.txt",
+      "originalPath": "package/assemble-review-package.py",
+      "bytes": 10655,
+      "sha256": "956ec9266d471909999daf50ccda3867bc2e68f86ce8d6c851ce18182e6e99f4",
+      "byteIdentical": true
+    },
+    {
+      "file": "41__package__reference__existing-final__REVISION-MANIFEST.json.txt",
+      "originalPath": "package/reference/existing-final/REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3",
+      "byteIdentical": true
+    },
+    {
+      "file": "42__package__reference__existing-final__SOURCE-MAP.json.txt",
+      "originalPath": "package/reference/existing-final/SOURCE-MAP.json",
+      "bytes": 731936,
+      "sha256": "6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1",
+      "byteIdentical": true
+    },
+    {
+      "file": "43__package__reference__existing-final__docs__STATE-ROOT-BINDINGS.md.txt",
+      "originalPath": "package/reference/existing-final/docs/STATE-ROOT-BINDINGS.md",
+      "bytes": 10043,
+      "sha256": "12af2adfdf81ce8c1953dcf40f711506d473ba8f9233ad265fd1101364c06715",
+      "byteIdentical": true
+    },
+    {
+      "file": "44__package__reference__existing-final__docs__TRUST-LAUNCH.md.txt",
+      "originalPath": "package/reference/existing-final/docs/TRUST-LAUNCH.md",
+      "bytes": 5263,
+      "sha256": "6b1c48b18af401f343d366d31d1b682abd2aef0e3257b563e526dc2879d65ecd",
+      "byteIdentical": true
+    },
+    {
+      "file": "45__package__reference__existing-final__revision__Install-FilesAndServices.ps1.txt",
+      "originalPath": "package/reference/existing-final/revision/Install-FilesAndServices.ps1",
+      "bytes": 13021,
+      "sha256": "2bd0591770e08b5ab1c6b9c7c6af0998999fb3e91db16db1ca36bb75c4d1b561",
+      "byteIdentical": true
+    },
+    {
+      "file": "46__package__reference__existing-final__revision__SETUP-SPEC.json.txt",
+      "originalPath": "package/reference/existing-final/revision/SETUP-SPEC.json",
+      "bytes": 9009,
+      "sha256": "463f85a2516296e8ffcd19c266bc59d67124b5230e049d5c71d184a895174414",
+      "byteIdentical": true
+    },
+    {
+      "file": "47__package__reference__existing-final__revision__Setup-Common.ps1.txt",
+      "originalPath": "package/reference/existing-final/revision/Setup-Common.ps1",
+      "bytes": 9957,
+      "sha256": "9569624fa58dfb139026d48df9d080af64bae33d3fc1a88354aebe595c11dbe7",
+      "byteIdentical": true
+    },
+    {
+      "file": "48__package__reference__existing-final__revision__Setup-Database.ps1.txt",
+      "originalPath": "package/reference/existing-final/revision/Setup-Database.ps1",
+      "bytes": 13687,
+      "sha256": "b385bcdfc3af6c3a66c85937005eda1bde0abef17355b4a2027b140b027bb3f2",
+      "byteIdentical": true
+    },
+    {
+      "file": "49__package__reference__existing-final__revision__Staging-Gate.ps1.txt",
+      "originalPath": "package/reference/existing-final/revision/Staging-Gate.ps1",
+      "bytes": 11706,
+      "sha256": "613fa981f5fed3fa4dba758619e5713e05f14d389892d7d94a3ea97b1811a309",
+      "byteIdentical": true
+    },
+    {
+      "file": "50__package__reference__existing-final__revision__provider-binding.json.txt",
+      "originalPath": "package/reference/existing-final/revision/provider-binding.json",
+      "bytes": 501,
+      "sha256": "0fd281796b12b38ba7af755487206d3fdf034ca00b6f14497e67846e68b634d8",
+      "byteIdentical": true
+    },
+    {
+      "file": "51__package__reference__existing-final__revision__service-launch.mjs.txt",
+      "originalPath": "package/reference/existing-final/revision/service-launch.mjs",
+      "bytes": 1070,
+      "sha256": "819e37a8fb140b413c1202ee588a37a9954231f88cee5ab86f0d6969b3d30767",
+      "byteIdentical": true
+    },
+    {
+      "file": "52__package__reference__existing-final__stage-receipt.json.txt",
+      "originalPath": "package/reference/existing-final/stage-receipt.json",
+      "bytes": 483090,
+      "sha256": "18ac1853599fc8012b2f4319f8896cddd7b945701706b3a155bd646656f85ee8",
+      "byteIdentical": true
+    },
+    {
+      "file": "53__package__reference__existing-final__staged-REVISION-MANIFEST.json.txt",
+      "originalPath": "package/reference/existing-final/staged-REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3",
+      "byteIdentical": true
+    },
+    {
+      "file": "54__package__reference__existing-final__tests__test-installer-adapter.ps1.txt",
+      "originalPath": "package/reference/existing-final/tests/test-installer-adapter.ps1",
+      "bytes": 2953,
+      "sha256": "008f3c11a4888582694f22fe5530d3963711d1a28ee54c9849244eb305cf8c0e",
+      "byteIdentical": true
+    },
+    {
+      "file": "55__package__reference__existing-final__tools__Assess-Ancestors.ps1.txt",
+      "originalPath": "package/reference/existing-final/tools/Assess-Ancestors.ps1",
+      "bytes": 6080,
+      "sha256": "9e6476006c441b93f44826ecd6557b8bd877b7bca20e6d2fd571e802530a0d3d",
+      "byteIdentical": true
+    },
+    {
+      "file": "56__package__reference__existing-final__tools__Stage-Candidate.ps1.txt",
+      "originalPath": "package/reference/existing-final/tools/Stage-Candidate.ps1",
+      "bytes": 8890,
+      "sha256": "e02cc09151572e39a78e8043e0c7ce32be05ee7d668b1f9246f467afce7b4c93",
+      "byteIdentical": true
+    },
+    {
+      "file": "57__package__reference__existing-final__tools__Staging-Security.cs.txt",
+      "originalPath": "package/reference/existing-final/tools/Staging-Security.cs",
+      "bytes": 11110,
+      "sha256": "6161f1421525f238d6be7ba85047e7ae132ec8c81a7b343c6b51f1fde2cb6422",
+      "byteIdentical": true
+    },
+    {
+      "file": "58__package__reference__existing-final__tools__build-installer-revision.py.txt",
+      "originalPath": "package/reference/existing-final/tools/build-installer-revision.py",
+      "bytes": 12101,
+      "sha256": "66d86149589f9d72b4f66dc5995558cf0a09bf39a4c94ce44bc7ebd684eea8f7",
+      "byteIdentical": true
+    },
+    {
+      "file": "59__package__reference__existing-final__tools__build-map.cjs.txt",
+      "originalPath": "package/reference/existing-final/tools/build-map.cjs",
+      "bytes": 3300,
+      "sha256": "522dcea826de367dce977fc05694d1f3d2173846e1dac56e32a771bd0ebac6a7",
+      "byteIdentical": true
+    },
+    {
+      "file": "60__package__reference__existing-final__tools__seal-revision.cjs.txt",
+      "originalPath": "package/reference/existing-final/tools/seal-revision.cjs",
+      "bytes": 1218,
+      "sha256": "826e664024bc07ad298be07d02828ac8e61a12e0b104504c3e2af1b8143a402e",
+      "byteIdentical": true
+    },
+    {
+      "file": "61__package__reference__predecessor__stage-receipt.json.txt",
+      "originalPath": "package/reference/predecessor/stage-receipt.json",
+      "bytes": 483090,
+      "sha256": "35fd81e95f4be6bf4d072f3c50f1fea97f14478a8b761d001d2b2605a2c2fe49",
+      "byteIdentical": true
+    },
+    {
+      "file": "62__package__reference__predecessor__staged-REVISION-MANIFEST.json.txt",
+      "originalPath": "package/reference/predecessor/staged-REVISION-MANIFEST.json",
+      "bytes": 2448,
+      "sha256": "d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70",
+      "byteIdentical": true
+    },
+    {
+      "file": "63__package__reference__retained-evidence__RESULTS-ENVELOPE.json.txt",
+      "originalPath": "package/reference/retained-evidence/RESULTS-ENVELOPE.json",
+      "bytes": 2468,
+      "sha256": "53f992a5c9b87a8c8ae254042cb2dd46aebc8e444af0cc0729956fa0cf98cb6c",
+      "byteIdentical": true
+    },
+    {
+      "file": "64__package__reference__retained-evidence__collision-negative-control.json.txt",
+      "originalPath": "package/reference/retained-evidence/collision-negative-control.json",
+      "bytes": 1362,
+      "sha256": "23e59dbabc76ea71901330fc23199e1c3c8c940c915f08d1cdca6e62084e3e15",
+      "byteIdentical": true
+    },
+    {
+      "file": "65__package__reference__retained-evidence__fresh-pins.json.txt",
+      "originalPath": "package/reference/retained-evidence/fresh-pins.json",
+      "bytes": 1712,
+      "sha256": "63131b7c3e452f5d3af0933604d45fd37be32c740dd4a4d4d3388144e62b6207",
+      "byteIdentical": true
+    },
+    {
+      "file": "66__package__reference__retained-evidence__independent-review-v1.txt.txt",
+      "originalPath": "package/reference/retained-evidence/independent-review-v1.txt",
+      "bytes": 6277,
+      "sha256": "f8050050cb823033a0d83ddfc2475b26070b32e49fe748921b40863e1b3aaff4",
+      "byteIdentical": true
+    },
+    {
+      "file": "67__package__reference__retained-evidence__independent-review.txt.txt",
+      "originalPath": "package/reference/retained-evidence/independent-review.txt",
+      "bytes": 2703,
+      "sha256": "c8d4b156304e5c490e320518e0bd4ef699d4ec3ef17bcd9dcffffac02a519646",
+      "byteIdentical": true
+    },
+    {
+      "file": "68__package__reference__retained-evidence__installer-prepared-tests.json.txt",
+      "originalPath": "package/reference/retained-evidence/installer-prepared-tests.json",
+      "bytes": 3116,
+      "sha256": "e0ff13a3b855a2574594cef80f05fb006ee50d612d561d4ca35059b9431dc5ef",
+      "byteIdentical": true
+    },
+    {
+      "file": "69__package__reference__retained-evidence__native-containment-tests.json.txt",
+      "originalPath": "package/reference/retained-evidence/native-containment-tests.json",
+      "bytes": 4696,
+      "sha256": "e9072ebcac0feb7844c1d8a86df2a26317e4c5d222a136dac30a886b1f9fc3fd",
+      "byteIdentical": true
+    },
+    {
+      "file": "70__package__reference__retained-evidence__security-canonical-final.json.txt",
+      "originalPath": "package/reference/retained-evidence/security-canonical-final.json",
+      "bytes": 23714,
+      "sha256": "5fca6b5ebc0f5c1c85732d15217d923e8a1852046b3208f9ed1d65b6f4690a7a",
+      "byteIdentical": true
+    },
+    {
+      "file": "71__package__reference__retained-evidence__security-final.json.txt",
+      "originalPath": "package/reference/retained-evidence/security-final.json",
+      "bytes": 23716,
+      "sha256": "e0594ecc931334ff1ae04a390b9081b2c377b50d7f43b7c8689ef4327af03d19",
+      "byteIdentical": true
+    }
+  ]
+}

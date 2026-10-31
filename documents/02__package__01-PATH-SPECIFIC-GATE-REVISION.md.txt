@@ -1,0 +1,98 @@
+# C5 path-specific gate revision — PG-R1 (review only)
+Date: 2026-10-30. Status: PROPOSED REQUIREMENT, NOT IMPLEMENTED OR ACCEPTED.
+This document is the proposed exact gate contract, not an execution permit. No runnable revised gate is supplied.
+Current strict ancestor checks and unconditional ProtectedStage/Apply admission blocks remain unchanged.
+Preparation only: no operational staging, Setup retry, test execution, ACL changes, deployment or hosted calls.
+All exclusions and 48 unspent attempts (42 primary + 6 reserved) remain binding.
+
+## 1. Normative replacement rule
+
+For each explicitly allowlisted path and each actual component from its local volume root through its leaf, reject any untrusted effective route to alter security-relevant contents/metadata, owner/DACL, or delete, rename, redirect or replace that component. Include DELETE on the component and FILE_DELETE_CHILD on its parent, inherited grants, ownership and applicable privileges. Reject unsupported or unresolved cases.
+
+An ancestor's right to create an unrelated sibling is not, by itself, a reason to reject an already protected chain. It may be classified SIBLING_CREATE_ONLY only after every other predicate below passes. This is neither a blanket C-drive exception nor a ProgramData exception. No future absent target is accepted based on parent ACLs alone. No ancestor ACL is changed.
+
+A permitted mutable-data write is an exception only to that named service's own data path, not to protection of its parent chain or authority over any code, configuration, secret, ledger, evidence or other service's data. Passing file/ACL checks means PATH_POLICY_VERIFIED_NOT_SETUP_AUTHORIZATION, never permission to execute Setup.
+
+## 2. Principals and threat boundary
+
+| Principal | Exact authority |
+| --- | --- |
+| Local SYSTEM, SID S-1-5-18 | Trusted installation/security administrator. Full control of new dedicated roots. |
+| Enabled elevated BUILTIN Administrators, SID S-1-5-32-544 | Trusted installation/security administrator. A deny-only/filtered Administrators membership does NOT confer trust. HENRI's username or user SID alone is not an allowlist entry. |
+| Windows TrustedInstaller, SID S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464 | Trusted owner/servicing authority only for existing verified Windows/system/shared Program Files prerequisites. Not a general writer exception on new C5 roots. |
+| NT SERVICE\\MCVQ5Postgres1029 | Untrusted with respect to protected code/control material; only the Postgres mutable-data capability in section 3. |
+| NT SERVICE\\MCVQ5Provider1029 | Untrusted with respect to protected code/control material; only provider slots/log capabilities in section 3. |
+| NT SERVICE\\MCVQ5Tunnel1029 | RX/read on exact assigned executable/config/credential only; no mutable-data capability. |
+| Everyone S-1-1-0, Users S-1-5-32-545, Authenticated Users S-1-5-11, ordinary users, other services and other resolved principals | Untrusted unless an exact reviewed capability below applies. Unknown SID/token/claim is BLOCKED, not omitted. |
+
+Resolve service names to exact SIDs using supported Windows identity/service-SID semantics and record both names and SIDs before future acceptance. Missing identities are UNQUALIFIED; do not create services/accounts to fill this review gap. A service SID found in some unrelated token does not grant the whole token global trust. Evaluate enabled, restricted and deny-only groups, owner rights, integrity label and enabled privileges. Admin/SYSTEM/same-trusted-writer concurrency is outside the lower-privilege adversary model; no resistance to a malicious administrator is claimed. Do not bypass any previously denied token-inspection operation.
+
+## 3. Exact path inventory and rights
+
+Definitions (literal roots, not configurable prefixes):
+T = C:\\Program Files\\MCVQ5-Staging-20261029
+K = T\\candidate-b9e20e88
+C = C:\\Program Files\\MCVQ5-20261029
+S = C:\\Program Files\\MCVQ5-State-20261029
+
+| Path | Permitted access beyond Admin/SYSTEM |
+| --- | --- |
+| T and K, every revision/map/packet/input/bootstrap/helper and stage receipt | None. Protected manifest-exact inventory; staged artifacts never writable by services. |
+| C and all installed binaries, dependencies, provider source, launch wrappers, configs, install receipts and setup-install-complete.json | Exact service SID RX only where required by that service's complete executable/dependency closure. No service write, ownership or DACL change. No broad Users/AuthUsers/Everyone grants. |
+| S root and intermediate control directories | Exact required service traversal/RX, no service add-child/delete/rename at S. |
+| S\\postgres and descendants including postgres\\data | Postgres SID Modify only within this subtree, not on S or sibling objects. Cluster config files under data are included in this bounded runtime-data capability; they are NOT immutable control-code evidence. Other services denied mutation. External tablespaces/preload/library/archive/config paths forbidden unless separately inventoried and reviewed. |
+| S\\provider-slots | Provider SID Modify for existing ledger behavior: 01.slot through 48.slot. This filesystem capability does NOT authorize a reservation or attempt now. Operator ledger remains separate. |
+| S\\provider-logs | Provider SID Modify only: events.lock, events.0.jsonl through events.3.jsonl, including reviewed rotation/rename. No log path may be a loader/config/input fallback. |
+| S\\provider-secrets.json | Provider SID Read only; Admin/SYSTEM writes. Provider cannot edit enabled/binding/credentials. |
+| S\\tunnel\\config.yml and credentials.json | Tunnel SID Read only, traversal on tunnel directory as needed. Directory/config/credentials writable only by Admin/SYSTEM. No tunnel log/cert/output path is implicitly permitted. |
+| S\\operator-slots (HALTED, operator.lock, 01.slot–48.slot) | Admin/SYSTEM only; no service rights. No ledger reservation now. |
+| S\\evidence, S\\setup, S\\setup\\admin-password, S\\setup-install-state.json, S\\setup-install-failure.json and counterpart C receipts | Admin/SYSTEM only. No service Modify or inherited service grant. |
+| C:\\ProgramData\\MCVQ5-20261029 (old proposed state root) | Not an accepted alternative. Never create/adopt it as compatibility path. |
+| Windows PowerShell/.NET/compiler/native DLL dependencies, working directory, TEMP/TMP, PATH, PGSYSCONFDIR and any other actual launch dependency | Exact protected resolved inventory required before use; no acceptance based solely on a trusted directory label. Missing inventory is BLOCKED_LAUNCH_CHAIN_UNQUALIFIED. |
+
+The root-binding inventory supplied as reference/STATE-ROOT-BINDINGS.md remains part of this proposal. It enumerates SCM/NSSM quoted arguments, config substitutions, pg_ctl -D, cluster containment, secret paths, evidence and external operator binding. No hidden ProgramData fallback or arbitrary root override. Exact installed-file/RX grant inventory must be derived from the pinned spec and manifests, recorded per service and rejected if absent; no recursive grant to all services as a substitute.
+
+The Postgres service can modify its own data/config and therefore can compromise its own database trust domain; this exception provides filesystem separation, not database semantic integrity against that service. Qualification must not mistake it for immutable-code protection. All process DLL/module/executable search paths stay outside mutable data, except reviewed Postgres data configuration interpreted within that service's own trust domain. A config feature that loads executable code from mutable state is blocked until separately reviewed.
+
+## 4. Effective-access decision contract
+
+For EACH component, record path, parent relation, volume serial/file ID, type/reparse state, owner SID, protected/inherited descriptor, integrity label, parent/child security descriptors, token context and requested rights/result. Read descriptors through the same held identity, not an independently re-resolved path.
+
+Use reviewed Windows AccessCheck/Authz semantics with correct FILE/DIRECTORY generic-right mapping, normal/restricted-token intersection, deny-only groups, owner/OWNER RIGHTS semantics, mandatory integrity and privilege effects. Merely decoding Allow ACE masks or synthesizing a convenient ordinary-user token is not proof. Require both:
+1. Complete descriptor/principal analysis for all applicable mutation grants; unknown group/ACE/claim/privilege => BLOCKED.
+2. Supported token-specific checks for the representative real token classes in the validation plan. Unavailable real service tokens remain unqualified; fixture tokens are not substitutes.
+
+Check individually (not one MAXIMUM_ALLOWED summary):
+- File WRITE_DATA/APPEND_DATA, and directories ADD_FILE/ADD_SUBDIRECTORY where protected names or loader contents could be introduced.
+- DELETE on each component and FILE_DELETE_CHILD on each parent. Either untrusted route => BLOCKED even if the child's DACL otherwise looks safe.
+- WRITE_DAC, WRITE_OWNER, effective owner authority, security-changing privileges.
+- WRITE_EA, WRITE_ATTRIBUTES and any redirect/reparse/volume mechanism affecting chain integrity; unresolved relevance => BLOCKED.
+- Rename/move/replacement combining source removal and destination insertion/replacement. Never infer replacement solely from one create bit.
+- Read/RX for the exact intended service, cross-service negative access, service configuration/SCM registry authority and inherited environment/lookup routes.
+
+C:\\ Authenticated Users ADD_SUBDIRECTORY alone may be SIBLING_CREATE_ONLY only for the already existing verified Program Files branch, with no DELETE/DELETE_CHILD/security-control/redirect route and complete held-identity continuity. ProgramData Users 0x116 cannot be generically accepted: inheritance, owner effects and exact-name squatting require explicit treatment. This revision selects Program Files state, not ProgramData.
+
+Outcomes: PASS_PROTECTED, PASS_SCOPED_SERVICE_DATA, SIBLING_CREATE_ONLY (ancestor observation only), BLOCKED_COLLISION, BLOCKED_EFFECTIVE_ACCESS, BLOCKED_UNKNOWN, BLOCKED_CONTINUITY or BLOCKED_LAUNCH_CHAIN_UNQUALIFIED. Any blocked or missing component blocks the whole chain. No warning-only fallback or user-configurable skip.
+
+## 5. Creation, collision and continuity
+
+- Validate canonical local absolute paths and exact allowlist. Reject UNC/device namespaces, ADS, traversal, normalization aliases, short-name aliases, trailing spaces/dots, reserved names, unexpected volume/mount transitions and reparse points. Reject hard-linked protected files (link count not one) unless a future reviewed proof explicitly covers all aliases; no such exception here.
+- Hold every existing ancestor with no delete sharing, record volume/file identity, verify descriptors and reparse state. Resolve/create relative to the validated parent handle using a supported reviewed primitive, or prove equivalent parent-chain stability. No arbitrary path re-resolution can silently substitute a different object.
+- Create every new directory/file with its restrictive protected descriptor AT creation, trusted owner and no inherited untrusted write. Exclusive create only. Never adopt an existing directory, file, junction, receipt or service; collision => STOP before writes to it. Do not repair ACLs on rejected paths.
+- A failed exclusive creation must not trigger cleanup/evidence writes into the rejected destination. Record only in a separate already owned protected evidence destination, or return the failure without a file write.
+- Acquire the new object's non-delete-share handle immediately, verify owner/DACL/type/file identity against the created object, and retain through copy, gate and receipt flush. A post-create pathname open alone does not prove atomic continuity: if the primitive cannot close the low-privilege creation-to-held-handle substitution window, BLOCKED_CONTINUITY.
+- The existing CreateDirectoryW-then-open implementation documents a same-SID/Admin/SYSTEM gap; do not relabel that gap as closed. Prove lower-privilege safety from exclusive creation + validated parent authority and descriptor-at-creation, or require a different reviewed primitive later.
+- Copy pinned bytes from held read-only sources into exclusive new files with explicit descriptor; verify size/hash after durable flush via held identities. No original-source execution fallback. Preserve the original 52-file anchor and complete 1,691-entry map, all revision pins, no extra files/directories.
+- Failure revokes only grants that this invocation demonstrably created on its own dedicated objects, if later authorized. Never delete or modify collided/shared objects. Failed containment remains BLOCKED, never successful quarantine.
+
+## 6. Proposed change surface — not applied
+
+| Existing consumer | Future required revision |
+| --- | --- |
+| tools/Staging-Security.cs: AssertStrictAncestor / Chain / Create / CopyPin | Replace blanket mask only with reviewed per-component/token contract; bind ACL reads to held identities, qualify creation continuity and hard links. Preserve strict fallback for unknown cases. |
+| revision/Staging-Gate.ps1: Assert-C5ProtectedPreload / Assert-C5Revision | Apply same policy BEFORE candidate helper loading and again on staged inventory; do not bootstrap trust by loading unverified candidate code. |
+| tools/Stage-Candidate.ps1 | Preserve unconditional ProtectedStage admission block in this preparation; later code must pin independent bootstrap/policy and protect compiler/TEMP/loader before use. |
+| revision/SETUP-SPEC.json / Install-FilesAndServices.ps1 / Setup-Common.ps1 / Setup-Database.ps1 | Bind exact roots, per-service capabilities, installed readbacks and receipts; do not change activation/qualification semantics. |
+| docs/STATE-ROOT-BINDINGS.md / TRUST-LAUNCH / manifests / generators / tests | Make exact source bindings and evidence provenance agree. Any code change needs a NEW manifest digest and fresh evidence, not reuse of 19867043… as approval. |
+
+No exclusion, live financial setting, permit or approval pin changes. Supported Vercel-access restoration is a separate prerequisite and has not been checked or restored by this package. General administrator access is not the claimed blocker; token-probe limitations, technical path qualification, review and scoped authorization remain distinct.

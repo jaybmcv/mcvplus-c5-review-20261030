@@ -1,0 +1,144 @@
+"""Prepare a separate local-only installer candidate; never edits the sealed packet."""
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent.parent
+original = root.parent / "mcvplus-c5-setup-closure-20261029"
+revision = root / "revision"
+old_state = r"C:\ProgramData\MCVQ5-20261029"
+new_state = r"C:\Program Files\MCVQ5-State-20261029"
+
+def load(name):
+    return (original / name).read_text(encoding="utf-8-sig")
+
+def save(name, value):
+    (revision / name).write_text(value, encoding="utf-8", newline="\n")
+
+spec = json.loads(load("SETUP-SPEC.json"))
+# Replace exact reviewed installed-root bindings recursively, not arbitrary input paths.
+def relocate(value):
+    if isinstance(value, str):
+        return value.replace(old_state, new_state)
+    if isinstance(value, list):
+        return [relocate(x) for x in value]
+    if isinstance(value, dict):
+        return {k: relocate(v) for k, v in value.items()}
+    return value
+spec = relocate(spec)
+spec["status"] = "PREPARED_LOCAL_ONLY_TARGETED_REVIEW_AND_FUTURE_AUTHORIZATION_REQUIRED"
+spec["dataRootRelocation"] = {
+    "original": old_state, "proposed": new_state,
+    "applied": False, "sharedAclChangesAuthorized": False,
+    "review": "Strict ancestor effective-access gate still required; relocation is proposed, not approved."
+}
+for name in ("node", "nssm", "cloudflared"):
+    spec["binary"][name]["source"] = f"inputs/binary/{name}.exe"
+save("SETUP-SPEC.json", json.dumps(spec, indent=2) + "\n")
+save("service-launch.mjs", load("service-launch.mjs").replace(old_state.replace("\\", "\\\\"), new_state.replace("\\", "\\\\")))
+binding = relocate(json.loads(load("payload/config/provider-binding.json")))
+save("provider-binding.json", json.dumps(binding, indent=2) + "\n")
+
+common = load("Setup-Common.ps1")
+common = common.replace("if(-not ('C5Native' -as [type])){Add-Type -Path (Join-Path $PSScriptRoot 'Setup-Native.cs') -ReferencedAssemblies System.Management}", """# Dot-sourcing the common helpers performs no compilation or process operation.
+function Initialize-C5Native([string]$CandidateRoot,[string]$ExpectedRevisionManifestSha256){
+ Assert-C5Revision -CandidateRoot $CandidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+ if(('C5Native' -as [type]) -or ('C5System' -as [type])){throw 'PRELOADED_NATIVE_TYPE_REQUIRES_FRESH_PROCESS'}
+ $native=Get-C5StagedPacketPath -CandidateRoot $CandidateRoot -RelativePath 'Setup-Native.cs'
+ Add-Type -Path $native -ReferencedAssemblies System.Management
+}
+function Assert-C5LocalInstalledPin([string]$Path,$Pin,[string]$LocalRoot){
+ Assert-C5Plain $Path
+ $full=[IO.Path]::GetFullPath($Path)
+ if(-not $full.StartsWith($LocalRoot+'\\',[StringComparison]::OrdinalIgnoreCase)){throw 'LOCAL_NATIVE_OUTSIDE_DISPOSABLE_ROOT'}
+ if(-not(Test-Path -LiteralPath $full -PathType Leaf) -or (Get-Item -LiteralPath $full).Length -ne $Pin.bytes -or (Get-FileHash -LiteralPath $full -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Pin.sha256){throw 'LOCAL_INSTALLED_NATIVE_PIN_MISMATCH'}
+}
+""")
+common = common.replace(" $base=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot 'tests\\local-runs'))", """ # Disposable outputs are outside the sealed candidate inventory.
+ $candidate=Split-Path -Parent $PSScriptRoot
+ if((Split-Path -Leaf $candidate) -eq 'candidate-b9e20e88'){$base=[IO.Path]::GetFullPath((Join-Path (Split-Path -Parent $candidate) 'local-runs'))}
+ else{$base=[IO.Path]::GetFullPath((Join-Path $candidate 'tests\\installer-runs'))}""")
+save("Setup-Common.ps1", common)
+
+installer = load("Install-FilesAndServices.ps1")
+installer = installer.replace("param([switch]$Apply,", "param([switch]$Apply,[string]$ExpectedRevisionManifestSha256='',")
+begin = installer.index("$bundle=$PSScriptRoot")
+end = installer.index("$local=[bool]$LocalRoot")
+installer = installer[:begin] + """# This revision is preparation only. No switch combination can enable Setup.
+if($Apply){throw 'PREPARED_CANDIDATE_OPERATIONAL_APPLY_BLOCKED'}
+if($LocalFault -and -not $LocalRoot){throw 'LOCAL_FAULT_REQUIRES_DISPOSABLE_ROOT'}
+$candidateRoot=Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot 'Staging-Gate.ps1')
+Assert-C5Revision -CandidateRoot $candidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+$spec=Get-C5StagedSpec -CandidateRoot $candidateRoot
+if(-not $LocalRoot){$spec | ConvertTo-Json -Depth 16;return}
+$bundle=Join-Path $candidateRoot 'packet'
+. (Join-Path $PSScriptRoot 'Setup-Common.ps1')
+""" + installer[end:]
+installer = installer.replace("$data -ne 'C:\\ProgramData\\MCVQ5-20261029'", "$data -ne 'C:\\Program Files\\MCVQ5-State-20261029'")
+installer = installer.replace(" $raw=[IO.File]::ReadAllText((Join-Path $bundle 'SETUP-SPEC.json'))", " $raw=$spec | ConvertTo-Json -Depth 16")
+installer = installer.replace("'C:\\\\ProgramData\\\\MCVQ5-20261029'", "'C:\\\\Program Files\\\\MCVQ5-State-20261029'")
+installer = installer.replace("function CheckPin($entry){if(", "function CheckPin($entry){Assert-C5Plain $entry.source;if(")
+installer = installer.replace(" New-Item -ItemType Directory -Path (Split-Path -Parent $dest) -Force | Out-Null\n [IO.File]::Copy($entry.source,$dest,$false)\n if((Get-FileHash -LiteralPath $dest -Algorithm SHA256).Hash.ToLowerInvariant() -ne $entry.sha256){throw 'COPIED_HASH_MISMATCH'}", """ CheckPin $entry
+ Assert-C5Plain $dest
+ if(-not ([IO.Path]::GetFullPath($dest)).StartsWith($LocalRoot+'\\',[StringComparison]::OrdinalIgnoreCase)){throw 'COPY_DESTINATION_OUTSIDE_LOCAL_ROOT'}
+ New-Item -ItemType Directory -Path (Split-Path -Parent $dest) -Force | Out-Null
+ [IO.File]::Copy($entry.source,$dest,$false)
+ if((Get-Item -LiteralPath $dest).Length -ne $entry.bytes -or (Get-FileHash -LiteralPath $dest -Algorithm SHA256).Hash.ToLowerInvariant() -ne $entry.sha256){throw 'COPIED_HASH_MISMATCH'}""")
+start = installer.index(" $approvedFiles=Get-Content")
+stop = installer.index(" foreach($p in @($code,$data))", start)
+installer = installer[:start] + """ # No local hash exemptions: complete staged packet and external pins passed the gate.
+ Assert-C5Revision -CandidateRoot $candidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+ $approvedFiles=Get-Content -LiteralPath (Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath 'SETUP-FILE-MANIFEST.json') -Raw | ConvertFrom-Json
+""" + installer[stop:]
+installer = installer.replace(" Assert-C5PortFree 55442;Assert-C5PortFree 55443", " # The installer adapter starts no listener; it does not touch operational ports.")
+installer = installer.replace("$pg=Get-Content (Join-Path $bundle 'POSTGRES-BINARY-MANIFEST.json') -Raw | ConvertFrom-Json", "$pg=Get-C5StagedManifest -CandidateRoot $candidateRoot -Kind Postgres")
+installer = installer.replace("$deps=Get-Content (Join-Path $bundle 'PROVIDER-DEPENDENCY-MANIFEST.json') -Raw | ConvertFrom-Json", "$deps=Get-C5StagedManifest -CandidateRoot $candidateRoot -Kind Provider")
+acl_start = installer.index(" if(-not $local){\n  $receipt=Join-Path $bundle 'approved-ancestor-and-source-acls.json'")
+acl_end = installer.index(" # Containment starts BEFORE", acl_start)
+installer = installer[:acl_start] + " if(-not $local){throw 'PREPARED_CANDIDATE_OPERATIONAL_APPLY_BLOCKED'}\n" + installer[acl_end:]
+installer = installer.replace("[C5System]::CreateFreshDirectory($code)", "New-Item -ItemType Directory -Path $code -ErrorAction Stop | Out-Null")
+installer = installer.replace("[C5System]::CreateFreshDirectory($data)", "New-Item -ItemType Directory -Path $data -ErrorAction Stop | Out-Null")
+installer = installer.replace("$identity=Get-Content (Join-Path $bundle 'BUILD-IDENTITIES.json') -Raw | ConvertFrom-Json", "$identity=Get-Content -LiteralPath (Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath 'BUILD-IDENTITIES.json') -Raw | ConvertFrom-Json")
+installer = installer.replace("@($identity.providerFiles)+@('config/provider-binding.json')", "@($identity.providerFiles)")
+installer = installer.replace("source=(Join-Path $bundle ('payload\\'+$rel));sha256=$pin.sha256", "source=(Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath ('payload/'+$rel));bytes=$pin.bytes;sha256=$pin.sha256")
+installer = installer.replace(" [IO.File]::Copy((Join-Path $bundle 'service-launch.mjs'),(Join-Path $code 'service-launch.mjs'),$false)", """ # Revised root bindings are separate revision metadata. Original payload remains intact.
+ foreach($pair in @(@('service-launch.mjs','service-launch.mjs'),@('provider-binding.json','provider\\config\\provider-binding.json'))){
+  $revisionPin=Get-C5RevisionFilePin -CandidateRoot $candidateRoot -RelativePath $pair[0]
+  CopyPinned $revisionPin (Join-Path $code $pair[1])
+ }""")
+installer = installer.replace("Write-C5Json (Join-Path $LocalRoot 'local-install.json') @{root=$LocalRoot;code=$code;data=$data;", "Write-C5Json (Join-Path $LocalRoot 'local-install.json') @{root=$LocalRoot;code=$code;data=$data;candidateRoot=$candidateRoot;")
+installer = installer.replace("else{'FILES_AND_DISABLED_SERVICES_INSTALLED'}", "else{'LOCAL_FILES_AND_SIMULATED_DISABLED_SERVICES'}")
+installer = installer.replace("'FILES_AND_DISABLED_SERVICES_INSTALLED; DB/CLOUD/DEPLOYMENT NOT PERFORMED; fresh full hash/ACL readback required'", "'LOCAL_FILES_COPIED_AND_SIMULATED_SERVICES_DISABLED; SCM/ACL NOT APPLIED; DB/CLOUD/DEPLOYMENT NOT PERFORMED'")
+save("Install-FilesAndServices.ps1", installer)
+
+database = load("Setup-Database.ps1")
+database = database.replace("param([switch]$Apply,", "param([switch]$Apply,[string]$ExpectedRevisionManifestSha256='',")
+begin = database.index("$bundle=$PSScriptRoot")
+end = database.index("$local=[bool]$LocalRoot")
+database = database[:begin] + """# This revision is preparation only. No switch combination can enable Setup.
+if($Apply){throw 'PREPARED_CANDIDATE_OPERATIONAL_APPLY_BLOCKED'}
+if($LocalNativeOnly -and -not $LocalRoot){throw 'LOCAL_NATIVE_TEST_REQUIRES_DISPOSABLE_ROOT'}
+if($LocalFault -and -not $LocalRoot){throw 'LOCAL_FAULT_REQUIRES_DISPOSABLE_ROOT'}
+# The authorized preparation explicitly prohibits cluster and credential creation.
+if($LocalRoot){throw 'PREPARED_CANDIDATE_CLUSTER_AND_CREDENTIAL_OPERATIONS_BLOCKED'}
+$candidateRoot=Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot 'Staging-Gate.ps1')
+Assert-C5Revision -CandidateRoot $candidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+$spec=Get-C5StagedSpec -CandidateRoot $candidateRoot
+if(-not $LocalRoot){'PREPARED ONLY: operational Apply disabled; disposable native adapter requires staged pins and fresh local installer marker.';return}
+$bundle=Join-Path $candidateRoot 'packet'
+. (Join-Path $PSScriptRoot 'Setup-Common.ps1')
+""" + database[end:]
+database = database.replace("$code='C:\\Program Files\\MCVQ5-20261029';$data='C:\\ProgramData\\MCVQ5-20261029'", "$code=$spec.codeRoot;$data=$spec.dataRoot")
+database = database.replace("$marker.mode -ne 'LOCAL_ONLY'", "$marker.candidateRoot -ne $candidateRoot -or $marker.mode -ne 'LOCAL_ONLY'")
+database = database.replace("$bin=Join-Path $code", """# Reverify every installed PostgreSQL byte before loading native runner or executing binaries.
+$pg=Get-C5StagedManifest -CandidateRoot $candidateRoot -Kind Postgres
+foreach($pin in $pg){Assert-C5LocalInstalledPin (Join-Path $code ('postgres\\'+$pin.path)) $pin $LocalRoot}
+Initialize-C5Native -CandidateRoot $candidateRoot -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+$bin=Join-Path $code""")
+database = database.replace("(Join-Path $bundle $File)", "(Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath $File)")
+database = database.replace("(Join-Path $bundle 'postgresql.conf')", "(Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath 'postgresql.conf')")
+database = database.replace("(Join-Path $bundle 'pg_hba.conf')", "(Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath 'pg_hba.conf')")
+save("Setup-Database.ps1", database)
+
+print("Prepared installer/common/database/spec and two binding revisions; original packet untouched.")

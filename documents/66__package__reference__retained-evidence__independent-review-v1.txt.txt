@@ -1,0 +1,59 @@
+**Local-preparation verdict: HOLD — one reproducibility defect requires correction and resealing.** The targeted receipt fix and physical relocation are otherwise consistent with the disabled preparation boundary. No operational readiness is established.
+
+1. **P2 — build-map cannot reproduce the pinned map bytes.** [build-map.cjs:19](D:/OpenClaw-workspace/artifacts/mcvplus-c5-staging-revision-20261030/tools/build-map.cjs:19) emits LF; `SOURCE-MAP.json` contains 13,541 CRLF sequences. Independent reconstruction in memory produced:
+   
+   - Current: **745,477 bytes**, `b15b82d5be05cbefc547ee7646599a329314647a9365818d4dcc8b84d6335264`
+   - Generator-equivalent LF: **731,936 bytes**, `6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1`
+   
+   Choose the canonical serialization, regenerate and reseal. This changes the revision digest.
+
+2. **P2 — supporting reports still identify the previous revision.** [REVISION-DELTA.json:3](D:/OpenClaw-workspace/artifacts/mcvplus-c5-staging-revision-20261030/REVISION-DELTA.json:3) retains the old manifest/map hashes. [VALIDATION-NOTES.md:35](D:/OpenClaw-workspace/artifacts/mcvplus-c5-staging-revision-20261030/docs/VALIDATION-NOTES.md:35) and [TRUST-LAUNCH.md:52](D:/OpenClaw-workspace/artifacts/mcvplus-c5-staging-revision-20261030/docs/TRUST-LAUNCH.md:52) retain old identity/access limitations; validation notes report **56 PASS / 2 BLOCKED**, versus the latest stored **64 PASS / 0 FAIL / 0 BLOCKED**. These need reconciliation during the parent’s report refresh.
+
+3. **Conditional ownership caveat:** [Stage-Candidate.ps1:68](D:/OpenClaw-workspace/artifacts/mcvplus-c5-staging-revision-20261030/tools/Stage-Candidate.ps1:68) acquires its retained destination handle after `CreateValidation` returns. Creation does not return a continuously held identity. A concurrent current-SID/Admin/SYSTEM writer could substitute a matching plain directory during that gap. This limits the literal invocation-ownership guarantee; no lower-privilege escape was demonstrated.
+
+**Verified targeted behavior**
+
+- Rejected existing roots/junctions leave `$destinationOwned` false and receive no receipt.
+- Receipt writing uses `CreateNew`, an explicit protected owner/DACL, write-through and durable flush. Acquired destination/ancestor handles remain held through writing. Existing receipts cannot be overwritten through this path.
+- Both maps contain **1,691 entries**. Exactly **54 sources** changed: 52 packet files, the original manifest and `psql.exe`. Every change is the specified prefix substitution; all `kind/key/destination/bytes/sha256` tuples and original external keys remain unchanged.
+- `Get-C5PhysicalSource` uses exact ordinal prefix matching. Resolvers remain stage-local without runtime realpath discovery or original-source fallback. Drift, reparse and unexpected staged inventory rejection remain present.
+- Installed root bindings and separate launcher/config substitutions remain intact. Future tunnel-config and operator-driver bindings remain explicitly outstanding.
+- Latest stored security evidence records **64 PASS**, a completed untrusted local stage and eight ceased owned processes. Native evidence records three containment cases; installer evidence covers eleven preparation/helper cases, not full installer success/fault execution. I did not replay these tests.
+
+**Operational blockers remain separate**
+
+`ProtectedStage`, both `Apply` admissions and database `LocalRoot` admission remain blocked. The recorded strict rule still fails at `C:\` and ProgramData. Program Files state relocation is **PREPARED, NOT PASS**.
+
+The ancestor report is raw SID/ACE analysis, not effective Authz/AccessCheck proof. Create rights do not alone prove delete/rename/replacement authority.
+
+The prior independent review, proposal, original source closure and completed stage contents were access-denied. External payload bytes were not independently reread; their unchanged pins were compared against the preserved verified map.
+
+**Exact hashes**
+
+Both revision manifests matched the supplied hashes; **all 14 files in each candidate matched their respective byte counts and SHA256 pins**. Five current entries changed; nine remained identical.
+
+| Anchor | SHA256 |
+|---|---|
+| Preserved revision manifest | `4b9416af9709b883ee843116273c724c2d753243fce7eea53629f0e82fb4eac9` |
+| Current revision manifest | `d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70` |
+| Original manifest, verified copied bytes | `b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c` |
+| Latest security report, 22:22:05 UTC | `e0594ecc931334ff1ae04a390b9081b2c377b50d7f43b7c8689ef4327af03d19` |
+
+| Current manifest entry | SHA256 |
+|---|---|
+| SOURCE-MAP.json | `b15b82d5be05cbefc547ee7646599a329314647a9365818d4dcc8b84d6335264` |
+| revision/Install-FilesAndServices.ps1 | `2bd0591770e08b5ab1c6b9c7c6af0998999fb3e91db16db1ca36bb75c4d1b561` |
+| revision/SETUP-SPEC.json | `463f85a2516296e8ffcd19c266bc59d67124b5230e049d5c71d184a895174414` |
+| revision/Setup-Common.ps1 | `9569624fa58dfb139026d48df9d080af64bae33d3fc1a88354aebe595c11dbe7` |
+| revision/Setup-Database.ps1 | `b385bcdfc3af6c3a66c85937005eda1bde0abef17355b4a2027b140b027bb3f2` |
+| revision/Staging-Gate.ps1 | `613fa981f5fed3fa4dba758619e5713e05f14d389892d7d94a3ea97b1811a309` |
+| revision/provider-binding.json | `0fd281796b12b38ba7af755487206d3fdf034ca00b6f14497e67846e68b634d8` |
+| revision/service-launch.mjs | `819e37a8fb140b413c1202ee588a37a9954231f88cee5ab86f0d6969b3d30767` |
+| tools/Assess-Ancestors.ps1 | `9e6476006c441b93f44826ecd6557b8bd877b7bca20e6d2fd571e802530a0d3d` |
+| tools/Stage-Candidate.ps1 | `e02cc09151572e39a78e8043e0c7ce32be05ee7d668b1f9246f467afce7b4c93` |
+| tools/Staging-Security.cs | `6161f1421525f238d6be7ba85047e7ae132ec8c81a7b343c6b51f1fde2cb6422` |
+| tools/build-installer-revision.py | `66d86149589f9d72b4f66dc5995558cf0a09bf39a4c94ce44bc7ebd684eea8f7` |
+| tools/build-map.cjs | `522dcea826de367dce977fc05694d1f3d2173846e1dac56e32a771bd0ebac6a7` |
+| tools/seal-revision.cjs | `826e664024bc07ad298be07d02828ac8e61a12e0b104504c3e2af1b8143a402e` |
+
+Read-only review completed. No project code/tests/compilation, network, credentials, ACL changes, services, remote actions or file writes were performed.

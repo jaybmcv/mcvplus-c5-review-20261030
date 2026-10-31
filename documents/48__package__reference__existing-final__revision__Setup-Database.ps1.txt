@@ -1,0 +1,170 @@
+param([switch]$Apply,[string]$ExpectedRevisionManifestSha256='',[string]$LocalRoot='',[switch]$LocalNativeOnly,
+ [ValidateSet('','InitdbTimeout','SqlTimeout','SqlTimeoutAndShutdownFailure','AfterCreateDatabase','ShutdownFailure','CessationBlocked','PrimaryAndShutdownFailure','NativeLifecycle')][string]$LocalFault='')
+$ErrorActionPreference='Stop'
+# This revision is preparation only. No switch combination can enable Setup.
+if($Apply){throw 'PREPARED_CANDIDATE_OPERATIONAL_APPLY_BLOCKED'}
+if($LocalNativeOnly -and -not $LocalRoot){throw 'LOCAL_NATIVE_TEST_REQUIRES_DISPOSABLE_ROOT'}
+if($LocalFault -and -not $LocalRoot){throw 'LOCAL_FAULT_REQUIRES_DISPOSABLE_ROOT'}
+# The authorized preparation explicitly prohibits cluster and credential creation.
+if($LocalRoot){throw 'PREPARED_CANDIDATE_CLUSTER_AND_CREDENTIAL_OPERATIONS_BLOCKED'}
+$candidateRoot=Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot 'Staging-Gate.ps1')
+Assert-C5Revision -CandidateRoot $candidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+$spec=Get-C5StagedSpec -CandidateRoot $candidateRoot
+if(-not $LocalRoot){'PREPARED ONLY: operational Apply disabled; disposable native adapter requires staged pins and fresh local installer marker.';return}
+$bundle=Join-Path $candidateRoot 'packet'
+. (Join-Path $PSScriptRoot 'Setup-Common.ps1')
+$local=[bool]$LocalRoot
+$script:C5NativeReceipts=New-Object 'Collections.Generic.List[object]'
+$cleanup=New-Object 'Collections.Generic.List[string]'
+$known=@{};$server=$null;$startRequested=$false;$clusterMade=$false;$primary='';$stage='PREFLIGHT';$runtimeLogin=$false
+$code=$spec.codeRoot;$data=$spec.dataRoot
+$serviceName='MCVQ5Postgres1029';$admin=$null;$runtimePassword=$null
+if($local){
+ $LocalRoot=Assert-C5LocalRoot $LocalRoot
+ $markerPath=Join-Path $LocalRoot 'local-install.json'
+ if(-not(Test-Path -LiteralPath $markerPath)){throw 'LOCAL_INSTALL_MARKER_REQUIRED'}
+ $marker=Get-Content -LiteralPath $markerPath -Raw | ConvertFrom-Json
+ if($marker.candidateRoot -ne $candidateRoot -or $marker.mode -ne 'LOCAL_ONLY' -or $marker.root -ne $LocalRoot -or $marker.dbAttempted -or ([DateTime]::UtcNow-[DateTime]::Parse($marker.createdUtc).ToUniversalTime()).TotalHours -gt 6){throw 'LOCAL_INSTALL_NOT_FRESH_SINGLE_USE'}
+ $code=Join-Path $LocalRoot 'code';$data=Join-Path $LocalRoot 'data'
+ if($marker.code -ne $code -or $marker.data -ne $data){throw 'LOCAL_MARKER_ROOT_MISMATCH'}
+ $marker.dbAttempted=$true;Write-C5Json $markerPath $marker
+}
+# Reverify every installed PostgreSQL byte before loading native runner or executing binaries.
+$pg=Get-C5StagedManifest -CandidateRoot $candidateRoot -Kind Postgres
+foreach($pin in $pg){Assert-C5LocalInstalledPin (Join-Path $code ('postgres\'+$pin.path)) $pin $LocalRoot}
+Initialize-C5Native -CandidateRoot $candidateRoot -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+$bin=Join-Path $code 'postgres\bin';$cluster=Join-Path $data 'postgres\data';$adminFile=Join-Path $data 'setup\admin-password'
+$evidence=Join-Path $data 'evidence';$servicePath='"'+(Join-Path $bin 'pg_ctl.exe')+'" runservice -N '+$serviceName+' -D "'+$cluster+'" -w -t 30'
+function AssertBinding {
+ $s=Get-C5Service $serviceName
+ if(-not $s -or $s.PathName -ne $servicePath -or $s.StartName -ne ('NT SERVICE\'+$serviceName)){throw 'EXACT_SERVICE_BINDING_MISMATCH'}
+ return $s
+}
+function Sql([string]$Db,[string]$File='', [string]$Text='', [int]$TimeoutMs=30000){
+ $arguments=@('--no-psqlrc','--no-password','--quiet','--tuples-only','--no-align','--set=ON_ERROR_STOP=1','-h','127.0.0.1','-p','55442','-U','c5_roq_setup_admin','-d',$Db)
+ if($File){$arguments+=@('--file',(Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath $File))}
+ $r=Invoke-C5Native (Join-Path $bin 'psql.exe') $arguments $stage $bundle -InputText $Text -TimeoutMs $TimeoutMs -Password $admin
+ return $r.Output
+}
+try{
+ foreach($p in @($code,$data,$cluster)){Assert-C5Plain $p}
+ if(Test-Path -LiteralPath $cluster){throw 'EXISTING_CLUSTER_BLOCKED'}
+ if(-not(Test-Path -LiteralPath $evidence)){throw 'INSTALL_EVIDENCE_ROOT_MISSING'}
+ # NativeLifecycle and InitdbTimeout are LOCAL-only runner/cluster tests, never a
+ # successful provisioning receipt; they do not masquerade as SQL acceptance.
+ if(-not $LocalNativeOnly -and $LocalFault -notin @('NativeLifecycle','InitdbTimeout') -and -not(Test-Path -LiteralPath (Join-Path $bin 'psql.exe'))){throw 'PINNED_NATIVE_PSQL_MISSING'}
+ if(-not $local){
+  $s=AssertBinding
+  if($s.State -ne 'Stopped' -or $s.StartMode -ne 'Disabled' -or $s.ProcessId -ne 0){throw 'SERVICE_NOT_STOPPED_DISABLED_PID0'}
+  [void](Assert-C5InstallEvidence -Code $code -Data $data)
+ }
+ Assert-C5PortFree 55442
+ if($local){
+  # Synthetic fixtures only, generated in memory; no existing secret input read.
+  $admin='LOCAL_SYNTHETIC_ADMIN_0123456789abcdef0123456789abcdef'
+  $runtimePassword="LOCAL_SYNTHETIC_READONLY_0123456789abcdef'quoted"
+  [IO.File]::WriteAllText($adminFile,$admin,(New-Object Text.UTF8Encoding($false)))
+ }else{
+  $admin=[IO.File]::ReadAllText($adminFile).Trim()
+  $secret=Get-Content (Join-Path $data 'provider-secrets.json') -Raw | ConvertFrom-Json
+  $runtimePassword=$secret.C5_READONLY_DB_PASSWORD
+  if($admin.Length -lt 32 -or $runtimePassword.Length -lt 32){throw 'DEDICATED_SECRET_INPUT_MISSING'}
+ }
+ $stage='INITDB';$clusterMade=$true
+ $initTimeout=60000;if($local -and $LocalFault -eq 'InitdbTimeout'){$initTimeout=1}
+ [void](Invoke-C5Native (Join-Path $bin 'initdb.exe') @('-D',$cluster,'--locale=C','--encoding=UTF8','-U','c5_roq_setup_admin','--auth=scram-sha-256',('--pwfile='+$adminFile)) $stage $bundle -TimeoutMs $initTimeout)
+ [IO.File]::Copy((Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath 'postgresql.conf'),(Join-Path $cluster 'postgresql.conf'),$true)
+ [IO.File]::Copy((Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath 'pg_hba.conf'),(Join-Path $cluster 'pg_hba.conf'),$true)
+ if(-not $local){[void](Invoke-C5Native ($env:SystemRoot+'\System32\icacls.exe') @($cluster,'/grant',('NT SERVICE\'+$serviceName+':(OI)(CI)M')) 'CLUSTER_ACL' $bundle -TimeoutMs 10000)}
+ $stage='POSTGRES_START';$startRequested=$true
+ if($local){
+  # pg_ctl descendants remain in the same private Job, including detached postgres.
+  $server=Invoke-C5Native (Join-Path $bin 'pg_ctl.exe') @('start','-D',$cluster,'-l',(Join-Path $evidence 'local-postgres-startup.log'),'-w','-t','15') $stage $bundle -TimeoutMs 20000 -KeepChildren
+ }else{
+  [void](AssertBinding);Invoke-C5Sc @('config',$serviceName,'start=','demand') $bundle
+  Invoke-C5Sc @('start',$serviceName) $bundle
+  [void](Wait-C5Service $serviceName 'Running' -TimeoutMs 30000)
+ }
+ Get-C5OwnedClusterProcesses $cluster $bin $known
+ if(-not $local -and -not $known.Count){throw 'SERVICE_CLUSTER_PROCESS_OWNERSHIP_UNCONFIRMED'}
+ if($local -and $LocalFault -eq 'PrimaryAndShutdownFailure'){throw 'LOCAL_INJECTED_PRIMARY_FAILURE'}
+ if($local -and ($LocalNativeOnly -or $LocalFault -eq 'NativeLifecycle')){$stage='NATIVE_LIFECYCLE_ONLY'}else{
+  $stage='CREATE_DATABASE';[void](Sql 'postgres' '01-create-database.sql')
+  if($local -and $LocalFault -eq 'AfterCreateDatabase'){throw 'LOCAL_INJECTED_PARTIAL_DATABASE_FAILURE'}
+  $stage='FIXTURE_GRANTS';$oids=Sql 'mcvplus_c5_roq_20261029' '02-fixture-grants.sql'
+  # SQL errors/stderr are discarded. Evidence accepts only actual OID/signature rows.
+  $rows=@($oids -split '\r?\n' | Where-Object {$_ -ne ''})
+  if(-not $rows.Count -or @($rows | Where-Object {$_ -notmatch '^\d+\|[a-zA-Z0-9_., "\[\]()]+$'}).Count){throw 'SANITIZED_OID_READBACK_INVALID'}
+  $rows | Set-Content -LiteralPath (Join-Path $evidence 'setup-function-oids.txt') -Encoding UTF8
+  if($local -and $LocalFault -in @('SqlTimeout','SqlTimeoutAndShutdownFailure')){$stage='SQL_TIMEOUT';[void](Sql 'mcvplus_c5_roq_20261029' -Text 'SELECT pg_sleep(60);' -TimeoutMs 1000)}
+  $stage='RUNTIME_LOGIN';$quoted="'"+$runtimePassword.Replace("'","''")+"'"
+  [void](Sql 'mcvplus_c5_roq_20261029' -Text ('ALTER ROLE c5_qualification_readonly LOGIN PASSWORD '+$quoted+';'))
+  $runtimeLogin=$true
+ }
+}catch{
+ $msg=$_.Exception.Message
+ if($msg -notmatch '^[A-Z_0-9]+$' -and $msg -notmatch '^FAIL stage=[A-Z_]+ primary=[A-Z_]+ cleanup=[A-Z_]+$'){$msg=$_.Exception.GetType().Name}
+ $primary=$stage+':'+$msg
+}finally{
+ # LOCAL-only admin readback before shutdown; no runtime login or hosted probe.
+ if($local -and $startRequested -and -not $LocalNativeOnly -and $LocalFault -notin @('NativeLifecycle','InitdbTimeout','PrimaryAndShutdownFailure')){
+  $savedStage=$stage
+  try{
+   $stage='LOCAL_ADMIN_INVENTORY'
+   $exists=(Sql 'postgres' -Text "SELECT EXISTS(SELECT 1 FROM pg_database WHERE datname='mcvplus_c5_roq_20261029');" -TimeoutMs 5000).Trim()
+   $inventory=[ordered]@{databaseExists=($exists -eq 't');fixture=$null;runtimeLoginUsed=$false;adminOnly=$true}
+   if($inventory.databaseExists){$inventory.fixture=(Sql 'mcvplus_c5_roq_20261029' 'tests/Fixture-Inventory.sql' -TimeoutMs 5000)|ConvertFrom-Json}
+   Write-C5Json (Join-Path $LocalRoot 'local-admin-inventory.json') $inventory
+  }catch{$cleanup.Add('LOCAL_ADMIN_INVENTORY_FAILED')}
+  $stage=$savedStage
+ }
+ if($primary -and $runtimeLogin){try{$stage='REVOKE_DEDICATED_LOGIN';[void](Sql 'mcvplus_c5_roq_20261029' -Text 'ALTER ROLE c5_qualification_readonly NOLOGIN;')}catch{$cleanup.Add('DEDICATED_LOGIN_REVOCATION_BLOCKED')}}
+ if($startRequested){
+  try{
+   if($local){
+    if($LocalFault -in @('ShutdownFailure','PrimaryAndShutdownFailure','SqlTimeoutAndShutdownFailure')){throw 'LOCAL_INJECTED_SHUTDOWN_FAILURE'}
+    # LOCAL-only false-success stop adapter: leave the actual owned server alive
+    # to exercise the real natural-cessation deadline and forced fallback.
+    if($LocalFault -ne 'CessationBlocked'){[void](Invoke-C5Native (Join-Path $bin 'pg_ctl.exe') @('stop','-D',$cluster,'-m','fast','-w','-t','10') 'POSTGRES_STOP' $bundle -TimeoutMs 15000)}
+   }else{
+    [void](AssertBinding);Invoke-C5Sc @('stop',$serviceName) $bundle
+    [void](Wait-C5Service $serviceName 'Stopped' -TimeoutMs 30000)
+   }
+  }catch{$cleanup.Add('POSTGRES_SHUTDOWN_FAIL')}
+ }
+ if(-not $local -and $clusterMade){try{[void](AssertBinding);Invoke-C5Sc @('config',$serviceName,'start=','disabled') $bundle;$endService=Wait-C5Service $serviceName 'Stopped' 'Disabled' -TimeoutMs 10000;if($endService.ProcessId -ne 0){throw 'SERVICE_STOPPED_PID_NOT_ZERO'}}catch{$cleanup.Add('SERVICE_DISABLE_OR_STOP_READBACK_BLOCKED')}}
+ if($clusterMade){
+  try{
+   Get-C5OwnedClusterProcesses $cluster $bin $known
+   # A successful stop REQUEST is not proof of cessation. Give natural exit its
+   # own absolute budget BEFORE forced containment; any overrun remains BLOCKED
+   # even if exact-owned fallback termination subsequently succeeds.
+   if($startRequested -and -not $cleanup.Count){
+    $grace=[Diagnostics.Stopwatch]::StartNew();$gone=$false
+    while($grace.ElapsedMilliseconds -lt 5000){
+     $alive=if($server){$server.Active()}else{@($known.Values | Where-Object {-not $_.HasExited}).Count}
+     if($alive -eq 0){$gone=$true;break};Start-Sleep -Milliseconds 25
+    }
+    if(-not $gone){$cleanup.Add('NATURAL_POSTGRES_CESSATION_BLOCKED')}
+   }
+   if($server){if(-not $server.Stop(5000)){$cleanup.Add('JOB_CESSATION_BLOCKED')}}
+   Stop-C5OwnedProcesses $known 5000
+   Get-C5OwnedClusterProcesses $cluster $bin $known
+   if(@($known.Values | Where-Object {-not $_.HasExited}).Count){throw 'OWNED_PROCESSES_REMAIN'}
+   Assert-C5PortFree 55442
+  }catch{$cleanup.Add('INDEPENDENT_CESSATION_READBACK_BLOCKED')}
+ }
+ if(($primary -or $cleanup.Count) -and $clusterMade -and -not $local){try{
+   # Revoke ONLY new dedicated cluster access; preserve cluster and all evidence.
+   [void](Invoke-C5Native ($env:SystemRoot+'\System32\icacls.exe') @((Join-Path $data 'postgres'),'/remove:g',('NT SERVICE\'+$serviceName)) 'QUARANTINE_CLUSTER' $bundle -TimeoutMs 10000)
+   if(Test-Path -LiteralPath $cluster){[void](Invoke-C5Native ($env:SystemRoot+'\System32\icacls.exe') @($cluster,'/remove:g',('NT SERVICE\'+$serviceName)) 'QUARANTINE_CLUSTER' $bundle -TimeoutMs 10000)}
+  }catch{$cleanup.Add('CLUSTER_ACCESS_REVOCATION_BLOCKED')}}
+ $status=if($cleanup.Count){'BLOCKED'}elseif($primary){'FAIL_QUARANTINED'}elseif($LocalNativeOnly -or $LocalFault -eq 'NativeLifecycle'){'NATIVE_LIFECYCLE_ONLY'}else{'PROVISIONED_NEW_FIXTURE_ONLY'}
+ $report=[ordered]@{status=$status;primary=$primary;cleanup=$cleanup.ToArray();mode=$(if($local){'LOCAL_NATIVE_NO_SCM'}else{'OPERATIONAL'});localFault=$LocalFault;nativeOnly=[bool]$LocalNativeOnly;stage=$stage;cluster=$cluster;port=55442;ownedIdentities=@($known.Keys);jobCessation=$(if($server){$server.Cleanup}else{'NOT_STARTED_OR_NATIVE_ALREADY_CONTAINED'});jobIdentities=$(if($server){$server.Identities.ToArray()}else{@()});native=$script:C5NativeReceipts.ToArray();deletionPerformed=$false;runtimeDiagnosticsPerformed=$false}
+ try{if($local){Write-C5Json (Join-Path $LocalRoot 'database-receipt.json') $report}else{Write-C5Json (Join-Path $evidence 'setup-database-state.json') $report}}catch{$cleanup.Add('EVIDENCE_WRITE_BLOCKED');$status='BLOCKED';$report.status='BLOCKED';$report.cleanup=$cleanup.ToArray();try{Write-C5Json (Join-Path $evidence 'setup-database-evidence-failure.json') $report}catch{$cleanup.Add('EVIDENCE_FAILURE_RECORD_BLOCKED')}}
+ if($server){$server.Dispose()};foreach($p in $known.Values){$p.Dispose()}
+ $admin=$null;$runtimePassword=$null;$secret=$null;$quoted=$null
+}
+if($primary -or $cleanup.Count){throw ('DATABASE_FAIL primary='+$primary+' cleanup='+($cleanup -join ',')+'; NEW_CLUSTER_AND_EVIDENCE_PRESERVED')}
+$status+'; cessation confirmed; independent setup catalog/grant/ACL review still required'

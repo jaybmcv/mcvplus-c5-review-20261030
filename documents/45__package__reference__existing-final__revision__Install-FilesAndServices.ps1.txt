@@ -1,0 +1,148 @@
+param([switch]$Apply,[string]$ExpectedRevisionManifestSha256='',[string]$LocalRoot='',[ValidateSet('','AfterCodeRoot','AfterDataRoot','AfterFirstCopy','AfterServiceCreate','AfterGrant','ContainmentFailure')][string]$LocalFault='')
+$ErrorActionPreference='Stop'
+# This revision is preparation only. No switch combination can enable Setup.
+if($Apply){throw 'PREPARED_CANDIDATE_OPERATIONAL_APPLY_BLOCKED'}
+if($LocalFault -and -not $LocalRoot){throw 'LOCAL_FAULT_REQUIRES_DISPOSABLE_ROOT'}
+$candidateRoot=Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot 'Staging-Gate.ps1')
+Assert-C5Revision -CandidateRoot $candidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+$spec=Get-C5StagedSpec -CandidateRoot $candidateRoot
+if(-not $LocalRoot){$spec | ConvertTo-Json -Depth 16;return}
+$bundle=Join-Path $candidateRoot 'packet'
+. (Join-Path $PSScriptRoot 'Setup-Common.ps1')
+$local=[bool]$LocalRoot
+$script:C5NativeReceipts=New-Object 'Collections.Generic.List[object]'
+$stage='PREFLIGHT';$made=New-Object 'Collections.Generic.List[object]';$roots=New-Object 'Collections.Generic.List[string]'
+$mock=@{};$mockAcl=@{};$revoked=0;$grants=New-Object 'Collections.Generic.List[object]';$cleanup=New-Object 'Collections.Generic.List[string]'
+$primary='';$script:firstCopy=$true
+$code=$spec.codeRoot;$data=$spec.dataRoot
+if($code -ne 'C:\Program Files\MCVQ5-20261029' -or $data -ne 'C:\Program Files\MCVQ5-State-20261029'){throw 'UNEXPECTED_OPERATIONAL_ROOTS'}
+if($local){
+ $LocalRoot=Assert-C5LocalRoot $LocalRoot -Fresh
+ New-Item -ItemType Directory -Path $LocalRoot | Out-Null
+ $code=Join-Path $LocalRoot 'code';$data=Join-Path $LocalRoot 'data'
+ $raw=$spec | ConvertTo-Json -Depth 16
+ $raw=$raw.Replace('C:\\Program Files\\MCVQ5-20261029',$code.Replace('\','\\')).Replace('C:\\Program Files\\MCVQ5-State-20261029',$data.Replace('\','\\'))
+ $spec=$raw | ConvertFrom-Json
+}
+function Fault([string]$At){if($local -and ($LocalFault -eq $At -or ($LocalFault -eq 'ContainmentFailure' -and $At -eq 'AfterGrant'))){throw 'LOCAL_INJECTED_FAILURE'}}
+function CheckPin($entry){Assert-C5Plain $entry.source;if((Get-Item -LiteralPath $entry.source).Length -ne $entry.bytes -or (Get-FileHash -LiteralPath $entry.source -Algorithm SHA256).Hash.ToLowerInvariant() -ne $entry.sha256){throw 'SOURCE_PIN_MISMATCH'}}
+function Acl([string]$Path,[string[]]$Arguments){
+ if($local){
+  if(-not ([IO.Path]::GetFullPath($Path)).StartsWith($LocalRoot+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'MOCK_ACL_OUTSIDE_ROOT'}
+  if(-not(Test-Path -LiteralPath $Path)){throw 'MOCK_ACL_MISSING_PATH'}
+  if($Arguments[0] -eq '/grant'){$pair=$Arguments[1] -split ':',2;$mockAcl[$Path+'|'+$pair[0]]=$pair[1]}
+  elseif($Arguments[0] -eq '/remove:g'){$mockAcl.Remove($Path+'|'+$Arguments[1])}
+  elseif($Arguments[0] -ne '/inheritance:r'){throw 'MOCK_ACL_UNSUPPORTED_OPERATION'}
+  return
+ }
+ [void](Invoke-C5Native ($env:SystemRoot+'\System32\icacls.exe') (@($Path)+$Arguments) 'ACL' $bundle -TimeoutMs 10000)
+}
+function Grant([string]$Path,[string]$Identity,[string]$Permission){$grants.Add(@{path=$Path;identity=$Identity});Acl $Path @('/grant',($Identity+':'+$Permission))}
+function CopyPinned($entry,[string]$dest){
+ CheckPin $entry
+ Assert-C5Plain $dest
+ if(-not ([IO.Path]::GetFullPath($dest)).StartsWith($LocalRoot+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'COPY_DESTINATION_OUTSIDE_LOCAL_ROOT'}
+ New-Item -ItemType Directory -Path (Split-Path -Parent $dest) -Force | Out-Null
+ [IO.File]::Copy($entry.source,$dest,$false)
+ if((Get-Item -LiteralPath $dest).Length -ne $entry.bytes -or (Get-FileHash -LiteralPath $dest -Algorithm SHA256).Hash.ToLowerInvariant() -ne $entry.sha256){throw 'COPIED_HASH_MISMATCH'}
+ if($script:firstCopy){$script:firstCopy=$false;Fault 'AfterFirstCopy'}
+}
+function ReadNewService($entry){if($local){if($mock.ContainsKey($entry.name)){return $mock[$entry.name]};return $null};return Get-C5Service $entry.name}
+function AssertNewService($entry){$s=ReadNewService $entry;if(-not $s -or $s.PathName -ne $entry.path){throw 'NEW_SERVICE_OWNERSHIP_MISMATCH'};return $s}
+try{
+ # No local hash exemptions: complete staged packet and external pins passed the gate.
+ Assert-C5Revision -CandidateRoot $candidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+ $approvedFiles=Get-Content -LiteralPath (Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath 'SETUP-FILE-MANIFEST.json') -Raw | ConvertFrom-Json
+ foreach($p in @($code,$data)){Assert-C5Plain $p;if(Test-Path -LiteralPath $p){throw 'TARGET_ALREADY_EXISTS'}}
+ foreach($svc in $spec.services){if(-not $local -and (Get-C5Service $svc.name)){throw 'SERVICE_COLLISION'}}
+ # The installer adapter starts no listener; it does not touch operational ports.
+ $pg=Get-C5StagedManifest -CandidateRoot $candidateRoot -Kind Postgres
+ if(-not $local -and -not @($pg | Where-Object path -eq 'bin/psql.exe').Count){throw 'POSTGRES_CLIENT_NOT_PINNED'}
+ $deps=Get-C5StagedManifest -CandidateRoot $candidateRoot -Kind Provider
+ foreach($pin in @($spec.binary.node,$spec.binary.nssm,$spec.binary.cloudflared)+$pg+@($deps.files)){CheckPin $pin}
+ if(-not $local){throw 'PREPARED_CANDIDATE_OPERATIONAL_APPLY_BLOCKED'}
+ # Containment starts BEFORE the first root/file/ACL mutation; nothing is deleted.
+ $stage='CREATE_CODE_ROOT';New-Item -ItemType Directory -Path $code -ErrorAction Stop | Out-Null;$roots.Add($code);Fault 'AfterCodeRoot'
+ Acl $code @('/inheritance:r','/grant:r','*S-1-5-18:(OI)(CI)F','*S-1-5-32-544:(OI)(CI)F')
+ $stage='CREATE_DATA_ROOT';New-Item -ItemType Directory -Path $data -ErrorAction Stop | Out-Null;$roots.Add($data);Fault 'AfterDataRoot'
+ Acl $data @('/inheritance:r','/grant:r','*S-1-5-18:(OI)(CI)F','*S-1-5-32-544:(OI)(CI)F')
+ $stage='COPY_FILES'
+ CopyPinned $spec.binary.node (Join-Path $code 'node.exe');CopyPinned $spec.binary.nssm (Join-Path $code 'nssm.exe');CopyPinned $spec.binary.cloudflared (Join-Path $code 'cloudflared.exe')
+ foreach($pin in $pg){CopyPinned $pin (Join-Path $code ('postgres\'+$pin.path))}
+ foreach($pin in $deps.files){CopyPinned $pin (Join-Path $code ('provider\'+$pin.path))}
+ $identity=Get-Content -LiteralPath (Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath 'BUILD-IDENTITIES.json') -Raw | ConvertFrom-Json
+ foreach($rel in @($identity.providerFiles)){
+  $pin=@($approvedFiles | Where-Object path -eq ('payload/'+$rel))[0]
+  CopyPinned ([pscustomobject]@{source=(Get-C5StagedPacketPath -CandidateRoot $candidateRoot -RelativePath ('payload/'+$rel));bytes=$pin.bytes;sha256=$pin.sha256}) (Join-Path $code ('provider\'+$rel))
+ }
+ # Revised root bindings are separate revision metadata. Original payload remains intact.
+ foreach($pair in @(@('service-launch.mjs','service-launch.mjs'),@('provider-binding.json','provider\config\provider-binding.json'))){
+  $revisionPin=Get-C5RevisionFilePin -CandidateRoot $candidateRoot -RelativePath $pair[0]
+  CopyPinned $revisionPin (Join-Path $code $pair[1])
+ }
+ foreach($sub in @('postgres','provider-slots','provider-logs','operator-slots','evidence','tunnel','setup')){New-Item -ItemType Directory -Path (Join-Path $data $sub) | Out-Null}
+ [IO.File]::WriteAllText((Join-Path $data 'provider-secrets.json'),'{"C5_PROVIDER_ENABLED":"false","C5_READONLY_DB_PASSWORD":"","C5_READONLY_PROVIDER_BEARER":"","C5_PROVIDER_PERIMETER_SECRET":""}')
+ foreach($svc in $spec.services){
+  if($local -and ($svc.name -notmatch '^MCVQ5(Postgres|Provider|Tunnel)1029$' -or $svc.identity -ne ('NT SERVICE\'+$svc.name) -or -not $svc.binary.StartsWith($code+'\',[StringComparison]::OrdinalIgnoreCase) -or $svc.startup -ne 'Disabled')){throw 'STRICT_MOCK_SERVICE_SCOPE_MISMATCH'}
+  $stage='CREATE_SERVICE';$binary='"'+$svc.binary+'"';if($svc.name -eq 'MCVQ5Postgres1029'){$binary+=' '+$svc.arguments}
+  $entry=@{name=$svc.name;path=$binary;created=$false};$made.Add($entry)
+  # Track candidate BEFORE create: exact-path readback contains partial success.
+  if($local){$mock[$svc.name]=@{Name=$svc.name;PathName=$binary;State='Stopped';StartMode='Disabled';ProcessId=0};$entry.created=$true}
+  else{Invoke-C5Sc @('create',$svc.name,'binPath=',$binary,'start=','disabled') $bundle;$entry.created=$true}
+  [void](AssertNewService $entry);Fault 'AfterServiceCreate'
+  if(-not $local){
+   foreach($a in @(@('config',$svc.name,'obj=',$svc.identity),@('sidtype',$svc.name,'unrestricted'),@('privs',$svc.name,'SeChangeNotifyPrivilege'))){Invoke-C5Sc $a $bundle}
+   if($svc.application){
+    $reg='HKLM:\SYSTEM\CurrentControlSet\Services\'+$svc.name+'\Parameters';New-Item -Path $reg -Force | Out-Null
+    foreach($pair in @(@('Application',$svc.application),@('AppParameters',$svc.arguments),@('AppDirectory',$svc.cwd))){New-ItemProperty -Path $reg -Name $pair[0] -PropertyType ExpandString -Value $pair[1] -Force | Out-Null}
+    New-ItemProperty -Path $reg -Name AppEnvironment -PropertyType MultiString -Value @($spec.nssm.AppEnvironment) -Force | Out-Null
+    foreach($key in @('AppKillProcessTree','AppStopMethodSkip','AppStopMethodConsole','AppStopMethodWindow','AppStopMethodThreads')){New-ItemProperty -Path $reg -Name $key -PropertyType DWord -Value ([int]$spec.nssm.$key) -Force | Out-Null}
+    New-Item -Path ($reg+'\AppExit') -Force | Out-Null;Set-Item -Path ($reg+'\AppExit') -Value 'Exit'
+   }
+   if($svc.dependencies.Count){New-ItemProperty -Path ('HKLM:\SYSTEM\CurrentControlSet\Services\'+$svc.name) -Name DependOnService -PropertyType MultiString -Value @($svc.dependencies) -Force | Out-Null}
+  }
+  Grant $code $svc.identity 'RX';Grant $data $svc.identity 'RX'
+  foreach($mutable in $svc.mutable){Grant $mutable $svc.identity '(OI)(CI)M'}
+  Fault 'AfterGrant'
+ }
+ Grant (Join-Path $code 'postgres') 'NT SERVICE\MCVQ5Postgres1029' '(OI)(CI)RX'
+ foreach($p in @('node.exe','service-launch.mjs')){Grant (Join-Path $code $p) 'NT SERVICE\MCVQ5Provider1029' 'RX'}
+ Grant (Join-Path $code 'provider') 'NT SERVICE\MCVQ5Provider1029' '(OI)(CI)RX'
+ foreach($svc in @('MCVQ5Provider1029','MCVQ5Tunnel1029')){Grant (Join-Path $code 'nssm.exe') ('NT SERVICE\'+$svc) 'RX'}
+ Grant (Join-Path $code 'cloudflared.exe') 'NT SERVICE\MCVQ5Tunnel1029' 'RX';Grant (Join-Path $data 'provider-secrets.json') 'NT SERVICE\MCVQ5Provider1029' 'R'
+ foreach($entry in $made){$s=AssertNewService $entry;if($s.State -ne 'Stopped' -or $s.StartMode -ne 'Disabled' -or $s.ProcessId -ne 0){throw 'END_STATE_MISMATCH'}}
+}catch{
+ $reason=$_.Exception.Message
+ if($reason -notmatch '^[A-Z_0-9]+$'){$reason=$_.Exception.GetType().Name}
+ $primary='FAIL_'+$stage+':'+$reason
+ foreach($entry in $made){try{
+   $s=ReadNewService $entry;if(-not $s){continue}
+   if(-not $entry.created){throw 'SERVICE_CREATION_OWNERSHIP_UNCONFIRMED'}
+   [void](AssertNewService $entry)
+   if($local){$s.StartMode='Disabled'}else{Invoke-C5Sc @('config',$entry.name,'start=','disabled') $bundle}
+   if($s.State -ne 'Stopped' -or $s.ProcessId -ne 0){throw 'UNEXPECTED_RUNNING_NEW_SERVICE_BLOCKED'}
+   $s=AssertNewService $entry;if($s.StartMode -ne 'Disabled'){throw 'DISABLE_READBACK_FAILED'}
+  }catch{$cleanup.Add('NEW_SERVICE_CONTAINMENT_BLOCKED')}
+ }
+ foreach($g in $grants){try{
+   if($local -and $LocalFault -eq 'ContainmentFailure'){throw 'LOCAL_REVOCATION_FAILURE'}
+   # Exact dedicated allow grant revocation only. No recursive reset or deletion.
+   Acl $g.path @('/remove:g',$g.identity)
+   if(-not $local){
+    $sid=(New-Object Security.Principal.NTAccount($g.identity)).Translate([Security.Principal.SecurityIdentifier]).Value
+    $remaining=@((Get-Acl -LiteralPath $g.path).Access | Where-Object { $_.IdentityReference.Translate([Security.Principal.SecurityIdentifier]).Value -eq $sid -and $_.AccessControlType -eq 'Allow' })
+    if($remaining.Count){throw 'DEDICATED_ACCESS_REVOKE_READBACK_FAILED'}
+   }
+   $revoked++
+  }catch{$cleanup.Add('DEDICATED_ACCESS_REVOCATION_BLOCKED')}
+ }
+}finally{
+ $state=if($primary){if($cleanup.Count){'BLOCKED'}else{'FAIL_QUARANTINED'}}else{'LOCAL_FILES_AND_SIMULATED_DISABLED_SERVICES'}
+ $report=[ordered]@{status=$state;primary=$primary;cleanup=$cleanup.ToArray();mode=$(if($local){'LOCAL_FILES_ACTUAL_SCM_ACL_SIMULATED'}else{'OPERATIONAL'});localFault=$LocalFault;roots=$roots.ToArray();services=$made.ToArray();mockSCM=$mock;mockACL=$mockAcl;revokedGrants=$revoked;native=$script:C5NativeReceipts.ToArray();deletionPerformed=$false}
+ if($local){Write-C5Json (Join-Path $LocalRoot 'installer-receipt.json') $report
+  if(-not $primary){Write-C5Json (Join-Path $LocalRoot 'local-install.json') @{root=$LocalRoot;code=$code;data=$data;candidateRoot=$candidateRoot;createdUtc=[DateTime]::UtcNow.ToString('o');mode='LOCAL_ONLY';dbAttempted=$false}}
+ }else{Complete-C5InstallEvidence -Report $report -Roots $roots.ToArray() -Code $code -Data $data -Cleanup $cleanup}
+}
+if($primary -or $cleanup.Count){throw ('INSTALL_FAIL primary='+$primary+' cleanup='+($cleanup -join ',')+'; PARTIAL_NEW_RESOURCES_PRESERVED')}
+'LOCAL_FILES_COPIED_AND_SIMULATED_SERVICES_DISABLED; SCM/ACL NOT APPLIED; DB/CLOUD/DEPLOYMENT NOT PERFORMED'

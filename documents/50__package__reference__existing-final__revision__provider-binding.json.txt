@@ -1,0 +1,13 @@
+{
+  "enabled": false,
+  "runId": "c5-readonly-20261029-owner-review-1",
+  "deploymentId": "FROM_SETUP_RECEIPT",
+  "buildId": "5a5ded1bd2f4aa7e92ffd8ddfab06c4d76b04ce1fc0fc99413666bb65756d645",
+  "providerBuildId": "4e6b983266c169c0d1a6203406af1c83591d3b056f57f732fcbefccc19571e41",
+  "scopes": [
+    "members:read",
+    "reservations:read"
+  ],
+  "slotsDirectory": "C:\\Program Files\\MCVQ5-State-20261029\\provider-slots",
+  "logDirectory": "C:\\Program Files\\MCVQ5-State-20261029\\provider-logs"
+}

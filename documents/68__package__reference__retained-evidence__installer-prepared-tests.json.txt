@@ -1,0 +1,70 @@
+﻿{
+    "status":  "PASS",
+    "scope":  "STATIC_BOUNDARIES_AND_REAL_DISPOSABLE_COMMON_EVIDENCE_HELPERS",
+    "cases":  [
+                  {
+                      "name":  "static_apply_guard_Install-FilesAndServices.ps1",
+                      "result":  "PASS",
+                      "invokedApply":  false
+                  },
+                  {
+                      "name":  "static_apply_guard_Setup-Database.ps1",
+                      "result":  "PASS",
+                      "invokedApply":  false
+                  },
+                  {
+                      "name":  "static_database_local_guard",
+                      "result":  "PASS",
+                      "clusterOrCredentialsCreated":  false
+                  },
+                  {
+                      "name":  "common_load_has_no_native_compilation",
+                      "result":  "PASS"
+                  },
+                  {
+                      "name":  "outside_local_namespace",
+                      "result":  "PASS",
+                      "observed":  "LOCAL_ROOT_OUTSIDE_FRESH_TEST_NAMESPACE"
+                  },
+                  {
+                      "name":  "invalid_local_leaf",
+                      "result":  "PASS",
+                      "observed":  "LOCAL_ROOT_OUTSIDE_FRESH_TEST_NAMESPACE"
+                  },
+                  {
+                      "name":  "fresh_local_collision",
+                      "result":  "PASS",
+                      "observed":  "LOCAL_ROOT_ALREADY_EXISTS"
+                  },
+                  {
+                      "name":  "evidence_commit_readback",
+                      "result":  "PASS",
+                      "scmOrAclAcceptance":  false
+                  },
+                  {
+                      "name":  "evidence_tamper_rejected",
+                      "result":  "PASS",
+                      "observed":  "INSTALL_EVIDENCE_HASH_MISMATCH"
+                  },
+                  {
+                      "name":  "failure_sidecar_blocks_acceptance",
+                      "result":  "PASS",
+                      "observed":  "INSTALL_EVIDENCE_FAILURE_RECORDED"
+                  },
+                  {
+                      "name":  "evidence_write_failure_blocked",
+                      "result":  "PASS",
+                      "partialEvidencePreserved":  true
+                  }
+              ],
+    "runs":  [
+                 "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\installer-runs\\run-415456ddd6154129be05ab9fabc8663f",
+                 "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-staging-revision-20261030\\tests\\installer-runs\\run-01893c1d35a0402daa490657edc9b134"
+             ],
+    "installerSuccessAndFaultRuns":  "NOT_RUN_FULL_STAGED_INPUTS_UNAVAILABLE",
+    "databaseFixtures":  "NOT_RUN_NO_CLUSTER_OR_CREDENTIAL_AUTHORIZATION",
+    "nativeContainmentSeparateReceipt":  "evidence/native-containment-tests.json",
+    "simulatedScmIsNotOperationalProof":  true,
+    "deletionPerformed":  false,
+    "operationalMutations":  0
+}

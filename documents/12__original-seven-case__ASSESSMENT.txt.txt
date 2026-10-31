@@ -1,0 +1,56 @@
+C5 bounded read-only ancestor-permission assessment
+2026-10-30. Recommendation only; NOT rule revision, effective-access qualification, or Setup approval.
+
+Scope
+Inspected retained ACL/owner/reparse observations, completed installer summary, original seven receipts, test harness source, and revision bindings. No project/test/installer/Setup execution, compilation, operational staging, ACL/service change, deployment, credential action, Vercel check, or attempt reservation. New writes are limited to this report, evidence packaging, and task memory. ACL observations are retained snapshots (22:19/22:29 UTC), not a fresh host census.
+
+Recommendation
+The existing blanket prohibition on every untrusted create/write bit at every ancestor is sufficient as a conservative stop, but is broader than necessary to establish protection of the actual installation path. Recommend an explicitly reviewed, path-specific revision, NOT an automatic exception or implementation now. The existing rule remains binding and BLOCKED until such review and later authorization. Neither the retained ACLs nor this analysis establishes operational safety.
+
+Observed distinctions
+1. C:\: self-applicable Authenticated Users mask 0x4 is FILE_ADD_SUBDIRECTORY. It permits an available sibling name at C:\; it does not itself grant FILE_DELETE_CHILD (0x40), DELETE (0x10000), WRITE_DAC (0x40000), or WRITE_OWNER (0x80000). The broader Authenticated Users ACE is inherit-only, not a self grant on C:\. Program Files and ProgramData have protected DACLs, so that C-root ACE is not evidence they inherited its delete/write rights.
+2. C:\Program Files: observed untrusted self-applicable ACEs are read/execute, not creation/deletion/DACL/owner mutation grants. This favors a protected branch there, but does not prove all tokens, all components, or creation-to-use continuity safe.
+3. C:\ProgramData: Users mask 0x116 is FILE_ADD_FILE (0x2), FILE_ADD_SUBDIRECTORY (0x4), FILE_WRITE_EA (0x10), FILE_WRITE_ATTRIBUTES (0x100). It contains neither DELETE nor FILE_DELETE_CHILD. These grants alone do not demonstrate replacement of an existing protected child. Unlike unrelated sibling creation, inherited CI grants could give an unprotected child relevant writes. CREATOR OWNER can also benefit an attacker who creates the exact absent name first. Thus absent-name squatting, inherited permissions, and fail-closed collision handling matter.
+4. No actual operational installation roots existed in the retained preservation snapshot. Protection of those future roots cannot be declared from ancestor snapshots alone.
+
+Rights that a reviewed path-specific requirement must cover
+- Content modification: write-data/append on protected files; directory add-file/add-directory where new content would be loaded; EA/attribute writes where relevant (including path-redirection/reparse implications). Do not equate every attribute bit with content replacement, or dismiss it without analysis.
+- Delete/rename/removal of a path component: consider DELETE on the component OR FILE_DELETE_CHILD on its parent. A protected child's DACL alone does not defeat parent delete-child. Rename/move/replacement also depends on destination insertion/replacement rights and filesystem conditions; one create bit is not a full proof.
+- Modification of any component owner/DACL: WRITE_DAC, WRITE_OWNER, effective owner rights, applicable privileges, deny/allow ordering, group membership, restricted/deny-only SIDs, integrity level and service-token grants. Distinguish intended narrowly writable service-data subtrees from protected code, launch/config/evidence/permit files.
+- Pre-creation versus post-creation: ability to occupy the exact not-yet-created name is a real denial/preplant risk. Existing object/junction/collision must be rejected, never adopted, overwritten or recursively repaired. Protected descriptor at creation, trusted ownership, no unintended inheritance, identity/reparse validation and continuity through use are required; sibling creation elsewhere is not equivalent.
+- Every actual component, not only final leaf: removal/replacement of a parent can redirect a path without writing the leaf. Include volume/mount/reparse transitions and launch dependencies (compiler, DLL/helper lookup, TEMP, working directory), not just textual prefix checking.
+- Concurrency: account for path/handle TOCTOU, deletion sharing, and same-SID/Admin/SYSTEM creation-to-held-handle gap already documented. Do not claim protection against those writers from a lower-privilege threat model.
+
+Proposed requirement text FOR REVIEW ONLY
+Reject any untrusted effective ability to modify security-relevant contents or metadata, change ownership/DACL, delete, rename, redirect or replace an actual protected path component, including parent delete-child routes and inherited rights. Permit unrelated sibling creation only when it cannot affect the protected chain and exact-name creation/collision, descriptor-at-creation, reparse and identity-continuity requirements are satisfied. Reject unsupported/unknown effective-access cases. Define the trusted principals and explicitly bounded writable service-data exceptions. Do not qualify an absent future target based solely on parent ACL decoding.
+
+Required evidence before any future acceptance
+A separately authorized review must specify representative untrusted/service tokens and assess effective rights against exact component descriptors (AccessCheck/Authz or equivalent reviewed Windows semantics), including owner/privilege/inheritance/parent-child routes; verify future root construction and identity continuity with separately authorized evidence. Raw ACE decoding is not that proof. No such tests are authorized or run now. Moving state to Program Files would not satisfy the unchanged blanket C-root rule and is not adopted here.
+
+Seven-case evidence recovered
+Original aggregate installer-adapter-tests.json records PASS for seven expected outcomes:
+success -> LOCAL_FILES_AND_SIMULATED_DISABLED_SERVICES
+AfterCodeRoot -> FAIL_QUARANTINED
+AfterDataRoot -> FAIL_QUARANTINED
+AfterFirstCopy -> FAIL_QUARANTINED
+AfterServiceCreate -> FAIL_QUARANTINED
+AfterGrant -> FAIL_QUARANTINED
+ContainmentFailure -> BLOCKED (expected fail-closed outcome; not a successful install).
+All seven original installer-receipt.json files are supplied byte-for-byte, with source paths, sizes and SHA256 in BINDINGS.json. Receipts describe actual file copies but SIMULATED SCM/ACL, native-operation arrays empty; these cannot establish real service/ACL installation acceptance.
+
+Revision binding and independent-review correction
+Those runs belong to predecessor manifest d54f56d3c0199652d7a932797b15bd2cd7e4de93916c04815bf4202cd2acfb70.
+Final manifest is 19867043a03c15a7e9f010f53369b8c6d3adefe15878db1852338966e283f3b3.
+Individual receipts and aggregate lack a direct manifest digest field; binding is recovered from the containing staged candidate manifest, retained stage evidence, invocation source/stdout and carry-forward record, not retroactively inserted into original receipts. The bundle includes both manifests and original supporting evidence.
+The prior independent reviewer explicitly stated the completed adapter receipt was unavailable and seven PASS was NOT independently established. Providing it now makes verification possible; it does not retroactively close that gap or claim a new independent review. Prior evidence supports unchanged executable pins/identical 1691 parsed entries with only CRLF-to-LF SOURCE-MAP change. These are predecessor results, not seven reruns on the final manifest.
+
+Preserved stop conditions
+Setup PAUSED. Existing strict ancestor gate unchanged; effective-access acceptance unproven, protected launch/compiler/TEMP qualification outstanding. Jay's supported Vercel-access restoration remains a separate prerequisite, not solved or checked here. No operational staging, Setup retry, deployment, tests, shared ACL changes or exclusions relaxed. Purchases/financial actions remain disabled; no permits/pins/credentials provisioned. Existing deployment/canonical/Alpha and service/cluster/tunnel/connector/reboot/deletion exclusions remain intact. All 48 attempts (42 primary + 6 reserved) remain unspent; no attempt was consumed by this assessment.
+
+Reference semantics (not fetched during this bounded assessment):
+Microsoft File Security and Access Rights:
+https://learn.microsoft.com/en-us/windows/win32/fileio/file-security-and-access-rights
+Microsoft File Access Rights Constants:
+https://learn.microsoft.com/en-us/windows/win32/fileio/file-access-rights-constants
+Microsoft ACE Inheritance Rules:
+https://learn.microsoft.com/en-us/windows/win32/secauthz/ace-inheritance-rules

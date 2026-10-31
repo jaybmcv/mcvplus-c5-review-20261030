@@ -1,0 +1,63 @@
+# Prepared trust and launch boundary
+
+This workspace is writable and **is not a trusted bootstrap location**. Neither a
+self-check, a matching adjacent manifest, a successful local test nor this packet
+establishes elevated-execution trust. No independent approval is asserted.
+
+`REVISION-SHA256SUMS.txt` reports the candidate hashes. A reviewer must obtain those
+exact hashes through a separate trusted channel and independently review the bytes.
+The two external pins are the SHA256 of `tools/Stage-Candidate.ps1` and of
+`REVISION-MANIFEST.json`. The latter transitively binds SOURCE-MAP, native security
+helper and every executable/configuration revision. Changing any of them creates a
+new revision. The original manifest digest remains an anchor only for original bytes.
+
+The protected bootstrap is **admission-disabled in this preparation** before helper
+loading. Its `ProtectedStage` parameter always throws. Both revised Setup entry
+points always reject Apply, and the database entry point rejects LocalRoot. Enabling
+any protected staging or Setup needs a new targeted review and explicit authorization
+binding the resulting revision; no parameter or local-validation receipt enables it.
+
+Future protected-launch prerequisites, before interpreting any candidate script:
+
+1. A separately trusted system launcher, independently reviewed and externally pinned,
+   opens protected bootstrap/helper copies with write/delete sharing denied, verifies
+   external hashes and file identities while retaining their handles, and verifies their
+   Admin/SYSTEM owner/DACL plus every ancestor. A script copied from this workspace and
+   invoked elevated before that check does not qualify. This candidate does not install
+   or declare such a launcher trusted.
+2. Use the protected absolute 64-bit system PowerShell executable, fresh process,
+   `-NoProfile -NonInteractive`, protected working directory, no user PATH/module/profile
+   resolution, no preloaded candidate types or functions. Independently verify executable,
+   framework/GAC, compiler, configuration, system DLL search paths and identities. The
+   current native helper uses Add-Type; compiler TEMP/TMP, framework paths and assemblies
+   must be protected and reviewed too. No ambient user TEMP is a protected prerequisite.
+3. Pin a bootstrap/revision together and preserve launch process identity, token/owner
+   SIDs, raw SDDL, executable file ID, expected/observed hashes, native helper identities,
+   ancestor ACE assessment and any unsupported effective-access result. No unresolved
+   owner, deny/conditional/object ACE, null DACL or unsupported check may become PASS.
+4. The original strict rule rejects untrusted ancestor write/create/delete/rename. It
+   currently fails at `C:\` and the original ProgramData ancestor. Generic create rights
+   are distinguished from delete-child/replacement rights in the assessment, but that
+   distinction does not relax the original rule. Program Files state relocation is only
+   PREPARED. It is not operationally created or authorized.
+
+The native `CreateProtected` primitive calls CreateDirectoryW with an owner BA,
+protected BA/SYSTEM-only inheritable DACL in SECURITY_ATTRIBUTES **at creation**.
+Pinned files use CREATE_NEW/FileStream with explicit BA/SYSTEM owner and protected
+DACL at creation; no inherited-writable interval or source ACL copying. Directory
+handles deny delete sharing throughout path use; source file handles deny write and
+delete sharing across hash and copy. Every destination is rehashed and ACL checked.
+Production helpers retain full root-to-leaf reparse/identity checks, rejecting failure.
+
+Historical sandbox restrictions are not the current host result. The fresh parent-host run uses HENRI and can read all 1,691 pinned sources; native protected at-creation primitives pass in disposable task trees. The independent read-only reviewer has narrower source/receipt access, so copied reference bytes are provided without changing original ACLs. LocalValidation remains explicitly untrusted: D task-contained destinations and current SID + BA + SYSTEM. The historical local-chain exception before C:\Users\HENRI does not apply to D destinations or authorize production. See LOCAL-TRUST-LIMIT.md for the creation-to-handle same-SID/privileged substitution caveat. No atomic identity continuity from Win32 directory creation against those trusted/same-identity writers is claimed. Operational ProtectedStage is still blocked before compilation.
+
+Copying uses only the externally bound source map. All 52 original packet pins, the
+original manifest itself, and 1,638 external pins have unique case-insensitive destinations.
+The sealed original manifests validate the exact external mapping. Missing/unreadable or
+drifting sources block and preserve partial evidence; no mutable-source fallback exists.
+The final gate rejects unexpected files/directories, reparse entries, changed bytes,
+untrusted owners/ACLs, aliases, duplicate destinations and unsafe paths. Source fields
+returned to the installer are stage-local; original absolute sources are inert map provenance.
+
+Local command examples are recorded in RESULTS.md. Do not use this document as an
+operational launch instruction or approval. Parent review remains separate.

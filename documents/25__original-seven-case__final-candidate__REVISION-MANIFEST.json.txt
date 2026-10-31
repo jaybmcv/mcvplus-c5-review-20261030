@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "status": "PREPARED_LOCAL_ONLY_REQUIRES_TARGETED_REVIEW",
+  "originalManifestSha256": "b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c",
+  "files": [
+    {
+      "path": "SOURCE-MAP.json",
+      "bytes": 731936,
+      "sha256": "6f37ef601c5dcd52b75d4142f41be498fd6e57a3dd969392874a32e00b9172c1"
+    },
+    {
+      "path": "revision/Install-FilesAndServices.ps1",
+      "bytes": 13021,
+      "sha256": "2bd0591770e08b5ab1c6b9c7c6af0998999fb3e91db16db1ca36bb75c4d1b561"
+    },
+    {
+      "path": "revision/SETUP-SPEC.json",
+      "bytes": 9009,
+      "sha256": "463f85a2516296e8ffcd19c266bc59d67124b5230e049d5c71d184a895174414"
+    },
+    {
+      "path": "revision/Setup-Common.ps1",
+      "bytes": 9957,
+      "sha256": "9569624fa58dfb139026d48df9d080af64bae33d3fc1a88354aebe595c11dbe7"
+    },
+    {
+      "path": "revision/Setup-Database.ps1",
+      "bytes": 13687,
+      "sha256": "b385bcdfc3af6c3a66c85937005eda1bde0abef17355b4a2027b140b027bb3f2"
+    },
+    {
+      "path": "revision/Staging-Gate.ps1",
+      "bytes": 11706,
+      "sha256": "613fa981f5fed3fa4dba758619e5713e05f14d389892d7d94a3ea97b1811a309"
+    },
+    {
+      "path": "revision/provider-binding.json",
+      "bytes": 501,
+      "sha256": "0fd281796b12b38ba7af755487206d3fdf034ca00b6f14497e67846e68b634d8"
+    },
+    {
+      "path": "revision/service-launch.mjs",
+      "bytes": 1070,
+      "sha256": "819e37a8fb140b413c1202ee588a37a9954231f88cee5ab86f0d6969b3d30767"
+    },
+    {
+      "path": "tools/Assess-Ancestors.ps1",
+      "bytes": 6080,
+      "sha256": "9e6476006c441b93f44826ecd6557b8bd877b7bca20e6d2fd571e802530a0d3d"
+    },
+    {
+      "path": "tools/Stage-Candidate.ps1",
+      "bytes": 8890,
+      "sha256": "e02cc09151572e39a78e8043e0c7ce32be05ee7d668b1f9246f467afce7b4c93"
+    },
+    {
+      "path": "tools/Staging-Security.cs",
+      "bytes": 11110,
+      "sha256": "6161f1421525f238d6be7ba85047e7ae132ec8c81a7b343c6b51f1fde2cb6422"
+    },
+    {
+      "path": "tools/build-installer-revision.py",
+      "bytes": 12101,
+      "sha256": "66d86149589f9d72b4f66dc5995558cf0a09bf39a4c94ce44bc7ebd684eea8f7"
+    },
+    {
+      "path": "tools/build-map.cjs",
+      "bytes": 3300,
+      "sha256": "522dcea826de367dce977fc05694d1f3d2173846e1dac56e32a771bd0ebac6a7"
+    },
+    {
+      "path": "tools/seal-revision.cjs",
+      "bytes": 1218,
+      "sha256": "826e664024bc07ad298be07d02828ac8e61a12e0b104504c3e2af1b8143a402e"
+    }
+  ]
+}

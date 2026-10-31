@@ -1,0 +1,9 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..'),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+let files=['SOURCE-MAP.json'];
+for(const dir of ['revision','tools']){for(const f of fs.readdirSync(path.join(root,dir),{recursive:true,withFileTypes:true})){if(f.isFile()){const rel=path.relative(root,path.join(f.parentPath||f.path,f.name)).split(path.sep).join('/');if(!rel.includes('/tests/'))files.push(rel);}}}
+files=files.sort().map(p=>{const b=fs.readFileSync(path.join(root,p));return{path:p,bytes:b.length,sha256:hash(b)}});
+const m={schema:1,status:'PREPARED_LOCAL_ONLY_REQUIRES_TARGETED_REVIEW',originalManifestSha256:'b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c',files};
+const raw=Buffer.from(JSON.stringify(m,null,2)+'\n');fs.writeFileSync(path.join(root,'REVISION-MANIFEST.json'),raw);
+const b=files.find(f=>f.path==='tools/Stage-Candidate.ps1');fs.writeFileSync(path.join(root,'REVISION-SHA256SUMS.txt'),`${hash(raw)}  REVISION-MANIFEST.json\n${b.sha256}  tools/Stage-Candidate.ps1\n`);
+console.log(JSON.stringify({revisionManifestSha256:hash(raw),bootstrapSha256:b.sha256,files:files.length}));

@@ -1,0 +1,28 @@
+param([Parameter(Mandatory=$true)][string]$CandidateRoot,[Parameter(Mandatory=$true)][ValidatePattern('^[a-f0-9]{64}$')][string]$ExpectedRevisionManifestSha256)
+$ErrorActionPreference='Stop'
+$CandidateRoot=[IO.Path]::GetFullPath($CandidateRoot)
+$workspace=Split-Path -Parent $PSScriptRoot
+$stageBase=[IO.Path]::GetFullPath((Join-Path $workspace 'tests\stage-runs'))+'\'
+if(-not $CandidateRoot.StartsWith($stageBase,[StringComparison]::OrdinalIgnoreCase)){throw 'TEST_CANDIDATE_OUTSIDE_DISPOSABLE_STAGE_NAMESPACE'}
+$revision=Join-Path $CandidateRoot 'revision'
+. (Join-Path $revision 'Staging-Gate.ps1')
+# No stub gate or reduced fixture: every original packet/external pin must pass.
+Assert-C5Revision -CandidateRoot $CandidateRoot -LocalValidation -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256
+$rows=New-Object 'Collections.Generic.List[object]'
+foreach($fault in @('','AfterCodeRoot','AfterDataRoot','AfterFirstCopy','AfterServiceCreate','AfterGrant','ContainmentFailure')){
+ $localRoot=Join-Path (Split-Path -Parent $CandidateRoot) ('local-runs\run-'+[guid]::NewGuid().ToString('N'))
+ $errorText=''
+ try{& (Join-Path $revision 'Install-FilesAndServices.ps1') -LocalRoot $localRoot -LocalFault $fault -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256 | Out-Null}catch{$errorText=$_.Exception.Message}
+ $receipt=Get-Content -LiteralPath (Join-Path $localRoot 'installer-receipt.json') -Raw | ConvertFrom-Json
+ $expected=if($fault -eq 'ContainmentFailure'){'BLOCKED'}elseif($fault){'FAIL_QUARANTINED'}else{'LOCAL_FILES_AND_SIMULATED_DISABLED_SERVICES'}
+ if($receipt.status -ne $expected -or $receipt.mode -ne 'LOCAL_FILES_ACTUAL_SCM_ACL_SIMULATED' -or $receipt.deletionPerformed -or @($receipt.native).Count){throw 'ADAPTER_RECEIPT_INVALID'}
+ if([bool]$errorText -ne [bool]$fault){throw 'ADAPTER_ERROR_CONTRACT_MISMATCH'}
+ if($fault -eq 'ContainmentFailure' -and 'DEDICATED_ACCESS_REVOCATION_BLOCKED' -notin @($receipt.cleanup)){throw 'ADAPTER_CONTAINMENT_FAILURE_SUPPRESSED'}
+ if($fault -and $fault -ne 'ContainmentFailure' -and @($receipt.cleanup).Count){throw 'ADAPTER_UNEXPECTED_CONTAINMENT_FAILURE'}
+ foreach($property in @($receipt.mockSCM.PSObject.Properties)){$s=$property.Value;if($s.State -ne 'Stopped' -or $s.StartMode -ne 'Disabled' -or $s.ProcessId -ne 0){throw 'ADAPTER_SIMULATED_SERVICE_STATE_INVALID'}}
+ if(Test-Path -LiteralPath (Join-Path $localRoot 'data\postgres\data')){throw 'ADAPTER_CREATED_CLUSTER'}
+ $rows.Add([ordered]@{fault=$fault;status=$receipt.status;root=$localRoot;result='PASS';processesStarted=0;scmAclSimulated=$true})
+}
+$output=[ordered]@{status='PASS';scope='ACTUAL_FILE_COPIES_SIMULATED_SCM_AND_ACL';cases=$rows.ToArray();operationalMutations=0;deletionPerformed=$false;noClusterOrCredentialsCreated=$true}
+$output | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath (Join-Path $workspace 'evidence\installer-adapter-tests.json') -Encoding UTF8
+$output | ConvertTo-Json -Depth 12

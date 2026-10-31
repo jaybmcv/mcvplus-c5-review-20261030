@@ -1,0 +1,106 @@
+[CmdletBinding()]
+param(
+ [Parameter(Mandatory)][ValidateSet('LocalValidation','ProtectedStage')][string]$Mode,
+ [Parameter(Mandatory)][string]$DestinationRoot,
+ [Parameter(Mandatory)][string]$SourceRoot,
+ [Parameter(Mandatory)][ValidatePattern('^[a-f0-9]{64}$')][string]$ExpectedBootstrapSha256,
+ [Parameter(Mandatory)][ValidatePattern('^[a-f0-9]{64}$')][string]$ExpectedRevisionManifestSha256
+)
+$ErrorActionPreference='Stop'
+# No operational or privileged bootstrap execution is authorized by this local
+# preparation. This admission guard precedes dependency loading and compilation.
+if($Mode -eq 'ProtectedStage'){throw 'PREPARED_PROTECTED_EXECUTION_REQUIRES_FUTURE_REVIEWED_AUTHORIZATION'}
+# PRECONDITION OUTSIDE THIS SCRIPT: a separately trusted, independently reviewed
+# launcher must verify the externally delivered bootstrap AND revision digest,
+# before loading this file in protected system PowerShell -NoProfile -NonInteractive.
+# A self-check in a writable workspace cannot establish this precondition.
+if((Get-FileHash -LiteralPath $PSCommandPath -Algorithm SHA256).Hash.ToLowerInvariant() -cne $ExpectedBootstrapSha256){throw 'EXTERNAL_BOOTSTRAP_PIN_MISMATCH'}
+$SourceRoot=[IO.Path]::GetFullPath($SourceRoot)
+$DestinationRoot=[IO.Path]::GetFullPath($DestinationRoot)
+$manifestPath=Join-Path $SourceRoot 'REVISION-MANIFEST.json'
+if((Get-FileHash -LiteralPath $manifestPath -Algorithm SHA256).Hash.ToLowerInvariant() -cne $ExpectedRevisionManifestSha256){throw 'EXTERNAL_REVISION_PIN_MISMATCH'}
+$manifest=Get-Content -LiteralPath $manifestPath -Raw|ConvertFrom-Json
+if($manifest.schema -ne 1 -or $manifest.status -cne 'PREPARED_LOCAL_ONLY_REQUIRES_TARGETED_REVIEW' -or $manifest.originalManifestSha256 -cne 'b9e20e88febac511fc0e30db258da6d7708c504aa06f1979b335ed32cdb25a8c'){throw 'REVISION_IDENTITY'}
+$pins=@{};foreach($p in $manifest.files){
+ if(-not $p.path -or $p.path -match '\\|:|^/|//|(^|/)\.{1,2}(/|$)|[. ](/|$)|[<>"|?*]|~[0-9]' -or $pins.ContainsKey($p.path)){throw 'REVISION_PATH_OR_COLLISION'}
+ if($p.sha256 -cnotmatch '^[a-f0-9]{64}$' -or $p.bytes -lt 0){throw 'REVISION_PIN_INVALID'}
+ $f=Join-Path $SourceRoot $p.path
+ if((Get-Item -LiteralPath $f).Length -ne $p.bytes -or (Get-FileHash -LiteralPath $f -Algorithm SHA256).Hash.ToLowerInvariant() -cne $p.sha256){throw 'REVISION_SOURCE_DRIFT'}
+ $pins[$p.path]=$p
+}
+foreach($required in @('SOURCE-MAP.json','tools/Staging-Security.cs','tools/Stage-Candidate.ps1','revision/Staging-Gate.ps1')){if(-not $pins.ContainsKey($required)){throw 'REVISION_REQUIRED_INPUT_ABSENT'}}
+if($pins['tools/Stage-Candidate.ps1'].sha256 -cne $ExpectedBootstrapSha256){throw 'BOOTSTRAP_REVISION_BINDING'}
+if('C5StageSecurity' -as [type]){throw 'BOOTSTRAP_REQUIRES_FRESH_PROCESS'}
+# Local compilation is test-only. Protected execution additionally requires an
+# externally reviewed protected framework/compiler/TEMP chain (see TRUST-LAUNCH).
+Add-Type -Path (Join-Path $SourceRoot 'tools\Staging-Security.cs')
+[void][C5StageSecurity]::Full($SourceRoot);[void][C5StageSecurity]::Full($DestinationRoot)
+$local=$Mode -eq 'LocalValidation'
+if($local){
+ $base=Join-Path $SourceRoot 'tests\stage-runs'
+ if((Split-Path -Parent $DestinationRoot) -ine $base -or (Split-Path -Leaf $DestinationRoot) -cnotmatch '^run-[a-f0-9]{32}$'){throw 'LOCAL_STAGE_NAMESPACE_ONLY'}
+ # Parent namespace must already exist and be plain. Never create parents through
+ # caller-controlled input, nor silently move to operational roots.
+ if(-not(Test-Path -LiteralPath $base -PathType Container)){throw 'LOCAL_NAMESPACE_MISSING'}
+}else{
+ if($DestinationRoot -cne 'C:\Program Files\MCVQ5-Staging-20261029'){throw 'PROTECTED_DESTINATION_NOT_REVIEWED'}
+ $actual=[Diagnostics.Process]::GetCurrentProcess().MainModule.FileName
+ if($actual -ine 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe' -or [Environment]::CommandLine -notmatch '(?i)-NoProfile\b' -or [Environment]::CommandLine -notmatch '(?i)-NonInteractive\b'){throw 'PROTECTED_SYSTEM_FRESH_LAUNCH_REQUIRED'}
+ if(-not(New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){throw 'ELEVATED_ADMIN_REQUIRED'}
+ # Fail CLOSED under the original strict rule, including C:\. No source staging
+ # can waive the current ancestor blocker, and this candidate has no waiver flag.
+ foreach($start in @((Split-Path -Parent $PSCommandPath),(Split-Path -Parent $DestinationRoot),$env:TEMP,[IO.Path]::GetDirectoryName([Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory().TrimEnd('\')))){
+  $q=$start;while($q){[void][C5StageSecurity]::AssertStrictAncestor($q);$q=Split-Path -Parent $q}
+ }
+ [void][C5StageSecurity]::AssertProtected($PSCommandPath,$false)
+ [void][C5StageSecurity]::AssertProtected((Join-Path $SourceRoot 'tools\Staging-Security.cs'),$false)
+ throw 'PREPARED_PROTECTED_EXECUTION_REQUIRES_FUTURE_REVIEWED_AUTHORIZATION'
+}
+# Everything below is exclusively disposable local validation in this candidate.
+# The same CreateProtected and copy primitives are prepared above, but protected
+# launch is intentionally admission-blocked until future targeted authorization.
+$locks=New-Object 'Collections.Generic.List[IDisposable]'
+$destinationOwned=$false
+$receipt=[ordered]@{mode='UNTRUSTED_LOCAL_VALIDATION';status='IN_PROGRESS';destination=$DestinationRoot;revisionManifestSha256=$ExpectedRevisionManifestSha256;bootstrapSha256=$ExpectedBootstrapSha256;entries=@();operationalMutations=0}
+try{
+ $locks.Add([C5StageSecurity]::HoldValidation((Split-Path -Parent $DestinationRoot),$true))
+ if(Test-Path -LiteralPath $DestinationRoot){throw 'DESTINATION_COLLISION'}
+ [C5StageSecurity]::CreateValidation($DestinationRoot);$destinationOwned=$true;$locks.Add([C5StageSecurity]::HoldValidation($DestinationRoot,$true))
+ $candidate=Join-Path $DestinationRoot 'candidate-b9e20e88';[C5StageSecurity]::CreateValidation($candidate);$locks.Add([C5StageSecurity]::HoldValidation($candidate,$true))
+ function NewStageDirectory([string]$Path){if($local){[C5StageSecurity]::CreateValidation($Path)}else{[C5StageSecurity]::CreateProtected($Path)}}
+ function NewStageParent([string]$Path){
+  $parent=Split-Path -Parent $Path
+  if($parent -eq $candidate){return}
+  if(-not $parent.StartsWith($candidate+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'STAGE_PARENT_ESCAPE'}
+  if(-not(Test-Path -LiteralPath $parent)){NewStageParent $parent;NewStageDirectory $parent}
+  if($local){[void][C5StageSecurity]::AssertValidation($parent,$true)}else{[void][C5StageSecurity]::AssertProtected($parent,$true)}
+ }
+ foreach($p in $manifest.files){$src=[C5StageSecurity]::Under($SourceRoot,$p.path);$dst=[C5StageSecurity]::Under($candidate,$p.path);NewStageParent $dst;[C5StageSecurity]::CopyPin($src,$dst,$p.bytes,$p.sha256,$true)}
+ [C5StageSecurity]::CopyPin($manifestPath,(Join-Path $candidate 'REVISION-MANIFEST.json'),(Get-Item $manifestPath).Length,$ExpectedRevisionManifestSha256,$true)
+ # Gate itself is now independently pinned and copied before it is loaded. The
+ # original manifest and source manifests must be copied FIRST to anchor mapping.
+ . (Join-Path $candidate 'revision\Staging-Gate.ps1')
+ $map=Read-C5StageMap $candidate
+ foreach($e in @($map.entries|Where-Object {$_.destination -in @('packet/SETUP-FILE-MANIFEST.json','packet/SETUP-SPEC.json','packet/POSTGRES-BINARY-MANIFEST.json','packet/PROVIDER-DEPENDENCY-MANIFEST.json')})){
+  $dst=[C5StageSecurity]::Under($candidate,$e.destination);NewStageParent $dst;[C5StageSecurity]::CopyPin($e.source,$dst,$e.bytes,$e.sha256,$true)
+ }
+ $mapped=Assert-C5MapBindings $candidate $map
+ foreach($e in $map.entries){
+  if($e.destination -in @('packet/SETUP-FILE-MANIFEST.json','packet/SETUP-SPEC.json','packet/POSTGRES-BINARY-MANIFEST.json','packet/PROVIDER-DEPENDENCY-MANIFEST.json')){continue}
+  $dst=[C5StageSecurity]::Under($candidate,$e.destination);NewStageParent $dst
+  [C5StageSecurity]::CopyPin($e.source,$dst,$e.bytes,$e.sha256,$true)
+  $receipt.entries+=@{destination=$e.destination;sha256=$e.sha256;bytes=$e.bytes}
+ }
+ $receipt.verification=Assert-C5Revision -CandidateRoot $candidate -ExpectedRevisionManifestSha256 $ExpectedRevisionManifestSha256 -LocalValidation
+ $receipt.status='LOCAL_COPY_VERIFIED_NOT_PROTECTED_OR_AUTHORIZED'
+}catch{$receipt.status='BLOCKED';$receipt.error=$_.Exception.Message;throw}
+finally{
+ # Only this invocation's fresh destination receives a receipt.
+ # Retain all no-delete-share identity handles until exclusive receipt creation.
+ try{
+  if($destinationOwned){
+   [void][C5StageSecurity]::AssertValidation($DestinationRoot,$true)
+   [C5StageSecurity]::WriteReceiptNew((Join-Path $DestinationRoot 'stage-receipt.json'),($receipt|ConvertTo-Json -Depth 8))
+  }
+ }finally{foreach($h in $locks){$h.Dispose()}}
+}
