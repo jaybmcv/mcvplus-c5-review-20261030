@@ -1,0 +1,16 @@
+--- Candidate05/local-service/provider/readonly-db.mjs
++++ Candidate06-D12/local-service/provider/readonly-db.mjs
+@@ -33,10 +33,12 @@
+  n.nspname NOT LIKE 'pg_toast%' AND n.nspname NOT LIKE 'pg_temp_%' AND
+  (has_table_privilege(current_user,c.oid,'SELECT') OR has_any_column_privilege(current_user,c.oid,'SELECT')) AND (n.nspname||'.'||c.relname) NOT IN
+  ('c5_qualification.resource_marker','c5_qualification.members_fixture','c5_qualification.reservation_keys_fixture')`;
++// Activity-observation exception (not pure/immutable): dedicated disposable qualification cluster only.
++// pg_stat_get_activity permits cluster-wide basic and same-role fuller activity visibility; WHERE is not an ACL.
+ export const PURE_FUNCTIONS=Object.freeze([
+  'has_database_privilege(name,oid,text)','has_schema_privilege(name,oid,text)','has_table_privilege(name,oid,text)',
+  'has_any_column_privilege(name,oid,text)','has_column_privilege(name,oid,smallint,text)','has_sequence_privilege(name,oid,text)','has_function_privilege(name,oid,text)',
+- 'hashtext(text)','hashname(name)','hashoid(oid)','hashchar(\"char\")','hashint2(smallint)','hashint4(integer)','bttextcmp(text,text)','btnamecmp(name,name)','btoidcmp(oid,oid)','btint2cmp(smallint,smallint)','btint4cmp(integer,integer)','btcharcmp(\"char\",\"char\")','namene(name,name)','chareq(\"char\",\"char\")','int24gt(smallint,integer)','int2gt(smallint,smallint)','textne(text,text)','anytextcat(anynonarray,text)','textanycat(text,anynonarray)','textcat(text,text)','text(inet)','text(name)','pg_backend_pid()','current_database()','inet_server_addr()','inet_server_port()','current_setting(text)','aclexplode(aclitem[])',
++ 'hashtext(text)','hashname(name)','hashoid(oid)','hashchar(\"char\")','hashint2(smallint)','hashint4(integer)','bttextcmp(text,text)','btnamecmp(name,name)','btoidcmp(oid,oid)','btint2cmp(smallint,smallint)','btint4cmp(integer,integer)','btcharcmp(\"char\",\"char\")','namene(name,name)','chareq(\"char\",\"char\")','int24gt(smallint,integer)','int2gt(smallint,smallint)','textne(text,text)','anytextcat(anynonarray,text)','textanycat(text,anynonarray)','textcat(text,text)','text(inet)','text(name)','pg_backend_pid()','pg_stat_get_activity(integer)','current_database()','inet_server_addr()','inet_server_port()','current_setting(text)','aclexplode(aclitem[])',
+  // Exact immutable cast/operator helpers required by these catalog checks/parameter comparisons.
+  'nameeq(name,name)','texteq(text,text)','int4eq(integer,integer)','oideq(oid,oid)','textlike(text,text)','textnlike(text,text)',
+  'nameeqtext(name,text)','namelike(name,text)','namenlike(name,text)','regprocedureout(regprocedure)','textin(cstring)',

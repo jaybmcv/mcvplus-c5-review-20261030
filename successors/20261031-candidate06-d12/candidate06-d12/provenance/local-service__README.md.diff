@@ -1,0 +1,11 @@
+--- Candidate05/local-service/README.md
++++ Candidate06-D12/local-service/README.md
+@@ -1,3 +1,8 @@
++> Candidate06-D12 source-only successor. Current authority: root README.md, PROPOSED-SETUP-SQL.md and REMAINING-WORK.md.
++> Sole added activity signature: pg_catalog.pg_stat_get_activity(integer), both sets 49 -> 50.
++> Dedicated disposable cluster only; not pure/immutable or own-session-only. No execution/Setup authority.
++> Historical Candidate05 text below is retained context, not a successor manifest or fresh runtime receipt.
++
+ # Disabled conventional provider source bundle
+ This is source only, NOT an installer or operational stage. No dependencies installed, cluster created, secret supplied, listener or Windows service started.
+ Layout preserves provider/ sibling qualification/ and config/ imports. Provider target is loopback55443; DB target loopback55442/mcvplus_c5_roq_20261029. Binding enabled=false/deploymentUNBOUND/mutable directoriesUNPROVISIONED.

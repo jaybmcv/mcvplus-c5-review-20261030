@@ -1,0 +1,866 @@
+{
+  "authority": [
+    {
+      "path": "PARENT-HISTORICAL-CAMPAIGN.txt",
+      "sha256": "50205b8715b5b1540be3ef6c609fed185abc83c598e5e2ac36c2be2ce6fab6fe"
+    },
+    {
+      "path": "PARENT-AUTHORITATIVE-AMENDMENT.txt",
+      "sha256": "11c838e25bdaadef2c3d747dff86944c987b9ca958e3c2987c5b6bfbe429c915"
+    },
+    {
+      "path": "copied-candidate04/operator.mjs",
+      "sha256": "a07a15554fb5749ae9e6d94a27436fa1415def50a7f8cf8b52926bc90e4d048d"
+    }
+  ],
+  "primary": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7a",
+    "B7b",
+    "B7c",
+    "B7d",
+    "B7e",
+    "B7f",
+    "B7g",
+    "B8",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "D9",
+    "D10",
+    "D11",
+    "D12"
+  ],
+  "reserved": {
+    "V1": 43,
+    "V2": 44,
+    "V3": 45,
+    "V4a": 46,
+    "V4b": 47,
+    "V5": 48
+  },
+  "cases": {
+    "A1": {
+      "id": "A1",
+      "label": "no invocation secret",
+      "kind": "http",
+      "expected": [
+        "401"
+      ],
+      "steps": [
+        "incoming-https"
+      ]
+    },
+    "A2": {
+      "id": "A2",
+      "label": "wrong incoming perimeter proof",
+      "kind": "http",
+      "expected": [
+        "401"
+      ],
+      "steps": [
+        "incoming-https"
+      ]
+    },
+    "A3": {
+      "id": "A3",
+      "label": "invalid signed permit",
+      "kind": "http",
+      "expected": [
+        "404"
+      ],
+      "steps": [
+        "incoming-https"
+      ]
+    },
+    "A4": {
+      "id": "A4",
+      "label": "wrong method at exact route",
+      "kind": "http",
+      "expected": [
+        "405"
+      ],
+      "steps": [
+        "incoming-https"
+      ]
+    },
+    "A5": {
+      "id": "A5",
+      "label": "unsupported path",
+      "kind": "http",
+      "expected": [
+        "404"
+      ],
+      "steps": [
+        "incoming-https"
+      ]
+    },
+    "A6": {
+      "id": "A6",
+      "label": "first invocation; cold requires independent new-instance evidence",
+      "kind": "http",
+      "expected": [
+        "200"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "identity": "A6"
+    },
+    "A7": {
+      "id": "A7",
+      "label": "warm parent identity and increasing sequence",
+      "kind": "http",
+      "expected": [
+        "200"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "identity": "A7"
+    },
+    "A8": {
+      "id": "A8",
+      "label": "15-minute idle; identity recorded, cold unverified",
+      "kind": "http",
+      "expected": [
+        "200"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "identity": "A8"
+    },
+    "B1": {
+      "id": "B1",
+      "label": "missing bearer",
+      "kind": "http",
+      "expected": [
+        "401"
+      ],
+      "steps": [
+        "provider-https"
+      ]
+    },
+    "B2": {
+      "id": "B2",
+      "label": "wrong bearer",
+      "kind": "http",
+      "expected": [
+        "401"
+      ],
+      "steps": [
+        "provider-https"
+      ]
+    },
+    "B3": {
+      "id": "B3",
+      "label": "missing Cloudflare proof",
+      "kind": "http",
+      "expected": [
+        "ACCESS_DENIED"
+      ],
+      "steps": [
+        "provider-https"
+      ],
+      "externalContract": "access-status"
+    },
+    "B4": {
+      "id": "B4",
+      "label": "wrong provider method/query",
+      "kind": "http",
+      "expected": [
+        "400"
+      ],
+      "steps": [
+        "provider-https"
+      ]
+    },
+    "B5": {
+      "id": "B5",
+      "label": "marker mismatch; readiness denied",
+      "kind": "http",
+      "expected": [
+        "503"
+      ],
+      "steps": [
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker"
+      ],
+      "requires": "marker-mismatch"
+    },
+    "B6": {
+      "id": "B6",
+      "label": "actual-role effective privilege inventory",
+      "kind": "db",
+      "expected": [
+        "OK"
+      ],
+      "steps": [
+        "db-login",
+        "db-identity",
+        "db-privileges",
+        "db-relations",
+        "db-constraints",
+        "db-marker"
+      ]
+    },
+    "B7a": {
+      "id": "B7a",
+      "label": "INSERT INTO public.throwaway_write_probe(id) VALUES (1)",
+      "kind": "db",
+      "expected": [
+        "42501"
+      ],
+      "steps": [
+        "db-login",
+        "db-begin-read-write",
+        "db-negative",
+        "db-rollback"
+      ],
+      "sql": "INSERT INTO public.throwaway_write_probe(id) VALUES (1)"
+    },
+    "B7b": {
+      "id": "B7b",
+      "label": "UPDATE public.throwaway_write_probe SET id=2 WHERE id=1",
+      "kind": "db",
+      "expected": [
+        "42501"
+      ],
+      "steps": [
+        "db-login",
+        "db-begin-read-write",
+        "db-negative",
+        "db-rollback"
+      ],
+      "sql": "UPDATE public.throwaway_write_probe SET id=2 WHERE id=1"
+    },
+    "B7c": {
+      "id": "B7c",
+      "label": "DELETE FROM public.throwaway_write_probe WHERE id=1",
+      "kind": "db",
+      "expected": [
+        "42501"
+      ],
+      "steps": [
+        "db-login",
+        "db-begin-read-write",
+        "db-negative",
+        "db-rollback"
+      ],
+      "sql": "DELETE FROM public.throwaway_write_probe WHERE id=1"
+    },
+    "B7d": {
+      "id": "B7d",
+      "label": "TRUNCATE public.throwaway_write_probe",
+      "kind": "db",
+      "expected": [
+        "42501"
+      ],
+      "steps": [
+        "db-login",
+        "db-begin-read-write",
+        "db-negative",
+        "db-rollback"
+      ],
+      "sql": "TRUNCATE public.throwaway_write_probe"
+    },
+    "B7e": {
+      "id": "B7e",
+      "label": "CREATE TABLE public.denied(id integer)",
+      "kind": "db",
+      "expected": [
+        "42501"
+      ],
+      "steps": [
+        "db-login",
+        "db-begin-read-write",
+        "db-negative",
+        "db-rollback"
+      ],
+      "sql": "CREATE TABLE public.denied(id integer)"
+    },
+    "B7f": {
+      "id": "B7f",
+      "label": "CREATE TEMP TABLE denied(id integer)",
+      "kind": "db",
+      "expected": [
+        "42501"
+      ],
+      "steps": [
+        "db-login",
+        "db-begin-read-write",
+        "db-negative",
+        "db-rollback"
+      ],
+      "sql": "CREATE TEMP TABLE denied(id integer)"
+    },
+    "B7g": {
+      "id": "B7g",
+      "label": "SELECT nextval('public.throwaway_sequence')",
+      "kind": "db",
+      "expected": [
+        "42501"
+      ],
+      "steps": [
+        "db-login",
+        "db-begin-read-write",
+        "db-negative",
+        "db-rollback"
+      ],
+      "sql": "SELECT nextval('public.throwaway_sequence')"
+    },
+    "B8": {
+      "id": "B8",
+      "label": "supported effective Firebase permission evaluation only",
+      "kind": "sdk",
+      "expected": [
+        "PERMISSIONS_REVIEWED"
+      ],
+      "steps": [
+        "firebase-permission-evaluation"
+      ],
+      "externalContract": "supported-permission-evaluation"
+    },
+    "C1": {
+      "id": "C1",
+      "label": "provider unavailable before call",
+      "kind": "http",
+      "expected": [
+        "503",
+        "504"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "requires": "C1",
+      "negative": true
+    },
+    "C2": {
+      "id": "C2",
+      "label": "delayed provider headers",
+      "kind": "http",
+      "expected": [
+        "503",
+        "504"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "requires": "C2",
+      "negative": true
+    },
+    "C3": {
+      "id": "C3",
+      "label": "delayed provider body",
+      "kind": "http",
+      "expected": [
+        "503",
+        "504"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "requires": "C3",
+      "negative": true
+    },
+    "C4": {
+      "id": "C4",
+      "label": "transient disconnect; no retry",
+      "kind": "http",
+      "expected": [
+        "503",
+        "504"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "requires": "C4",
+      "negative": true
+    },
+    "C5": {
+      "id": "C5",
+      "label": "client abort",
+      "kind": "http",
+      "expected": [
+        "503",
+        "504"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "requires": "C5",
+      "negative": true
+    },
+    "C6": {
+      "id": "C6",
+      "label": "delayed credential/SDK initialization",
+      "kind": "http",
+      "expected": [
+        "503",
+        "504"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "requires": "C6",
+      "negative": true
+    },
+    "C7": {
+      "id": "C7",
+      "label": "dedicated provider crash/hang",
+      "kind": "http",
+      "expected": [
+        "503",
+        "504"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "requires": "C7",
+      "negative": true
+    },
+    "C8": {
+      "id": "C8",
+      "label": "dedicated restart diagnostic availability only",
+      "kind": "http",
+      "expected": [
+        "200"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "requires": "C8"
+    },
+    "D1": {
+      "id": "D1",
+      "label": "bearer warm baseline",
+      "kind": "http",
+      "expected": [
+        "200"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "group": "bearer",
+      "baseline": true
+    },
+    "D2": {
+      "id": "D2",
+      "label": "old bearer at 0m",
+      "kind": "http",
+      "expected": [
+        "401"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https"
+      ],
+      "group": "bearer",
+      "minute": 0,
+      "upstreamProof": "provider-bearer"
+    },
+    "D3": {
+      "id": "D3",
+      "label": "old bearer at 15m if still needed",
+      "kind": "http",
+      "expected": [
+        "401"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https"
+      ],
+      "group": "bearer",
+      "minute": 15,
+      "upstreamProof": "provider-bearer"
+    },
+    "D4": {
+      "id": "D4",
+      "label": "Cloudflare baseline",
+      "kind": "http",
+      "expected": [
+        "200"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "group": "cf",
+      "baseline": true
+    },
+    "D5": {
+      "id": "D5",
+      "label": "old Cloudflare token at 0m",
+      "kind": "http",
+      "expected": [
+        "ACCESS_DENIED",
+        "200"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https",
+        "provider-identity",
+        "provider-privileges",
+        "provider-relations",
+        "provider-constraints",
+        "provider-marker",
+        "provider-member",
+        "firestore-get"
+      ],
+      "group": "cf",
+      "minute": 0,
+      "upstreamProof": "cloudflare",
+      "externalContract": "access-status",
+      "propagation": true
+    },
+    "D6": {
+      "id": "D6",
+      "label": "old Cloudflare token at 15m if needed",
+      "kind": "http",
+      "expected": [
+        "ACCESS_DENIED"
+      ],
+      "steps": [
+        "incoming-https",
+        "replay-create",
+        "provider-https"
+      ],
+      "group": "cf",
+      "minute": 15,
+      "upstreamProof": "cloudflare",
+      "externalContract": "access-status"
+    },
+    "D7": {
+      "id": "D7",
+      "label": "retained external SDK/issued-token baseline",
+      "kind": "sdk",
+      "expected": [
+        "200"
+      ],
+      "steps": [
+        "firestore-get"
+      ],
+      "group": "firebase",
+      "baseline": true,
+      "retain": true
+    },
+    "D8": {
+      "id": "D8",
+      "label": "same retained issued token at 0m",
+      "kind": "sdk",
+      "expected": [
+        "200",
+        "7",
+        "16"
+      ],
+      "steps": [
+        "firestore-get"
+      ],
+      "group": "firebase",
+      "minute": 0,
+      "propagation": true,
+      "retain": true
+    },
+    "D9": {
+      "id": "D9",
+      "label": "same retained issued token at 15m",
+      "kind": "sdk",
+      "expected": [
+        "200",
+        "7",
+        "16"
+      ],
+      "steps": [
+        "firestore-get"
+      ],
+      "group": "firebase",
+      "minute": 15,
+      "propagation": true,
+      "retain": true
+    },
+    "D10": {
+      "id": "D10",
+      "label": "same retained issued token at 60m",
+      "kind": "sdk",
+      "expected": [
+        "200",
+        "7",
+        "16"
+      ],
+      "steps": [
+        "firestore-get"
+      ],
+      "group": "firebase",
+      "minute": 60,
+      "propagation": true,
+      "retain": true
+    },
+    "D11": {
+      "id": "D11",
+      "label": "same retained issued token at 75m",
+      "kind": "sdk",
+      "expected": [
+        "7",
+        "16"
+      ],
+      "steps": [
+        "firestore-get"
+      ],
+      "group": "firebase",
+      "minute": 75,
+      "propagation": false,
+      "retain": true
+    },
+    "D12": {
+      "id": "D12",
+      "label": "existing DB Client baseline with session identity",
+      "kind": "db",
+      "expected": [
+        "OK"
+      ],
+      "steps": [
+        "db-login",
+        "db-session-identity",
+        "db-marker"
+      ],
+      "group": "db",
+      "baseline": true,
+      "retain": true
+    },
+    "V1": {
+      "id": "V1",
+      "label": "final old bearer rejection; direct provider loopback allowed",
+      "kind": "http",
+      "expected": [
+        "401"
+      ],
+      "steps": [
+        "provider-https"
+      ],
+      "group": "bearer",
+      "reserved": 43
+    },
+    "V2": {
+      "id": "V2",
+      "label": "final old Cloudflare token rejection",
+      "kind": "http",
+      "expected": [
+        "ACCESS_DENIED"
+      ],
+      "steps": [
+        "provider-https"
+      ],
+      "group": "cf",
+      "reserved": 44,
+      "externalContract": "access-status"
+    },
+    "V3": {
+      "id": "V3",
+      "label": "final retained Firebase token rejection",
+      "kind": "sdk",
+      "expected": [
+        "7",
+        "16"
+      ],
+      "steps": [
+        "firestore-get"
+      ],
+      "group": "firebase",
+      "reserved": 45,
+      "retain": true
+    },
+    "V4a": {
+      "id": "V4a",
+      "label": "same non-reconnecting DB Client post-revoke statement",
+      "kind": "db",
+      "expected": [
+        "42501"
+      ],
+      "steps": [
+        "db-marker"
+      ],
+      "group": "db",
+      "reserved": 46,
+      "retain": true
+    },
+    "V4b": {
+      "id": "V4b",
+      "label": "fresh old-password DB login must deny",
+      "kind": "db",
+      "expected": [
+        "28P01",
+        "28000"
+      ],
+      "steps": [
+        "db-login"
+      ],
+      "group": "db",
+      "reserved": 47
+    },
+    "V5": {
+      "id": "V5",
+      "label": "old incoming credentials after combined preview retirement",
+      "kind": "http",
+      "expected": [
+        "PREVIEW_RETIRED"
+      ],
+      "steps": [
+        "incoming-https"
+      ],
+      "group": "preview",
+      "reserved": 48,
+      "externalContract": "preview-retirement-status"
+    }
+  },
+  "rawVsSemantic": "D2/D3 incoming503 requires correlated provider401; D5/D6 incoming503 requires correlated Access denial. Actual raw status is retained. Generic503 never proves revocation."
+}

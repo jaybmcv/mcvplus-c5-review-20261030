@@ -1,0 +1,31 @@
+{
+  "candidate": "Candidate06-D12",
+  "sourceOnly": true,
+  "baselineFilesVerified": 70,
+  "baselineManifestSha256": "7c2fca43299c2f70886335b33228829ba9f7fdf4472bf1f10f7c3b1a7b4d888a",
+  "initialChangedFiles": [
+    {
+      "path": "SETUP-PACKET.md",
+      "beforeSha256": "160327ec7641ca745214a33cbfc0732c14bc3085b7fa9d683611363a7febf662",
+      "afterSha256": "4bfe9de4a1922e0009b7d2930219cbc9f98e609ab34f219b65def5ea116b0bd9"
+    },
+    {
+      "path": "driver/provider-contract.mjs",
+      "beforeSha256": "c1aade362e363c1f4b7b681d577879ade45c5e6be9a241720e22e02a8f07edd2",
+      "afterSha256": "19c70f33f7d1cb314c6201c9d2a555d6a7dcdb3eacca505c8f8b0c35f9ec7b67"
+    },
+    {
+      "path": "local-service/README.md",
+      "beforeSha256": "735ff8017eb89913e79c7bd6dfd1ca726bce4b14d2fc0b597e2274790ba77849",
+      "afterSha256": "21350870ead3ff5c6df63c0fd97c191764b6043c800df116e27e739ce77bce2e"
+    },
+    {
+      "path": "local-service/provider/readonly-db.mjs",
+      "beforeSha256": "c9a11c62117a631b88b0088182127b42337708da9d2ec102e86b1afc2a747e47",
+      "afterSha256": "ac31d18d3d1a81025023b335e514bb274450bfe2803be33e3f5280bdbb3e6a49"
+    }
+  ],
+  "candidateCodeExecuted": false,
+  "testsRun": false,
+  "sqlExecuted": false
+}

@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawn} from 'node:child_process';
+import {randomUUID} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url));
+test('development wrapper timeout fails, retains evidence, and collects only its captured fixture root and child',async()=>{
+ const label='wrapper-timeout-'+randomUUID();
+ const started=Date.now(),wrapper=spawn('python',['run-local.py',label,root,'python','tests/wrapper-timeout-fixture.py'],{cwd:root,windowsHide:true,env:{...process.env,MCV_LOCAL_TEST_TIMEOUT_SECONDS:'1'},stdio:['ignore','pipe','pipe']});
+ let output='';wrapper.stdout.on('data',b=>output+=b);wrapper.stderr.on('data',b=>output+=b);
+ const code=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>{wrapper.kill();reject(Error('wrapper collection exceeded test bound'));},20000);wrapper.once('error',reject);wrapper.once('close',c=>{clearTimeout(timer);resolve(c);});});
+ assert.equal(code,124,output);assert.ok(Date.now()-started<20000);
+ const records=fs.readFileSync(new URL('../evidence/COMMANDS.jsonl',import.meta.url),'utf8').trim().split('\n').map(x=>JSON.parse(x));
+ const record=records.findLast(x=>x.label===label);assert.ok(record);assert.equal(record.timedOut,true);assert.equal(record.cleanup.ownedRootCollected,true);assert.equal(record.cleanup.treeTerminationRequested,true);assert.equal(record.cleanup.treeTerminationReportedSuccess,true);
+ const log=fs.readFileSync(record.log,'utf8'),match=log.match(/WRAPPER_OWNED_FIXTURE (\{[^\n]+\})/);assert.ok(match,log);const owned=JSON.parse(match[1]);
+ assert.equal(owned.root,record.pid);
+ for(const pid of [owned.root,owned.child,wrapper.pid])assert.throws(()=>process.kill(pid,0),e=>e.code==='ESRCH');
+ fs.writeFileSync(new URL('../evidence/WRAPPER-TIMEOUT-COLLECTION.json',import.meta.url),JSON.stringify({label,exitCode:code,retainedLog:record.log,checks:[owned.root,owned.child,wrapper.pid].map(pid=>({pid,gone:true})),limit:'this exact fixture only; not shared-process or production cessation proof'},null,2));
+});

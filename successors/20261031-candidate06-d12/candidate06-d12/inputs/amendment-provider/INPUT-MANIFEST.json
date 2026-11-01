@@ -1,0 +1,46 @@
+{
+  "origin": "D:\\OpenClaw-workspace\\artifacts\\mcvplus-c5-setup-amendment-20261029\\payload",
+  "purpose": "read-only baseline input for new disabled provider bundle; not installation payload",
+  "files": [
+    {
+      "path": "provider/entry.mjs",
+      "sha256": "b4f6ca08902a6fe405a770a4559cf65c3dde15a8ce525892c909bae3f6053627"
+    },
+    {
+      "path": "provider/server.mjs",
+      "sha256": "e316d53716c7c2a68ef2b966a3f13d56086761e016957be3e43882e5bc3039e2"
+    },
+    {
+      "path": "provider/readonly-db.mjs",
+      "sha256": "e930d076a0fdceb074daf4c08ba7e9f9f648d3bc52c8ee906e8651cc23b9a444"
+    },
+    {
+      "path": "provider/package.json",
+      "sha256": "87d5f981663e6d40061b64df2a34dd88e23b30eea5edd9ae5940a6bfdfa7fa44"
+    },
+    {
+      "path": "provider/package-lock.json",
+      "sha256": "434d46a2910a684dc9f9bde28e52fb9913d9c89fe8069813ef13f6ab3c2ede9d"
+    },
+    {
+      "path": "qualification/budget.mjs",
+      "sha256": "1918f13bcfe1c31be96f2c690c0d11571c3134e88b24fa5921bc125015f054f3"
+    },
+    {
+      "path": "qualification/constants.mjs",
+      "sha256": "5919ca3d8597434ae92f605f77f43cc3d62e72b438de6c1e9eac9c485e965b81"
+    },
+    {
+      "path": "qualification/gates.mjs",
+      "sha256": "5d542a09420b813373c2a5b582ffb94f8ba5198a57fa5cc505703c40ae04ff2a"
+    },
+    {
+      "path": "qualification/ledger.mjs",
+      "sha256": "fb66a065f0966f042dcb1f8e3a215542c3147cfd9dd24131f12f918b9dbd6c73"
+    },
+    {
+      "path": "config/provider-binding.json",
+      "sha256": "66038cbb6ece24fbd4f31bedfb0a01e4bc8a47e98509c87893c685d67fdb4793"
+    }
+  ]
+}

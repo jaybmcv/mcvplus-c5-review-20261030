@@ -1,0 +1,32 @@
+{
+  "candidate": "Candidate06-D12",
+  "sourceManifestSha256": "93e969ba01bedc56a6ca5a685278e1a13db3eba382766769a1f19aa1d4406e5c",
+  "sourceFiles": 100,
+  "serviceManifestSha256": "cbf44154304bb2d4d53130c7324e41892c514b214c3280cb297aa9600c164dc5",
+  "sqlDocumentSha256": "9e89347af6716e600fe4ab6b80c3688e481ea56460df09aa89db8b7e362bc555",
+  "reviewSha256": "58622e33d41060366dd9bde8a476621a1efbdb68011c0e5e38033264fc6fa31d",
+  "packageManifestSha256": "fb55d17d6f213134872535eedc680718dfa3998cabf2ce6141007852b26cdbf4",
+  "archive": "CANDIDATE06-D12-SOURCE-ONLY.zip",
+  "archiveSha256": "f9f792067b0e38ab1e927309863e69839350a03317b70ff4eba9edbf831dd887",
+  "archiveBytes": 318367,
+  "independentReview": "PASS; static only; no execution/Setup authority",
+  "candidate05Unchanged": true,
+  "candidateCodeExecuted": false,
+  "testsRun": false,
+  "sqlExecuted": false,
+  "purchases": "OFF",
+  "recovery": "DISARMED",
+  "approvalPin": "UNSET",
+  "attemptsPreserved": 48,
+  "importantFiles": {
+    "driver/provider-contract.mjs": "19c70f33f7d1cb314c6201c9d2a555d6a7dcdb3eacca505c8f8b0c35f9ec7b67",
+    "local-service/provider/readonly-db.mjs": "ac31d18d3d1a81025023b335e514bb274450bfe2803be33e3f5280bdbb3e6a49",
+    "driver/clients.mjs": "415218d2ebe5444dff60b7fdb9381f84db9c011d534cd4f61a6956f02717405d",
+    "driver/cases.mjs": "57f10a14542171a3763ad3d7d36161f315381b9135ace75193fca23f763a33ad",
+    "driver/evidence.mjs": "607610a77ad769b3420cefcb5e5f770ef037973aa6f84d0dd4ab6131d51b5730",
+    "prepare-provider-bundle.py": "c02034b23f66573d5714bf0ca7cd3730acf11d2b8acefb95b2f6ff318a46241d",
+    "proposed-sql/PHASE-A.sql": "369766797c2239ff4ade94349f5b67f5344d4cd2e222405b6b9d4257ed644007",
+    "proposed-sql/PHASE-B.sql": "6defb7328b0a9b21842a4715231cea1990b94e8fe9523e6a219beb60b6d85f58",
+    "proposed-sql/PHASE-C.sql": "9871ff7dd6142137d701f1389a32d4e5ea9423e4d612a71adfa0e448dcba45cf"
+  }
+}

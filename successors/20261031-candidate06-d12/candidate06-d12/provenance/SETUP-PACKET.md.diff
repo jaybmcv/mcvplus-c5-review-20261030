@@ -1,0 +1,11 @@
+--- Candidate05/SETUP-PACKET.md
++++ Candidate06-D12/SETUP-PACKET.md
+@@ -1,3 +1,8 @@
++> Candidate06-D12 source-only successor. Current authority: root README.md, PROPOSED-SETUP-SQL.md and REMAINING-WORK.md.
++> Sole added activity signature: pg_catalog.pg_stat_get_activity(integer), both sets 49 -> 50.
++> Dedicated disposable cluster only; not pure/immutable or own-session-only. No execution/Setup authority.
++> Historical Candidate05 text below is retained context, not a successor manifest or fresh runtime receipt.
++
+ # Candidate05 conventional local-service Setup packet — proposal only
+ Date 2026-10-31. Scope owner Henri; future Setup executor Windows administrator; approver Biggunn. This is a reviewable specification, NOT authorization, an installer, an operational stage, or instructions to execute now. TASK.md prohibits all installation/provisioning/real credential/IAM changes. This packet separates three future decisions: (S) local services, (V) Vercel, (T) attended campaign execution. Neither review nor S authorizes V/T.
+ ## 1. Immutable inputs / no carry-forward authorization
