@@ -1,0 +1,16 @@
+{
+  "kind": "document-only static inspection; not test or SQL execution",
+  "date": "2026-10-31 America/Toronto",
+  "frozenCommit": "f7d2fe369098589364abcac9a7af7992d90042c2",
+  "manifestSha256": "7c2fca43299c2f70886335b33228829ba9f7fdf4472bf1f10f7c3b1a7b4d888a",
+  "frozenFilesCompared": 70,
+  "frozenHashMismatches": [],
+  "proposal": "D12-RESOLUTION-PROPOSAL.md",
+  "proposalSha256": "660ab7f6cdebb7e313eba52894e634e2fc846c7d5915fdafc9dd788b07541456",
+  "recommendation": "future successor only: exact pg_catalog.pg_stat_get_activity(integer) addition; 49 to 50; D12 query unchanged",
+  "implemented": false,
+  "testsRun": false,
+  "sqlExecuted": false,
+  "setupAuthorized": false,
+  "operationalChanges": false
+}
