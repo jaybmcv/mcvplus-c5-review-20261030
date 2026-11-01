@@ -1,0 +1,14 @@
+{
+  "input_sha256": "43b095e088f6dd81a1f62ffa52863ee23aacdb5901a02616676a2d6e641acbd6",
+  "sql_blocks": 3,
+  "review_only_guards_preserved": true,
+  "grant_count": 49,
+  "inventory_counts": [
+    49,
+    49
+  ],
+  "both_frozen_source_sets_equal": true,
+  "sql_changes_only_nine_quote_corrections": true,
+  "sql_execution": false,
+  "parser_validation": false
+}
