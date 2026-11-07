@@ -1,0 +1,27 @@
+{
+  "source": "https://openapi.vercel.sh",
+  "retrievedAt": "2026-11-02T00:04:08.601Z",
+  "schemaSha256": "b02dd782a9eef520dad3df0ba0cdeede522b2dc9a83e9d074fe5f6622a318d7b",
+  "wireSha256": "c5e8d23cc9c9c53ce5d99f78aa676439e6be506c100abfbee6986f742f81329c",
+  "networkRequests": 0,
+  "credentialStoresRead": 0,
+  "validation": "prepared structure with synthetic environment values",
+  "preparedValid": false,
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "additionalProperty": "env"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "additionalProperty": "build"
+    }
+  ],
+  "withoutEnvAndBuildValid": true,
+  "requestModified": false,
+  "caveat": "Cached schema, not current server acceptance. Removing env/build drops required overrides and is NOT an approved or semantically equivalent next request."
+}

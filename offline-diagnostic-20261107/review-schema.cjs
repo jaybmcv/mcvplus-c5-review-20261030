@@ -1,0 +1,27 @@
+'use strict';
+const fs=require('fs'),vm=require('vm'),crypto=require('crypto'),assert=require('assert/strict');
+const Ajv=require('C:/Users/HENRI/AppData/Roaming/npm/node_modules/vercel/node_modules/ajv');
+const historical='D:/OpenClaw-workspace/artifacts/mcvplus-readiness-20261107';
+const path='D:/OpenClaw-workspace/artifacts/mcvplus-preview-setup-20261101/deployment-api-schema.json';
+const bytes=fs.readFileSync(path),cached=JSON.parse(bytes);
+const schema=cached.relevant.find(x=>x.operationId==='createDeployment').requestBody.content['application/json'].schema;
+const manifest=JSON.parse(fs.readFileSync(historical+'/configuration-manifest.json'));
+// Preserve prepared request structure; never load credential stores or emit actual env values.
+for(const v of Object.values(manifest.values))assert.equal(typeof v,'string');
+const fields=new Set(Object.values(manifest.bindings).map(x=>x[1]));
+manifest.values=Object.fromEntries(Object.keys(manifest.values).map(k=>[k,'fixture-value']));
+manifest.selectedUid='fixture-user';manifest.values.MCV_PURCHASE_TEST_UIDS='["fixture-user"]';
+const wireModule={exports:{}};
+const mockFs={readFileSync(p){return JSON.stringify(p.endsWith('configuration-manifest.json')?manifest:Object.fromEntries([...fields].map(k=>[k,'fixture-bound-value'])));}};
+const code=fs.readFileSync(historical+'/create-wire.cjs','utf8');
+vm.runInNewContext(code,{require:n=>n==='fs'?mockFs:require(n),module:wireModule,__dirname:historical,console:{log(){}}});
+const {body}=wireModule.exports.construct();
+const ajv=new Ajv({allErrors:true,strict:false,validateSchema:false});
+const validate=ajv.compile(schema);
+const preparedValid=validate(body);
+const errors=validate.errors.map(e=>({instancePath:e.instancePath||'',schemaPath:e.schemaPath,keyword:e.keyword,additionalProperty:e.params.additionalProperty}));
+assert.equal(preparedValid,false);assert.deepEqual(errors.map(e=>e.additionalProperty).sort(),['build','env']);
+const withoutUnsupported={...body};delete withoutUnsupported.env;delete withoutUnsupported.build;
+assert(validate(withoutUnsupported),'remaining structure conforms to cached schema');
+const out={source:cached.source,retrievedAt:cached.retrievedAt,schemaSha256:crypto.createHash('sha256').update(bytes).digest('hex'),wireSha256:crypto.createHash('sha256').update(code).digest('hex'),networkRequests:0,credentialStoresRead:0,validation:'prepared structure with synthetic environment values',preparedValid,errors,withoutEnvAndBuildValid:true,requestModified:false,caveat:'Cached schema, not current server acceptance. Removing env/build drops required overrides and is NOT an approved or semantically equivalent next request.'};
+fs.writeFileSync(__dirname+'/schema-review-result.json',JSON.stringify(out,null,2));console.log(JSON.stringify(out,null,2));
