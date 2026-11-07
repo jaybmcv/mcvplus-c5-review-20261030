@@ -1,0 +1,41 @@
+{
+  "vercelRequests": 0,
+  "realCredentialsRead": 0,
+  "cliExecuted": false,
+  "passed": 8,
+  "results": [
+    {
+      "name": "name-only CLI flags resolve from child environment without value logging",
+      "pass": true
+    },
+    {
+      "name": "missing named environment value fails closed",
+      "pass": true
+    },
+    {
+      "name": "actual wrapper preserves distinct runtime/build maps",
+      "pass": true
+    },
+    {
+      "name": "extracted wrapper forwards source path and contains no shared-setting mutation request",
+      "pass": true
+    },
+    {
+      "name": "actual final builder preserves env/build and omits preview target; BUILDING is only created",
+      "pass": true
+    },
+    {
+      "name": "single extracted POST failure does not retry but raw error must not be logged",
+      "pass": true
+    },
+    {
+      "name": "single extracted POST network failure does not retry",
+      "pass": true
+    },
+    {
+      "name": "full upload source has missing_files recovery and two deploy call sites",
+      "pass": true
+    }
+  ],
+  "caveat": "Extracted functions only; not full CLI validation, live acceptance or schema conformance. Synthetic values; no request body persisted."
+}
