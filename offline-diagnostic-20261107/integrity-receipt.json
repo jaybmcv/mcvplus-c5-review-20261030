@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-07T21:40:08.914Z",
+  "vercelRequests": 0,
+  "ledgerUsed": 29,
+  "cap": 48,
+  "prerequisiteUsed": 28,
+  "setupUsed": 1,
+  "cleanupUsed": 0,
+  "cleanupReserved": 8,
+  "ledgerSha256": "c27f0ba0cfd237f34bd91c8dc0033409628a6535d1da1bd9249afdb61dbf3a56",
+  "historicalTransportUnchanged": true,
+  "applicationSourceUnchanged": "6166eabb7bfbd2e5b162c6a141731172be6110e2",
+  "preparedRequestUnchanged": "c5e8d23cc9c9c53ce5d99f78aa676439e6be506c100abfbee6986f742f81329c",
+  "candidateSha256": "ddcf280d43ef864c03cf82d57b4ee04f7cf3c82ac5cbc82e99b0ea2b267968b6",
+  "files": {
+    "create-wire.reference.cjs": "c5e8d23cc9c9c53ce5d99f78aa676439e6be506c100abfbee6986f742f81329c",
+    "deploy-counted.before.cjs": "fda8e17125d248009b7c071023d041fa6a2a5f3edd5a712247de47c0026ec83b",
+    "deploy-counted.cjs": "ddcf280d43ef864c03cf82d57b4ee04f7cf3c82ac5cbc82e99b0ea2b267968b6",
+    "deployment-api-schema.json": "b02dd782a9eef520dad3df0ba0cdeede522b2dc9a83e9d074fe5f6622a318d7b",
+    "review-schema.cjs": "4dbc0629dfbee72838ebbc432928346c5e7f1c18f8c2eee55306ac4ee5aaf5e4",
+    "schema-review-result.json": "04db98a2bdee63a576a075b73aee9da9f9d4518157b36fa88a4efebc8dd18bc3",
+    "transport-fixtures-result.json": "02184e005c15634089b6bdd6a9aaf200483abfdfbb380e6cfe6c52c8c1b82b80",
+    "transport-fixtures.before.cjs": "2ce1027d426009af1a95ea57c5310bc4da73bdd3550772114f063883fb4d3efe",
+    "transport-fixtures.cjs": "39cb384afac6bf703416ef368f685c0b5dbf750182a7ed07da850804d6a98f52",
+    "transport.diff": "9faa720751a7fa009856b33a4d696259c8b20c2dd44d8991163f390b8cec068f"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "at": "2026-11-07T21:39:41.983Z",
+  "liveRequests": 0,
+  "results": [
+    {
+      "case": "normal",
+      "requests": 16,
+      "pass": true
+    },
+    {
+      "case": "unapproved",
+      "requests": 0,
+      "pass": true
+    },
+    {
+      "case": "locked",
+      "requests": 0,
+      "pass": true
+    },
+    {
+      "case": "redirect",
+      "requests": 1,
+      "pass": true
+    },
+    {
+      "case": "network-failure",
+      "requests": 1,
+      "pass": true
+    },
+    {
+      "case": "final-build-error",
+      "requests": 11,
+      "pass": true
+    },
+    {
+      "case": "alias-drift",
+      "requests": 14,
+      "pass": true
+    },
+    {
+      "case": "already-consumed",
+      "requests": 0,
+      "pass": true
+    },
+    {
+      "case": "cleanup-reserved",
+      "requests": 0,
+      "pass": true
+    },
+    {
+      "case": "create-400",
+      "requests": 5,
+      "pass": true
+    },
+    {
+      "case": "create-secret",
+      "requests": 5,
+      "pass": true
+    },
+    {
+      "case": "create-malformed",
+      "requests": 5,
+      "pass": true
+    },
+    {
+      "case": "create-oversized",
+      "requests": 5,
+      "pass": true
+    },
+    {
+      "case": "create-stream-error",
+      "requests": 5,
+      "pass": true
+    },
+    {
+      "case": "create-timeout",
+      "requests": 5,
+      "pass": true
+    },
+    {
+      "case": "create-unknown",
+      "requests": 5,
+      "pass": true
+    },
+    {
+      "case": "create-long-message",
+      "requests": 5,
+      "pass": true
+    }
+  ]
+}

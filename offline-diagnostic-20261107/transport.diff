@@ -1,0 +1,61 @@
+diff --git a/deploy-counted.cjs b/deploy-counted.cjs
+index b737e96..d5d4a06 100644
+--- a/deploy-counted.cjs
++++ b/deploy-counted.cjs
+@@ -4,6 +4,46 @@ const root=__dirname,setup='D:/OpenClaw-workspace/artifacts/mcvplus-preview-setu
+ const starts=()=>fs.readFileSync(ledger,'utf8').trim().split('\n').filter(Boolean).map(JSON.parse).filter(r=>r.event==='started');
+ const hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
+ const configKeys=['buildCommand','installCommand','framework','rootDirectory','nodeVersion','outputDirectory','ssoProtection','passwordProtection','trustedIps','resourceConfig','gitForkProtection','gitLFS','link'];
++
++// Deliberately lossy: never persist a raw response, headers, or echoed values.
++async function createErrorDiagnostic(response, sensitiveValues){
++ const diagnostic={status:response.status,code:null,message:null,bodyState:'unavailable',messagePolicy:'allowlisted-tokens-v1'};
++ const MAX_BYTES=16384,MAX_MESSAGE=512,MAX_TOKENS=80;
++ const codes=new Set(['bad_request','invalid_request','validation_error','unauthorized','forbidden','not_found','rate_limited','too_many_requests','internal_server_error','invalid_git_source','git_source_error','deployment_error']);
++ const words=new Set(('invalid request body property properties additional unexpected missing required must should be a an the is not of type string number integer object array boolean null value values allowed expected provided found at in for and or does match schema validation failed error deployment project name git source repository ref sha build env target gitSource repoId').split(' '));
++ let reader,timer;
++ try{
++  if(!response.body)return diagnostic;
++  reader=response.body.getReader();
++  const timeout=new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('diagnostic timeout')),2000);});
++  const chunks=[];let size=0;
++  for(;;){
++   const {done,value}=await Promise.race([reader.read(),timeout]);
++   if(done)break;
++   size+=value.byteLength;
++   if(size>MAX_BYTES){diagnostic.bodyState='oversized';return diagnostic;}
++   chunks.push(Buffer.from(value));
++  }
++  const parsed=JSON.parse(Buffer.concat(chunks).toString('utf8'));
++  const error=parsed&&typeof parsed==='object'&&!Array.isArray(parsed)?parsed.error:null;
++  diagnostic.bodyState='json';
++  if(!error||typeof error!=='object'||Array.isArray(error))return diagnostic;
++  const sensitive=sensitiveValues.filter(v=>typeof v==='string'&&v.length);
++  const echoes=value=>sensitive.some(v=>value.toLowerCase().includes(v.toLowerCase()));
++  if(typeof error.code==='string')diagnostic.code=codes.has(error.code)&&!echoes(error.code)?error.code:'[withheld]';
++  if(typeof error.message==='string'){
++   // Redact before truncation; unknown tokens, digits, URLs and identifiers never pass through.
++   if(echoes(error.message))diagnostic.message='[withheld: echoed protected value]';
++   else{
++    const tokens=error.message.match(/[A-Za-z_][A-Za-z_0-9]*|[^\sA-Za-z_]+/g)||[];
++    diagnostic.message=tokens.slice(0,MAX_TOKENS).map(t=>words.has(t)?t:'[redacted]').join(' ').slice(0,MAX_MESSAGE);
++   }
++  }
++ }catch(_){diagnostic.bodyState='unreadable';}
++ finally{clearTimeout(timer);if(reader){try{void reader.cancel().catch(()=>{});}catch(_){} }}
++ return diagnostic;
++}
++
+ async function main(){
+  const {body,summary}=require('./create-wire.cjs').construct();
+  if(!process.argv.includes('--execute')){console.log(JSON.stringify({mode:'dry-run',networkRequests:0,maximumSetupRequests:12,additionalPrerequisiteReads:4,summary}));return;}
+@@ -42,7 +82,8 @@ async function main(){
+   baseline=fresh;result.baselineDate=fresh.at;fs.writeFileSync(root+'/fresh-baseline.json',JSON.stringify(fresh,null,2),{flush:true});
+   // One supported deployment-create request, no upload/CLI discovery fanout.
+   const r=await request('create exact protected preview',api('/v13/deployments'),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+-  assert(r.ok,'Create HTTP'+r.status+'; STOP no retry');const d=await r.json();
++  if(!r.ok){result.createError=await createErrorDiagnostic(r,[auth.token,...Object.values(body.env||{}),...Object.values(body.build?.env||{})]);throw new Error('Create HTTP'+r.status+'; STOP no retry');}
++  const d=await r.json();
+   assert(/^dpl_[A-Za-z0-9]+$/.test(d.id));assert(/^[a-z0-9-]+\.vercel\.app$/.test(d.url));
+   result.deploymentId=d.id;result.url=d.url;result.deployed=true;save();
+   let current=d;
