@@ -1,0 +1,13 @@
+{
+  "version": "50.33.1",
+  "files": {
+    "dist/commands/deploy/index.js": "79963299a5ca08dccaeadc813c506996cf6c5f13089da59912cf1b2dbcd5e3d7",
+    "dist/chunks/chunk-RHUKJ7OR.js": "7fc1f32f152f0a91a374391b01247a13586c459c1177759a08470f28219ffcf9",
+    "dist/chunks/chunk-DPRZMI7B.js": "c368f5f1619e8ee6f08debf20d4016d5d193d0d8de7916423a4ec4cfa628e24d",
+    "dist/chunks/chunk-U7WYFYT7.js": "fc755ef104eef7b6880c1fecc675def640b0ee30bb757fb84009c88c9d062fbf",
+    "dist/chunks/chunk-ZA7B7LXL.js": "b721c44d83c461563ceaeeb70562e390b3b9a9b1a21f0a460d9024a28bff56fd"
+  },
+  "vercelRequests": 0,
+  "credentialStoresRead": 0,
+  "cliExecuted": false
+}

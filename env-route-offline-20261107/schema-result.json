@@ -1,0 +1,27 @@
+{
+  "networkRequests": 0,
+  "credentialsRead": 0,
+  "schemaSha256": "b02dd782a9eef520dad3df0ba0cdeede522b2dc9a83e9d074fe5f6622a318d7b",
+  "results": [
+    {
+      "name": "preparedShape",
+      "valid": false,
+      "additionalProperties": [
+        "build",
+        "env"
+      ]
+    },
+    {
+      "name": "cliShape",
+      "valid": false,
+      "additionalProperties": [
+        "build",
+        "env",
+        "source"
+      ]
+    }
+  ],
+  "withoutOverridesValid": true,
+  "withoutOverridesSemanticallyEquivalent": false,
+  "disposition": "HOLD: CLI evidence conflicts with cached public schema. No corrected schema-conforming request established."
+}
